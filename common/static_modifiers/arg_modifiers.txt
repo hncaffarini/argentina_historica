@@ -1,0 +1,5 @@
+argentina_fomento_inmigracion = {
+	state_migration_pull_mult = 0.25
+	state_pop_growth_add = 0.002
+	icon = "gfx/interface/icons/modifier_icons/migration_positive.dds"
+}

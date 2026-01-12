@@ -1,0 +1,12 @@
+{
+  "name" : "Eventos Históricos de Argentina",
+	"id" : "argentina_historica",
+  "version" : "1.0",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : ["Historical", "Events"],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

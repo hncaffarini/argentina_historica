@@ -1,0 +1,45 @@
+﻿namespace = argentina_events
+
+# Evento de ejemplo: Fomento de la Inmigración
+argentina_events.1 = {
+	type = country_event
+	title = argentina_events.1.t
+	desc = argentina_events.1.d
+	flavor = argentina_events.1.f
+	
+	gui_window = event_window
+
+	trigger = {
+		exists = c:ARG
+		this = c:ARG
+		is_date >= 1845.1.1
+		NOT = { has_variable = argentina_inmigracion_lanzada }
+	}
+
+	immediate = {
+		set_variable = argentina_inmigracion_lanzada
+	}
+
+	# Opción A: Fomentar activamente
+	option = {
+		name = argentina_events.1.a
+		default_option = yes
+
+		add_prestige = 20
+
+		add_modifier = {
+			name = argentina_fomento_inmigracion
+			days = 3650 # Dura 10 años
+		}
+		add_enactment_progression = {
+			law = law_cultural_exclusion
+			value = 0.1
+		}
+	}
+
+	# Opción B: Mantener el statu quo
+	option = {
+		name = argentina_events.1.b
+		add_influence = 100
+	}
+}

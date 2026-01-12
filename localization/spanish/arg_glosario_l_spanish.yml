@@ -1,0 +1,27 @@
+l_spanish:
+ arg_loc_aduana: "Aduana de Buenos Aires"
+ arg_loc_aduana_tooltip: "El principal puerto de entrada y salida de mercancías de la Confederación. Sus rentas representaban la mayor fuente de ingresos del país, pero Buenos Aires se negaba a nacionalizarlas, usándolas para su propio beneficio."
+ 
+ arg_loc_rosas: "Juan Manuel de Rosas"
+ arg_loc_rosas_tooltip: "Gobernador de Buenos Aires y el hombre más poderoso de la Confederación Argentina entre 1835 y 1852. Defensor del federalismo porteño y del control exclusivo del puerto."
+
+ arg_loc_provincias: "Provincias del Litoral"
+ arg_loc_provincias_tooltip: "Santa Fe, Entre Ríos y Corrientes. Estas provincias exigían la libre navegación de los ríos para poder comerciar directamente con Europa sin pasar por la Aduana de Buenos Aires."
+
+ arg_loc_santa_cruz: "Andrés de Santa Cruz"
+ arg_loc_santa_cruz_tooltip: "Mariscal boliviano y Protector de la Confederación Perú-Boliviana. Su proyecto de unión andina era visto como una amenaza expansionista tanto por Argentina como por Chile."
+
+ arg_loc_alejandro_heredia: "Alejandro Heredia"
+ arg_loc_alejandro_heredia_tooltip: "Gobernador de Tucumán y caudillo del Norte. Fue nombrado por Rosas como comandante del Ejército del Norte para enfrentar a los bolivianos, consolidando el control rosista en la región."
+
+ arg_loc_bloqueo_frances: "Bloqueo Francés de 1838"
+ arg_loc_bloqueo_frances_tooltip: "Conflicto diplomático donde Francia cerró el puerto de Buenos Aires. El pretexto fue el maltrato a ciudadanos franceses, pero el objetivo real era forzar la apertura comercial y debilitar la influencia de Rosas."
+
+ arg_loc_almirante_leblanc: "Almirante Le Blanc"
+ arg_loc_almirante_leblanc_tooltip: "Comandante de la flota francesa que ejecutó el bloqueo. Intentó aliarse con los enemigos internos de Rosas para forzar su caída."
+
+ arg_loc_libres_del_sur: "Libres del Sur"
+ arg_loc_libres_del_sur_tooltip: "Insurrección armada de 1839 liderada por estancieros del sur de Buenos Aires (Dolores y Chascomús). Protestaban contra la caída de las exportaciones debida al bloqueo francés y la política de Rosas sobre la propiedad de la tierra."
+
+ arg_loc_pedro_castelli: "Pedro Castelli"
+ arg_loc_pedro_castelli_tooltip: "Líder militar de la revuelta e hijo del prócer Juan José Castelli. Fue ejecutado tras la derrota en la batalla de Chascomús, y su cabeza fue expuesta en una pica en la plaza de Dolores como advertencia."

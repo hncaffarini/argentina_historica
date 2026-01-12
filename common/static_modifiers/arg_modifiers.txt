@@ -3,3 +3,31 @@ argentina_fomento_inmigracion = {
 	state_pop_growth_add = 0.002
 	icon = "gfx/interface/icons/modifier_icons/migration_positive.dds"
 }
+
+arg_monopolio_puerto = {
+	icon = "gfx/interface/icons/modifier_icons/money_positive.dds"
+	state_tax_capacity_add = 50
+	country_trade_route_export_revenue_mult = 0.15
+}
+
+arg_ejercito_del_norte = {
+	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
+	unit_offense_add = 5
+	unit_defense_add = 5
+	land_morale_mult = 0.10
+}
+
+arg_bloqueo_economico_frances = {
+	icon = "gfx/interface/icons/modifier_icons/trade_negative.dds"
+	# Reduce drásticamente los ingresos de aduana
+	state_tax_capacity_add = -100 
+	country_trade_route_import_revenue_mult = -0.80
+	country_trade_route_export_revenue_mult = -0.80
+	# Aumenta el radicalismo por la crisis
+	country_enactment_time_mult = 0.25
+}
+
+arg_concesiones_francia = {
+	icon = "gfx/interface/icons/modifier_icons/diplomacy_negative.dds"
+	country_trade_route_import_revenue_mult = -0.50 # Francia no paga impuestos
+}

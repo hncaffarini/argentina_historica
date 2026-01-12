@@ -4,3 +4,38 @@
  argentina_events.1.f: "Gobernar es poblar."
  argentina_events.1.a: "Fomentar la llegada de inmigrantes."
  argentina_events.1.b: "Priorizar el orden interno."
+
+ # --- 1836 ---
+ arg_ley_de_aduanas.t: "El Monopolio de la Aduana"
+ arg_ley_de_aduanas.d: "Desde la caída del gobierno central, la #v $arg_loc_aduana$#! ha permanecido bajo el control exclusivo de Buenos Aires. El gobernador #v $arg_loc_rosas$#! sostiene que estas rentas pertenecen legítimamente a su provincia, pero las #v $arg_loc_provincias$#! exigen que los ingresos se repartan o que se permita la libre navegación de los ríos."
+ arg_ley_de_aduanas.f: "«Buenos Aires es la puerta de la tierra, y tiene la llave en su mano». — Observación de la época."
+
+ arg_ley_de_aduanas.a: "Defender el privilegio de Buenos Aires."
+ arg_ley_de_aduanas.a.tt: "Históricamente, Rosas mantuvo este monopolio, lo que financió su ejército pero generó constantes rebeliones en el litoral."
+
+ arg_ley_de_aduanas.b: "Nacionalizar las rentas del puerto."
+ arg_ley_de_aduanas.b.tt: "Esto debilitará el poder de Buenos Aires pero fortalecerá la unidad nacional de forma prematura."
+
+ # --- 1837 ---
+ arg_guerra_peru_boliviana.t: "Guerra en el Norte"
+ arg_guerra_peru_boliviana.d: "La ambición de #v $arg_loc_santa_cruz$#! ha dado sus frutos: Perú y Bolivia se han unido en una sola confederación. Esta nueva potencia amenaza la estabilidad de nuestras provincias del norte y la soberanía sobre Tarija. El gobernador #v $arg_loc_alejandro_heredia$#! solicita apoyo para movilizar las milicias y defender la Confederación Argentina."
+ arg_guerra_peru_boliviana.f: "«Ningún argentino puede ver con indiferencia la formación de un poder que busca absorber a sus vecinos». — Nota diplomática de la época."
+ 
+ arg_guerra_peru_boliviana.a: "Movilizar al Ejército del Norte."
+ arg_guerra_peru_boliviana.b: "Evitar una guerra costosa."
+
+ # --- 1838 ---
+ arg_bloqueo_frances.t: "El Ultimátum del $arg_loc_almirante_leblanc$"
+ arg_bloqueo_frances.d: "La flota francesa ha aparecido frente a nuestras costas. El #v $arg_loc_almirante_leblanc$#! exige que nuestros ciudadanos franceses sean eximidos del servicio militar y reclama reparaciones por supuestos agravios. De no aceptar, Francia iniciará un #v $arg_loc_bloqueo_frances$#! que impedirá cualquier actividad en el puerto de Buenos Aires."
+ arg_bloqueo_frances.f: "«La Francia no tiene interés en hacer la guerra a la Confederación, pero tiene el derecho de ser respetada». — Almirante Le Blanc."
+ 
+ arg_bloqueo_frances.a: "¡No aceptaremos imposiciones extranjeras!"
+ arg_bloqueo_frances.b: "Ceder para evitar la ruina económica."
+
+ # --- 1839 ---
+ arg_libres_del_sur.t: "La Revolución de los $arg_loc_libres_del_sur$"
+ arg_libres_del_sur.d: "La asfixia económica causada por el bloqueo ha llegado a su límite. En los campos de Chascomús y Dolores, un grupo de estancieros liderados por #v $arg_loc_pedro_castelli$#! se ha alzado en armas. Denuncian que la intransigencia de Rosas está arruinando la industria ganadera y exigen el fin de las hostilidades con Francia."
+ arg_libres_del_sur.f: "«Libertad o muerte, no hay más camino para los hijos de mayo». — Consigna de los sublevados."
+ 
+ arg_libres_del_sur.a: "Enviar a la Mazorca a restaurar el orden."
+ arg_libres_del_sur.b: "Ofrecer concesiones a los estancieros del sur."

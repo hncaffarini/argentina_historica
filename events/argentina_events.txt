@@ -12,7 +12,7 @@ argentina_events.1 = {
 	trigger = {
 		exists = c:ARG
 		this = c:ARG
-		is_date >= 1845.1.1
+		game_date = 1845.1.1
 		NOT = { has_variable = argentina_inmigracion_lanzada }
 	}
 
@@ -41,5 +41,210 @@ argentina_events.1 = {
 	option = {
 		name = argentina_events.1.b
 		add_influence = 100
+	}
+}
+
+# 1836 - El Control del Puerto y la ley de aduanas
+arg_ley_de_aduanas = {
+	type = country_event
+	title = arg_ley_de_aduanas.t
+	desc = arg_ley_de_aduanas.d
+	flavor = arg_ley_de_aduanas.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+
+	trigger = {
+		tag = ARG
+		game_date = 1836.1.1
+		NOT = { has_variable = arg_evento_aduana_lanzado }
+	}
+
+	immediate = {
+		set_variable = arg_evento_aduana_lanzado
+	}
+
+	# Opción Histórica: Mantener el control porteño
+	option = {
+		name = arg_ley_de_aduanas.a
+		default_option = yes
+		custom_tooltip = arg_ley_de_aduanas.a.tt
+		
+		# Beneficio económico para Buenos Aires, pero enojo en el litoral
+		add_modifier = {
+			name = arg_monopolio_puerto
+			months = 120
+		}
+	}
+
+	# Opción Alternativa: Ceder ante el litoral
+	option = {
+		name = arg_ley_de_aduanas.b
+		custom_tooltip = arg_ley_de_aduanas.b.tt
+		
+		# Perdés autoridad pero calmas a las provincias
+		add_authority = -100
+		add_prestige = 10
+	}
+}
+
+# 1837 - Guerra contra la Confederación Perú-Boliviana
+arg_guerra_peru_boliviana = {
+	type = country_event
+	title = arg_guerra_peru_boliviana.t
+	desc = arg_guerra_peru_boliviana.d
+	flavor = arg_guerra_peru_boliviana.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		game_date = 1837.5.1
+		# Condición: Que Bolivia sea una amenaza o esté unida a Perú
+		any_country = {
+			tag = BOL
+			OR = {
+				relations = { target = ARG value < 0 }
+				has_variable = peru_bolivia_confederation_formed
+			}
+		}
+		NOT = { has_variable = arg_guerra_norte_lanzada }
+	}
+
+	immediate = {
+		set_variable = arg_guerra_norte_lanzada
+	}
+
+	# Opción A: Declarar la guerra (Histórica)
+	option = {
+		name = arg_guerra_peru_boliviana.a
+		default_option = yes
+		
+		# Crea un 'Casus Belli' contra Bolivia
+		create_diplomatic_play = {
+			target = c:BOL
+			play_type = dp_humiliate # O 'dp_conquer_state' para Tarija
+		}
+		
+		# Bono militar temporal para representar el mando de Heredia
+		add_modifier = {
+			name = arg_ejercito_del_norte
+			months = 24
+		}
+	}
+
+	# Opción B: Ignorar el conflicto
+	option = {
+		name = arg_guerra_peru_boliviana.b
+		add_prestige = -20
+		add_radicalism_mult = {
+			value = 0.1
+			state = s:STATE_TUCUMAN
+		}
+	}
+}
+
+# 1838 - El Bloqueo Francés
+arg_bloqueo_frances = {
+	type = country_event
+	title = arg_bloqueo_frances.t
+	desc = arg_bloqueo_frances.d
+	flavor = arg_bloqueo_frances.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_naval_battle.bk2"
+
+	trigger = {
+		tag = ARG
+		game_date >= 1838.3.28
+		NOT = { has_variable = arg_bloqueo_frances_lanzado }
+		# Solo ocurre si Francia existe y es una potencia
+		exists = c:FRA
+	}
+
+	immediate = {
+		set_variable = arg_bloqueo_frances_lanzado
+	}
+
+	# Opción A: Rechazar las demandas (Histórico)
+	option = {
+		name = arg_bloqueo_frances.a
+		default_option = yes
+		
+		# Efecto: El bloqueo asfixia la economía
+		add_modifier = {
+			name = arg_bloqueo_economico_frances
+			months = 24
+		}
+		add_prestige = 20 # Por defender la soberanía
+		
+		# Francia se enoja
+		c:FRA = {
+			add_relations = { target = c:ARG value = -50 }
+		}
+	}
+
+	# Opción B: Ceder ante Francia
+	option = {
+		name = arg_bloqueo_frances.b
+		add_prestige = -30
+		add_authority = -100
+		# Se vuelve un títere económico de Francia
+		add_modifier = {
+			name = arg_concesiones_francia
+			months = 60
+		}
+	}
+}
+
+# 1839 - Revolución de los Libres del Sur
+arg_libres_del_sur = {
+	type = country_event
+	title = arg_libres_del_sur.t
+	desc = arg_libres_del_sur.d
+	flavor = arg_libres_del_sur.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/estate_owners.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1839.10.29
+		# Solo ocurre si estamos bajo el bloqueo francés
+		has_modifier = arg_bloqueo_economico_frances
+		NOT = { has_variable = arg_libres_sur_lanzado }
+	}
+
+	immediate = {
+		set_variable = arg_libres_sur_lanzado
+	}
+
+	# Opción A: Represión implacable (Histórica)
+	option = {
+		name = arg_libres_del_sur.a
+		default_option = yes
+		
+		# Aumenta el radicalismo de los Terratenientes
+		ig:ig_landowners = {
+			add_approval = -5
+		}
+		# Buenos Aires sufre disturbios
+		s:STATE_BUENOS_AIRES = {
+			add_radicalism_mult = {
+				value = 0.15
+			}
+		}
+		add_prestige = 10
+	}
+
+	# Opción B: Intentar negociar
+	option = {
+		name = arg_libres_del_sur.b
+		# Perdés autoridad con tu propia base de poder
+		add_authority = -150
+		ig:ig_landowners = {
+			add_approval = 2
+		}
 	}
 }

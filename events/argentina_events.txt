@@ -328,6 +328,67 @@ arg_fiestas_mayas_1841 = {
 	}
 }
 
+# 1842 - Batalla de Arroyo Grande
+arg_batalla_arroyo_grande = {
+	type = country_event
+	title = arg_batalla_arroyo_grande.t
+	desc = arg_batalla_arroyo_grande.d
+	flavor = arg_batalla_arroyo_grande.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1842.12.6
+		NOT = { has_variable = arg_arroyo_grande_lanzado }
+	}
+
+	immediate = { set_variable = arg_arroyo_grande_lanzado }
+
+	option = {
+		name = arg_batalla_arroyo_grande.a
+		add_prestige = 15
+		# Mejora la moral del ejército
+		add_modifier = { name = arg_victoria_federal months = 24 }
+		# Tensión diplomática con el Reino Unido y Francia por el asedio a Montevideo
+		c:GBR = { add_relations = { target = c:ARG value = -10 } }
+	}
+}
+
+# 1843 - El espíritu de La Moda
+arg_revista_la_moda = {
+	type = country_event
+	title = arg_revista_la_moda.t
+	desc = arg_revista_la_moda.d
+	flavor = arg_revista_la_moda.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1843.5.1
+		NOT = { has_variable = arg_la_moda_lanzado }
+	}
+
+	immediate = { set_variable = arg_la_moda_lanzado }
+
+	# Opción A: Tolerar estas reuniones sociales
+	option = {
+		name = arg_revista_la_moda.a
+		add_enactment_progression = { law = law_freedom_of_thought value = 0.05 }
+		ig:ig_intelligentsia = { add_approval = 2 }
+	}
+
+	# Opción B: Censurar por considerarlas unitarias
+	option = {
+		name = arg_revista_la_moda.b
+		add_authority = 50
+		ig:ig_intelligentsia = { add_approval = -5 }
+	}
+}
+
 # 1844 - Terremoto de Salta
 arg_terremoto_salta = {
 	type = country_event

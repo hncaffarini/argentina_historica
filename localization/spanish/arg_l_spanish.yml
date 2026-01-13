@@ -54,6 +54,19 @@
  arg_fiestas_mayas_1841.f: "«¡Viva la Confederación Argentina! ¡Mueran los salvajes unitarios!» — Consigna obligatoria en las celebraciones."
  arg_fiestas_mayas_1841.a: "¡Que continúe el festejo popular!"
 
+ # --- 1842 ---
+ arg_batalla_arroyo_grande.t: "Victoria en $arg_loc_batalla_arroyo_grande$"
+ arg_batalla_arroyo_grande.d: "Las fuerzas de la Confederación, al mando del General Manuel Oribe, han aniquilado al ejército de Fructuoso Rivera. Con esta victoria, el camino hacia Montevideo queda abierto. Rosas consolida su dominio sobre el Río de la Plata, desafiando las pretensiones de los unitarios y sus aliados extranjeros."
+ arg_batalla_arroyo_grande.f: "«¡El triunfo es completo! No queda enemigo organizado en la campaña». — Parte de guerra federal."
+ arg_batalla_arroyo_grande.a: "Asegurar nuestra hegemonía regional."
+
+ # --- 1843 ---
+ arg_revista_la_moda.t: "La Elegancia y $arg_loc_la_moda$"
+ arg_revista_la_moda.d: "A pesar de la rigidez política, en los salones porteños circula la revista #v La Moda#!. Bajo el pretexto de hablar de vestimenta y música, los jóvenes de la #v Generación del 37#! deslizan ideas sobre la libertad y el futuro de la nación. ¿Debemos permitir estos espacios de debate o verlos como focos de traición?"
+ arg_revista_la_moda.f: "«Seamos elegantes, pero también seamos pensadores». — Editorial de La Moda."
+ arg_revista_la_moda.a: "Permitir los salones literarios."
+ arg_revista_la_moda.b: "Prohibir cualquier tertulia sospechosa."
+
  # --- 1844 ---
  arg_terremoto_salta.t: "Tragedia en el Norte: El $arg_loc_terremoto_salta$"
  arg_terremoto_salta.d: "La tierra ha temblado violentamente en el Norte. La ciudad de Salta ha sufrido daños considerables en sus templos y viviendas. Los ciudadanos, aterrados, han sacado las imágenes del Señor y la Virgen del Milagro en procesión, implorando el fin de la catástrofe."

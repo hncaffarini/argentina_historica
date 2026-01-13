@@ -35,5 +35,11 @@ l_spanish:
  arg_loc_fiestas_mayas: "Fiestas Mayas"
  arg_loc_fiestas_mayas_tooltip: "Celebraciones anuales que conmemoraban la Revolución de Mayo de 1810. Durante el rosismo, estas fiestas se convirtieron en grandes actos de propaganda política donde el color punzó y el culto a la figura de Rosas eran omnipresentes."
 
+ arg_loc_batalla_arroyo_grande: "Batalla de Arroyo Grande"
+ arg_loc_batalla_arroyo_grande_tooltip: "Ocurrida en diciembre de 1842, fue una de las batallas más grandes de las guerras civiles. El ejército federal de Oribe destruyó a las fuerzas unitarias y uruguayas de Rivera, permitiendo que Rosas iniciara el 'Sitio Grande' de Montevideo."
+
+ arg_loc_la_moda: "La Moda y los Salones"
+ arg_loc_la_moda_tooltip: "Hacia 1837-1843, a pesar de la censura, la vida social en Buenos Aires giraba en torno a revistas como 'La Moda' y los salones literarios. Fue el espacio donde la juventud romántica debatía ideas de progreso, moda europea y civilización."
+
  arg_loc_terremoto_salta: "Terremoto de Salta de 1844"
  arg_loc_terremoto_salta_tooltip: "Un violento sismo que afectó gravemente a la ciudad de Salta el 18 de octubre de 1844. Fue un evento de gran impacto espiritual y social, que dio origen a la procesión del Milagro como acto de fe tras el cese de los temblores."

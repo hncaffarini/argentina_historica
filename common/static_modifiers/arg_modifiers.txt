@@ -40,6 +40,12 @@ arg_guerra_civil_norte = {
 	state_turmoil_mult = 0.25 # Más disturbios en todo el país
 }
 
+arg_victoria_federal = {
+	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
+	unit_offense_add = 10
+	land_morale_mult = 0.15
+}
+
 arg_reconstruccion_salta = {
 	icon = "gfx/interface/icons/modifier_icons/construction_positive.dds"
 	state_construction_efficiency_add = 0.20

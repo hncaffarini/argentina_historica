@@ -296,3 +296,35 @@ arg_coalicion_norte = {
 		add_authority = -100
 	}
 }
+
+# 1841 - Fiestas Mayas
+arg_fiestas_mayas_1841 = {
+	type = country_event
+	title = arg_fiestas_mayas_1841.t
+	desc = arg_fiestas_mayas_1841.d
+	flavor = arg_fiestas_mayas_1841.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1841.5.25
+		NOT = { has_variable = arg_fiestas_41_lanzado }
+	}
+
+	immediate = { set_variable = arg_fiestas_41_lanzado }
+
+	# Opción A: Celebración masiva y patriótica
+	option = {
+		name = arg_fiestas_mayas_1841.a
+		add_authority = 50
+		add_loyalists = {
+			value = 0.05
+			pop_type = laborers
+		}
+		# Los intelectuales (opositores) ven esto como pura propaganda
+		ig:ig_intelligentsia = { add_approval = -2 }
+	}
+}
+

@@ -47,3 +47,9 @@
  
  arg_coalicion_norte.a: "Enviar al General Oribe a pacificar el Norte."
  arg_coalicion_norte.b: "Enviar emisarios con oro para dividir a los rebeldes."
+
+ # --- 1841 ---
+ arg_fiestas_mayas_1841.t: "Las $arg_loc_fiestas_mayas$"
+ arg_fiestas_mayas_1841.d: "Buenos Aires se viste de color punzó. Entre desfiles, bailes populares y el estallido de cohetes, el pueblo celebra la Revolución de Mayo. Rosas aprovecha la ocasión para reafirmar la unidad federal bajo su mando y repartir carne entre los más necesitados."
+ arg_fiestas_mayas_1841.f: "«¡Viva la Confederación Argentina! ¡Mueran los salvajes unitarios!» — Consigna obligatoria en las celebraciones."
+ arg_fiestas_mayas_1841.a: "¡Que continúe el festejo popular!"

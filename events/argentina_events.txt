@@ -248,3 +248,51 @@ arg_libres_del_sur = {
 		}
 	}
 }
+
+# 1840 - La Coalición del Norte
+arg_coalicion_norte = {
+	type = country_event
+	title = arg_coalicion_norte.t
+	desc = arg_coalicion_norte.d
+	flavor = arg_coalicion_norte.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1840.4.7
+		NOT = { has_variable = arg_coalicion_norte_lanzada }
+		# Solo ocurre si Rosas sigue en el poder
+		ig:ig_landowners = { is_in_government = yes }
+	}
+
+	immediate = {
+		set_variable = arg_coalicion_norte_lanzada
+	}
+
+	# Opción A: Campaña militar de Oribe (Histórica)
+	option = {
+		name = arg_coalicion_norte.a
+		default_option = yes
+		
+		# Representamos la guerra civil como un costo de mantenimiento y lucha interna
+		add_modifier = {
+			name = arg_guerra_civil_norte
+			months = 36
+		}
+		
+		# Radicalizamos a los intelectuales (que apoyaban la coalición)
+		ig:ig_intelligentsia = {
+			add_approval = -5
+		}
+	}
+
+	# Opción B: Intentar sobornar a los caudillos locales
+	option = {
+		name = arg_coalicion_norte.b
+		# Un costo alto de dinero para evitar la lucha armada
+		add_treasury = -20000 
+		add_authority = -100
+	}
+}

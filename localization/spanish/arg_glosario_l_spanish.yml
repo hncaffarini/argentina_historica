@@ -25,3 +25,9 @@ l_spanish:
 
  arg_loc_pedro_castelli: "Pedro Castelli"
  arg_loc_pedro_castelli_tooltip: "Líder militar de la revuelta e hijo del prócer Juan José Castelli. Fue ejecutado tras la derrota en la batalla de Chascomús, y su cabeza fue expuesta en una pica en la plaza de Dolores como advertencia."
+
+ arg_loc_coalicion_norte: "Coalición del Norte"
+ arg_loc_coalicion_norte_tooltip: "Alianza de las provincias de Tucumán, Salta, Jujuy, Catamarca y La Rioja formada en 1840. Liderada por Marco Avellaneda, buscaba derrocar a Rosas y establecer una organización nacional basada en una constitución."
+
+ arg_loc_marco_avellaneda: "Marco Avellaneda"
+ arg_loc_marco_avellaneda_tooltip: "Político tucumano y alma mater de la Coalición. Tras la derrota de sus fuerzas, fue ejecutado en Metán, convirtiéndose en uno de los mártires de la causa antirrosista."

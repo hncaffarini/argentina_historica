@@ -39,3 +39,11 @@
  
  arg_libres_del_sur.a: "Enviar a la Mazorca a restaurar el orden."
  arg_libres_del_sur.b: "Ofrecer concesiones a los estancieros del sur."
+
+ # --- 1840 ---
+ arg_coalicion_norte.t: "La Liga de las Provincias del Norte"
+ arg_coalicion_norte.d: "Las provincias de Salta, Jujuy, Tucumán, Catamarca y La Rioja han firmado un acta de rebelión. Bajo el liderazgo de #v $arg_loc_marco_avellaneda$#!, la #v $arg_loc_coalicion_norte$#! desconoce la autoridad de Rosas y exige una Constitución Nacional. El orden federal en el interior se está desmoronando y los ejércitos rebeldes comienzan a marchar hacia el sur."
+ arg_coalicion_norte.f: "«La tiranía de Buenos Aires no tiene más límites que nuestra paciencia». — Manifiesto de la Coalición."
+ 
+ arg_coalicion_norte.a: "Enviar al General Oribe a pacificar el Norte."
+ arg_coalicion_norte.b: "Enviar emisarios con oro para dividir a los rebeldes."

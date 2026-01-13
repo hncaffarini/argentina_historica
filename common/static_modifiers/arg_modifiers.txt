@@ -31,3 +31,11 @@ arg_concesiones_francia = {
 	icon = "gfx/interface/icons/modifier_icons/diplomacy_negative.dds"
 	country_trade_route_import_revenue_mult = -0.50 # Francia no paga impuestos
 }
+
+arg_guerra_civil_norte = {
+	icon = "gfx/interface/icons/modifier_icons/civil_unrest.dds"
+	# La guerra consume recursos y hombres
+	state_tax_capacity_add = -50
+	country_army_maint_mult = 0.20 # El ejército es más caro de mantener
+	state_turmoil_mult = 0.25 # Más disturbios en todo el país
+}

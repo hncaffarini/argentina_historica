@@ -39,3 +39,9 @@ arg_guerra_civil_norte = {
 	country_army_maint_mult = 0.20 # El ejército es más caro de mantener
 	state_turmoil_mult = 0.25 # Más disturbios en todo el país
 }
+
+arg_reconstruccion_salta = {
+	icon = "gfx/interface/icons/modifier_icons/construction_positive.dds"
+	state_construction_efficiency_add = 0.20
+	state_migration_pull_add = 5
+}

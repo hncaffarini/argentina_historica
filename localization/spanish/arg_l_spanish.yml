@@ -53,3 +53,10 @@
  arg_fiestas_mayas_1841.d: "Buenos Aires se viste de color punzó. Entre desfiles, bailes populares y el estallido de cohetes, el pueblo celebra la Revolución de Mayo. Rosas aprovecha la ocasión para reafirmar la unidad federal bajo su mando y repartir carne entre los más necesitados."
  arg_fiestas_mayas_1841.f: "«¡Viva la Confederación Argentina! ¡Mueran los salvajes unitarios!» — Consigna obligatoria en las celebraciones."
  arg_fiestas_mayas_1841.a: "¡Que continúe el festejo popular!"
+
+ # --- 1844 ---
+ arg_terremoto_salta.t: "Tragedia en el Norte: El $arg_loc_terremoto_salta$"
+ arg_terremoto_salta.d: "La tierra ha temblado violentamente en el Norte. La ciudad de Salta ha sufrido daños considerables en sus templos y viviendas. Los ciudadanos, aterrados, han sacado las imágenes del Señor y la Virgen del Milagro en procesión, implorando el fin de la catástrofe."
+ arg_terremoto_salta.f: "«La ciudad parece un cementerio de escombros, el dolor es inmenso». — Crónica de un sobreviviente."
+ arg_terremoto_salta.a: "Destinar fondos del tesoro para Salta."
+ arg_terremoto_salta.b: "Confiar en la resiliencia del pueblo salteño."

@@ -328,3 +328,41 @@ arg_fiestas_mayas_1841 = {
 	}
 }
 
+# 1844 - Terremoto de Salta
+arg_terremoto_salta = {
+	type = country_event
+	title = arg_terremoto_salta.t
+	desc = arg_terremoto_salta.d
+	flavor = arg_terremoto_salta.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_war_civilians.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1844.10.18
+		NOT = { has_variable = arg_terremoto_44_lanzado }
+	}
+
+	immediate = { set_variable = arg_terremoto_44_lanzado }
+
+	# Opción A: Enviar fondos para la reconstrucción
+	option = {
+		name = arg_terremoto_salta.a
+		add_treasury = -15000
+		s:STATE_SALTA = {
+			add_modifier = { name = arg_reconstruccion_salta months = 24 }
+		}
+	}
+
+	# Opción B: Que la fe y la caridad se encarguen
+	option = {
+		name = arg_terremoto_salta.b
+		s:STATE_SALTA = {
+			add_radicalism_mult = { value = 0.1 }
+		}
+		# Ganas aprobación de los religiosos
+		ig:ig_devout = { add_approval = 2 }
+	}
+}
+

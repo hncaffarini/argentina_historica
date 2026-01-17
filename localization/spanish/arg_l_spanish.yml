@@ -100,3 +100,9 @@
  arg_camila_ogorman.f: "«Han buscado su propia ruina desafiando las leyes de Dios y del Estado». — Opinión en el entorno federal."
  arg_camila_ogorman.a: "Ejecutar la sentencia para preservar el orden público."
  arg_camila_ogorman.b: "Conmutar la pena y enviarlos al destierro."
+
+ # --- 1849 ---
+ arg_tratado_arana_southern.t: "El $arg_loc_tratado_arana_southern$"
+ arg_tratado_arana_southern.d: "La perseverancia ha dado sus frutos. Tras años de conflicto, el enviado británico Henry Southern ha firmado junto a nuestro ministro #v $arg_loc_felipe_arana$#! un tratado definitivo de paz. El Reino Unido reconoce que la navegación del río Paraná es un asunto interno de la Confederación Argentina y saluda a nuestro pabellón con 21 cañonazos. Es un reconocimiento histórico a nuestra soberanía."
+ arg_tratado_arana_southern.f: "«La Gran Bretaña reconoce ser la navegación del Río Paraná una navegación interior de la Confederación Argentina». — Artículo IV del Tratado."
+ arg_tratado_arana_southern.a: "¡Victoria diplomática para la Confederación!"

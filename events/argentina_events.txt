@@ -589,3 +589,49 @@ arg_camila_ogorman = {
 		}
 	}
 }
+
+# 1849 - El Tratado Arana-Southern
+arg_tratado_arana_southern = {
+	type = country_event
+	title = arg_tratado_arana_southern.t
+	desc = arg_tratado_arana_southern.d
+	flavor = arg_tratado_arana_southern.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1849.11.24
+		NOT = { has_variable = arg_arana_southern_lanzado }
+		# Solo ocurre si el Reino Unido existe
+		exists = c:GBR
+	}
+
+	immediate = { 
+		set_variable = arg_arana_southern_lanzado
+		# Quitamos los efectos negativos de los bloqueos si es que quedaba alguno
+		remove_modifier = arg_bloqueo_economico_frances
+	}
+
+	# Opción A: Un triunfo para la Soberanía
+	option = {
+		name = arg_tratado_arana_southern.a
+		default_option = yes
+		
+		add_prestige = 50
+		add_authority = 100
+		
+		# Mejora drásticamente las relaciones con GBR
+		c:GBR = {
+			add_relations = { target = c:ARG value = 50 }
+		}
+		
+		# Bono económico por el fin de las hostilidades
+		add_modifier = {
+			name = arg_paz_britanica
+			months = 60
+		}
+	}
+}
+

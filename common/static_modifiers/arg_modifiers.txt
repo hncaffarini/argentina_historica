@@ -70,3 +70,10 @@ arg_mejora_desembarco = {
 	state_market_access_add = 0.10
 	state_migration_pull_add = 2
 }
+
+arg_paz_britanica = {
+	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
+	country_trade_route_import_revenue_mult = 0.20
+	country_trade_route_export_revenue_mult = 0.20
+	country_market_threshold_mult = 0.10
+}

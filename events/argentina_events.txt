@@ -635,3 +635,43 @@ arg_tratado_arana_southern = {
 	}
 }
 
+# 1850 - El paso a la inmortalidad de San Martín
+arg_muerte_san_martin = {
+	type = country_event
+	title = arg_muerte_san_martin.t
+	desc = arg_muerte_san_martin.d
+	flavor = arg_muerte_san_martin.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1850.8.17
+		NOT = { has_variable = arg_san_martin_muerte_lanzada }
+	}
+
+	immediate = { set_variable = arg_san_martin_muerte_lanzada }
+
+	# Opción A: "El Padre de la Patria ha partido"
+	option = {
+		name = arg_muerte_san_martin.a
+		default_option = yes
+		
+		# La figura de San Martín une a los argentinos
+		add_loyalists = {
+			value = 0.05
+		}
+		
+		# Rosas recibe el sable (Legitimidad política)
+		add_prestige = 25
+		add_authority = 50
+		
+		# El país entra en luto
+		add_modifier = {
+			name = arg_luto_nacional
+			months = 12
+		}
+	}
+}
+

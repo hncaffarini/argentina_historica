@@ -106,3 +106,9 @@
  arg_tratado_arana_southern.d: "La perseverancia ha dado sus frutos. Tras años de conflicto, el enviado británico Henry Southern ha firmado junto a nuestro ministro #v $arg_loc_felipe_arana$#! un tratado definitivo de paz. El Reino Unido reconoce que la navegación del río Paraná es un asunto interno de la Confederación Argentina y saluda a nuestro pabellón con 21 cañonazos. Es un reconocimiento histórico a nuestra soberanía."
  arg_tratado_arana_southern.f: "«La Gran Bretaña reconoce ser la navegación del Río Paraná una navegación interior de la Confederación Argentina». — Artículo IV del Tratado."
  arg_tratado_arana_southern.a: "¡Victoria diplomática para la Confederación!"
+
+ # --- 1850 ---
+ arg_muerte_san_martin.t: "El Fallecimiento del Gran Libertador"
+ arg_muerte_san_martin.d: "Desde Francia llega la noticia que entristece a todo el continente: #v $arg_loc_san_martin$#! ha fallecido. El hombre que cruzó los Andes y dio la libertad a medio mundo ha muerto en la sencillez de su exilio. En su testamento, ha dejado una última voluntad que sacude la política local: la entrega de su #v $arg_loc_sable_corvo$#! al gobernador Rosas, como prueba de su admiración por la defensa del territorio nacional frente a los bloqueos extranjeros."
+ arg_muerte_san_martin.f: "«El sable que me ha acompañado en toda la guerra de la Independencia de la América del Sud, le será entregado al General de la República Argentina, Don Juan Manuel de Rosas». — Testamento de San Martín."
+ arg_muerte_san_martin.a: "Luto nacional por el Padre de la Patria."

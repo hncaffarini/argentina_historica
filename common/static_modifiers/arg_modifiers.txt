@@ -77,3 +77,9 @@ arg_paz_britanica = {
 	country_trade_route_export_revenue_mult = 0.20
 	country_market_threshold_mult = 0.10
 }
+
+arg_luto_nacional = {
+	icon = "gfx/interface/icons/modifier_icons/morale_positive.dds"
+	state_turmoil_mult = -0.20 # La gente está más tranquila por el respeto al prócer
+	country_prestige_add = 10
+}

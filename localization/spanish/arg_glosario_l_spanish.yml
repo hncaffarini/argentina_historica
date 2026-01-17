@@ -73,3 +73,9 @@ l_spanish:
 
  arg_loc_felipe_arana: "Felipe Arana"
  arg_loc_felipe_arana_tooltip: "Ministro de Relaciones Exteriores de Rosas durante años. Fue el hábil arquitecto detrás de las negociaciones que lograron que las potencias europeas retrocedieran en sus pretensiones."
+
+ arg_loc_san_martin: "José de San Martín"
+ arg_loc_san_martin_tooltip: "El Libertador de Argentina, Chile y Perú. Falleció en Francia a los 72 años. Durante su exilio, mantuvo correspondencia con Rosas y le legó su sable corvo en testamento, como reconocimiento a la defensa de la soberanía argentina contra las potencias extranjeras."
+
+ arg_loc_sable_corvo: "El Sable de San Martín"
+ arg_loc_sable_corvo_tooltip: "Arma que acompañó al General en todas sus campañas. En su testamento, San Martín decidió entregárselo a Juan Manuel de Rosas por la firmeza con que este sostuvo el honor de la República contra las pretensiones de las naciones europeas."

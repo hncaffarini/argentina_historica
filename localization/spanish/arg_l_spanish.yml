@@ -86,3 +86,10 @@
  arg_facundo_sarmiento.d: "Desde su exilio en Chile, el sanjuanino #v $arg_loc_sarmiento$#! ha publicado su obra más ambiciosa: #v $arg_loc_facundo$#!. En sus páginas, describe la pampa como un escenario de lucha entre el progreso urbano y el atraso del desierto. El libro está circulando clandestinamente en Buenos Aires, encendiendo los ánimos de aquellos que sueñan con una organización nacional diferente."
  arg_facundo_sarmiento.f: "«¡Sombra de Quiroga, voy a evocarte, para que sacudiendo el ensangrentado polvo que cubre tus cenizas, te levantes a explicarnos la vida secreta y las convulsiones internas que desgarran las entrañas de un noble pueblo!» — D. F. Sarmiento."
  arg_facundo_sarmiento.a: "Una obra que definirá el pensamiento argentino."
+
+ # --- 1847 ---
+ arg_muelle_pasajeros.t: "El Puerto y $arg_loc_muelles_ba$"
+ arg_muelle_pasajeros.d: "Buenos Aires, la gran capital de la Confederación, carece de un muelle digno. Los diplomáticos y comerciantes extranjeros se asombran al tener que desembarcar en carretas tiradas por bueyes en medio del barro del Río de la Plata. Se ha presentado un proyecto para construir un muelle de madera que facilite el tráfico de personas y bienes."
+ arg_muelle_pasajeros.f: "«Es un espectáculo singular ver a los caballeros y damas llegar a tierra firme sobre los hombros de un carretero o en el fondo de un carro pesado». — Relato de un viajero inglés."
+ arg_muelle_pasajeros.a: "Modernizar los accesos a la ciudad."
+ arg_muelle_pasajeros.b: "No hay fondos para tales lujos."

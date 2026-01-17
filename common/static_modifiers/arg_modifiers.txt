@@ -64,3 +64,9 @@ arg_libre_navegacion_forzada = {
 	country_trade_route_import_revenue_mult = -0.50
 	country_trade_route_export_revenue_mult = -0.50
 }
+
+arg_mejora_desembarco = {
+	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
+	state_market_access_add = 0.10
+	state_migration_pull_add = 2
+}

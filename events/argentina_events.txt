@@ -509,3 +509,37 @@ arg_facundo_sarmiento = {
 	}
 }
 
+# 1847 - Mejoras en el Puerto de Buenos Aires
+arg_muelle_pasajeros = {
+	type = country_event
+	title = arg_muelle_pasajeros.t
+	desc = arg_muelle_pasajeros.d
+	flavor = arg_muelle_pasajeros.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1847.1.1
+		NOT = { has_variable = arg_muelle_lanzado }
+	}
+
+	immediate = { set_variable = arg_muelle_lanzado }
+
+	# Opción A: Invertir en infraestructura portuaria
+	option = {
+		name = arg_muelle_pasajeros.a
+		add_treasury = -5000
+		s:STATE_BUENOS_AIRES = {
+			add_modifier = { name = arg_mejora_desembarco months = 60 }
+		}
+	}
+
+	# Opción B: Seguir usando las carretas tradicionales
+	option = {
+		name = arg_muelle_pasajeros.b
+		add_authority = 25 # Mantiene el orden tradicional
+	}
+}
+

@@ -55,3 +55,9 @@ l_spanish:
 
  arg_loc_sarmiento: "Domingo Faustino Sarmiento"
  arg_loc_sarmiento_tooltip: "Intelectual, escritor y futuro presidente argentino. Durante el gobierno de Rosas, vivió exiliado en Chile, desde donde utilizó su pluma como un arma política para combatir al régimen federal."
+
+ arg_loc_muelles_ba: "El desembarco en carretas"
+ arg_loc_muelles_ba_tooltip: "Debido a la poca profundidad de la costa porteña, Buenos Aires no tuvo muelles modernos durante décadas. Los pasajeros y mercancías debían trasbordar a carretas de ejes altísimos que se adentraban en el río, una imagen característica de la ciudad hasta mediados del siglo XIX."
+
+ arg_loc_ingenieria_rosista: "Departamento de Ingenieros"
+ arg_loc_ingenieria_rosista_tooltip: "Durante el gobierno de Rosas, se realizaron las primeras obras de defensa de la costa y se proyectaron muelles para facilitar el comercio, aunque la inestabilidad de las guerras solía postergar estas grandes inversiones."

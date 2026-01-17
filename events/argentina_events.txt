@@ -543,3 +543,49 @@ arg_muelle_pasajeros = {
 	}
 }
 
+# 1848 - El Destino de Camila O'Gorman
+arg_camila_ogorman = {
+	type = country_event
+	title = arg_camila_ogorman.t
+	desc = arg_camila_ogorman.d
+	flavor = arg_camila_ogorman.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1848.8.18
+		NOT = { has_variable = arg_camila_lanzado }
+	}
+
+	immediate = { set_variable = arg_camila_lanzado }
+
+	# Opción A: Aplicar la ley con rigor (Histórica)
+	option = {
+		name = arg_camila_ogorman.a
+		default_option = yes
+		
+		# Rosas mantiene el apoyo de los sectores más conservadores pero genera lejanía moral
+		ig:ig_devout = { add_approval = 2 }
+		add_authority = 50
+		
+		# Impacto negativo en la opinión pública y prestigio
+		add_prestige = -10
+		add_radicalism_mult = {
+			value = 0.05
+		}
+	}
+
+	# Opción B: Conmutar la pena por el exilio
+	option = {
+		name = arg_camila_ogorman.b
+		# Enojo de la Iglesia y sectores puritanos
+		ig:ig_devout = { add_approval = -5 }
+		add_authority = -50
+		# Alivia tensiones sociales
+		add_loyalists = {
+			value = 0.02
+		}
+	}
+}

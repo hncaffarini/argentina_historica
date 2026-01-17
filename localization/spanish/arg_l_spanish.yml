@@ -93,3 +93,10 @@
  arg_muelle_pasajeros.f: "«Es un espectáculo singular ver a los caballeros y damas llegar a tierra firme sobre los hombros de un carretero o en el fondo de un carro pesado». — Relato de un viajero inglés."
  arg_muelle_pasajeros.a: "Modernizar los accesos a la ciudad."
  arg_muelle_pasajeros.b: "No hay fondos para tales lujos."
+
+ # --- 1848 ---
+ arg_camila_ogorman.t: "El Escándalo de $arg_loc_camila_ogorman$"
+ arg_camila_ogorman.d: "La sociedad de la Confederación está conmocionada. #v $arg_loc_camila_ogorman$#! y el sacerdote #v $arg_loc_ladislao_gutierrez$#! han sido capturados en Corrientes tras meses de fuga. Tanto la oposición unitaria desde el exilio como los sectores más conservadores de la Iglesia exigen un castigo ejemplar para este 'crimen contra la moral y el orden'. Rosas debe decidir si aplica la pena de muerte o muestra clemencia ante el ruego de las familias."
+ arg_camila_ogorman.f: "«Han buscado su propia ruina desafiando las leyes de Dios y del Estado». — Opinión en el entorno federal."
+ arg_camila_ogorman.a: "Ejecutar la sentencia para preservar el orden público."
+ arg_camila_ogorman.b: "Conmutar la pena y enviarlos al destierro."

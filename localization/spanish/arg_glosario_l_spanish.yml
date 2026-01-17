@@ -49,3 +49,9 @@ l_spanish:
 
  arg_loc_lucio_mansilla: "Lucio N. Mansilla"
  arg_loc_lucio_mansilla_tooltip: "General argentino que comandó las baterías de defensa en Obligado. A pesar de la disparidad tecnológica frente a los barcos de vapor europeos, su resistencia fue elogiada incluso por sus enemigos."
+ 
+ arg_loc_facundo: "Facundo: Civilización o Barbarie"
+ arg_loc_facundo_tooltip: "Obra fundamental de Domingo Faustino Sarmiento. A través de la biografía del caudillo Facundo Quiroga, Sarmiento analiza la geografía, la cultura y la política argentina, proponiendo que el país debe elegir entre el progreso europeo (civilización) o el caudillismo rural (barbarie)."
+
+ arg_loc_sarmiento: "Domingo Faustino Sarmiento"
+ arg_loc_sarmiento_tooltip: "Intelectual, escritor y futuro presidente argentino. Durante el gobierno de Rosas, vivió exiliado en Chile, desde donde utilizó su pluma como un arma política para combatir al régimen federal."

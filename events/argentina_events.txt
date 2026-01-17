@@ -478,3 +478,34 @@ arg_vuelta_obligado = {
 	}
 }
 
+# 1846 - Civilización o Barbarie
+arg_facundo_sarmiento = {
+	type = country_event
+	title = arg_facundo_sarmiento.t
+	desc = arg_facundo_sarmiento.d
+	flavor = arg_facundo_sarmiento.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1846.1.1
+		NOT = { has_variable = arg_facundo_lanzado }
+		# Históricamente, Sarmiento estaba exiliado
+		ig:ig_intelligentsia = { is_in_government = no }
+	}
+
+	immediate = { set_variable = arg_facundo_lanzado }
+
+	# Opción A: Impacto cultural
+	option = {
+		name = arg_facundo_sarmiento.a
+		# Aumenta el deseo de reformas en los intelectuales
+		ig:ig_intelligentsia = { add_approval = 2 }
+		add_enactment_progression = { law = law_public_schools value = 0.05 }
+		# Rosas se irrita por la publicación
+		add_authority = -25
+	}
+}
+

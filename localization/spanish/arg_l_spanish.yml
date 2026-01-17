@@ -80,3 +80,9 @@
  arg_vuelta_obligado.f: "«¡Vedlos, camaradas, allí los tenéis! Considerad el tamaño del insulto que vienen haciendo a la soberanía de nuestra patria». — Lucio N. Mansilla."
  arg_vuelta_obligado.a: "¡Fuego a discreción! ¡Defiendan el río!"
  arg_vuelta_obligado.b: "Es inútil resistir a las potencias mundiales."
+
+ # --- 1846 ---
+ arg_facundo_sarmiento.t: "Civilización o Barbarie"
+ arg_facundo_sarmiento.d: "Desde su exilio en Chile, el sanjuanino #v $arg_loc_sarmiento$#! ha publicado su obra más ambiciosa: #v $arg_loc_facundo$#!. En sus páginas, describe la pampa como un escenario de lucha entre el progreso urbano y el atraso del desierto. El libro está circulando clandestinamente en Buenos Aires, encendiendo los ánimos de aquellos que sueñan con una organización nacional diferente."
+ arg_facundo_sarmiento.f: "«¡Sombra de Quiroga, voy a evocarte, para que sacudiendo el ensangrentado polvo que cubre tus cenizas, te levantes a explicarnos la vida secreta y las convulsiones internas que desgarran las entrañas de un noble pueblo!» — D. F. Sarmiento."
+ arg_facundo_sarmiento.a: "Una obra que definirá el pensamiento argentino."

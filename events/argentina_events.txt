@@ -427,3 +427,54 @@ arg_terremoto_salta = {
 	}
 }
 
+# 1845 - Vuelta de Obligado
+arg_vuelta_obligado = {
+	type = country_event
+	title = arg_vuelta_obligado.t
+	desc = arg_vuelta_obligado.d
+	flavor = arg_vuelta_obligado.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_naval_battle.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1845.11.20
+		NOT = { has_variable = arg_obligado_lanzado }
+		# Verifica que estemos bajo presión diplomática europea
+		OR = {
+			has_modifier = arg_bloqueo_economico_frances
+			relations = { target = c:GBR value < 0 }
+		}
+	}
+
+	immediate = { set_variable = arg_obligado_lanzado }
+
+	# Opción A: Resistencia armada
+	option = {
+		name = arg_vuelta_obligado.a
+		default_option = yes
+		
+		# Efecto histórico: Gran aumento de prestigio nacional
+		add_prestige = 50
+		add_authority = 100
+		
+		# Las potencias sufren un golpe a sus relaciones pero ganamos respeto
+		c:GBR = { add_relations = { target = c:ARG value = -20 } }
+		c:FRA = { add_relations = { target = c:ARG value = -20 } }
+		
+		# El costo de la defensa
+		add_treasury = -10000
+		add_modifier = { name = arg_espiritu_obligado months = 48 }
+	}
+
+	# Opción B: Permitir el paso por presión diplomática
+	option = {
+		name = arg_vuelta_obligado.b
+		add_prestige = -50
+		add_authority = -200
+		# Se abren los ríos a la fuerza (libre navegación prematura)
+		add_modifier = { name = arg_libre_navegacion_forzada months = 120 }
+	}
+}
+

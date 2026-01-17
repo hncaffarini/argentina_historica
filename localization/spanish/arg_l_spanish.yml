@@ -73,3 +73,10 @@
  arg_terremoto_salta.f: "«La ciudad parece un cementerio de escombros, el dolor es inmenso». — Crónica de un sobreviviente."
  arg_terremoto_salta.a: "Destinar fondos del tesoro para Salta."
  arg_terremoto_salta.b: "Confiar en la resiliencia del pueblo salteño."
+
+ # --- 1845 ---
+ arg_vuelta_obligado.t: "Las Cadenas de la $arg_loc_vuelta_obligado$"
+ arg_vuelta_obligado.d: "Una imponente flota de vapores de guerra británicos y franceses avanza por el río Paraná, desafiando nuestra prohibición de navegar los ríos interiores. En el paso de Obligado, el general #v $arg_loc_lucio_mansilla$#! ha dispuesto baterías de artillería y cruzado tres pesadas cadenas para detenerlos. Es una lucha desigual: madera y coraje contra hierro y vapor."
+ arg_vuelta_obligado.f: "«¡Vedlos, camaradas, allí los tenéis! Considerad el tamaño del insulto que vienen haciendo a la soberanía de nuestra patria». — Lucio N. Mansilla."
+ arg_vuelta_obligado.a: "¡Fuego a discreción! ¡Defiendan el río!"
+ arg_vuelta_obligado.b: "Es inútil resistir a las potencias mundiales."

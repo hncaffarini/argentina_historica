@@ -112,3 +112,42 @@ l_spanish:
 
  arg_loc_alberdi: "Juan Bautista Alberdi"
  arg_loc_alberdi_tooltip: "Autor de 'Bases y puntos de partida para la organización política de la República Argentina'. Su pensamiento fue la piedra angular de la Constitución de 1853, promoviendo la inmigración, el libre comercio y el ferrocarril."
+
+ arg_loc_colonia_esperanza: "Colonia Esperanza"
+ arg_loc_colonia_esperanza_tooltip: "Fundada en 1856 en Santa Fe, fue la primera colonia agrícola organizada del país. Formada por familias suizas, alemanas y francesas, marcó el inicio del modelo de colonización que transformaría la pampa en 'el granero del mundo'."
+
+ arg_loc_batalla_cepeda: "Batalla de Cepeda (1859)"
+ arg_loc_batalla_cepeda_tooltip: "Enfrentamiento armado donde el ejército de la Confederación (Urquiza) derrotó a las fuerzas de Buenos Aires (Mitre). El resultado forzó a Buenos Aires a firmar el Pacto de San José de Flores para reincorporarse a la Nación."
+
+ arg_loc_primer_censo: "Primeros Registros Estadísticos"
+ arg_loc_primer_censo_tooltip: "Antes del censo nacional de 1869, las provincias iniciaron sus propios registros para entender cuánta población tenían. Estos datos revelaron la urgente necesidad de fomentar la inmigración ante la baja densidad poblacional."
+
+ arg_loc_puerto_rosario: "Puerto de Rosario"
+ arg_loc_puerto_rosario_tooltip: "La Confederación declaró a Rosario como 'puerto de depósito', permitiendo el comercio directo con el exterior. Esto buscaba arrebatarle el monopolio a la Aduana de Buenos Aires y asfixiarla económicamente."
+ 
+ arg_loc_reforma_educativa: "Escuelas de la Patria"
+ arg_loc_reforma_educativa_tooltip: "Durante esta década, tanto en el interior como en Buenos Aires, se fundaron escuelas primarias y colegios nacionales. Se entendía que la democracia solo funcionaría si el pueblo estaba alfabetizado."
+
+ arg_loc_alumbrado_gas: "Iluminación a Gas"
+ arg_loc_alumbrado_gas_tooltip: "En 1856, la Plaza de Mayo fue iluminada con gas por primera vez para celebrar el aniversario de la Revolución de Mayo. Fue un símbolo de modernidad que Buenos Aires usó para presumir frente a la Confederación."
+
+ arg_loc_asado_politico: "El Asado de la Unión"
+ arg_loc_asado_politico_tooltip: "Durante las campañas militares y las reuniones de caudillos, el asado no era solo comida; era una herramienta de negociación política. Urquiza, en particular, era famoso por agasajar a sus aliados con banquetes criollos masivos."
+
+ arg_loc_enigma_pavon: "El Misterio de Pavón"
+ arg_loc_enigma_pavon_tooltip: "Historiadores debaten por qué Urquiza se retiró teniendo la ventaja. Las teorías incluyen: un pacto secreto con Mitre a través de la Masonería, su cansancio de las guerras civiles, o su decepción con el gobierno de Derqui. Su retirada marcó el fin del predominio del interior sobre Buenos Aires."
+
+ arg_loc_mitre: "Bartolomé Mitre"
+ arg_loc_mitre_tooltip: "Político, militar e historiador. Lideró a Buenos Aires durante su separación de la Confederación. Tras la batalla de Pavón, se convirtió en el primer presidente de la República unificada (1862-1868). Es considerado uno de los fundadores de la historiografía argentina y del diario La Nación."
+
+ arg_loc_belgrano: "Manuel Belgrano"
+ arg_loc_belgrano_tooltip: "Abogado, economista y general de la Independencia. Creador de la Bandera Argentina y vencedor en las batallas de Tucumán y Salta. Su ética y sacrificio personal lo convirtieron en el símbolo máximo de la integridad republicana."
+
+ arg_loc_guemes: "Martín Miguel de Güemes"
+ arg_loc_guemes_tooltip: "Líder de la 'Guerra Gaucha' en el Norte. Defendió la frontera argentina contra las invasiones realistas con sus escuadrones de gauchos. Fue el único general argentino muerto en acción de guerra externa y es el símbolo del patriotismo del interior."
+
+ arg_loc_gobernar_es_poblar: "Gobernar es Poblar"
+ arg_loc_gobernar_es_poblar_tooltip: "Máxima de Juan Bautista Alberdi que guio la política argentina. Sostenía que, para que la civilización triunfara sobre la barbarie, era necesario atraer inmigración europea, fomentar el ferrocarril y extender la educación pública."
+
+ arg_loc_ley_avellaneda: "Ley de Inmigración y Colonización"
+ arg_loc_ley_avellaneda_tooltip: "Sancionada en 1876, brindaba facilidades de alojamiento y tierras a los inmigrantes. Fue el gran catalizador que convirtió a Argentina en uno de los destinos preferidos de la corriente migratoria transatlántica."

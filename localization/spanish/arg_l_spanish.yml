@@ -118,3 +118,15 @@
  arg_evento_pronunciamiento.d: "El general #v $arg_loc_urquiza$#! ha lanzado un desafío abierto. Al reasumir las facultades de Entre Ríos, ha roto el pacto de caballeros que sostenía a la Confederación. Con el apoyo del Brasil y los exiliados en Montevideo, se prepara para marchar sobre Buenos Aires. El sistema de Rosas se enfrenta a su prueba final."
  arg_evento_pronunciamiento.f: "«¡Muera el tirano Rosas! ¡Viva la libertad de las provincias!» — Grito de guerra del Litoral."
  arg_evento_pronunciamiento.a: "La suerte está echada."
+
+ # --- 1861 ---
+ arg_batalla_pavon_1861.t: "La Batalla de Pavón"
+ arg_batalla_pavon_1861.d: "En las orillas del arroyo Pavón, los ejércitos de la Confederación y Buenos Aires han chocado. Pero algo inaudito ha sucedido: tras un combate indeciso, el General Urquiza ha retirado a su caballería entrerriana hacia el Paraná. Este #v $arg_loc_enigma_pavon$#! ha dejado la victoria en manos de Bartolomé Mitre. La Confederación se desmorona y el camino a la unificación porteña está libre."
+ arg_batalla_pavon_1861.f: "«Urquiza se fue, no porque le ganaran, sino porque no quiso ganar». — Comentario de la época."
+
+ # --- 1862
+ arg_objetivo_poblacion_desc: "Alcanzar una población total de al menos 3 millones de habitantes."
+ arg_objetivo_alfabetizacion_desc: "Elevar la tasa de alfabetización nacional al 25%."
+ arg_objetivo_ferrocarril_desc: "Establecer la primera red ferroviaria que conecte las provincias."
+ 
+ arg_mision_gobernar_es_poblar_status: "La nación está recibiendo el flujo de la civilización. Los campos se llenan de colonos y las ciudades de escuelas."

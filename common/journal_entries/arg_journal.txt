@@ -31,3 +31,44 @@ arg_mision_organizacion_nacional = {
 		add_prestige = 100
 	}
 }
+
+arg_mision_gobernar_es_poblar = {
+	title = "Gobernar es Poblar"
+	icon = "gfx/interface/icons/event_icons/population.dds"
+	
+	transferable = yes
+
+	# Se activa con la unificación nacional
+	trigger = {
+		has_variable = arg_mitre_lanzado
+		tag = ARG
+	}
+
+	# Objetivos para completar la misión (Simulando 1862-1880)
+	is_complete = {
+		custom_description = {
+			text = "arg_objetivo_poblacion_desc"
+			country_population >= 3000000
+		}
+		custom_description = {
+			text = "arg_objetivo_alfabetizacion_desc"
+			average_literacy >= 0.25
+		}
+		custom_description = {
+			text = "arg_objetivo_ferrocarril_desc"
+			has_technology = railways
+			any_scope_state = {
+				has_building_with_level = {
+					building = railway
+					level >= 1
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		add_prestige = 100
+		add_modifier = { name = arg_granero_del_mundo months = 240 }
+		trigger_event = { id = arg_fin_mision_poblar.1 }
+	}
+}

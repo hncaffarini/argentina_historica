@@ -95,3 +95,59 @@ arg_era_constitucional = {
 	country_migration_attraction_mult = 0.50 # Empieza el flujo migratorio
 	country_tech_spread_mult = 0.20
 }
+
+arg_bono_colonizacion = {
+	icon = "gfx/interface/icons/modifier_icons/migration_positive.dds"
+	state_migration_pull_add = 10
+	state_agriculture_output_mult = 0.15 # Los colonos mejoran la producción
+}
+
+arg_mejora_administrativa = {
+	icon = "gfx/interface/icons/modifier_icons/bureaucracy_positive.dds"
+	state_tax_capacity_add = 50
+	country_bureaucracy_add = 50
+}
+
+arg_pacto_flores = {
+	icon = "gfx/interface/icons/modifier_icons/diplomatic_positive.dds"
+	state_market_access_add = 0.25
+	# Representa las tensiones de la integración
+	state_turmoil_mult = 0.10
+}
+
+arg_puerto_libre = {
+	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
+	state_market_access_add = 0.20
+	state_trade_route_export_revenue_mult = 0.15
+}
+
+arg_fomento_escolar = {
+	icon = "gfx/interface/icons/modifier_icons/literacy_positive.dds"
+	country_literacy_rate_mult = 0.05
+	country_tech_spread_mult = 0.10
+}
+
+arg_iluminacion_moderna = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	state_standard_of_living_add = 1
+	state_services_output_mult = 0.10
+}
+
+arg_espiritu_guemes = {
+	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
+	state_conscription_rate_add = 0.02
+	unit_defense_add = 5
+	land_morale_mult = 0.10
+}
+
+arg_impulso_sarmiento = {
+	icon = "gfx/interface/icons/modifier_icons/literacy_positive.dds"
+	country_education_access_add = 0.20
+	country_tech_spread_mult = 0.25
+}
+
+arg_granero_del_mundo = {
+	icon = "gfx/interface/icons/modifier_icons/money_positive.dds"
+	country_agriculture_output_mult = 0.30
+	country_trade_route_export_revenue_mult = 0.20
+}

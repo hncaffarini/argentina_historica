@@ -243,6 +243,28 @@ arg_darwin_fosiles = {
 	}
 }
 
+# 1838 - Homenaje a Manuel Belgrano
+arg_homenaje_belgrano = {
+	type = country_event
+	title = "El Manto de la Patria"
+	desc = "En medio de las tensiones con las potencias extranjeras, el gobernador Rosas ha ordenado celebrar con especial fervor el legado de #v $arg_loc_belgrano$#!. La bandera celeste y blanca que él creó en las barrancas del Paraná es hoy el símbolo de nuestra resistencia. Su ejemplo de austeridad y servicio es invocado para unir a los federales ante la amenaza externa."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1838.6.20 # Aniversario de su muerte
+		has_modifier = arg_bloqueo_economico_frances
+	}
+
+	option = {
+		name = "Su bandera nos cobija a todos."
+		add_prestige = 10
+		add_loyalists = { value = 0.02 }
+	}
+}
+
 # 1839 - Revolución de los Libres del Sur
 arg_libres_del_sur = {
 	type = country_event
@@ -395,6 +417,29 @@ arg_fiestas_mayas_1841 = {
 		}
 		# Los intelectuales (opositores) ven esto como pura propaganda
 		ig:ig_intelligentsia = { add_approval = -2 }
+	}
+}
+
+# 1841 - La Sombra del Guerrero Gaucho
+arg_herencia_guemes = {
+	type = country_event
+	title = "Los Herederos de Güemes"
+	desc = "En las provincias del Norte, el recuerdo de #v $arg_loc_guemes$#! sigue siendo el motor de las milicias locales. Los gauchos de Salta y Jujuy, que una vez frenaron a los realistas, hoy forman la vanguardia de nuestras defensas. Se dice que mientras un gaucho recuerde al 'Padre de los Pobres', la frontera norte estará segura."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1841.6.17 # Aniversario de su muerte
+	}
+
+	option = {
+		name = "Honrar la memoria del Protector del Norte."
+		# Bono militar para las provincias del norte
+		s:STATE_SALTA = { add_modifier = { name = arg_espiritu_guemes months = 24 } }
+		s:STATE_JUJUY = { add_modifier = { name = arg_espiritu_guemes months = 24 } }
+		ig:ig_armed_forces = { add_approval = 2 }
 	}
 }
 
@@ -953,5 +998,299 @@ arg_primer_ferrocarril = {
 		s:STATE_BUENOS_AIRES = {
 			add_modifier = { name = arg_impulso_ferroviario months = 60 }
 		}
+	}
+}
+
+# 1855 - Rosario: El Puerto de la Confederación
+arg_puerto_rosario_1855 = {
+	type = country_event
+	title = "Rosario: La Llave del Interior"
+	desc = "Para contrarrestar el poder de Buenos Aires, el General Urquiza ha designado al #v $arg_loc_puerto_rosario$#! como puerto habilitado para el comercio exterior. Las mercaderías ya no necesitan pasar por las manos porteñas. Rosario florece, y los barcos de ultramar comienzan a remontar el Paraná en números nunca vistos."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_steam_ship.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1855.1.1
+		NOT = { has_variable = arg_rosario_lanzado }
+	}
+
+	option = {
+		name = "Fomentar el comercio en el Litoral."
+		# Mejora el mercado del interior pero irrita a Buenos Aires
+		s:STATE_SANTA_FE = {
+			add_modifier = { name = arg_puerto_libre months = 60 }
+		}
+		add_prestige = 10
+	}
+}
+
+# 1856 - Inmigración en Santa Fe
+arg_colonia_esperanza_evento = {
+	type = country_event
+	title = "La Semilla de la Esperanza"
+	desc = "Bajo el lema de Alberdi 'Gobernar es poblar', un grupo de 200 familias suizas, alemanas y francesas ha llegado a Santa Fe para fundar #v $arg_loc_colonia_esperanza$#!. Es el primer experimento de colonización agrícola organizada. Si tienen éxito, el desierto pronto se convertirá en campos de trigo."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1856.9.8
+		NOT = { has_variable = arg_esperanza_lanzado }
+	}
+
+	immediate = { set_variable = arg_esperanza_lanzado }
+
+	option = {
+		name = "Bienvenidos a su nueva patria."
+		s:STATE_SANTA_FE = {
+			add_modifier = { name = arg_bono_colonizacion months = 120 }
+			# Genera un pequeño grupo de población europea
+			create_pop = { culture = swiss size = 2000 } 
+		}
+		add_prestige = 10
+	}
+}
+
+# 1856 - La Luz de Gas en Buenos Aires
+arg_luz_gas_1856 = {
+	type = country_event
+	title = "La Noche se hace Día"
+	desc = "Para las fiestas mayas de este año, el gobierno de Buenos Aires ha inaugurado el alumbrado a gas en la Plaza de la Victoria. Mientras el interior sigue iluminándose con velas de sebo, la capital brilla con una luz blanca y moderna. Los ciudadanos pasean asombrados bajo los nuevos faroles, sintiéndose más cerca de París que nunca."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1856.5.25
+		NOT = { has_variable = arg_gas_lanzado }
+	}
+
+	option = {
+		name = "El progreso ilumina nuestro camino."
+		add_prestige = 15
+		s:STATE_BUENOS_AIRES = {
+			add_modifier = { name = arg_iluminacion_moderna months = 60 }
+		}
+	}
+}
+
+# 1857 - Necesidad de Datos
+arg_registros_poblacion = {
+	type = country_event
+	title = "Contar para Gobernar"
+	desc = "Para organizar un estado moderno, primero debemos saber cuántos somos y qué producimos. Se han iniciado los primeros relevamientos estadísticos en las provincias de la Confederación. Los resultados son alarmantes: somos pocos para un territorio tan vasto."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1857.1.1
+		NOT = { has_variable = arg_censos_lanzado }
+	}
+
+	option = {
+		name = "Invertir en el Departamento de Estadística."
+		add_treasury = -5000
+		add_modifier = { name = arg_mejora_administrativa months = 60 }
+	}
+}
+
+# 1857 - Inauguración del Primer Teatro Colón
+arg_primer_colon = {
+	type = country_event
+	title = "Ópera en el Plata"
+	desc = "Se ha inaugurado el primer Teatro Colón en Buenos Aires. Con una capacidad para 2.500 personas y materiales importados de Europa, se convierte en el centro de la vida social de la élite porteña. La ópera y el drama europeo ahora tienen un hogar permanente, reforzando la identidad cosmopolita de la ciudad."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1857.4.27
+		NOT = { has_variable = arg_colon_lanzado }
+	}
+
+	option = {
+		name = "Fomentar las artes y el refinamiento."
+		add_prestige = 20
+		ig:ig_intelligentsia = { add_approval = 5 }
+	}
+}
+
+# 1858 - Fomento de la Educación Primaria
+arg_educacion_1858 = {
+	type = country_event
+	title = "La Instrucción Pública"
+	desc = "En medio de la división política, surge una certeza: la República necesita ciudadanos instruidos. Se han destinado fondos para la creación de nuevas #v $arg_loc_reforma_educativa$#! en las capitales provinciales. Aunque el tesoro está exhausto por los gastos militares, la educación se ve como la única vía hacia el progreso."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1858.6.1
+		NOT = { has_variable = arg_escuelas_lanzado }
+	}
+
+	option = {
+		name = "Las letras son tan importantes como las espadas."
+		# Mejora la alfabetización a largo plazo
+		add_modifier = { name = arg_fomento_escolar months = 120 }
+		add_treasury = -3000
+		ig:ig_intelligentsia = { add_approval = 5 }
+	}
+}
+
+# 1859 - El choque de Cepeda
+arg_batalla_cepeda_1859 = {
+	type = country_event
+	title = "El Trueno de $arg_loc_batalla_cepeda$"
+	desc = "La paciencia de la Confederación se ha agotado. En los campos de Cepeda, el General Urquiza ha destrozado al ejército porteño de Mitre. Buenos Aires está sitiada y no tiene más opción que negociar su reincorporación. Sin embargo, los porteños son negociadores duros y exigirán revisar la Constitución."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1859.10.23
+		NOT = { has_variable = arg_cepeda_lanzado }
+	}
+
+	option = {
+		name = "Firmar el Pacto de San José de Flores."
+		# Buenos Aires empieza a integrarse, pero con condiciones
+		s:STATE_BUENOS_AIRES = {
+			remove_modifier = arg_estado_separado
+			add_modifier = { name = arg_pacto_flores months = 24 }
+		}
+		add_prestige = 40
+		add_authority = 50
+	}
+}
+
+# 1860 - Derqui al mando
+arg_presidencia_derqui = {
+	type = country_event
+	title = "Santiago Derqui y la Unión Frágil"
+	desc = "Urquiza deja la presidencia y asume el cordobés Santiago Derqui. Su misión es casi imposible: mantener unidos a los federales del interior y a los liberales de Buenos Aires. La desconfianza mutua es tan grande que el más mínimo roce podría reabrir la guerra civil."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_election.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1860.3.5
+		NOT = { has_variable = arg_derqui_lanzado }
+	}
+
+	option = {
+		name = "Intentar un gobierno de unidad nacional."
+		ig:ig_landowners = { add_approval = 2 }
+		ig:ig_intelligentsia = { add_approval = 2 }
+		add_modifier = { name = arg_tregua_fragil months = 18 }
+	}
+}
+
+# 1861 - La Batalla de Pavón
+arg_batalla_pavon_1861 = {
+	type = country_event
+	title = "El Enigma de Pavón"
+	desc = "En las orillas del arroyo Pavón, los ejércitos de la Confederación y Buenos Aires han chocado. Pero algo inaudito ha sucedido: tras un combate indeciso, el General Urquiza ha retirado a su invicta caballería entrerriana hacia el Paraná, dejando la victoria en manos de Bartolomé Mitre. Nadie entiende su motivo, pero el resultado es claro: Buenos Aires ha ganado la guerra por abandono."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1861.9.17
+		NOT = { has_variable = arg_pavon_lanzado }
+	}
+
+	option = {
+		name = "El triunfo definitivo del Liberalismo."
+		# Buenos Aires toma el control total
+		remove_modifier = arg_estado_separado
+		add_modifier = { name = arg_unificacion_mitre months = 120 }
+		
+		# Cambio de líder y de leyes
+		set_law = law_national_supremacy
+		add_prestige = 50
+	}
+}
+
+# 1862 - Asunción de Bartolomé Mitre
+arg_presidencia_mitre = {
+	type = country_event
+	title = "La República Unificada"
+	desc = "Tras la victoria en Pavón y la renuncia de las autoridades de la Confederación, #v $arg_loc_mitre$#! ha sido elegido presidente. Por primera vez en décadas, Buenos Aires y las Provincias caminan bajo una misma bandera y una misma Constitución. El desafío ahora es pacificar el interior y modernizar la nación."
+	flavor = "«Todo está por hacerse: no tenemos tesoro, no tenemos ejército, no tenemos ni siquiera un edificio donde reunir al gabinete». — Reflexión de Bartolomé Mitre al asumir."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/southamerica_election.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1862.10.12
+		NOT = { has_variable = arg_mitre_lanzado }
+	}
+
+	option = {
+		name = "Unidad y Libertad."
+		add_prestige = 50
+		# Mitre representa a los Intelectuales y las Fuerzas Armadas
+		ig:ig_intelligentsia = { add_approval = 5 }
+		ig:ig_armed_forces = { add_approval = 5 }
+		
+		# Efecto: Empieza la consolidación del Estado Nacional
+		add_modifier = { name = arg_presidencias_historicas months = 72 }
+	}
+}
+
+# 1863 - La Rebelión del Chacho
+arg_rebelion_chacho = {
+	type = country_event
+	title = "La Lanza del Chacho Peñaloza"
+	desc = "En los llanos de La Rioja, el caudillo Ángel Vicente 'El Chacho' Peñaloza se ha alzado en armas. Representa el último grito de las provincias contra el centralismo de #v $arg_loc_mitre$#!. La pacificación del interior exige sangre, pero el progreso no se detendrá."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1863.3.1
+		has_journal_entry = arg_mision_gobernar_es_poblar
+	}
+
+	option = {
+		name = "No hay paz sin orden. ¡Aplastad la rebelión!"
+		add_authority = 50
+		s:STATE_LA_RIOJA = { add_radicalism_mult = { value = 0.2 } }
+		add_modifier = { name = arg_guerra_policia months = 12 }
+	}
+}
+
+# 1868 - Asunción de Sarmiento
+arg_presidencia_sarmiento = {
+	type = country_event
+	title = "El Maestro de América"
+	desc = "Mientras se encuentra en Estados Unidos, #v $arg_loc_sarmiento$#! ha sido elegido presidente. Su obsesión es clara: la escuela es la base de la República. Bajo su mando, se fundarán cientos de colegios y se traerán maestras norteamericanas para revolucionar la enseñanza."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/southamerica_election.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1868.10.12
+	}
+
+	option = {
+		name = "¡Escuelas, muchas escuelas!"
+		add_modifier = { name = arg_impulso_sarmiento months = 72 }
+		add_enactment_progression = { law = law_public_schools value = 0.15 }
 	}
 }

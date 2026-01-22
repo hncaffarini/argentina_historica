@@ -1,0 +1,33 @@
+arg_mision_organizacion_nacional = {
+	title = "La Crisis de la Confederación"
+	icon = "gfx/interface/icons/event_icons/civil_war.dds"
+	
+	# Aparece cuando ocurre el evento del Pronunciamiento
+	trigger = {
+		has_variable = arg_mision_caseros_activa
+		tag = ARG
+	}
+
+	# Objetivo: Mantener el orden o colapsar
+	status_proxies = {
+		# Esto crea una barra que se llena con el radicalismo
+		variable = arg_progreso_caida_rosas
+	}
+
+	# Condición de fracaso (Histórica): Si el radicalismo en el Litoral es muy alto
+	# o si pasa demasiado tiempo sin reformas.
+	timeout_effect = {
+		trigger_event = { id = arg_batalla_caseros.1 }
+	}
+
+	# Condición de éxito (Alternativa): Sobrevivir 2 años al asedio político
+	complete = {
+		years_passed_since_entry = 2
+		ig:ig_landowners = { approval > 10 }
+	}
+
+	on_complete = {
+		# Rosas sobrevive y se consolida
+		add_prestige = 100
+	}
+}

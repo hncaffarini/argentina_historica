@@ -112,3 +112,9 @@
  arg_muerte_san_martin.d: "Desde Francia llega la noticia que entristece a todo el continente: #v $arg_loc_san_martin$#! ha fallecido. El hombre que cruzó los Andes y dio la libertad a medio mundo ha muerto en la sencillez de su exilio. En su testamento, ha dejado una última voluntad que sacude la política local: la entrega de su #v $arg_loc_sable_corvo$#! al gobernador Rosas, como prueba de su admiración por la defensa del territorio nacional frente a los bloqueos extranjeros."
  arg_muerte_san_martin.f: "«El sable que me ha acompañado en toda la guerra de la Independencia de la América del Sud, le será entregado al General de la República Argentina, Don Juan Manuel de Rosas». — Testamento de San Martín."
  arg_muerte_san_martin.a: "Luto nacional por el Padre de la Patria."
+
+ # --- 1851 ---
+ arg_evento_pronunciamiento.t: "El $arg_loc_pronunciamiento$"
+ arg_evento_pronunciamiento.d: "El general #v $arg_loc_urquiza$#! ha lanzado un desafío abierto. Al reasumir las facultades de Entre Ríos, ha roto el pacto de caballeros que sostenía a la Confederación. Con el apoyo del Brasil y los exiliados en Montevideo, se prepara para marchar sobre Buenos Aires. El sistema de Rosas se enfrenta a su prueba final."
+ arg_evento_pronunciamiento.f: "«¡Muera el tirano Rosas! ¡Viva la libertad de las provincias!» — Grito de guerra del Litoral."
+ arg_evento_pronunciamiento.a: "La suerte está echada."

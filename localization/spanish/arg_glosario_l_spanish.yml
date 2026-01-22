@@ -79,3 +79,9 @@ l_spanish:
 
  arg_loc_sable_corvo: "El Sable de San Martín"
  arg_loc_sable_corvo_tooltip: "Arma que acompañó al General en todas sus campañas. En su testamento, San Martín decidió entregárselo a Juan Manuel de Rosas por la firmeza con que este sostuvo el honor de la República contra las pretensiones de las naciones europeas."
+
+ arg_loc_pronunciamiento: "El Pronunciamiento de Urquiza"
+ arg_loc_pronunciamiento_tooltip: "Acto político de mayo de 1851 donde Justo José de Urquiza, gobernador de Entre Ríos, aceptó la renuncia que Rosas presentaba anualmente. Esto significó que Entre Ríos reasumía su soberanía y la capacidad de negociar con otros países, rompiendo la unidad de la Confederación."
+
+ arg_loc_ejercito_grande: "El Ejército Grande"
+ arg_loc_ejercito_grande_tooltip: "Fuerza militar aliada compuesta por tropas de Entre Ríos, Corrientes, el Imperio del Brasil y el Uruguay. Fue el ejército más grande visto en Sudamérica hasta ese momento, organizado con el único fin de derrocar a Juan Manuel de Rosas."

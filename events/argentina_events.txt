@@ -675,3 +675,48 @@ arg_muerte_san_martin = {
 	}
 }
 
+# 1851 - El Pronunciamiento de Urquiza
+arg_evento_pronunciamiento = {
+	type = country_event
+	title = arg_evento_pronunciamiento.t
+	desc = arg_evento_pronunciamiento.d
+	flavor = arg_evento_pronunciamiento.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1851.5.1
+		NOT = { has_variable = arg_mision_caseros_activa }
+	}
+
+	immediate = {
+		set_variable = arg_mision_caseros_activa
+	}
+
+	option = {
+		name = arg_evento_pronunciamiento.a
+		# Al elegir esto, se activa la entrada de diario
+	}
+}
+
+# 1852 - La Caída de Rosas
+arg_batalla_caseros.1 = {
+	type = country_event
+	title = "La Batalla de Caseros"
+	desc = "El #v $arg_loc_ejercito_grande$#! ha derrotado a las fuerzas federales en los campos de Caseros. Juan Manuel de Rosas ha firmado su renuncia y se encamina al exilio en un buque británico. Una nueva era comienza para la nación: la era de la Constitución."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/military_retreat.bk2"
+
+	option = {
+		name = "Termina una época. Comienza la Organización Nacional."
+		# Cambios masivos: Rosas muere/se va, cambian las leyes
+		set_law = law_census_suffrage
+		set_law = law_guaranteed_liberties
+		
+		# Limpiamos variables para la siguiente etapa del mod
+		remove_variable = arg_mision_caseros_activa
+	}
+}

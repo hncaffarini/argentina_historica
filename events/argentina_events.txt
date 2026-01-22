@@ -198,6 +198,28 @@ arg_bloqueo_frances = {
 	}
 }
 
+# 1838 - Hallazgos Paleontológicos
+arg_darwin_fosiles = {
+	type = country_event
+	title = "Los Gigantes del Pasado"
+	desc = "Científicos y viajeros europeos, maravillados por la geografía de nuestras pampas, han reportado el hallazgo de huesos de proporciones colosales. Estos #v $arg_loc_paleontologia$#! desafían la comprensión actual del mundo natural. Algunos sugieren crear un espacio para su estudio en Buenos Aires."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_aristocrats.dds"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1838.1.1
+		NOT = { has_variable = arg_darwin_lanzado }
+	}
+
+	option = {
+		name = "Fomentar la curiosidad científica."
+		add_prestige = 5
+		ig:ig_intelligentsia = { add_approval = 2 }
+	}
+}
+
 # 1839 - Revolución de los Libres del Sur
 arg_libres_del_sur = {
 	type = country_event
@@ -356,6 +378,28 @@ arg_batalla_arroyo_grande = {
 	}
 }
 
+# 1842 - El Corazón del Campo
+arg_vida_pulperia = {
+	type = country_event
+	title = "Entre Guitarras y Facones"
+	desc = "En cada rincón de nuestras provincias, #v $arg_loc_pulperias$#! sirven como el único nexo entre la civilización y el desierto. Allí, el gaucho bebe, canta cielitos y reafirma su lealtad al federalismo o a su caudillo local. Controlar estos espacios es controlar el pulso del país rural."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_factory_opening.dds"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1842.6.1
+		NOT = { has_variable = arg_pulperia_lanzado }
+	}
+
+	option = {
+		name = "Asegurar la lealtad de los paisanos."
+		add_authority = 25
+		add_loyalists = { value = 0.02 pop_type = farmers }
+	}
+}
+
 # 1843 - El espíritu de La Moda
 arg_revista_la_moda = {
 	type = country_event
@@ -475,6 +519,28 @@ arg_vuelta_obligado = {
 		add_authority = -200
 		# Se abren los ríos a la fuerza (libre navegación prematura)
 		add_modifier = { name = arg_libre_navegacion_forzada months = 120 }
+	}
+}
+
+# 1845 - El Orden Nocturno
+arg_serenos_ba = {
+	type = country_event
+	title = "¡Todo Sereno!"
+	desc = "Al caer el sol, la ciudad de Buenos Aires queda bajo el cuidado de los #v $arg_loc_serenos$#!. Con sus lanzas y faroles, recorren las calles de barro asegurando que el orden federal no sea perturbado. Sus gritos marcan las horas y el estado del tiempo, siendo un consuelo para los vecinos honestos y una advertencia para los malhechores."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.dds"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1845.3.1
+		NOT = { has_variable = arg_serenos_lanzado }
+	}
+
+	option = {
+		name = "La ciudad duerme tranquila."
+		# Solo un pequeño bono de estabilidad
+		add_modifier = { name = arg_orden_urbano months = 12 }
 	}
 }
 

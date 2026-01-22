@@ -85,3 +85,12 @@ l_spanish:
 
  arg_loc_ejercito_grande: "El Ejército Grande"
  arg_loc_ejercito_grande_tooltip: "Fuerza militar aliada compuesta por tropas de Entre Ríos, Corrientes, el Imperio del Brasil y el Uruguay. Fue el ejército más grande visto en Sudamérica hasta ese momento, organizado con el único fin de derrocar a Juan Manuel de Rosas."
+
+ arg_loc_pulperias: "La Pulpería"
+ arg_loc_pulperias_tooltip: "Centro social del campo argentino. Funcionaba como almacén, bar y club político. Era el lugar donde el gaucho se enteraba de las noticias y donde el juez de paz o el caudillo local reclutaba gente para las milicias."
+
+ arg_loc_paleontologia: "Los 'Monstruos' de la Pampa"
+ arg_loc_paleontologia_tooltip: "Durante esta época, viajeros y científicos (incluyendo a Charles Darwin en su viaje en el Beagle) descubrieron fósiles de Megaterios y Glyptodontes. Estos hallazgos iniciaron la riquísima tradición paleontológica argentina."
+
+ arg_loc_serenos: "Los Serenos"
+ arg_loc_serenos_tooltip: "Encargados de la vigilancia nocturna y el encendido de faroles. Su grito característico: '¡Las doce han dado y todo sereno!', formaba parte del paisaje sonoro de la Buenos Aires colonial y rosista."

@@ -880,3 +880,78 @@ arg_batalla_caseros.1 = {
 		remove_variable = arg_mision_caseros_activa
 	}
 }
+
+# 1852 - Secesión de Buenos Aires
+arg_secesion_buenos_aires = {
+	type = country_event
+	title = "La Revolución del 11 de Septiembre"
+	desc = "La tensión entre el General Urquiza y la élite porteña ha estallado. Liderados por Valentín Alsina y Bartolomé Mitre, los bonaerenses han expulsado a las tropas federales y proclamado que Buenos Aires no se someterá a los dictados de Paraná. La nación ha quedado fracturada."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1852.9.11
+		NOT = { has_variable = arg_secesion_ba_lanzada }
+	}
+
+	option = {
+		name = "Buenos Aires se separa de la Confederación."
+		# Efecto de gameplay: Buenos Aires gana una autonomía enorme o se vuelve un estado rebelde
+		s:STATE_BUENOS_AIRES = {
+			add_radicalism_mult = { value = 0.5 }
+			add_modifier = { name = arg_estado_separado months = 120 }
+		}
+		add_authority = -200
+		add_prestige = -50
+	}
+}
+
+# 1853 - Constitución Nacional
+arg_constitucion_1853 = {
+	type = country_event
+	title = "¡Constitución y Libertad!"
+	desc = "En la ciudad de Santa Fe, los congresistas han jurado finalmente la #v $arg_loc_constitucion_53$#!. Basada en las 'Bases' de #v $arg_loc_alberdi$#!, esta carta magna promete libertad de cultos, fomento a la inmigración y un sistema federal. Sin embargo, los representantes de Buenos Aires no han estado presentes."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1853.5.1
+		NOT = { has_variable = arg_const_53_lanzada }
+	}
+
+	option = {
+		name = "Gobernar es poblar. ¡Viva la República!"
+		# Cambios legales automáticos que reflejan la constitución
+		set_law = law_freedom_of_thought # Libertad de cultos/prensa
+		set_law = law_migration_controls_no_allowed_migration # Puertas abiertas
+		
+		add_modifier = { name = arg_era_constitucional months = 120 }
+	}
+}
+
+# 1854 - El Camino de Hierro
+arg_primer_ferrocarril = {
+	type = country_event
+	title = "El Ferrocarril del Oeste"
+	desc = "Se ha otorgado la concesión para construir la primera línea férrea del país. Buenos Aires busca modernizarse para demostrar su superioridad sobre el interior. La locomotora 'La Porteña' pronto silbará por nuestras tierras, cambiando para siempre el transporte de mercancías."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_trains.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1854.1.1
+		has_technology = railways
+	}
+
+	option = {
+		name = "El progreso no tiene vuelta atrás."
+		s:STATE_BUENOS_AIRES = {
+			add_modifier = { name = arg_impulso_ferroviario months = 60 }
+		}
+	}
+}

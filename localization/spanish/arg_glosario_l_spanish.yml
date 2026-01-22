@@ -103,3 +103,12 @@ l_spanish:
 
  arg_loc_casa_moneda: "Casa de Moneda de Buenos Aires"
  arg_loc_casa_moneda_tooltip: "Institución encargada de la emisión de papel moneda. Durante los bloqueos, la emisión descontrolada para financiar la guerra provocó fuertes devaluaciones del peso moneda corriente."
+
+ arg_loc_constitucion_53: "Constitución Nacional de 1853"
+ arg_loc_constitucion_53_tooltip: "Inspirada en el pensamiento de Alberdi, estableció la forma representativa, republicana y federal. Buenos Aires la rechazó, iniciando un período de 10 años en los que funcionó como un estado independiente."
+
+ arg_loc_estado_ba: "Estado de Buenos Aires"
+ arg_loc_estado_ba_tooltip: "Periodo entre 1852 y 1861 donde Buenos Aires se separó del resto de las provincias. Tenía su propia constitución, moneda y gobierno, negándose a compartir las rentas de su aduana con la Confederación."
+
+ arg_loc_alberdi: "Juan Bautista Alberdi"
+ arg_loc_alberdi_tooltip: "Autor de 'Bases y puntos de partida para la organización política de la República Argentina'. Su pensamiento fue la piedra angular de la Constitución de 1853, promoviendo la inmigración, el libre comercio y el ferrocarril."

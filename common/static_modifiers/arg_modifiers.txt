@@ -83,3 +83,15 @@ arg_luto_nacional = {
 	state_turmoil_mult = -0.20 # La gente está más tranquila por el respeto al prócer
 	country_prestige_add = 10
 }
+
+arg_estado_separado = {
+	icon = "gfx/interface/icons/modifier_icons/secession_positive.dds"
+	state_tax_capacity_add = -200 # Paraná pierde los impuestos de BA
+	state_market_access_add = -0.50 # El mercado nacional se rompe
+}
+
+arg_era_constitucional = {
+	icon = "gfx/interface/icons/modifier_icons/law_positive.dds"
+	country_migration_attraction_mult = 0.50 # Empieza el flujo migratorio
+	country_tech_spread_mult = 0.20
+}

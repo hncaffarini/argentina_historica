@@ -228,7 +228,7 @@ arg_darwin_fosiles = {
 	desc = "Científicos y viajeros europeos, maravillados por la geografía de nuestras pampas, han reportado el hallazgo de huesos de proporciones colosales. Estos #v $arg_loc_paleontologia$#! desafían la comprensión actual del mundo natural. Algunos sugieren crear un espacio para su estudio en Buenos Aires."
 	
 	gui_window = event_window
-	texture = "gfx/event_pictures/southamerica_aristocrats.dds"
+	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
 
 	trigger = {
 		tag = ARG
@@ -433,7 +433,7 @@ arg_vida_pulperia = {
 	desc = "En cada rincón de nuestras provincias, #v $arg_loc_pulperias$#! sirven como el único nexo entre la civilización y el desierto. Allí, el gaucho bebe, canta cielitos y reafirma su lealtad al federalismo o a su caudillo local. Controlar estos espacios es controlar el pulso del país rural."
 	
 	gui_window = event_window
-	texture = "gfx/event_pictures/southamerica_factory_opening.dds"
+	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
 
 	trigger = {
 		tag = ARG
@@ -600,7 +600,7 @@ arg_serenos_ba = {
 	desc = "Al caer el sol, la ciudad de Buenos Aires queda bajo el cuidado de los #v $arg_loc_serenos$#!. Con sus lanzas y faroles, recorren las calles de barro asegurando que el orden federal no sea perturbado. Sus gritos marcan las horas y el estado del tiempo, siendo un consuelo para los vecinos honestos y una advertencia para los malhechores."
 	
 	gui_window = event_window
-	texture = "gfx/event_pictures/europenorthamerica_london_center.dds"
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
 
 	trigger = {
 		tag = ARG

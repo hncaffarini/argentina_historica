@@ -88,6 +88,29 @@ arg_ley_de_aduanas = {
 	}
 }
 
+# 1836 - El Terror de la Mazorca
+arg_evento_mazorca = {
+	type = country_event
+	title = "La Sociedad Popular Restauradora"
+	desc = "Las calles de Buenos Aires ya no son seguras para los críticos del gobierno. #v $arg_loc_mazorca$#! ha intensificado sus rondas, asegurando que cada ciudadano porte el distintivo punzó y profiera las consignas federales. Aquellos sospechosos de simpatías unitarias enfrentan el azote o algo peor."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1836.10.1
+		NOT = { has_variable = arg_mazorca_lanzado }
+	}
+
+	option = {
+		name = "El orden requiere firmeza."
+		add_authority = 100
+		add_radicalism_mult = { value = 0.05 }
+		ig:ig_intelligentsia = { add_approval = -5 }
+	}
+}
+
 # 1837 - Guerra contra la Confederación Perú-Boliviana
 arg_guerra_peru_boliviana = {
 	type = country_event
@@ -319,6 +342,31 @@ arg_coalicion_norte = {
 	}
 }
 
+# 1840 - Venta de Tierras en Enfiteusis
+arg_venta_tierras = {
+	type = country_event
+	title = "La Propiedad de la Tierra"
+	desc = "Para financiar las guerras contra la Coalición del Norte y el Bloqueo Francés, el gobierno ha decidido terminar con la #v $arg_loc_ley_enfiteusis$#!. Las tierras públicas ahora serán vendidas a los actuales arrendatarios, transformando a los enfiteutas en propietarios absolutos."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1840.1.1
+		NOT = { has_variable = arg_tierras_lanzado }
+	}
+
+	option = {
+		name = "Consolidar la clase terrateniente."
+		# Beneficio para los Landowners
+		ig:ig_landowners = { add_approval = 5 }
+		add_treasury = 25000
+		# Efecto a largo plazo: Menos campesinos independientes
+		add_modifier = { name = arg_latifundismo months = 120 }
+	}
+}
+
 # 1841 - Fiestas Mayas
 arg_fiestas_mayas_1841 = {
 	type = country_event
@@ -468,6 +516,29 @@ arg_terremoto_salta = {
 		}
 		# Ganas aprobación de los religiosos
 		ig:ig_devout = { add_approval = 2 }
+	}
+}
+
+# 1844 - Devaluación del Peso
+arg_emision_moneda = {
+	type = country_event
+	title = "La Prensa de la $arg_loc_casa_moneda$"
+	desc = "Las arcas están vacías tras años de bloqueos. La #v $arg_loc_casa_moneda$#! ha recibido la orden de imprimir nuevas series de billetes para cubrir los gastos militares. El valor del peso frente a la onza de oro cae estrepitosamente, encareciendo los productos importados."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1844.5.1
+		NOT = { has_variable = arg_moneda_lanzado }
+	}
+
+	option = {
+		name = "Es un mal necesario para la guerra."
+		add_treasury = 15000
+		# Inflación representada por costo de importaciones
+		add_modifier = { name = arg_inflacion_rosista months = 48 }
 	}
 }
 
@@ -738,6 +809,29 @@ arg_muerte_san_martin = {
 			name = arg_luto_nacional
 			months = 12
 		}
+	}
+}
+
+# 1850 - Tratado Arana-Lepredour
+arg_tratado_francia = {
+	type = country_event
+	title = "La Paz con Francia"
+	desc = "Tras el éxito con los británicos, Francia finalmente ha aceptado que no puede doblegar nuestra voluntad. El Almirante Lepredour ha firmado el tratado que devuelve la isla Martín García y reconoce nuestra soberanía fluvial. ¡La Confederación ha vencido a las dos potencias!"
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1850.8.31
+		NOT = { has_variable = arg_paz_francia_lanzada }
+	}
+
+	option = {
+		name = "La soberanía ha sido defendida."
+		add_prestige = 30
+		remove_modifier = arg_bloqueo_economico_frances
+		c:FRA = { add_relations = { target = c:ARG value = 40 } }
 	}
 }
 

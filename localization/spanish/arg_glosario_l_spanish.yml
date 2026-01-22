@@ -94,3 +94,12 @@ l_spanish:
 
  arg_loc_serenos: "Los Serenos"
  arg_loc_serenos_tooltip: "Encargados de la vigilancia nocturna y el encendido de faroles. Su grito característico: '¡Las doce han dado y todo sereno!', formaba parte del paisaje sonoro de la Buenos Aires colonial y rosista."
+
+ arg_loc_mazorca: "La Mazorca"
+ arg_loc_mazorca_tooltip: "Brazo armado de la Sociedad Popular Restauradora. Funcionaba como una fuerza para-policial que perseguía a los opositores ('salvajes unitarios') mediante la intimidación y la violencia física."
+ 
+ arg_loc_ley_enfiteusis: "Fin de la Enfiteusis"
+ arg_loc_enfiteusis_tooltip: "Sistema de alquiler de tierras públicas iniciado por Rivadavia. Rosas decidió no renovar estos contratos y vender las tierras, lo que consolidó la formación de los grandes latifundios (estancias) en Buenos Aires."
+
+ arg_loc_casa_moneda: "Casa de Moneda de Buenos Aires"
+ arg_loc_casa_moneda_tooltip: "Institución encargada de la emisión de papel moneda. Durante los bloqueos, la emisión descontrolada para financiar la guerra provocó fuertes devaluaciones del peso moneda corriente."

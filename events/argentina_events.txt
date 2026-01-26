@@ -1358,6 +1358,76 @@ arg_presidencia_sarmiento = {
 	}
 }
 
+# 1869 - El Primer Censo Nacional
+arg_censo_nacional_1869 = {
+	type = country_event
+	title = "Conocernos para Gobernar"
+	desc = "Bajo las órdenes de #v $arg_loc_sarmiento$#!, se ha llevado a cabo el #v $arg_loc_censo_1869$#!. Los resultados son un baño de realidad: somos una nación vasta pero casi vacía, y la mayoría de nuestros ciudadanos no saben leer ni escribir. Estos datos serán la brújula para nuestras futuras reformas de inmigración y educación."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/paper_reading.dds"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1869.9.15
+		NOT = { has_variable = arg_censo_69_lanzado }
+	}
+
+	option = {
+		name = "Los números no mienten."
+		# Mejora la eficiencia de impuestos y administración
+		add_modifier = { name = arg_eficiencia_censal months = 120 }
+		country_bureaucracy_add = 100
+		add_prestige = 10
+	}
+}
+
+# 1869 - Exposición Nacional de Córdoba
+arg_exposicion_cordoba = {
+	type = country_event
+	title = "El Progreso en el Corazón de la República"
+	desc = "Se ha inaugurado en Córdoba una gran exposición de artes y productos nacionales. Es un mensaje político: la modernidad no debe detenerse en el puerto de Buenos Aires. Maquinaria agrícola, tejidos y nuevas tecnologías se exhiben para demostrar que la Confederación unificada camina hacia la industria."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_art_gallery.dds"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1869.10.15
+	}
+
+	option = {
+		name = "Hacia una nación industrializada."
+		s:STATE_CORDOBA = {
+			add_modifier = { name = arg_impulso_cordoba months = 60 }
+		}
+		add_tech_progression = { technology = atmospheric_engine progress = 0.25 }
+	}
+}
+
+# 1870 - La Muerte del León de Entre Ríos
+arg_asesinato_urquiza = {
+	type = country_event
+	title = "Sangre en el Palacio San José"
+	desc = "El General #v $arg_loc_urquiza$#! ha sido asesinado en su propia residencia por seguidores de Ricardo López Jordán. Los federales más radicales nunca le perdonaron su retiro en Pavón ni su acercamiento a Sarmiento. Con su muerte, termina la era de los caudillos históricos y Entre Ríos entra en un caos que debemos sofocar."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1870.4.11
+		NOT = { has_variable = arg_urquiza_muerto }
+	}
+
+	option = {
+		name = "Se apaga la última gran lanza del Federalismo."
+		# Inestabilidad en Entre Ríos
+		s:STATE_ENTRE_RIOS = { add_radicalism_mult = { value = 0.3 } }
+		add_authority = -50
+	}
+}
+
 # 1870 - Fin de la Guerra de la Triple Alianza
 arg_fin_guerra_paraguay = {
 	type = country_event

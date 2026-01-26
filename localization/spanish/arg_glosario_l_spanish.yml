@@ -172,3 +172,9 @@ l_spanish:
 
  arg_loc_doctrina_tejedor: "La Victoria no da Derechos"
  arg_loc_doctrina_tejedor_tooltip: "Frase del canciller Mariano Varela que definió la política argentina tras la guerra. A pesar de haber ganado, Argentina renunció a reclamos territoriales excesivos para evitar el exterminio total del Paraguay y equilibrar el poder con el Imperio del Brasil."
+
+ arg_loc_censo_1869: "Primer Censo Nacional"
+ arg_loc_censo_1869_tooltip: "Realizado bajo la presidencia de Sarmiento, fue la primera vez que se contó a toda la población de forma científica. Reveló que Argentina tenía solo 1.8 millones de habitantes y un 77% de analfabetismo, lo que impulsó las políticas educativas masivas."
+
+ arg_loc_observatorio_cba: "Observatorio Astronómico de Córdoba"
+ arg_loc_observatorio_cba_tooltip: "Fundado en 1871 (proyectado en 1869), fue la primera institución científica de alcance internacional en Argentina. Sarmiento trajo al astrónomo Benjamin Gould desde EE.UU. para 'mapear' los cielos del sur."

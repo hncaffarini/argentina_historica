@@ -181,3 +181,15 @@ arg_prestigio_diplomatico = {
 	country_diplomatic_discoverability_mult = -0.15
 	country_improve_relations_speed_mult = 0.25
 }
+
+arg_eficiencia_censal = {
+	icon = "gfx/interface/icons/modifier_icons/bureaucracy_positive.dds"
+	state_tax_capacity_add = 75
+	country_tax_efficiency_add = 0.05
+}
+
+arg_impulso_cordoba = {
+	icon = "gfx/interface/icons/modifier_icons/innovation_positive.dds"
+	state_manufacturing_industries_throughput_mult = 0.10
+	country_innovation_add = 5
+}

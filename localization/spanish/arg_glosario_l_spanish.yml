@@ -184,3 +184,9 @@ l_spanish:
 
  arg_loc_cementerio_chacarita: "Cementerio de la Chacarita"
  arg_loc_cementerio_chacarita_tooltip: "Creado de urgencia en 1871 debido a que el Cementerio del Sur estaba colapsado por las víctimas de la epidemia. Se convirtió en la necrópolis más grande de la ciudad."
+
+ arg_loc_telégrafo: "El Cable Transatlántico"
+ arg_loc_telégrafo_tooltip: "Inaugurado en 1874, permitió la comunicación instantánea entre Buenos Aires y Europa. Fue el hito tecnológico más importante de la década, eliminando el aislamiento de semanas que sufría el Río de la Plata."
+
+ arg_loc_lopez_jordan: "Ricardo López Jordán"
+ arg_loc_lopez_jordan_tooltip: "Último gran caudillo federal de Entre Ríos. Lideró varias rebeliones contra el gobierno nacional tras el asesinato de Urquiza, representando la resistencia final del sistema de montoneras frente al ejército profesional de línea."

@@ -206,3 +206,15 @@ arg_vivienda_conventillos = {
 	state_standard_of_living_add = -2 # El hacinamiento en el sur baja la calidad de vida
 	state_migration_pull_add = -5
 }
+
+arg_eficiencia_telegráfica = {
+	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
+	country_market_threshold_mult = 0.15
+	country_bureaucracy_add = 50
+}
+
+arg_crisis_institucional = {
+	icon = "gfx/interface/icons/modifier_icons/morale_negative.dds"
+	state_tax_capacity_add = -50
+	country_prestige_add = -10
+}

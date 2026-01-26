@@ -1518,6 +1518,74 @@ arg_fiebre_amarilla_1871 = {
 	}
 }
 
+# 1872 - La Red Telegráfica
+arg_telegrafo_sarmiento = {
+	type = country_event
+	title = "Hilos que Unen la República"
+	desc = "Bajo el incansable impulso de #v $arg_loc_sarmiento$#!, las líneas del telégrafo están cruzando las pampas y los Andes. Pronto, una noticia en Buenos Aires será conocida en San Juan o en Londres en cuestión de minutos. El telégrafo no es solo comercio; es la herramienta definitiva para que el gobierno central controle cada rincón del territorio."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1872.4.1
+		NOT = { has_variable = arg_telegrafo_lanzado }
+	}
+
+	option = {
+		name = "El pensamiento viaja a la velocidad del rayo."
+		add_modifier = { name = arg_eficiencia_telegráfica months = 60 }
+		add_tech_progression = { technology = telegraph progress = 0.25 }
+		add_prestige = 15
+	}
+}
+
+# 1873 - El Atentado fallido
+arg_atentado_sarmiento = {
+	type = country_event
+	title = "Disparos en la Noche"
+	desc = "Dos sicarios han intentado asesinar al Presidente mientras se dirigía a la casa de Dalmacio Vélez Sarsfield. El trabuco de uno de ellos estalló en su mano, y el carruaje de #v $arg_loc_sarmiento$#! siguió su marcha sin que el mandatario, debido a su avanzada sordera, notara el estruendo. La política argentina sigue siendo un terreno peligroso."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1873.8.22
+	}
+
+	option = {
+		name = "Las ideas no se matan."
+		add_authority = 50
+		add_radicalism_mult = { value = 0.05 }
+	}
+}
+
+# 1874 - La Revolución del 74
+arg_revolucion_1874 = {
+	type = country_event
+	title = "Mitre toma las Armas"
+	desc = "El general #v $arg_loc_mitre$#!, descontento con el triunfo de Nicolás Avellaneda en las urnas, ha iniciado una rebelión militar. El país se encuentra en una encrucijada: ¿Prevalecerá la legitimidad de las instituciones o el prestigio del antiguo héroe de Pavón? El ejército nacional, ahora profesionalizado, debe sofocar este último intento de sedición liberal."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1874.9.24
+		NOT = { has_variable = arg_rev_74_lanzada }
+	}
+
+	option = {
+		name = "La ley está por encima de los hombres."
+		# El país sufre inestabilidad momentánea
+		add_modifier = { name = arg_crisis_institucional months = 6 }
+		add_radicalism_mult = { value = 0.1 }
+		ig:ig_armed_forces = { add_approval = 2 }
+	}
+}
+
 # 1884 - Fundación Oficial de Ushuaia
 arg_fundacion_ushuaia = {
 	type = country_event

@@ -1274,6 +1274,69 @@ arg_rebelion_chacho = {
 	}
 }
 
+# 1865 - Declaración de Guerra al Paraguay
+arg_guerra_paraguay_inicio = {
+	type = country_event
+	title = "¡En veinticuatro horas en los cuarteles!"
+	desc = "El Mariscal #v $arg_loc_solano_lopez$#! ha invadido la provincia de Corrientes tras la negativa de nuestro gobierno de permitirle el paso hacia Uruguay. La indignación en Buenos Aires es total. #v $arg_loc_mitre$#! ha prometido una campaña relámpago, pero la realidad del terreno y la determinación paraguaya sugieren un conflicto mucho más largo y costoso."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1865.5.1
+		NOT = { has_variable = arg_guerra_paraguay_lanzada }
+	}
+
+	immediate = { set_variable = arg_guerra_paraguay_lanzada }
+
+	# Opción A: Formar la Triple Alianza (Histórica)
+	option = {
+		name = "Firmar el Tratado de la #v $arg_loc_triple_alianza$#!."
+		default_option = yes
+		
+		# Efectos: Guerra diplomática y costos militares
+		add_prestige = 20
+		create_diplomatic_play = {
+			target = c:PAR
+			play_type = dp_humiliate
+		}
+		# Bono de movilización pero costo de tesoro
+		add_modifier = { name = arg_gastos_de_guerra months = 60 }
+		add_treasury = -30000
+	}
+
+	# Opción B: Intentar una mediación neutral
+	option = {
+		name = "Evitar el conflicto y buscar la paz."
+		add_prestige = -50
+		add_authority = -100
+		relations = { target = c:BRA value = -30 }
+	}
+}
+
+# 1866 - El Desastre de Curupayty
+arg_desastre_curupayty = {
+	type = country_event
+	title = "El Desastre de $arg_loc_curupayty$"
+	desc = "Las noticias del frente son devastadoras. El asalto a las trincheras de Curupayty ha terminado en una masacre para nuestras tropas. La confianza en el mando de #v $arg_loc_mitre$#! se desmorona y en las provincias del interior comienzan a oírse gritos contra una guerra que consideran ajena."
+	
+	trigger = {
+		tag = ARG
+		has_variable = arg_guerra_paraguay_lanzada
+		is_date >= 1866.9.22
+	}
+
+	option = {
+		name = "Debemos persistir hasta la victoria final."
+		add_radicalism_mult = { value = 0.15 }
+		ig:ig_armed_forces = { add_approval = -5 }
+		# Aparece el descontento en el interior (Montoneras)
+		add_modifier = { name = arg_rebeliones_internas months = 24 }
+	}
+}
+
 # 1868 - Asunción de Sarmiento
 arg_presidencia_sarmiento = {
 	type = country_event
@@ -1292,6 +1355,55 @@ arg_presidencia_sarmiento = {
 		name = "¡Escuelas, muchas escuelas!"
 		add_modifier = { name = arg_impulso_sarmiento months = 72 }
 		add_enactment_progression = { law = law_public_schools value = 0.15 }
+	}
+}
+
+# 1870 - Fin de la Guerra de la Triple Alianza
+arg_fin_guerra_paraguay = {
+	type = country_event
+	title = "El Final de la Gran Guerra"
+	desc = "Las noticias llegan desde el norte: el #v $arg_loc_solano_lopez$#! ha caído en el #v $arg_loc_cerro_cora$#!. La guerra más sangrienta de nuestra historia ha terminado. Paraguay yace en ruinas, y ahora nos enfrentamos al dilema de la paz. ¿Debemos exigir reparaciones y territorios, o mostrar la grandeza de una nación civilizada?"
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1870.3.1
+		has_variable = arg_guerra_paraguay_lanzada
+	}
+
+	immediate = {
+		# Limpiamos los efectos de la guerra
+		remove_modifier = arg_gastos_de_guerra
+		remove_modifier = arg_rebeliones_internas
+		set_variable = arg_guerra_paraguay_finalizada
+	}
+
+	# Opción A: Postura de Varela: "La victoria no da derechos" (Histórica)
+	option = {
+		name = "arg_opcion_varela_nombre"
+		default_option = yes
+		
+		add_prestige = 50
+		# Mejora drásticamente la opinión internacional
+		add_modifier = { name = arg_prestigio_diplomatico months = 120 }
+		
+		c:PAR = {
+			add_relations = { target = c:ARG value = 50 }
+		}
+	}
+
+	# Opción B: Exigir compensaciones territoriales máximas
+	option = {
+		name = "arg_opcion_anexion_nombre"
+		
+		# Ganas tierras (representado por influencia) pero pierdes prestigio
+		add_prestige = -30
+		add_authority = 50
+		c:BRA = {
+			add_relations = { target = c:ARG value = -25 }
+		}
 	}
 }
 

@@ -157,3 +157,18 @@ l_spanish:
 
  arg_loc_presidio_ushuaia: "El Presidio de Ushuaia"
  arg_loc_presidio_ushuaia_tooltip: "Iniciado como un destacamento penal en 1896 y formalizado en 1902. El envío de presos peligrosos y políticos fue una estrategia de 'colonización penal' para asegurar la presencia argentina en un territorio inhóspito y lejano."
+
+ arg_loc_triple_alianza: "La Triple Alianza"
+ arg_loc_triple_alianza_tooltip: "Pacto secreto firmado en 1865 entre Argentina, el Imperio del Brasil y Uruguay. El objetivo era derrocar al Mariscal Francisco Solano López tras su invasión a Corrientes, estableciendo una unión militar que duraría cinco años."
+
+ arg_loc_solano_lopez: "Francisco Solano López"
+ arg_loc_solano_lopez_tooltip: "Presidente del Paraguay. Su decisión de cruzar territorio argentino sin permiso para intervenir en Uruguay disparó la declaración de guerra de Mitre y la formación de la Triple Alianza."
+
+ arg_loc_curupayty: "Batalla de Curupayty"
+ arg_loc_curupayty_tooltip: "Ocurrida en 1866, fue la mayor derrota de la Triple Alianza. Las fuerzas paraguayas diezmaron a las tropas argentinas y brasileñas, lo que provocó una crisis política en Buenos Aires y el estallido de rebeliones en el interior."
+
+ arg_loc_cerro_cora: "Combate de Cerro Corá"
+ arg_loc_cerro_cora_tooltip: "El enfrentamiento final de la guerra el 1 de marzo de 1870, donde el Mariscal Francisco Solano López fue muerto por las tropas brasileñas. Esto marcó el cese de las hostilidades y el inicio de la reconstrucción paraguaya."
+
+ arg_loc_doctrina_tejedor: "La Victoria no da Derechos"
+ arg_loc_doctrina_tejedor_tooltip: "Frase del canciller Mariano Varela que definió la política argentina tras la guerra. A pesar de haber ganado, Argentina renunció a reclamos territoriales excesivos para evitar el exterminio total del Paraguay y equilibrar el poder con el Imperio del Brasil."

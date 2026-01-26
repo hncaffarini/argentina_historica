@@ -162,3 +162,22 @@ arg_atraccion_austral = {
 	icon = "gfx/interface/icons/modifier_icons/migration_positive.dds"
 	state_migration_pull_add = 10
 }
+
+arg_gastos_de_guerra = {
+	icon = "gfx/interface/icons/modifier_icons/money_negative.dds"
+	country_army_maint_mult = 0.30 # El ejército es mucho más caro
+	country_tax_efficiency_add = -0.10 # La guerra afecta la recaudación
+}
+
+arg_rebeliones_internas = {
+	icon = "gfx/interface/icons/modifier_icons/civil_unrest.dds"
+	state_turmoil_mult = 0.40 # Representa a Felipe Varela y las últimas montoneras
+	state_conscription_rate_add = -0.05 # La gente se resiste al reclutamiento
+}
+
+arg_prestigio_diplomatico = {
+	icon = "gfx/interface/icons/modifier_icons/diplomatic_positive.dds"
+	country_prestige_add = 20
+	country_diplomatic_discoverability_mult = -0.15
+	country_improve_relations_speed_mult = 0.25
+}

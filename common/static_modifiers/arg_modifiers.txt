@@ -151,3 +151,14 @@ arg_granero_del_mundo = {
 	country_agriculture_output_mult = 0.30
 	country_trade_route_export_revenue_mult = 0.20
 }
+
+arg_presencia_austral = {
+	icon = "gfx/interface/icons/modifier_icons/state_sovereignty.dds"
+	state_tax_capacity_add = 25
+	state_migration_pull_add = 2
+}
+
+arg_atraccion_austral = {
+	icon = "gfx/interface/icons/modifier_icons/migration_positive.dds"
+	state_migration_pull_add = 10
+}

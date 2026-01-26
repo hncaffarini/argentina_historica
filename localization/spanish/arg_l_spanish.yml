@@ -124,9 +124,14 @@
  arg_batalla_pavon_1861.d: "En las orillas del arroyo Pavón, los ejércitos de la Confederación y Buenos Aires han chocado. Pero algo inaudito ha sucedido: tras un combate indeciso, el General Urquiza ha retirado a su caballería entrerriana hacia el Paraná. Este #v $arg_loc_enigma_pavon$#! ha dejado la victoria en manos de Bartolomé Mitre. La Confederación se desmorona y el camino a la unificación porteña está libre."
  arg_batalla_pavon_1861.f: "«Urquiza se fue, no porque le ganaran, sino porque no quiso ganar». — Comentario de la época."
 
- # --- 1862
+ # --- 1862 ---
  arg_objetivo_poblacion_desc: "Alcanzar una población total de al menos 3 millones de habitantes."
  arg_objetivo_alfabetizacion_desc: "Elevar la tasa de alfabetización nacional al 25%."
  arg_objetivo_ferrocarril_desc: "Establecer la primera red ferroviaria que conecte las provincias."
  
  arg_mision_gobernar_es_poblar_status: "La nación está recibiendo el flujo de la civilización. Los campos se llenan de colonos y las ciudades de escuelas."
+
+ # --- 1884 ---
+ arg_fundacion_ushuaia.t: "La Fundación de $arg_loc_ushuaia$"
+ arg_fundacion_ushuaia.d: "Lo que comenzó como una misión anglicana se ha convertido hoy en el puesto de avanzada más austral de nuestra nación. Ante las pretensiones extranjeras en los mares del sur, el gobierno ha decidido establecer una subprefectura permanente. Algunos sugieren que la mejor forma de poblar este sitio es mediante la creación de un #v $arg_loc_presidio_ushuaia$#!, asegurando que el estado tenga ojos y oídos en el Fin del Mundo."
+ arg_fundacion_ushuaia.f: "«Ushuaia no es solo un pueblo, es una centinela». — Augusto Lasserre."

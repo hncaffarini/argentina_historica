@@ -1294,3 +1294,44 @@ arg_presidencia_sarmiento = {
 		add_enactment_progression = { law = law_public_schools value = 0.15 }
 	}
 }
+
+# 1884 - Fundación Oficial de Ushuaia
+arg_fundacion_ushuaia = {
+	type = country_event
+	title = "El Pabellón en el Canal Beagle"
+	desc = "El comodoro Augusto Lasserre ha llegado a las costas de la misión de #v $arg_loc_ushuaia$#! para izar oficialmente la bandera argentina. En este rincón remoto, donde la tierra parece terminar, debemos establecer una presencia permanente si queremos asegurar nuestros derechos sobre el extremo sur del continente."
+	
+	gui_window = event_window
+	# Podrías usar un video .bk2 de un paisaje gélido o barcos en un canal
+	video = "gfx/event_pictures/antarctic_coast.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1884.10.12
+		NOT = { has_variable = arg_ushuaia_lanzado }
+	}
+
+	immediate = { set_variable = arg_ushuaia_lanzado }
+
+	# Opción A: Establecer una subprefectura y colonia penal (Histórica)
+	option = {
+		name = "Asegurar la soberanía con un destacamento penal."
+		default_option = yes
+		
+		# Mejora el control estatal en el sur
+		s:STATE_TIERRA_DEL_FUEGO = {
+			add_modifier = { name = arg_presencia_austral months = 120 }
+			# Ganas un poco de población para representar a los guardias y presos
+			create_pop = { culture = argentine size = 500 }
+		}
+		add_prestige = 10
+	}
+
+	# Opción B: Fomentar la colonización civil libre
+	option = {
+		name = "Atraer colonos y misioneros."
+		s:STATE_TIERRA_DEL_FUEGO = {
+			add_modifier = { name = arg_atraccion_austral months = 120 }
+		}
+	}
+}

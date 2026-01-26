@@ -151,3 +151,9 @@ l_spanish:
 
  arg_loc_ley_avellaneda: "Ley de Inmigración y Colonización"
  arg_loc_ley_avellaneda_tooltip: "Sancionada en 1876, brindaba facilidades de alojamiento y tierras a los inmigrantes. Fue el gran catalizador que convirtió a Argentina en uno de los destinos preferidos de la corriente migratoria transatlántica."
+
+ arg_loc_ushuaia: "Ushuaia"
+ arg_loc_ushuaia_tooltip: "Fundada originalmente como una misión anglicana por Thomas Bridges en 1869, fue oficialmente incorporada a la soberanía argentina en 1884. Su ubicación estratégica en el Canal Beagle es la llave del control sobre el archipiélago de Tierra del Fuego."
+
+ arg_loc_presidio_ushuaia: "El Presidio de Ushuaia"
+ arg_loc_presidio_ushuaia_tooltip: "Iniciado como un destacamento penal en 1896 y formalizado en 1902. El envío de presos peligrosos y políticos fue una estrategia de 'colonización penal' para asegurar la presencia argentina en un territorio inhóspito y lejano."

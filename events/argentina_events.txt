@@ -1477,6 +1477,47 @@ arg_fin_guerra_paraguay = {
 	}
 }
 
+# 1871 - La Epidemia de Fiebre Amarilla
+arg_fiebre_amarilla_1871 = {
+	type = country_event
+	title = "La Peste en el Puerto"
+	desc = "El verano ha traído un horror inesperado a Buenos Aires. La #v $arg_loc_fiebre_amarilla$#! se extiende por los barrios del sur, alimentada por el calor y el hacinamiento. El gobierno de #v $arg_loc_sarmiento$#! y las autoridades locales han huido de la ciudad, dejando a comisiones populares el manejo de la crisis. Las calles están desiertas, los comercios cerrados y los muertos se cuentan por cientos cada día."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_sick_in_hospital.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1871.1.27
+		NOT = { has_variable = arg_fiebre_lanzada }
+	}
+
+	immediate = { set_variable = arg_fiebre_lanzada }
+
+	# Opción A: Invertir en saneamiento de urgencia
+	option = {
+		name = "Debemos modernizar el sistema de aguas y cloacas."
+		add_treasury = -20000
+		s:STATE_BUENOS_AIRES = {
+			add_modifier = { name = arg_impacto_fiebre months = 12 }
+			# Efecto demográfico: Pérdida de población
+			reduce_pop = { factor = 0.05 } 
+		}
+		# Bono de tecnología futura para salud
+		add_tech_progression = { technology = pharmaceuticals progress = 0.20 }
+	}
+
+	# Opción B: "Sálvese quien pueda" (Huir al norte)
+	option = {
+		name = "La élite abandona el casco histórico."
+		s:STATE_BUENOS_AIRES = {
+			add_modifier = { name = arg_vivienda_conventillos months = 60 }
+			reduce_pop = { factor = 0.08 }
+		}
+		add_prestige = -20
+	}
+}
+
 # 1884 - Fundación Oficial de Ushuaia
 arg_fundacion_ushuaia = {
 	type = country_event

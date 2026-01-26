@@ -178,3 +178,9 @@ l_spanish:
 
  arg_loc_observatorio_cba: "Observatorio Astronómico de Córdoba"
  arg_loc_observatorio_cba_tooltip: "Fundado en 1871 (proyectado en 1869), fue la primera institución científica de alcance internacional en Argentina. Sarmiento trajo al astrónomo Benjamin Gould desde EE.UU. para 'mapear' los cielos del sur."
+
+ arg_loc_fiebre_amarilla: "La Gran Epidemia de 1871"
+ arg_loc_fiebre_amarilla_tooltip: "Brote de fiebre amarilla que asoló Buenos Aires, propagado principalmente por el mosquito Aedes aegypti en condiciones de hacinamiento. La élite huyó hacia el norte de la ciudad, abandonando sus mansiones en el sur, lo que dio origen a los conventillos."
+
+ arg_loc_cementerio_chacarita: "Cementerio de la Chacarita"
+ arg_loc_cementerio_chacarita_tooltip: "Creado de urgencia en 1871 debido a que el Cementerio del Sur estaba colapsado por las víctimas de la epidemia. Se convirtió en la necrópolis más grande de la ciudad."

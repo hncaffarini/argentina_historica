@@ -193,3 +193,16 @@ arg_impulso_cordoba = {
 	state_manufacturing_industries_throughput_mult = 0.10
 	country_innovation_add = 5
 }
+
+arg_impacto_fiebre = {
+	icon = "gfx/interface/icons/modifier_icons/mortality_positive.dds"
+	state_mortality_mult = 0.50
+	state_working_conditions_mult = -0.20
+	state_market_access_add = -0.30
+}
+
+arg_vivienda_conventillos = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_negative.dds"
+	state_standard_of_living_add = -2 # El hacinamiento en el sur baja la calidad de vida
+	state_migration_pull_add = -5
+}

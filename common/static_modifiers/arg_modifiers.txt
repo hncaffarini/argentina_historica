@@ -218,3 +218,21 @@ arg_crisis_institucional = {
 	state_tax_capacity_add = -50
 	country_prestige_add = -10
 }
+
+arg_austeridad_republicana = {
+	icon = "gfx/interface/icons/modifier_icons/money_positive.dds"
+	country_expenses_mult = -0.10
+	country_loan_interest_rate_mult = -0.20
+}
+
+arg_gran_inmigración = {
+	icon = "gfx/interface/icons/modifier_icons/migration_positive.dds"
+	country_migration_attraction_mult = 0.50
+	state_migration_pull_add = 15
+}
+
+arg_auge_ganadero = {
+	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
+	state_agriculture_output_mult = 0.20
+	state_livestock_ranches_throughput_mult = 0.25
+}

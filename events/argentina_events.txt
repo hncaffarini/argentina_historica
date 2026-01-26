@@ -1586,6 +1586,75 @@ arg_revolucion_1874 = {
 	}
 }
 
+# 1874 - Presidencia de Avellaneda
+arg_presidencia_avellaneda = {
+	type = country_event
+	title = "La Presidencia de la Austeridad"
+	desc = "Nicolás Avellaneda ha asumido el mando en un momento crítico. Con las arcas vacías y la deuda externa asfixiando la nación, el nuevo presidente ha sido tajante: 'La República puede estar dividida en partidos, pero no tiene sino un honor y un crédito'. Se avecinan tiempos de sacrificios económicos para salvar el buen nombre de la Argentina en los mercados de Londres."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1874.10.12
+		NOT = { has_variable = arg_avellaneda_lanzado }
+	}
+
+	option = {
+		name = "Ahorrar sobre el hambre y la sed de los argentinos."
+		# Mecánica de Victoria 3: Reducir gasto para ganar legitimidad financiera
+		add_modifier = { name = arg_austeridad_republicana months = 48 }
+		add_prestige = 20
+		ig:ig_landowners = { add_approval = 2 }
+	}
+}
+
+# 1876 - Ley 817 de Inmigración
+arg_ley_inmigracion_1876 = {
+	type = country_event
+	title = "La Tierra de Promisión"
+	desc = "El Congreso ha sancionado la #v $arg_loc_ley_avellaneda$#!. A partir de ahora, cada inmigrante que llegue a nuestras costas será protegido y ayudado por el Estado. Se les garantiza alojamiento gratuito en el Hotel de Inmigrantes y transporte hacia las colonias del interior. ¡El sueño de Alberdi y Sarmiento se hace ley!"
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_steam_ship.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1876.10.19
+	}
+
+	option = {
+		name = "Abrir las puertas de la Nación."
+		# Bono masivo de atracción migratoria
+		add_modifier = { name = arg_gran_inmigración months = 120 }
+		add_enactment_progression = { law = law_migration_controls_no_allowed_migration value = 0.2 }
+	}
+}
+
+# 1876 - Revolución de la Carne
+arg_buque_frigorifico = {
+	type = country_event
+	title = "El Triunfo del Frío"
+	desc = "El buque #v $arg_loc_frigorifico$#! ha llegado a nuestras costas demostrando que la tecnología de refrigeración permite llevar carne fresca a través del Atlántico. Esto cambia las reglas del juego: ya no exportaremos solo saladero; ahora el mundo comerá nuestra mejor carne vacuna."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_steam_ship.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1876.12.25
+	}
+
+	option = {
+		name = "Invertir en la mejora de las razas bovinas."
+		add_tech_progression = { technology = refrigeration progress = 0.5 }
+		s:STATE_BUENOS_AIRES = { 
+			add_modifier = { name = arg_auge_ganadero months = 60 } 
+		}
+	}
+}
+
 # 1884 - Fundación Oficial de Ushuaia
 arg_fundacion_ushuaia = {
 	type = country_event

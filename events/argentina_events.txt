@@ -1919,6 +1919,29 @@ arg_evento_alambrado = {
 	}
 }
 
+# 1880 - El Corazón del Pueblo: Ramos Generales
+arg_ramos_generales_1880 = {
+	type = country_event
+	title = "El Almacén de Ramos Generales"
+	desc = "En cada cruce de caminos y en cada pueblo nuevo que nace junto al ferrocarril, surge un #v $arg_loc_almacen_ramos_generales$#!. Entre bolsas de arpillera con olor a yerba y estanterías llenas de conservas europeas, se forja la identidad del país. Es el lugar donde el pulpero fía al paisano y donde se discute la política de la Capital mientras se comparte un salame y un queso de colonia."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1880.5.1
+	}
+
+	option = {
+		name = "Brindar por el progreso de la campaña."
+		# Bono al comercio interno y satisfacción popular
+		add_modifier = { name = arg_vida_de_almacen months = 120 }
+		add_loyalists = { value = 0.05 pop_type = shopkeepers }
+		add_prestige = 5
+	}
+}
+
 # 1884 - Fundación Oficial de Ushuaia
 arg_fundacion_ushuaia = {
 	type = country_event

@@ -295,3 +295,9 @@ arg_orden_rural_alambrado = {
 	state_agriculture_output_mult = 0.15
 	state_migration_pull_add = -5 # La tierra es más difícil de conseguir para nuevos colonos
 }
+
+arg_vida_de_almacen = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	state_service_consumption_mult = -0.10 # Los servicios son más accesibles
+	state_trade_center_throughput_mult = 0.15
+}

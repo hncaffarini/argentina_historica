@@ -148,6 +148,7 @@
  
  # --- 1880 ---
  arg_evento_alambrado.f: "«El alambre de hierro ha sido para la propiedad rural lo que el telégrafo para el pensamiento: una revolución silenciosa que lo cambió todo»."
+ arg_ramos_generales_1880.f: "«En el mostrador del almacén, todos los hombres son iguales ante la ginebra y el destino»."
  
  # --- 1884 ---
  arg_fundacion_ushuaia.t: "La Fundación de $arg_loc_ushuaia$"

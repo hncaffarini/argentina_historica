@@ -1337,6 +1337,29 @@ arg_desastre_curupayty = {
 	}
 }
 
+# 1867 - El primer partido de fútbol
+arg_inicio_futbol = {
+	type = country_event
+	title = "Un Extraño Juego de Pelota"
+	desc = "En los prados de Palermo, un grupo de residentes británicos ha organizado el #v $arg_loc_primer_partido_futbol$#!. Los locales observan con curiosidad cómo veinte hombres corren tras una pelota de cuero intentando meterla en un arco. Nadie imagina que este 'pasatiempo de ingleses' terminará convirtiéndose en la pasión más grande de nuestra nación."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1867.6.20
+		NOT = { has_variable = arg_futbol_lanzado }
+	}
+
+	option = {
+		name = "Una curiosa distracción para los inmigrantes."
+		add_modifier = { name = arg_pasion_deportiva months = 120 }
+		# Mejora la atracción migratoria británica
+		country_migration_attraction_mult = 0.05
+	}
+}
+
 # 1868 - Asunción de Sarmiento
 arg_presidencia_sarmiento = {
 	type = country_event
@@ -1629,6 +1652,49 @@ arg_ley_inmigracion_1876 = {
 		# Bono masivo de atracción migratoria
 		add_modifier = { name = arg_gran_inmigración months = 120 }
 		add_enactment_progression = { law = law_migration_controls_no_allowed_migration value = 0.2 }
+	}
+}
+
+# 1876 - El Mate en la Frontera
+arg_cultura_mate = {
+	type = country_event
+	title = "El Rito del Mate"
+	desc = "En los fogones de la frontera y en los patios de los conventillos, el #v $arg_loc_yerba_mate$#! sigue siendo el nexo que une a los argentinos. A pesar de los intentos de las clases altas por imitar las costumbres europeas, el amargo sabor de la yerba persiste como un símbolo de resistencia cultural y fraternidad criolla."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1876.1.1
+	}
+
+	option = {
+		name = "El mate nunca faltará en esta tierra."
+		# Bono a la satisfacción de los estratos bajos y medios
+		add_loyalists = { value = 0.02 pop_type = laborers }
+		add_loyalists = { value = 0.02 pop_type = farmers }
+	}
+}
+
+# 1876 - La Primera Marca Registrada
+arg_evento_hesperidina = {
+	type = country_event
+	title = "Hesperidina: El Orgullo Nacional"
+	desc = "El éxito de la #v $arg_loc_hesperidina$#! ha sido tal que su creador ha solicitado la protección del Estado contra las imitaciones. El presidente ha firmado la Patente N°1 de la República. Esta bebida de naranjas no solo refresca los almacenes, sino que simboliza el nacimiento de una industria nacional con identidad propia."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1876.10.1 # Año de la ley de patentes
+	}
+
+	option = {
+		name = "Proteger la invención nacional."
+		add_tech_progression = { technology = patent_management progress = 0.5 }
+		add_modifier = { name = arg_bono_industria_bebidas months = 60 }
 	}
 }
 

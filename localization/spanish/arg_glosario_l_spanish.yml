@@ -211,3 +211,12 @@ l_spanish:
 
  arg_loc_carlos_tejedor: "Carlos Tejedor"
  arg_loc_carlos_tejedor_tooltip: "Gobernador de Buenos Aires y líder del último gran levantamiento porteño contra el Gobierno Nacional. Su derrota militar en los combates de Barracas y Puente Alsina marcó el fin de la resistencia de Buenos Aires a integrarse plenamente."
+
+ arg_loc_primer_partido_futbol: "El primer partido de Football"
+ arg_loc_primer_partido_futbol_tooltip: "En 1867, en los campos del Buenos Aires Cricket Club (donde hoy está el Planetario), se jugó el primer partido de fútbol registrado en el país. Fue introducido por trabajadores ferroviarios y marinos británicos."
+
+ arg_loc_hesperidina: "Hesperidina: La Primera Patente"
+ arg_loc_hesperidina_tooltip: "Creada por Melville Bagley en 1864, es un licor de naranjas amargas. Fue el primer producto patentado en la historia argentina (Patente N°1), marcando el inicio de la propiedad intelectual y la industria de bebidas nacional."
+
+ arg_loc_yerba_mate: "El Mate y la Identidad"
+ arg_loc_yerba_mate_tooltip: "A pesar del avance de la moda europea, el mate persistió como el gran igualador social. Durante la Guerra del Paraguay y las Campañas del Desierto, fue el principal sustento de los soldados y el rito ineludible de la vida rural."

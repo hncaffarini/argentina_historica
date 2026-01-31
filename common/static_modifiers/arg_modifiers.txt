@@ -265,3 +265,13 @@ arg_salud_publica_mejorada = {
 	country_health_care_eff_mult = 0.10
 	country_mortality_mult = -0.05
 }
+
+arg_pasion_deportiva = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	state_standard_of_living_add = 1
+}
+
+arg_bono_industria_bebidas = {
+	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
+	country_manufacturing_food_industries_throughput_mult = 0.10
+}

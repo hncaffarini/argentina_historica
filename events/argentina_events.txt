@@ -2366,7 +2366,8 @@ arg_fin_mision_poblar.1 = {
 		name = arg_fin_mision_poblar.1.a
 		# Bono a la industria
 		add_modifier = {
-			name = arg_industria_nacional
+			name = country_manufacturing_industries_throughput_mult
+			value = 0.10
 			months = 120
 		}
 		ig:ig_industrialists = { add_approval = 5 }
@@ -2481,7 +2482,6 @@ arg_bancos_garantidos_1887 = {
 		name = arg_bancos_garantidos_1887.a
 		add_modifier = { name = arg_burbuja_financiera months = 36 }
 		add_treasury = 50000
-		country_minting_mult = 0.50
 	}
 }
 

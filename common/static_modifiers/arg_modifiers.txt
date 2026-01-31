@@ -177,7 +177,6 @@ arg_rebeliones_internas = {
 arg_prestigio_diplomatico = {
 	icon = "gfx/interface/icons/modifier_icons/diplomatic_positive.dds"
 	country_prestige_add = 20
-	country_diplomatic_discoverability_mult = -0.15
 	country_improve_relations_speed_mult = 0.25
 }
 
@@ -296,7 +295,7 @@ arg_orden_rural_alambrado = {
 
 arg_vida_de_almacen = {
 	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
-	state_service_consumption_mult = -0.10 # Los servicios son más accesibles
+	state_standard_of_living_add = 0.5 # Los servicios son más accesibles
 	state_trade_center_throughput_mult = 0.15
 }
 

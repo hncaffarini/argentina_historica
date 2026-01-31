@@ -235,3 +235,45 @@ l_spanish:
 
  arg_loc_almacen_ramos_generales: "Almacén de Ramos Generales"
  arg_loc_almacen_ramos_generales_tooltip: "Institución social y económica del interior. Aquí el gaucho, el inmigrante y el estanciero intercambiaban noticias, compraban desde hachas hasta ginebra, y socializaban en el 'estaño' (mostrador). Fue el corazón latente de la vida rural argentina."
+
+ arg_loc_paz_y_administracion: "Paz y Administración"
+ arg_loc_paz_y_administracion_tooltip: "Lema de la presidencia de Roca. Significaba el fin de las revoluciones armadas (Paz) para dar paso a la organización burocrática, la inversión extranjera y el crecimiento económico (Administración)."
+
+ arg_loc_partido_autonomista_nacional: "P.A.N. (Partido Autonomista Nacional)"
+ arg_loc_partido_autonomista_nacional_tooltip: "La fuerza política hegemónica que gobernó Argentina sin interrupción entre 1874 y 1916. Basado en una red de alianzas provinciales (la 'Liga de Gobernadores'), garantizó la estabilidad pero fue criticado por sus prácticas de fraude electoral."
+
+ arg_loc_ley_1420: "Ley 1420 de Educación Común"
+ arg_loc_ley_1420_tooltip: "Sancionada en 1884, estableció que la educación primaria debe ser obligatoria, gratuita, graduada y laica. Fue la base del progreso social argentino, permitiendo que los hijos de inmigrantes se integraran a la nación a través de la escuela pública."
+
+ arg_loc_registro_civil: "Ley de Registro Civil"
+ arg_loc_registro_civil_tooltip: "Hasta 1884, solo la Iglesia registraba los nacimientos y matrimonios. Con esta ley, el Estado tomó el control de la identidad de las personas, provocando la ruptura de relaciones diplomáticas con el Vaticano."
+
+ arg_loc_perito_moreno: "Francisco 'Perito' Moreno"
+ arg_loc_perito_moreno_tooltip: "Científico, naturalista y explorador. Fue el gran artífice de la demarcación de fronteras en el sur. Su conocimiento del terreno permitió que Argentina defendiera con éxito sus derechos sobre los Andes y la Patagonia frente a los reclamos chilenos."
+
+ arg_loc_nahuel_huapi: "Lago Nahuel Huapi"
+ arg_loc_nahuel_huapi_tooltip: "Inmenso lago andino de origen glaciar. En 1883, la exploración científica liderada por Moreno confirmó que este lago era la naciente del río Limay, consolidando el control efectivo sobre la región de los lagos del sur."
+
+ arg_loc_faro_fin_del_mundo: "Faro de San Juan de Salvamento"
+ arg_loc_faro_fin_del_mundo_tooltip: "Inaugurado en 1884 y plenamente operativo en 1885 en la Isla de los Estados. Es el famoso 'Faro del Fin del Mundo' que inspiró a Julio Verne. Su luz fue clave para guiar a los navegantes por las peligrosas aguas del Cabo de Hornos y reafirmar la presencia argentina en el Atlántico Sur."
+
+ arg_loc_tranvias: "La Ciudad de los Tranvías"
+ arg_loc_tranvias_tooltip: "A mediados de la década de 1880, Buenos Aires se convirtió en una de las ciudades con mayor densidad de tranvías por habitante en el mundo. El sistema de transporte permitió que la ciudad se expandiera, conectando el puerto con los nuevos barrios residenciales."
+
+ arg_loc_unicato: "El Unicato"
+ arg_loc_unicato_tooltip: "Sistema político donde el Presidente concentra todo el poder nacional y provincial, convirtiéndose en el 'Jefe Único' del Partido Autonomista Nacional. Juárez Celman lo llevó a su máxima expresión, eliminando cualquier disidencia interna."
+
+ arg_loc_bancos_garantidos: "Ley de Bancos Garantidos"
+ arg_loc_bancos_garantidos_tooltip: "Sancionada en 1887, permitía a cualquier banco emitir moneda si compraba bonos del Estado. Esto generó una inundación de papel moneda, una burbuja especulativa de tierras y, finalmente, una inflación galopante."
+
+ arg_loc_puerto_madero: "Puerto Madero"
+ arg_loc_puerto_madero_tooltip: "El gran proyecto de infraestructura de 1889. Se eligió el diseño de Eduardo Madero sobre el de Luis Huergo. Fue una obra monumental pero criticada por quedar obsoleta rápidamente ante el tamaño de los nuevos buques."
+
+ arg_loc_carlos_pellegrini: "Carlos Pellegrini"
+ arg_loc_carlos_pellegrini_tooltip: "Apodado 'El Piloto de la Tormenta'. Asumió la presidencia tras la renuncia de Juárez Celman. Su gestión salvó al país de la bancarrota, fundó el Banco de la Nación Argentina y saneó las finanzas públicas, ganándose el respeto de aliados y opositores."
+
+ arg_loc_banco_nacion: "Banco de la Nación Argentina"
+ arg_loc_banco_nacion_tooltip: "Fundado en 1891 como una herramienta de fomento y estabilidad. Fue la respuesta de Pellegrini a la quiebra de los bancos anteriores, diseñado para proteger el crédito agrícola e industrial y recuperar la confianza en la moneda nacional."
+
+ arg_loc_union_civica_radical: "U.C.R. (Unión Cívica Radical)"
+ arg_loc_union_civica_radical_tooltip: "Surgida de la Revolución del Parque, bajo el liderazgo de Leandro N. Alem e Hipólito Yrigoyen. Se convirtió en la principal fuerza de oposición al régimen del PAN, luchando por el sufragio libre y el fin del fraude electoral."

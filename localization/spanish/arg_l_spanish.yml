@@ -154,3 +154,7 @@
  arg_fundacion_ushuaia.t: "La Fundación de $arg_loc_ushuaia$"
  arg_fundacion_ushuaia.d: "Lo que comenzó como una misión anglicana se ha convertido hoy en el puesto de avanzada más austral de nuestra nación. Ante las pretensiones extranjeras en los mares del sur, el gobierno ha decidido establecer una subprefectura permanente. Algunos sugieren que la mejor forma de poblar este sitio es mediante la creación de un #v $arg_loc_presidio_ushuaia$#!, asegurando que el estado tenga ojos y oídos en el Fin del Mundo."
  arg_fundacion_ushuaia.f: "«Ushuaia no es solo un pueblo, es una centinela». — Augusto Lasserre."
+ arg_ley_1420_evento.f: "«La escuela pública es el más poderoso agente de civilización y el lazo más fuerte de unión nacional». — Memoria del Ministerio de Instrucción Pública."
+
+ # --- 1885 ---
+ arg_faro_1885.f: "«Esa luz es la voz del Estado que dice: 'Aquí comienza la Argentina'». — Comentario en la prensa de la época."

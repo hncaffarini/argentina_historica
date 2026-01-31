@@ -301,3 +301,87 @@ arg_vida_de_almacen = {
 	state_service_consumption_mult = -0.10 # Los servicios son más accesibles
 	state_trade_center_throughput_mult = 0.15
 }
+
+arg_orden_conservador = {
+	icon = "gfx/interface/icons/modifier_icons/legitimacy_positive.dds"
+	country_enactment_time_mult = -0.20 # Las leyes se aprueban más rápido por el control del PAN
+	country_loan_interest_rate_mult = -0.30 # Alta confianza de los bancos ingleses
+	state_radicalism_mult = -0.10
+}
+
+arg_brillo_platense = {
+	icon = "gfx/interface/icons/modifier_icons/innovation_positive.dds"
+	state_urban_center_throughput_mult = 0.15
+	state_services_output_mult = 0.10
+}
+
+arg_impulso_alfabetizador = {
+	icon = "gfx/interface/icons/modifier_icons/literacy_positive.dds"
+	country_education_access_add = 0.30
+	country_tech_spread_mult = 0.15
+}
+
+arg_soberania_laica = {
+	icon = "gfx/interface/icons/modifier_icons/legitimacy_positive.dds"
+	country_bureaucracy_add = 150
+	country_enactment_time_mult = -0.10
+}
+
+arg_prestigio_cientifico = {
+	icon = "gfx/interface/icons/modifier_icons/innovation_positive.dds"
+	country_innovation_add = 10
+	country_prestige_add = 15
+}
+
+arg_consumo_lujo = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	state_urban_center_throughput_mult = 0.10
+	state_standard_of_living_add = 1
+}
+
+arg_control_maritimo = {
+	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
+	state_market_access_add = 0.10
+	state_port_throughput_mult = 0.15
+}
+
+arg_movilidad_urbana = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	state_urban_center_throughput_mult = 0.20
+	state_infrastructure_add = 10
+}
+
+arg_poder_unicato = {
+	icon = "gfx/interface/icons/modifier_icons/authority_positive.dds"
+	country_enactment_time_mult = -0.15
+}
+
+arg_burbuja_financiera = {
+	icon = "gfx/interface/icons/modifier_icons/money_positive.dds"
+	country_minting_mult = 0.25
+	country_inflation_mult = 0.10 # Si tenés un mod de inflación, si no, usa tax_efficiency negativo
+}
+
+arg_obra_madero = {
+	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
+	state_port_throughput_mult = 0.30
+}
+
+arg_caos_90 = {
+	icon = "gfx/interface/icons/modifier_icons/turmoil_positive.dds"
+	state_turmoil_mult = 0.50
+	country_prestige_add = -50
+}
+
+arg_credito_nacional = {
+	icon = "gfx/interface/icons/modifier_icons/money_positive.dds"
+	country_loan_interest_rate_mult = -0.25
+	country_tax_efficiency_add = 0.10
+	country_investment_pool_efficiency_mult = 0.15
+}
+
+arg_presion_radical = {
+	icon = "gfx/interface/icons/modifier_icons/legitimacy_negative.dds"
+	country_legitimacy_base_add = -10
+	state_radicalism_mult = 0.15
+}

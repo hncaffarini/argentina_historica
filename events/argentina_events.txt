@@ -1942,6 +1942,161 @@ arg_ramos_generales_1880 = {
 	}
 }
 
+# 1880 - Presidencia de Julio A. Roca
+arg_presidencia_roca_1880 = {
+	type = country_event
+	title = "El Zorro en la Rosada"
+	desc = "Tras sus éxitos militares en el sur y la derrota de la rebelión porteña, #v $arg_loc_julio_roca$#! ha asumido la presidencia. Su visión es pragmática: el Estado debe ser fuerte para que el mercado sea libre. Se inicia una era de orden riguroso donde las viejas pasiones federales y unitarias son reemplazadas por la administración técnica y el progreso material."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1880.10.12
+		NOT = { has_variable = arg_roca_lanzado }
+	}
+
+	immediate = { set_variable = arg_roca_lanzado }
+
+	option = {
+		name = "Paz y Administración para la República."
+		# El PAN toma el control total del gobierno
+		add_modifier = { name = arg_orden_conservador months = 72 }
+		add_prestige = 30
+		ig:ig_landowners = { add_approval = 5 }
+		ig:ig_armed_forces = { add_approval = 5 }
+		
+		# Mecánica de estabilidad política
+		country_legitimacy_base_add = 15
+	}
+}
+
+# 1882 - Fundación de La Plata
+arg_fundacion_la_plata = {
+	type = country_event
+	title = "La Plata: La Ciudad Planificada"
+	desc = "Dardo Rocha ha fundado la nueva capital de la provincia de Buenos Aires: #v La Plata#!. Diseñada con diagonales perfectas, plazas cada seis cuadras e iluminación eléctrica (la primera en Sudamérica), esta ciudad es el símbolo máximo del racionalismo y el optimismo de la Generación del 80."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1882.11.19
+	}
+
+	option = {
+		name = "Un faro de modernidad en la pampa."
+		s:STATE_BUENOS_AIRES = { 
+			add_modifier = { name = arg_brillo_platense months = 120 }
+			# Ganas urbanización
+			add_urbanization = 50
+		}
+		add_prestige = 15
+	}
+}
+
+# 1883 - La Exploración del Nahuel Huapi
+arg_perito_moreno_1883 = {
+	type = country_event
+	title = "El Centinela de los Andes"
+	desc = "El joven científico #v $arg_loc_perito_moreno$#! ha regresado de sus expediciones por los lagos del sur. Sus mapas y estudios demuestran que el #v $arg_loc_nahuel_huapi$#! y las montañas circundantes son la clave para nuestra frontera definitiva. Moreno no solo trae datos geográficos; trae la visión de una Patagonia integrada a la Nación a través de la ciencia y la soberanía."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_gold_prospectors.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1883.1.22
+	}
+
+	option = {
+		name = "La ciencia es nuestra mejor defensa."
+		add_prestige = 20
+		# Mejora la relación con los intelectuales y el prestigio científico
+		ig:ig_intelligentsia = { add_approval = 5 }
+		add_modifier = { name = arg_prestigio_cientifico months = 60 }
+		
+		# Ayuda a los reclamos territoriales futuros
+		add_tech_progression = { technology = colonization progress = 0.25 }
+	}
+}
+
+# 1883 - El nacimiento de Gath & Chaves
+arg_gath_chaves_1883 = {
+	type = country_event
+	title = "La Elegancia de la Gran Aldea"
+	desc = "Lorenzo Chaves y Alfredo Gath han fundado una pequeña tienda en Buenos Aires que promete traer lo último de la moda de Londres y París. Lo que hoy es un local modesto, pronto se convertirá en el epicentro del lujo sudamericano, demostrando que Buenos Aires ya no es un puerto de barro, sino una metrópolis cosmopolita."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1883.7.1
+	}
+
+	option = {
+		name = "Buenos Aires se viste de gala."
+		s:STATE_BUENOS_AIRES = { 
+			add_modifier = { name = arg_consumo_lujo months = 48 } 
+		}
+		add_loyalists = { value = 0.05 pop_type = capitalists }
+	}
+}
+
+# 1884 - La Ley 1420
+arg_ley_1420_evento = {
+	type = country_event
+	title = "Laica, Gratuita y Obligatoria"
+	desc = "El Congreso ha sancionado la #v $arg_loc_ley_1420$#! tras debates maratónicos. La Iglesia está indignada por la eliminación de la enseñanza religiosa obligatoria en horario escolar. El Nuncio Apostólico ha protestado formalmente, pero el General #v $arg_loc_julio_roca$#! es firme: la escuela pública será el crisol donde se fundan las razas para crear al ciudadano argentino."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_christianity.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1884.7.8
+	}
+
+	option = {
+		name = "Formar a los ciudadanos del futuro."
+		# Mejora masiva de la alfabetización
+		add_modifier = { name = arg_impulso_alfabetizador months = 240 }
+		# Conflicto religioso
+		ig:ig_devout = { add_approval = -10 }
+		ig:ig_intelligentsia = { add_approval = 10 }
+		
+		# Progresión hacia leyes de educación pública
+		set_law = law_public_schools
+	}
+
+	option = {
+		name = "Mantener la enseñanza religiosa para evitar el conflicto."
+		ig:ig_devout = { add_approval = 5 }
+		add_modifier = { name = arg_paz_religiosa months = 60 }
+	}
+}
+
+# 1884 - Ruptura con la Santa Sede
+arg_ruptura_vaticano = {
+	type = country_event
+	title = "Expulsión del Nuncio"
+	desc = "La tensión por el #v $arg_loc_registro_civil$#! y la educación ha llegado al límite. El gobierno nacional ha entregado sus pasaportes al Nuncio Apostólico, monseñor Mattera, ordenándole abandonar el país. Argentina afirma su soberanía sobre las conciencias de sus habitantes, desafiando la autoridad de Roma."
+
+	trigger = {
+		has_variable = arg_ley_1420_lanzada
+		is_date >= 1884.10.14
+	}
+
+	option = {
+		name = "No hay más autoridad que la del Estado Argentino."
+		add_prestige = 20
+		add_modifier = { name = arg_soberania_laica months = 120 }
+	}
+}
+
 # 1884 - Fundación Oficial de Ushuaia
 arg_fundacion_ushuaia = {
 	type = country_event
@@ -1980,5 +2135,206 @@ arg_fundacion_ushuaia = {
 		s:STATE_TIERRA_DEL_FUEGO = {
 			add_modifier = { name = arg_atraccion_austral months = 120 }
 		}
+	}
+}
+
+# 1885 - El Faro del Fin del Mundo
+arg_faro_1885 = {
+	type = country_event
+	title = "La Luz en el Confín"
+	desc = "En la desolada Isla de los Estados, la luz del #v $arg_loc_faro_fin_del_mundo$#! ya brilla con regularidad. Para el gobierno de #v $arg_loc_julio_roca$#!, este faro no es solo una ayuda a la navegación; es una declaración de soberanía. Donde hay luz argentina, hay territorio nacional. Los marinos de todo el mundo ahora reconocen que estas aguas australes tienen un dueño."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_antarctica.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1885.5.25
+	}
+
+	option = {
+		name = "Iluminar el paso de las naciones."
+		add_prestige = 15
+		s:STATE_TIERRA_DEL_FUEGO = {
+			add_modifier = { name = arg_control_maritimo months = 120 }
+		}
+	}
+}
+
+# 1885 - Expansión del Tranvía
+arg_tranvias_1885 = {
+	type = country_event
+	title = "Los Rieles de la Capital"
+	desc = "El sistema de #v $arg_loc_tranvias$#! se extiende como una tela de araña por Buenos Aires. Los viejos carros a caballo están siendo superados por una red eficiente que permite a los trabajadores y a la burguesía vivir lejos del centro. La ciudad crece, se estira y late al ritmo del metal sobre el empedrado."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1885.10.1
+	}
+
+	option = {
+		name = "Modernizar la locomoción urbana."
+		s:STATE_BUENOS_AIRES = { 
+			add_modifier = { name = arg_movilidad_urbana months = 60 }
+		}
+		add_tech_progression = { technology = urban_planning progress = 0.20 }
+	}
+}
+
+# 1886 - El Unicato de Juárez Celman
+arg_unicato_1886 = {
+	type = country_event
+	title = "El Unicato de Juárez Celman"
+	desc = "arg_unicato_1886.d" # Referencia a localización
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/southamerica_election.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1886.10.12
+		NOT = { has_variable = arg_unicato_lanzado }
+	}
+
+	immediate = { set_variable = arg_unicato_lanzado }
+
+	option = {
+		name = "Yo soy el Jefe Único."
+		add_modifier = { name = arg_poder_unicato months = 48 }
+		add_authority = 100
+		ig:ig_landowners = { add_approval = 5 }
+	}
+}
+
+# 1887 - Especulación y Bancos Garantidos
+arg_bancos_garantidos_1887 = {
+	type = country_event
+	title = "La Quimera del Oro"
+	desc = "arg_bancos_garantidos_1887.d"
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_election.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1887.11.3
+		NOT = { has_variable = arg_bancos_lanzado }
+	}
+
+	immediate = { set_variable = arg_bancos_lanzado }
+
+	option = {
+		name = "¡Que el crédito no se detenga!"
+		add_modifier = { name = arg_burbuja_financiera months = 36 }
+		add_treasury = 50000
+		country_minting_mult = 0.50
+	}
+}
+
+# 1889 - Puerto Madero
+arg_puerto_madero_1889 = {
+	type = country_event
+	title = "Un Puerto para el Mundo"
+	desc = "arg_puerto_madero_1889.d"
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1889.4.1
+		NOT = { has_variable = arg_puerto_madero_lanzado }
+	}
+
+	immediate = { set_variable = arg_puerto_madero_lanzado }
+
+	option = {
+		name = "Buenos Aires debe tener un puerto monumental."
+		s:STATE_BUENOS_AIRES = { 
+			add_modifier = { name = arg_obra_madero months = 60 }
+			add_infrastructure = 20
+		}
+	}
+}
+
+# 1890 - Crisis y Revolución
+arg_revolucion_parque_1890 = {
+	type = country_event
+	title = "La Revolución del Parque"
+	desc = "arg_revolucion_parque_1890.d"
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1890.7.26
+		NOT = { has_variable = arg_crisis_90_lanzada }
+	}
+
+	immediate = { set_variable = arg_crisis_90_lanzada }
+
+	option = {
+		name = "Juárez ha caído. ¡Llamen al Piloto de la Tormenta!"
+		add_modifier = { name = arg_caos_90 months = 12 }
+		# Efectos de la crisis
+		add_radicalism_mult = { value = 0.2 }
+		add_treasury = -40000 # El pánico bancario
+		
+		# Referencia al glosario de Pellegrini que crearemos
+		set_variable = arg_pellegrini_lanzado
+	}
+}
+
+# 1891 - El Banco de la Nación
+arg_banco_nacion_1891 = {
+	type = country_event
+	title = "El Banco de la Nación Argentina"
+	desc = "La crisis de 1890 ha destruido el sistema bancario anterior. El presidente #v $arg_loc_carlos_pellegrini$#! ha propuesto una medida audaz: la creación de un banco estatal sólido que no sea una herramienta de especulación, sino un motor de desarrollo. El Banco Nación nace para dar crédito a los que producen y para demostrar al mundo que Argentina ha vuelto a ponerse de pie."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1891.10.26
+		has_variable = arg_crisis_90_lanzada
+		NOT = { has_variable = arg_banco_nacion_lanzado }
+	}
+
+	immediate = { set_variable = arg_banco_nacion_lanzado }
+
+	option = {
+		name = "Una institución para la reconstrucción."
+		add_modifier = { name = arg_credito_nacional months = 120 }
+		add_tech_progression = { technology = central_banking progress = 0.5 }
+		add_treasury = -20000 # Costo de capitalización inicial
+		ig:ig_industrialists = { add_approval = 5 }
+	}
+}
+
+# 1892 - La Unión Cívica Radical
+arg_nacimiento_ucr_1892 = {
+	type = country_event
+	title = "¡Adelante, Radicales!"
+	desc = "La paz de Pellegrini no ha conformado a todos. Tras la división de la Unión Cívica, #v Leandro N. Alem#! ha fundado la Unión Cívica Radical. Su proclama es la 'intransigencia': no aceptarán cargos del gobierno hasta que el sufragio sea libre y honesto. El régimen del PAN tiene ahora un enemigo que no puede ser comprado con cargos ni dinero."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1892.4.1
+	}
+
+	option = {
+		name = "La lucha por la pureza del sufragio ha comenzado."
+		add_modifier = { name = arg_presion_radical months = 60 }
+		# Los Intelectuales se vuelven más críticos
+		ig:ig_intelligentsia = { add_approval = -5 }
+		add_radicalism_mult = { value = 0.1 }
 	}
 }

@@ -228,7 +228,7 @@ arg_darwin_fosiles = {
 	desc = "Científicos y viajeros europeos, maravillados por la geografía de nuestras pampas, han reportado el hallazgo de huesos de proporciones colosales. Estos #v $arg_loc_paleontologia$#! desafían la comprensión actual del mundo natural. Algunos sugieren crear un espacio para su estudio en Buenos Aires."
 	
 	gui_window = event_window
-	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	video = "gfx/event_pictures/southamerica_aristocrats.bk2"
 
 	trigger = {
 		tag = ARG

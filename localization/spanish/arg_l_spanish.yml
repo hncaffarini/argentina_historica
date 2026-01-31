@@ -158,3 +158,20 @@
 
  # --- 1885 ---
  arg_faro_1885.f: "«Esa luz es la voz del Estado que dice: 'Aquí comienza la Argentina'». — Comentario en la prensa de la época."
+
+ # --- 1886 ---
+ arg_unicato_1886.d: "El presidente Miguel Juárez Celman ha concentrado en su persona la jefatura del Partido Autonomista Nacional y la Presidencia de la República. Los gobernadores responden directamente a él, y la oposición ha sido silenciada o cooptada. Sus seguidores lo llaman el 'Jefe Único', pero el descontento crece bajo la superficie de esta aparente unanimidad."
+
+ # --- 1887 ---
+ arg_bancos_garantidos_1887.d: "La Ley de Bancos Garantidos ha desatado una fiebre especulativa sin precedentes. Se fundan bancos por doquier solo para emitir billetes respaldados por bonos públicos, inundando la plaza de papel moneda. La Bolsa de Comercio es un hervidero donde se hacen fortunas de la noche a la mañana, mientras la inflación comienza a carcomer los salarios reales."
+
+ # --- 1889 ---
+ arg_puerto_madero_1889.d: "Tras años de debates entre los proyectos de Huergo y Madero, se ha inaugurado la primera sección del puerto diseñado por Eduardo Madero. Con sus diques de ladrillo y grúas hidráulicas, promete acabar con la vergüenza del desembarco en carretas. Sin embargo, las voces críticas advierten que su diseño de esclusas es costoso y complicado para el tráfico moderno."
+
+ # --- 1890 ---
+ arg_revolucion_parque_1890.d: "La crisis económica y el autoritarismo del Unicato han estallado. La Unión Cívica, liderada por Leandro N. Alem y Bartolomé Mitre, se ha levantado en armas, tomando el Parque de Artillería. Aunque el gobierno cuenta con ventaja militar, su legitimidad política está muerta. Juárez Celman está solo y el país exige un cambio de rumbo."
+
+ # --- Homenajes y Cultura ---
+ arg_homenaje_belgrano.t: "El Manto de la Patria"
+ arg_homenaje_belgrano.d: "En medio de las tensiones con las potencias extranjeras, el gobernador Rosas ha ordenado celebrar con especial fervor el legado de #v $arg_loc_belgrano$#!. La bandera celeste y blanca que él creó en las barrancas del Paraná es hoy el símbolo de nuestra resistencia. Su ejemplo de austeridad y servicio es invocado para unir a los federales ante la amenaza externa."
+ arg_homenaje_belgrano.a: "Su bandera nos cobija a todos."

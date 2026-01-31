@@ -385,3 +385,55 @@ arg_presion_radical = {
 	country_legitimacy_base_add = -10
 	state_radicalism_mult = 0.15
 }
+
+arg_latifundismo = {
+	icon = "gfx/interface/icons/modifier_icons/aristocrats_positive.dds"
+	state_aristocrats_political_strength_mult = 0.25
+	state_migration_pull_mult = -0.10
+}
+
+arg_inflacion_rosista = {
+	icon = "gfx/interface/icons/modifier_icons/money_negative.dds"
+	country_tax_efficiency_add = -0.15
+	state_standard_of_living_add = -1
+}
+
+arg_orden_urbano = {
+	icon = "gfx/interface/icons/modifier_icons/authority_positive.dds"
+	state_turmoil_mult = -0.10
+}
+
+arg_impulso_ferroviario = {
+	icon = "gfx/interface/icons/modifier_icons/infrastructure_positive.dds"
+	state_infrastructure_add = 10
+	state_transportation_throughput_mult = 0.15
+}
+
+arg_tregua_fragil = {
+	icon = "gfx/interface/icons/modifier_icons/legitimacy_positive.dds"
+	country_legitimacy_base_add = 10
+	state_radicalism_mult = -0.05
+}
+
+arg_unificacion_mitre = {
+	icon = "gfx/interface/icons/modifier_icons/authority_positive.dds"
+	country_authority_add = 100
+	country_prestige_add = 20
+}
+
+arg_presidencias_historicas = {
+	icon = "gfx/interface/icons/modifier_icons/bureaucracy_positive.dds"
+	country_bureaucracy_add = 50
+	country_institution_size_change_speed_mult = 0.25
+}
+
+arg_guerra_policia = {
+	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
+	state_turmoil_mult = -0.25
+	unit_offense_add = 5
+}
+
+arg_paz_religiosa = {
+	icon = "gfx/interface/icons/modifier_icons/devout_positive.dds"
+	state_turmoil_mult = -0.10
+}

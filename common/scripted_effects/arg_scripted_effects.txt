@@ -1,0 +1,41 @@
+add_radicalism_mult = {
+	# Parameters:
+	# value = required, multiplier for conversion (e.g., 0.05 for 5%).
+	# state = optional, if provided, the effect runs on this state. Otherwise, it runs on the current scope.
+	#
+	# This effect converts a percentage of loyalists in the target scope into radicals.
+	# It's a way to simulate growing discontent without just adding a flat number.
+
+	if = {
+		limit = { exists = $state$ }
+		# This block runs if the effect is called with a 'state' parameter,
+		# like: add_radicalism_mult = { value = 0.1 state = s:STATE_TUCUMAN }
+		$state$ = {
+			set_variable = {
+				name = temp_loyalist_count
+				value = 0
+			}
+			every_pop = {
+				limit = { is_loyalist = yes }
+				change_variable = { name = temp_loyalist_count add = pop_size }
+			}
+			modify_variable = { name = temp_loyalist_count multiply = $value$ }
+			add_radicals = { amount = var:temp_loyalist_count }
+			remove_loyalists = { amount = var:temp_loyalist_count }
+		}
+	}
+	else = {
+		# This block runs if no 'state' is specified, applying to the current scope (country or state).
+		set_variable = {
+			name = temp_loyalist_count
+			value = 0
+		}
+		every_pop = {
+			limit = { is_loyalist = yes }
+			change_variable = { name = temp_loyalist_count add = pop_size }
+		}
+		modify_variable = { name = temp_loyalist_count multiply = $value$ }
+		add_radicals = { amount = var:temp_loyalist_count }
+		remove_loyalists = { amount = var:temp_loyalist_count }
+	}
+}

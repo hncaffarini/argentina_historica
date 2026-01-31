@@ -1893,6 +1893,32 @@ arg_ley_capital_federal = {
 	}
 }
 
+# 1880 - El Cerco de la Pampa
+arg_evento_alambrado = {
+	type = country_event
+	title = "El Fin de la Pampa Abierta"
+	desc = "Lo que comenzó como una curiosidad en la estancia de #v $arg_loc_richard_newton$#! se ha convertido en una necesidad nacional. El #v $arg_loc_alambrado$#! está cubriendo la llanura, trazando líneas infranqueables de acero. Los estancieros celebran el control total sobre sus rodeos, pero para el gaucho y sus tradiciones de libertad, el alambre es una frontera que anuncia el fin de una era."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1880.1.1
+		has_technology = enclosure
+	}
+
+	option = {
+		name = "Delimitar la propiedad es civilizar la tierra."
+		# Aumenta la eficiencia de las estancias y el poder de los terratenientes
+		ig:ig_landowners = { add_approval = 5 }
+		add_modifier = { name = arg_orden_rural_alambrado months = 120 }
+		
+		# Efecto social: El gaucho se vuelve trabajador asalariado o marginal
+		add_radicalism_mult = { value = 0.05 } 
+	}
+}
+
 # 1884 - Fundación Oficial de Ushuaia
 arg_fundacion_ushuaia = {
 	type = country_event

@@ -145,7 +145,10 @@
 
  # --- 1879 ---
  arg_campaña_roca_1879.f: "«Sellaréis con vuestras espadas la ley más importante de la República: la ley que entrega el desierto a la labor del hombre blanco». — Julio A. Roca a sus tropas."
-
+ 
+ # --- 1880 ---
+ arg_evento_alambrado.f: "«El alambre de hierro ha sido para la propiedad rural lo que el telégrafo para el pensamiento: una revolución silenciosa que lo cambió todo»."
+ 
  # --- 1884 ---
  arg_fundacion_ushuaia.t: "La Fundación de $arg_loc_ushuaia$"
  arg_fundacion_ushuaia.d: "Lo que comenzó como una misión anglicana se ha convertido hoy en el puesto de avanzada más austral de nuestra nación. Ante las pretensiones extranjeras en los mares del sur, el gobierno ha decidido establecer una subprefectura permanente. Algunos sugieren que la mejor forma de poblar este sitio es mediante la creación de un #v $arg_loc_presidio_ushuaia$#!, asegurando que el estado tenga ojos y oídos en el Fin del Mundo."

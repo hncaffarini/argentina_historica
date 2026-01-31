@@ -226,3 +226,9 @@ l_spanish:
 
  arg_loc_campaña_desierto: "Campaña del Desierto"
  arg_loc_campaña_desierto_tooltip: "Ofensiva militar de 1879 que reemplazó la estrategia defensiva de fortines por una de avance continuo. Resultó en la incorporación de millones de hectáreas de tierra aptas para la ganadería y la agricultura, aunque implicó el desmantelamiento de las sociedades indígenas de la región."
+
+ arg_loc_alambrado: "El Alambrado"
+ arg_loc_alambrado_tooltip: "Introducido por Richard Newton, el alambrado de acero permitió delimitar la propiedad privada en la pampa. Fue el fin de la 'ganadería de cimarrones' y el inicio de la estancia moderna, permitiendo el control del pedigrí y la agricultura protegida del ganado."
+
+ arg_loc_richard_newton: "Richard Newton"
+ arg_loc_richard_newton_tooltip: "Hacendado inglés que en 1845 instaló el primer cerco de alambre en su estancia 'Santa María'. Su innovación fue resistida al principio, pero terminó siendo la base de la riqueza agroexportadora argentina."

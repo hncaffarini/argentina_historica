@@ -288,3 +288,10 @@ arg_ventaja_tactica = {
 	country_army_offense_add = 15
 	country_kill_rate_mult = 0.10
 }
+
+arg_orden_rural_alambrado = {
+	icon = "gfx/interface/icons/modifier_icons/livestock_positive.dds"
+	state_livestock_ranches_throughput_mult = 0.20
+	state_agriculture_output_mult = 0.15
+	state_migration_pull_add = -5 # La tierra es más difícil de conseguir para nuevos colonos
+}

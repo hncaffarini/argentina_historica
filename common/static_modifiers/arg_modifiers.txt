@@ -1,49 +1,49 @@
 argentina_fomento_inmigracion = {
 	state_migration_pull_mult = 0.25
-	state_pop_growth_add = 0.002
+	state_birth_rate_add = 0.002
 	icon = "gfx/interface/icons/modifier_icons/migration_positive.dds"
 }
 
 arg_monopolio_puerto = {
 	icon = "gfx/interface/icons/modifier_icons/money_positive.dds"
 	state_tax_capacity_add = 50
-	country_trade_route_export_revenue_mult = 0.15
+	country_export_tariff_mult = 0.15
 }
 
 arg_ejercito_del_norte = {
 	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
-	unit_offense_add = 5
-	unit_defense_add = 5
-	land_morale_mult = 0.10
+	army_offense_mult = 0.05
+	army_defense_mult = 0.05
+	army_morale_mult = 0.10
 }
 
 arg_bloqueo_economico_frances = {
 	icon = "gfx/interface/icons/modifier_icons/trade_negative.dds"
 	# Reduce drásticamente los ingresos de aduana
 	state_tax_capacity_add = -100 
-	country_trade_route_import_revenue_mult = -0.80
-	country_trade_route_export_revenue_mult = -0.80
+	country_import_tariff_mult = -0.80
+	country_export_tariff_mult = -0.80
 	# Aumenta el radicalismo por la crisis
-	country_enactment_time_mult = 0.25
+	law_enactment_time_mult = 0.25
 }
 
 arg_concesiones_francia = {
 	icon = "gfx/interface/icons/modifier_icons/diplomacy_negative.dds"
-	country_trade_route_import_revenue_mult = -0.50 # Francia no paga impuestos
+	country_import_tariff_mult = -0.50 # Francia no paga impuestos
 }
 
 arg_guerra_civil_norte = {
 	icon = "gfx/interface/icons/modifier_icons/civil_unrest.dds"
 	# La guerra consume recursos y hombres
 	state_tax_capacity_add = -50
-	country_army_maint_mult = 0.20 # El ejército es más caro de mantener
-	state_turmoil_mult = 0.25 # Más disturbios en todo el país
+	military_goods_cost_mult = 0.20 # El ejército es más caro de mantener
+	state_radicals_from_standard_of_living_mult = 0.25 # Más disturbios en todo el país
 }
 
 arg_victoria_federal = {
 	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
-	unit_offense_add = 10
-	land_morale_mult = 0.15
+	army_offense_mult = 0.10
+	army_morale_mult = 0.15
 }
 
 arg_reconstruccion_salta = {
@@ -56,13 +56,12 @@ arg_espiritu_obligado = {
 	icon = "gfx/interface/icons/modifier_icons/prestige_positive.dds"
 	country_prestige_add = 25
 	country_war_exhaustion_mult = -0.15 # El pueblo está más dispuesto a resistir
-	ig:ig_armed_forces = { add_approval = 5 } # Los militares están orgullosos
 }
 
 arg_libre_navegacion_forzada = {
 	icon = "gfx/interface/icons/modifier_icons/trade_negative.dds"
-	country_trade_route_import_revenue_mult = -0.50
-	country_trade_route_export_revenue_mult = -0.50
+	country_import_tariff_mult = -0.50
+	country_export_tariff_mult = -0.50
 }
 
 arg_mejora_desembarco = {
@@ -73,14 +72,14 @@ arg_mejora_desembarco = {
 
 arg_paz_britanica = {
 	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
-	country_trade_route_import_revenue_mult = 0.20
-	country_trade_route_export_revenue_mult = 0.20
+	country_import_tariff_mult = 0.20
+	country_export_tariff_mult = 0.20
 	country_market_threshold_mult = 0.10
 }
 
 arg_luto_nacional = {
 	icon = "gfx/interface/icons/modifier_icons/morale_positive.dds"
-	state_turmoil_mult = -0.20 # La gente está más tranquila por el respeto al prócer
+	state_radicals_from_standard_of_living_mult = -0.20 # La gente está más tranquila por el respeto al prócer
 	country_prestige_add = 10
 }
 
@@ -93,7 +92,7 @@ arg_estado_separado = {
 arg_era_constitucional = {
 	icon = "gfx/interface/icons/modifier_icons/law_positive.dds"
 	country_migration_attraction_mult = 0.50 # Empieza el flujo migratorio
-	country_tech_spread_mult = 0.20
+	technology_spread_mult = 0.20
 }
 
 arg_bono_colonizacion = {
@@ -112,19 +111,19 @@ arg_pacto_flores = {
 	icon = "gfx/interface/icons/modifier_icons/diplomatic_positive.dds"
 	state_market_access_add = 0.25
 	# Representa las tensiones de la integración
-	state_turmoil_mult = 0.10
+	state_radicals_from_standard_of_living_mult = 0.10
 }
 
 arg_puerto_libre = {
 	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
 	state_market_access_add = 0.20
-	state_trade_route_export_revenue_mult = 0.15
+	state_trade_center_throughput_mult = 0.15
 }
 
 arg_fomento_escolar = {
 	icon = "gfx/interface/icons/modifier_icons/literacy_positive.dds"
-	country_literacy_rate_mult = 0.05
-	country_tech_spread_mult = 0.10
+	education_access_add = 0.05
+	technology_spread_mult = 0.10
 }
 
 arg_iluminacion_moderna = {
@@ -136,20 +135,20 @@ arg_iluminacion_moderna = {
 arg_espiritu_guemes = {
 	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
 	state_conscription_rate_add = 0.02
-	unit_defense_add = 5
-	land_morale_mult = 0.10
+	army_defense_mult = 0.05
+	army_morale_mult = 0.10
 }
 
 arg_impulso_sarmiento = {
 	icon = "gfx/interface/icons/modifier_icons/literacy_positive.dds"
-	country_education_access_add = 0.20
-	country_tech_spread_mult = 0.25
+	education_access_add = 0.20
+	technology_spread_mult = 0.25
 }
 
 arg_granero_del_mundo = {
 	icon = "gfx/interface/icons/modifier_icons/money_positive.dds"
 	country_agriculture_output_mult = 0.30
-	country_trade_route_export_revenue_mult = 0.20
+	country_export_tariff_mult = 0.20
 }
 
 arg_presencia_austral = {
@@ -165,13 +164,13 @@ arg_atraccion_austral = {
 
 arg_gastos_de_guerra = {
 	icon = "gfx/interface/icons/modifier_icons/money_negative.dds"
-	country_army_maint_mult = 0.30 # El ejército es mucho más caro
+	military_goods_cost_mult = 0.30 # El ejército es mucho más caro
 	country_tax_efficiency_add = -0.10 # La guerra afecta la recaudación
 }
 
 arg_rebeliones_internas = {
 	icon = "gfx/interface/icons/modifier_icons/civil_unrest.dds"
-	state_turmoil_mult = 0.40 # Representa a Felipe Varela y las últimas montoneras
+	state_radicals_from_standard_of_living_mult = 0.40 # Representa a Felipe Varela y las últimas montoneras
 	state_conscription_rate_add = -0.05 # La gente se resiste al reclutamiento
 }
 
@@ -221,7 +220,7 @@ arg_crisis_institucional = {
 
 arg_austeridad_republicana = {
 	icon = "gfx/interface/icons/modifier_icons/money_positive.dds"
-	country_expenses_mult = -0.10
+	government_goods_cost_mult = -0.10
 	country_loan_interest_rate_mult = -0.20
 }
 
@@ -245,8 +244,8 @@ arg_estado_de_sitio = {
 
 arg_nacion_unificada = {
 	icon = "gfx/interface/icons/modifier_icons/legitimacy_positive.dds"
-	country_legitimacy_base_add = 20
 	country_bureaucracy_add = 200
+	country_tax_efficiency_add = 0.20
 }
 
 arg_proteccion_ganadera = {
@@ -256,14 +255,13 @@ arg_proteccion_ganadera = {
 
 arg_preparativos_ofensivos = {
 	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
-	country_army_offense_add = 10
+	army_offense_mult = 0.10
 	country_war_exhaustion_mult = -0.10
 }
 
 arg_salud_publica_mejorada = {
 	icon = "gfx/interface/icons/modifier_icons/mortality_negative.dds"
-	country_health_care_eff_mult = 0.10
-	country_mortality_mult = -0.05
+	mortality_mult = -0.10
 }
 
 arg_pasion_deportiva = {
@@ -273,19 +271,19 @@ arg_pasion_deportiva = {
 
 arg_bono_industria_bebidas = {
 	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
-	country_manufacturing_food_industries_throughput_mult = 0.10
+	building_group_bg_food_industries_throughput_mult = 0.10
 }
 
 arg_tierras_conquistadas = {
 	icon = "gfx/interface/icons/modifier_icons/state_sovereignty.dds"
 	state_migration_pull_add = 10
 	state_agriculture_output_mult = 0.20 # Representa la apertura de tierras ganaderas
-	state_turmoil_mult = -0.15 # Representa el fin de los malones
+	state_radicals_from_standard_of_living_mult = -0.15 # Representa el fin de los malones
 }
 
 arg_ventaja_tactica = {
 	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
-	country_army_offense_add = 15
+	army_offense_mult = 0.15
 	country_kill_rate_mult = 0.10
 }
 
@@ -304,9 +302,9 @@ arg_vida_de_almacen = {
 
 arg_orden_conservador = {
 	icon = "gfx/interface/icons/modifier_icons/legitimacy_positive.dds"
-	country_enactment_time_mult = -0.20 # Las leyes se aprueban más rápido por el control del PAN
+	law_enactment_time_mult = -0.20 # Las leyes se aprueban más rápido por el control del PAN
 	country_loan_interest_rate_mult = -0.30 # Alta confianza de los bancos ingleses
-	state_radicalism_mult = -0.10
+	state_radicals_from_standard_of_living_mult = -0.10
 }
 
 arg_brillo_platense = {
@@ -317,14 +315,14 @@ arg_brillo_platense = {
 
 arg_impulso_alfabetizador = {
 	icon = "gfx/interface/icons/modifier_icons/literacy_positive.dds"
-	country_education_access_add = 0.30
-	country_tech_spread_mult = 0.15
+	education_access_add = 0.30
+	technology_spread_mult = 0.15
 }
 
 arg_soberania_laica = {
 	icon = "gfx/interface/icons/modifier_icons/legitimacy_positive.dds"
 	country_bureaucracy_add = 150
-	country_enactment_time_mult = -0.10
+	law_enactment_time_mult = -0.10
 }
 
 arg_prestigio_cientifico = {
@@ -353,13 +351,13 @@ arg_movilidad_urbana = {
 
 arg_poder_unicato = {
 	icon = "gfx/interface/icons/modifier_icons/authority_positive.dds"
-	country_enactment_time_mult = -0.15
+	law_enactment_time_mult = -0.15
 }
 
 arg_burbuja_financiera = {
 	icon = "gfx/interface/icons/modifier_icons/money_positive.dds"
-	country_minting_mult = 0.25
-	country_inflation_mult = 0.10 # Si tenés un mod de inflación, si no, usa tax_efficiency negativo
+	country_minting_mult = 0.50
+	country_tax_efficiency_add = -0.10 # Si tenés un mod de inflación, si no, usa tax_efficiency negativo
 }
 
 arg_obra_madero = {
@@ -369,7 +367,7 @@ arg_obra_madero = {
 
 arg_caos_90 = {
 	icon = "gfx/interface/icons/modifier_icons/turmoil_positive.dds"
-	state_turmoil_mult = 0.50
+	state_radicals_from_standard_of_living_mult = 0.50
 	country_prestige_add = -50
 }
 
@@ -382,8 +380,7 @@ arg_credito_nacional = {
 
 arg_presion_radical = {
 	icon = "gfx/interface/icons/modifier_icons/legitimacy_negative.dds"
-	country_legitimacy_base_add = -10
-	state_radicalism_mult = 0.15
+	state_radicals_from_standard_of_living_mult = 0.15
 }
 
 arg_latifundismo = {
@@ -395,12 +392,12 @@ arg_latifundismo = {
 arg_inflacion_rosista = {
 	icon = "gfx/interface/icons/modifier_icons/money_negative.dds"
 	country_tax_efficiency_add = -0.15
-	state_standard_of_living_add = -1
+	state_radicals_from_standard_of_living_mult = 0.10
 }
 
 arg_orden_urbano = {
 	icon = "gfx/interface/icons/modifier_icons/authority_positive.dds"
-	state_turmoil_mult = -0.10
+	state_radicals_from_standard_of_living_mult = -0.10
 }
 
 arg_impulso_ferroviario = {
@@ -411,8 +408,7 @@ arg_impulso_ferroviario = {
 
 arg_tregua_fragil = {
 	icon = "gfx/interface/icons/modifier_icons/legitimacy_positive.dds"
-	country_legitimacy_base_add = 10
-	state_radicalism_mult = -0.05
+	state_radicals_from_standard_of_living_mult = -0.05
 }
 
 arg_unificacion_mitre = {
@@ -429,11 +425,16 @@ arg_presidencias_historicas = {
 
 arg_guerra_policia = {
 	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
-	state_turmoil_mult = -0.25
-	unit_offense_add = 5
+	state_radicals_from_standard_of_living_mult = -0.25
+	army_offense_mult = 0.05
 }
 
 arg_paz_religiosa = {
 	icon = "gfx/interface/icons/modifier_icons/devout_positive.dds"
-	state_turmoil_mult = -0.10
+	state_radicals_from_standard_of_living_mult = -0.10
+}
+
+arg_industria_nacional = {
+	icon = "gfx/interface/icons/modifier_icons/production_positive.dds"
+	building_group_bg_manufacturing_throughput_mult = 0.10
 }

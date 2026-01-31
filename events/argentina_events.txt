@@ -12,7 +12,7 @@ argentina_events.1 = {
 	trigger = {
 		exists = c:ARG
 		this = c:ARG
-		game_date = 1845.1.1
+		is_date >= 1845.1.1
 		NOT = { has_variable = argentina_inmigracion_lanzada }
 	}
 
@@ -56,7 +56,7 @@ arg_ley_de_aduanas = {
 
 	trigger = {
 		tag = ARG
-		game_date = 1836.1.1
+		is_date >= 1836.1.1
 		NOT = { has_variable = arg_evento_aduana_lanzado }
 	}
 
@@ -91,8 +91,8 @@ arg_ley_de_aduanas = {
 # 1836 - El Terror de la Mazorca
 arg_evento_mazorca = {
 	type = country_event
-	title = "La Sociedad Popular Restauradora"
-	desc = "Las calles de Buenos Aires ya no son seguras para los críticos del gobierno. #v $arg_loc_mazorca$#! ha intensificado sus rondas, asegurando que cada ciudadano porte el distintivo punzó y profiera las consignas federales. Aquellos sospechosos de simpatías unitarias enfrentan el azote o algo peor."
+	title = arg_evento_mazorca.t
+	desc = arg_evento_mazorca.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
@@ -102,11 +102,16 @@ arg_evento_mazorca = {
 		is_date >= 1836.10.1
 		NOT = { has_variable = arg_mazorca_lanzado }
 	}
+	immediate = {
+		set_variable = arg_mazorca_lanzado
+	}
 
 	option = {
 		name = "El orden requiere firmeza."
 		add_authority = 100
-		add_radicalism_mult = { value = 0.05 }
+		every_scope_state = {
+			add_radicals = { value = 0.05 type = lower_strata }
+		}
 		ig:ig_intelligentsia = { add_approval = -5 }
 	}
 }
@@ -123,7 +128,7 @@ arg_guerra_peru_boliviana = {
 
 	trigger = {
 		tag = ARG
-		game_date = 1837.5.1
+		is_date >= 1837.5.1
 		# Condición: Que Bolivia sea una amenaza o esté unida a Perú
 		any_country = {
 			tag = BOL
@@ -161,9 +166,8 @@ arg_guerra_peru_boliviana = {
 	option = {
 		name = arg_guerra_peru_boliviana.b
 		add_prestige = -20
-		add_radicalism_mult = {
-			value = 0.1
-			state = s:STATE_TUCUMAN
+		s:STATE_TUCUMAN = {
+			add_radicals = { value = 0.1 type = lower_strata }
 		}
 	}
 }
@@ -180,8 +184,9 @@ arg_bloqueo_frances = {
 
 	trigger = {
 		tag = ARG
-		game_date >= 1838.3.28
+		is_date >= 1838.3.28
 		NOT = { has_variable = arg_bloqueo_frances_lanzado }
+		has_modifier = arg_monopolio_puerto # Solo tiene sentido si Rosas mantiene el control del puerto
 		# Solo ocurre si Francia existe y es una potencia
 		exists = c:FRA
 	}
@@ -224,8 +229,8 @@ arg_bloqueo_frances = {
 # 1838 - Hallazgos Paleontológicos
 arg_darwin_fosiles = {
 	type = country_event
-	title = "Los Gigantes del Pasado"
-	desc = "Científicos y viajeros europeos, maravillados por la geografía de nuestras pampas, han reportado el hallazgo de huesos de proporciones colosales. Estos #v $arg_loc_paleontologia$#! desafían la comprensión actual del mundo natural. Algunos sugieren crear un espacio para su estudio en Buenos Aires."
+	title = arg_darwin_fosiles.t
+	desc = arg_darwin_fosiles.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/southamerica_aristocrats.bk2"
@@ -235,9 +240,12 @@ arg_darwin_fosiles = {
 		is_date >= 1838.1.1
 		NOT = { has_variable = arg_darwin_lanzado }
 	}
+	immediate = {
+		set_variable = arg_darwin_lanzado
+	}
 
 	option = {
-		name = "Fomentar la curiosidad científica."
+		name = arg_darwin_fosiles.a
 		add_prestige = 5
 		ig:ig_intelligentsia = { add_approval = 2 }
 	}
@@ -246,8 +254,8 @@ arg_darwin_fosiles = {
 # 1838 - Homenaje a Manuel Belgrano
 arg_homenaje_belgrano = {
 	type = country_event
-	title = "El Manto de la Patria"
-	desc = "En medio de las tensiones con las potencias extranjeras, el gobernador Rosas ha ordenado celebrar con especial fervor el legado de #v $arg_loc_belgrano$#!. La bandera celeste y blanca que él creó en las barrancas del Paraná es hoy el símbolo de nuestra resistencia. Su ejemplo de austeridad y servicio es invocado para unir a los federales ante la amenaza externa."
+	title = arg_homenaje_belgrano.t
+	desc = arg_homenaje_belgrano.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/unspecific_military_parade.bk2"
@@ -256,10 +264,14 @@ arg_homenaje_belgrano = {
 		tag = ARG
 		is_date >= 1838.6.20 # Aniversario de su muerte
 		has_modifier = arg_bloqueo_economico_frances
+		NOT = { has_variable = arg_homenaje_belgrano_lanzado }
+	}
+	immediate = {
+		set_variable = arg_homenaje_belgrano_lanzado
 	}
 
 	option = {
-		name = "Su bandera nos cobija a todos."
+		name = arg_homenaje_belgrano.a
 		add_prestige = 10
 		add_loyalists = { value = 0.02 }
 	}
@@ -298,8 +310,8 @@ arg_libres_del_sur = {
 		}
 		# Buenos Aires sufre disturbios
 		s:STATE_BUENOS_AIRES = {
-			add_radicalism_mult = {
-				value = 0.15
+			add_radicals = {
+				value = 0.15 type = lower_strata
 			}
 		}
 		add_prestige = 10
@@ -367,8 +379,8 @@ arg_coalicion_norte = {
 # 1840 - Venta de Tierras en Enfiteusis
 arg_venta_tierras = {
 	type = country_event
-	title = "La Propiedad de la Tierra"
-	desc = "Para financiar las guerras contra la Coalición del Norte y el Bloqueo Francés, el gobierno ha decidido terminar con la #v $arg_loc_ley_enfiteusis$#!. Las tierras públicas ahora serán vendidas a los actuales arrendatarios, transformando a los enfiteutas en propietarios absolutos."
+	title = arg_venta_tierras.t
+	desc = arg_venta_tierras.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
@@ -377,6 +389,9 @@ arg_venta_tierras = {
 		tag = ARG
 		is_date >= 1840.1.1
 		NOT = { has_variable = arg_tierras_lanzado }
+	}
+	immediate = {
+		set_variable = arg_tierras_lanzado
 	}
 
 	option = {
@@ -423,8 +438,8 @@ arg_fiestas_mayas_1841 = {
 # 1841 - La Sombra del Guerrero Gaucho
 arg_herencia_guemes = {
 	type = country_event
-	title = "Los Herederos de Güemes"
-	desc = "En las provincias del Norte, el recuerdo de #v $arg_loc_guemes$#! sigue siendo el motor de las milicias locales. Los gauchos de Salta y Jujuy, que una vez frenaron a los realistas, hoy forman la vanguardia de nuestras defensas. Se dice que mientras un gaucho recuerde al 'Padre de los Pobres', la frontera norte estará segura."
+	title = arg_herencia_guemes.t
+	desc = arg_herencia_guemes.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
@@ -432,10 +447,15 @@ arg_herencia_guemes = {
 	trigger = {
 		tag = ARG
 		is_date >= 1841.6.17 # Aniversario de su muerte
+		NOT = { has_variable = arg_guemes_lanzado }
+	}
+
+	immediate = {
+		set_variable = arg_guemes_lanzado
 	}
 
 	option = {
-		name = "Honrar la memoria del Protector del Norte."
+		name = arg_herencia_guemes.a
 		# Bono militar para las provincias del norte
 		s:STATE_SALTA = { add_modifier = { name = arg_espiritu_guemes months = 24 } }
 		s:STATE_JUJUY = { add_modifier = { name = arg_espiritu_guemes months = 24 } }
@@ -474,8 +494,8 @@ arg_batalla_arroyo_grande = {
 # 1842 - El Corazón del Campo
 arg_vida_pulperia = {
 	type = country_event
-	title = "Entre Guitarras y Facones"
-	desc = "En cada rincón de nuestras provincias, #v $arg_loc_pulperias$#! sirven como el único nexo entre la civilización y el desierto. Allí, el gaucho bebe, canta cielitos y reafirma su lealtad al federalismo o a su caudillo local. Controlar estos espacios es controlar el pulso del país rural."
+	title = arg_vida_pulperia.t
+	desc = arg_vida_pulperia.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
@@ -484,6 +504,9 @@ arg_vida_pulperia = {
 		tag = ARG
 		is_date >= 1842.6.1
 		NOT = { has_variable = arg_pulperia_lanzado }
+	}
+	immediate = {
+		set_variable = arg_pulperia_lanzado
 	}
 
 	option = {
@@ -514,7 +537,7 @@ arg_revista_la_moda = {
 	# Opción A: Tolerar estas reuniones sociales
 	option = {
 		name = arg_revista_la_moda.a
-		add_enactment_progression = { law = law_freedom_of_thought value = 0.05 }
+		add_enactment_progression = { law = law_protected_speech value = 0.05 }
 		ig:ig_intelligentsia = { add_approval = 2 }
 	}
 
@@ -557,7 +580,7 @@ arg_terremoto_salta = {
 	option = {
 		name = arg_terremoto_salta.b
 		s:STATE_SALTA = {
-			add_radicalism_mult = { value = 0.1 }
+			add_radicals = { value = 0.1 type = lower_strata }
 		}
 		# Ganas aprobación de los religiosos
 		ig:ig_devout = { add_approval = 2 }
@@ -567,8 +590,8 @@ arg_terremoto_salta = {
 # 1844 - Devaluación del Peso
 arg_emision_moneda = {
 	type = country_event
-	title = "La Prensa de la $arg_loc_casa_moneda$"
-	desc = "Las arcas están vacías tras años de bloqueos. La #v $arg_loc_casa_moneda$#! ha recibido la orden de imprimir nuevas series de billetes para cubrir los gastos militares. El valor del peso frente a la onza de oro cae estrepitosamente, encareciendo los productos importados."
+	title = arg_emision_moneda.t
+	desc = arg_emision_moneda.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
@@ -577,6 +600,9 @@ arg_emision_moneda = {
 		tag = ARG
 		is_date >= 1844.5.1
 		NOT = { has_variable = arg_moneda_lanzado }
+	}
+	immediate = {
+		set_variable = arg_moneda_lanzado
 	}
 
 	option = {
@@ -641,8 +667,8 @@ arg_vuelta_obligado = {
 # 1845 - El Orden Nocturno
 arg_serenos_ba = {
 	type = country_event
-	title = "¡Todo Sereno!"
-	desc = "Al caer el sol, la ciudad de Buenos Aires queda bajo el cuidado de los #v $arg_loc_serenos$#!. Con sus lanzas y faroles, recorren las calles de barro asegurando que el orden federal no sea perturbado. Sus gritos marcan las horas y el estado del tiempo, siendo un consuelo para los vecinos honestos y una advertencia para los malhechores."
+	title = arg_serenos_ba.t
+	desc = arg_serenos_ba.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -651,6 +677,9 @@ arg_serenos_ba = {
 		tag = ARG
 		is_date >= 1845.3.1
 		NOT = { has_variable = arg_serenos_lanzado }
+	}
+	immediate = {
+		set_variable = arg_serenos_lanzado
 	}
 
 	option = {
@@ -754,8 +783,8 @@ arg_camila_ogorman = {
 		
 		# Impacto negativo en la opinión pública y prestigio
 		add_prestige = -10
-		add_radicalism_mult = {
-			value = 0.05
+		every_scope_state = {
+			add_radicals = { value = 0.05 type = lower_strata }
 		}
 	}
 
@@ -860,8 +889,8 @@ arg_muerte_san_martin = {
 # 1850 - Tratado Arana-Lepredour
 arg_tratado_francia = {
 	type = country_event
-	title = "La Paz con Francia"
-	desc = "Tras el éxito con los británicos, Francia finalmente ha aceptado que no puede doblegar nuestra voluntad. El Almirante Lepredour ha firmado el tratado que devuelve la isla Martín García y reconoce nuestra soberanía fluvial. ¡La Confederación ha vencido a las dos potencias!"
+	title = arg_tratado_francia.t
+	desc = arg_tratado_francia.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_signed_contract.bk2"
@@ -870,6 +899,9 @@ arg_tratado_francia = {
 		tag = ARG
 		is_date >= 1850.8.31
 		NOT = { has_variable = arg_paz_francia_lanzada }
+	}
+	immediate = {
+		set_variable = arg_paz_francia_lanzada
 	}
 
 	option = {
@@ -917,12 +949,13 @@ arg_batalla_caseros.1 = {
 
 	option = {
 		name = "Termina una época. Comienza la Organización Nacional."
-		# Cambios masivos: Rosas muere/se va, cambian las leyes
-		set_law = law_census_suffrage
-		set_law = law_guaranteed_liberties
+		# Cambios masivos: Rosas se va, se impulsa un nuevo orden legal
+		# Forzar leyes puede ser disruptivo, es mejor dar un gran impulso a su aprobación
+		add_enactment_progression = { law = law_census_suffrage value = 0.5 }
+		add_enactment_progression = { law = law_guaranteed_liberties value = 0.5 }
 		
 		# Limpiamos variables para la siguiente etapa del mod
-		remove_variable = arg_mision_caseros_activa
+		remove_journal_entry = arg_mision_organizacion_nacional
 	}
 }
 
@@ -939,13 +972,18 @@ arg_secesion_buenos_aires = {
 		tag = ARG
 		is_date >= 1852.9.11
 		NOT = { has_variable = arg_secesion_ba_lanzada }
+		# Ocurre después de la caída de Rosas
+		has_completed_journal_entry = arg_mision_organizacion_nacional
+	}
+	immediate = {
+		set_variable = arg_secesion_ba_lanzada
 	}
 
 	option = {
 		name = "Buenos Aires se separa de la Confederación."
 		# Efecto de gameplay: Buenos Aires gana una autonomía enorme o se vuelve un estado rebelde
 		s:STATE_BUENOS_AIRES = {
-			add_radicalism_mult = { value = 0.5 }
+			add_radicals = { value = 0.5 type = lower_strata }
 			add_modifier = { name = arg_estado_separado months = 120 }
 		}
 		add_authority = -200
@@ -966,13 +1004,17 @@ arg_constitucion_1853 = {
 		tag = ARG
 		is_date >= 1853.5.1
 		NOT = { has_variable = arg_const_53_lanzada }
+		has_modifier = arg_estado_separado # Solo si Buenos Aires está separada
+	}
+	immediate = {
+		set_variable = arg_const_53_lanzada
 	}
 
 	option = {
 		name = "Gobernar es poblar. ¡Viva la República!"
 		# Cambios legales automáticos que reflejan la constitución
-		set_law = law_freedom_of_thought # Libertad de cultos/prensa
-		set_law = law_migration_controls_no_allowed_migration # Puertas abiertas
+		set_law = law_freedom_of_conscience # Libertad de cultos
+		set_law = law_no_migration_controls # Puertas abiertas
 		
 		add_modifier = { name = arg_era_constitucional months = 120 }
 	}
@@ -991,10 +1033,15 @@ arg_primer_ferrocarril = {
 		tag = ARG
 		is_date >= 1854.1.1
 		has_technology = railways
+		has_modifier = arg_estado_separado # Evento específico del Estado de Buenos Aires
+		NOT = { has_variable = arg_primer_ferrocarril_lanzado }
+	}
+	immediate = {
+		set_variable = arg_primer_ferrocarril_lanzado
 	}
 
 	option = {
-		name = "El progreso no tiene vuelta atrás."
+		name = arg_primer_ferrocarril.a
 		s:STATE_BUENOS_AIRES = {
 			add_modifier = { name = arg_impulso_ferroviario months = 60 }
 		}
@@ -1014,10 +1061,14 @@ arg_puerto_rosario_1855 = {
 		tag = ARG
 		is_date >= 1855.1.1
 		NOT = { has_variable = arg_rosario_lanzado }
+		has_modifier = arg_estado_separado # Evento de la Confederación para competir con BA
+	}
+	immediate = {
+		set_variable = arg_rosario_lanzado
 	}
 
 	option = {
-		name = "Fomentar el comercio en el Litoral."
+		name = arg_puerto_rosario_1855.a
 		# Mejora el mercado del interior pero irrita a Buenos Aires
 		s:STATE_SANTA_FE = {
 			add_modifier = { name = arg_puerto_libre months = 60 }
@@ -1039,16 +1090,19 @@ arg_colonia_esperanza_evento = {
 		tag = ARG
 		is_date >= 1856.9.8
 		NOT = { has_variable = arg_esperanza_lanzado }
+		has_modifier = arg_era_constitucional # Ocurre en el marco de la nueva constitución
 	}
 
 	immediate = { set_variable = arg_esperanza_lanzado }
 
 	option = {
-		name = "Bienvenidos a su nueva patria."
+		name = arg_colonia_esperanza_evento.a
 		s:STATE_SANTA_FE = {
 			add_modifier = { name = arg_bono_colonizacion months = 120 }
 			# Genera un pequeño grupo de población europea
-			create_pop = { culture = swiss size = 2000 } 
+			create_pop = { culture = swiss size = 800 } 
+			create_pop = { culture = north_german size = 600 }
+			create_pop = { culture = french size = 600 }
 		}
 		add_prestige = 10
 	}
@@ -1067,10 +1121,14 @@ arg_luz_gas_1856 = {
 		tag = ARG
 		is_date >= 1856.5.25
 		NOT = { has_variable = arg_gas_lanzado }
+		has_modifier = arg_estado_separado # Evento del Estado de Buenos Aires
+	}
+	immediate = {
+		set_variable = arg_gas_lanzado
 	}
 
 	option = {
-		name = "El progreso ilumina nuestro camino."
+		name = arg_luz_gas_1856.a
 		add_prestige = 15
 		s:STATE_BUENOS_AIRES = {
 			add_modifier = { name = arg_iluminacion_moderna months = 60 }
@@ -1091,10 +1149,14 @@ arg_registros_poblacion = {
 		tag = ARG
 		is_date >= 1857.1.1
 		NOT = { has_variable = arg_censos_lanzado }
+		has_modifier = arg_era_constitucional # Ocurre en el marco de la nueva constitución
+	}
+	immediate = {
+		set_variable = arg_censos_lanzado
 	}
 
 	option = {
-		name = "Invertir en el Departamento de Estadística."
+		name = arg_registros_poblacion.a
 		add_treasury = -5000
 		add_modifier = { name = arg_mejora_administrativa months = 60 }
 	}
@@ -1113,10 +1175,14 @@ arg_primer_colon = {
 		tag = ARG
 		is_date >= 1857.4.27
 		NOT = { has_variable = arg_colon_lanzado }
+		has_modifier = arg_estado_separado # Evento del Estado de Buenos Aires
+	}
+	immediate = {
+		set_variable = arg_colon_lanzado
 	}
 
 	option = {
-		name = "Fomentar las artes y el refinamiento."
+		name = arg_primer_colon.a
 		add_prestige = 20
 		ig:ig_intelligentsia = { add_approval = 5 }
 	}
@@ -1135,10 +1201,14 @@ arg_educacion_1858 = {
 		tag = ARG
 		is_date >= 1858.6.1
 		NOT = { has_variable = arg_escuelas_lanzado }
+		has_modifier = arg_era_constitucional
+	}
+	immediate = {
+		set_variable = arg_escuelas_lanzado
 	}
 
 	option = {
-		name = "Las letras son tan importantes como las espadas."
+		name = arg_educacion_1858.a
 		# Mejora la alfabetización a largo plazo
 		add_modifier = { name = arg_fomento_escolar months = 120 }
 		add_treasury = -3000
@@ -1159,6 +1229,10 @@ arg_batalla_cepeda_1859 = {
 		tag = ARG
 		is_date >= 1859.10.23
 		NOT = { has_variable = arg_cepeda_lanzado }
+		has_modifier = arg_estado_separado
+	}
+	immediate = {
+		set_variable = arg_cepeda_lanzado
 	}
 
 	option = {
@@ -1186,10 +1260,14 @@ arg_presidencia_derqui = {
 		tag = ARG
 		is_date >= 1860.3.5
 		NOT = { has_variable = arg_derqui_lanzado }
+		has_modifier = arg_pacto_flores
+	}
+	immediate = {
+		set_variable = arg_derqui_lanzado
 	}
 
 	option = {
-		name = "Intentar un gobierno de unidad nacional."
+		name = arg_presidencia_derqui.a
 		ig:ig_landowners = { add_approval = 2 }
 		ig:ig_intelligentsia = { add_approval = 2 }
 		add_modifier = { name = arg_tregua_fragil months = 18 }
@@ -1209,16 +1287,20 @@ arg_batalla_pavon_1861 = {
 		tag = ARG
 		is_date >= 1861.9.17
 		NOT = { has_variable = arg_pavon_lanzado }
+		has_modifier = arg_tregua_fragil
+	}
+	immediate = {
+		set_variable = arg_pavon_lanzado
 	}
 
 	option = {
-		name = "El triunfo definitivo del Liberalismo."
+		name = arg_batalla_pavon_1861.a
 		# Buenos Aires toma el control total
-		remove_modifier = arg_estado_separado
+		s:STATE_BUENOS_AIRES = { remove_modifier = arg_pacto_flores }
 		add_modifier = { name = arg_unificacion_mitre months = 120 }
 		
 		# Cambio de líder y de leyes
-		set_law = law_national_supremacy
+		add_enactment_progression = { law = law_national_supremacy value = 0.5 }
 		add_prestige = 50
 	}
 }
@@ -1237,10 +1319,14 @@ arg_presidencia_mitre = {
 		tag = ARG
 		is_date >= 1862.10.12
 		NOT = { has_variable = arg_mitre_lanzado }
+		has_modifier = arg_unificacion_mitre
+	}
+	immediate = {
+		set_variable = arg_mitre_lanzado
 	}
 
 	option = {
-		name = "Unidad y Libertad."
+		name = arg_presidencia_mitre.a
 		add_prestige = 50
 		# Mitre representa a los Intelectuales y las Fuerzas Armadas
 		ig:ig_intelligentsia = { add_approval = 5 }
@@ -1263,13 +1349,17 @@ arg_rebelion_chacho = {
 	trigger = {
 		tag = ARG
 		is_date >= 1863.3.1
-		has_journal_entry = arg_mision_gobernar_es_poblar
+		has_variable = arg_mitre_lanzado
+		NOT = { has_variable = arg_chacho_lanzado }
+	}
+	immediate = {
+		set_variable = arg_chacho_lanzado
 	}
 
 	option = {
-		name = "No hay paz sin orden. ¡Aplastad la rebelión!"
+		name = arg_rebelion_chacho.a
 		add_authority = 50
-		s:STATE_LA_RIOJA = { add_radicalism_mult = { value = 0.2 } }
+		s:STATE_LA_RIOJA = { add_radicals = { value = 0.2 type = lower_strata } }
 		add_modifier = { name = arg_guerra_policia months = 12 }
 	}
 }
@@ -1312,7 +1402,7 @@ arg_guerra_paraguay_inicio = {
 		name = "Evitar el conflicto y buscar la paz."
 		add_prestige = -50
 		add_authority = -100
-		relations = { target = c:BRA value = -30 }
+		c:BRA = { add_relations = { target = c:ARG value = -30 } }
 	}
 }
 
@@ -1326,11 +1416,17 @@ arg_desastre_curupayty = {
 		tag = ARG
 		has_variable = arg_guerra_paraguay_lanzada
 		is_date >= 1866.9.22
+		NOT = { has_variable = arg_curupayty_lanzado }
+	}
+	immediate = {
+		set_variable = arg_curupayty_lanzado
 	}
 
 	option = {
-		name = "Debemos persistir hasta la victoria final."
-		add_radicalism_mult = { value = 0.15 }
+		name = arg_desastre_curupayty.a
+		every_scope_state = {
+			add_radicals = { value = 0.15 type = lower_strata }
+		}
 		ig:ig_armed_forces = { add_approval = -5 }
 		# Aparece el descontento en el interior (Montoneras)
 		add_modifier = { name = arg_rebeliones_internas months = 24 }
@@ -1350,10 +1446,14 @@ arg_inicio_futbol = {
 		tag = ARG
 		is_date >= 1867.6.20
 		NOT = { has_variable = arg_futbol_lanzado }
+		has_technology = railways # Asociado a la presencia británica
+	}
+	immediate = {
+		set_variable = arg_futbol_lanzado
 	}
 
 	option = {
-		name = "Una curiosa distracción para los inmigrantes."
+		name = arg_inicio_futbol.a
 		add_modifier = { name = arg_pasion_deportiva months = 120 }
 		# Mejora la atracción migratoria británica
 		country_migration_attraction_mult = 0.05
@@ -1372,10 +1472,15 @@ arg_presidencia_sarmiento = {
 	trigger = {
 		tag = ARG
 		is_date >= 1868.10.12
+		has_completed_journal_entry = arg_mision_gobernar_es_poblar # Ocurre en la era de la organización
+		NOT = { has_variable = arg_sarmiento_lanzado }
+	}
+	immediate = {
+		set_variable = arg_sarmiento_lanzado
 	}
 
 	option = {
-		name = "¡Escuelas, muchas escuelas!"
+		name = arg_presidencia_sarmiento.a
 		add_modifier = { name = arg_impulso_sarmiento months = 72 }
 		add_enactment_progression = { law = law_public_schools value = 0.15 }
 	}
@@ -1394,10 +1499,14 @@ arg_censo_nacional_1869 = {
 		tag = ARG
 		is_date >= 1869.9.15
 		NOT = { has_variable = arg_censo_69_lanzado }
+		has_variable = arg_sarmiento_lanzado
+	}
+	immediate = {
+		set_variable = arg_censo_69_lanzado
 	}
 
 	option = {
-		name = "Los números no mienten."
+		name = arg_censo_nacional_1869.a
 		# Mejora la eficiencia de impuestos y administración
 		add_modifier = { name = arg_eficiencia_censal months = 120 }
 		country_bureaucracy_add = 100
@@ -1417,10 +1526,15 @@ arg_exposicion_cordoba = {
 	trigger = {
 		tag = ARG
 		is_date >= 1869.10.15
+		has_variable = arg_sarmiento_lanzado
+		NOT = { has_variable = arg_expo_cordoba_lanzada }
+	}
+	immediate = {
+		set_variable = arg_expo_cordoba_lanzada
 	}
 
 	option = {
-		name = "Hacia una nación industrializada."
+		name = arg_exposicion_cordoba.a
 		s:STATE_CORDOBA = {
 			add_modifier = { name = arg_impulso_cordoba months = 60 }
 		}
@@ -1441,12 +1555,18 @@ arg_asesinato_urquiza = {
 		tag = ARG
 		is_date >= 1870.4.11
 		NOT = { has_variable = arg_urquiza_muerto }
+		has_variable = arg_sarmiento_lanzado
+	}
+	immediate = {
+		set_variable = arg_urquiza_muerto
 	}
 
 	option = {
-		name = "Se apaga la última gran lanza del Federalismo."
+		name = arg_asesinato_urquiza.a
 		# Inestabilidad en Entre Ríos
-		s:STATE_ENTRE_RIOS = { add_radicalism_mult = { value = 0.3 } }
+		s:STATE_ENTRE_RIOS = { 
+			add_radicals = { value = 0.3 type = lower_strata } 
+		}
 		add_authority = -50
 	}
 }
@@ -1464,6 +1584,7 @@ arg_fin_guerra_paraguay = {
 		tag = ARG
 		is_date >= 1870.3.1
 		has_variable = arg_guerra_paraguay_lanzada
+		NOT = { has_variable = arg_guerra_paraguay_finalizada }
 	}
 
 	immediate = {
@@ -1524,7 +1645,6 @@ arg_fiebre_amarilla_1871 = {
 		s:STATE_BUENOS_AIRES = {
 			add_modifier = { name = arg_impacto_fiebre months = 12 }
 			# Efecto demográfico: Pérdida de población
-			reduce_pop = { factor = 0.05 } 
 		}
 		# Bono de tecnología futura para salud
 		add_tech_progression = { technology = pharmaceuticals progress = 0.20 }
@@ -1535,7 +1655,6 @@ arg_fiebre_amarilla_1871 = {
 		name = "La élite abandona el casco histórico."
 		s:STATE_BUENOS_AIRES = {
 			add_modifier = { name = arg_vivienda_conventillos months = 60 }
-			reduce_pop = { factor = 0.08 }
 		}
 		add_prestige = -20
 	}
@@ -1554,10 +1673,14 @@ arg_telegrafo_sarmiento = {
 		tag = ARG
 		is_date >= 1872.4.1
 		NOT = { has_variable = arg_telegrafo_lanzado }
+		has_variable = arg_sarmiento_lanzado
+	}
+	immediate = {
+		set_variable = arg_telegrafo_lanzado
 	}
 
 	option = {
-		name = "El pensamiento viaja a la velocidad del rayo."
+		name = arg_telegrafo_sarmiento.a
 		add_modifier = { name = arg_eficiencia_telegráfica months = 60 }
 		add_tech_progression = { technology = telegraph progress = 0.25 }
 		add_prestige = 15
@@ -1576,12 +1699,19 @@ arg_atentado_sarmiento = {
 	trigger = {
 		tag = ARG
 		is_date >= 1873.8.22
+		has_variable = arg_sarmiento_lanzado
+		NOT = { has_variable = arg_atentado_sarmiento_lanzado }
+	}
+	immediate = {
+		set_variable = arg_atentado_sarmiento_lanzado
 	}
 
 	option = {
-		name = "Las ideas no se matan."
+		name = arg_atentado_sarmiento.a
 		add_authority = 50
-		add_radicalism_mult = { value = 0.05 }
+		every_scope_state = {
+			add_radicals = { value = 0.05 type = lower_strata }
+		}
 	}
 }
 
@@ -1598,13 +1728,19 @@ arg_revolucion_1874 = {
 		tag = ARG
 		is_date >= 1874.9.24
 		NOT = { has_variable = arg_rev_74_lanzada }
+		has_variable = arg_sarmiento_lanzado
+	}
+	immediate = {
+		set_variable = arg_rev_74_lanzada
 	}
 
 	option = {
-		name = "La ley está por encima de los hombres."
+		name = arg_revolucion_1874.a
 		# El país sufre inestabilidad momentánea
 		add_modifier = { name = arg_crisis_institucional months = 6 }
-		add_radicalism_mult = { value = 0.1 }
+		every_scope_state = {
+			add_radicals = { value = 0.1 type = lower_strata }
+		}
 		ig:ig_armed_forces = { add_approval = 2 }
 	}
 }
@@ -1622,10 +1758,14 @@ arg_presidencia_avellaneda = {
 		tag = ARG
 		is_date >= 1874.10.12
 		NOT = { has_variable = arg_avellaneda_lanzado }
+		has_variable = arg_rev_74_lanzada # Ocurre tras la revolución de Mitre
+	}
+	immediate = {
+		set_variable = arg_avellaneda_lanzado
 	}
 
 	option = {
-		name = "Ahorrar sobre el hambre y la sed de los argentinos."
+		name = arg_presidencia_avellaneda.a
 		# Mecánica de Victoria 3: Reducir gasto para ganar legitimidad financiera
 		add_modifier = { name = arg_austeridad_republicana months = 48 }
 		add_prestige = 20
@@ -1645,13 +1785,18 @@ arg_ley_inmigracion_1876 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1876.10.19
+		has_variable = arg_avellaneda_lanzado
+		NOT = { has_variable = arg_ley_inmigracion_lanzada }
+	}
+	immediate = {
+		set_variable = arg_ley_inmigracion_lanzada
 	}
 
 	option = {
-		name = "Abrir las puertas de la Nación."
+		name = arg_ley_inmigracion_1876.a
 		# Bono masivo de atracción migratoria
 		add_modifier = { name = arg_gran_inmigración months = 120 }
-		add_enactment_progression = { law = law_migration_controls_no_allowed_migration value = 0.2 }
+		add_enactment_progression = { law = law_no_migration_controls value = 0.2 }
 	}
 }
 
@@ -1667,10 +1812,14 @@ arg_cultura_mate = {
 	trigger = {
 		tag = ARG
 		is_date >= 1876.1.1
+		NOT = { has_variable = arg_mate_lanzado }
+	}
+	immediate = {
+		set_variable = arg_mate_lanzado
 	}
 
 	option = {
-		name = "El mate nunca faltará en esta tierra."
+		name = arg_cultura_mate.a
 		# Bono a la satisfacción de los estratos bajos y medios
 		add_loyalists = { value = 0.02 pop_type = laborers }
 		add_loyalists = { value = 0.02 pop_type = farmers }
@@ -1689,10 +1838,14 @@ arg_evento_hesperidina = {
 	trigger = {
 		tag = ARG
 		is_date >= 1876.10.1 # Año de la ley de patentes
+		NOT = { has_variable = arg_hesperidina_lanzada }
+	}
+	immediate = {
+		set_variable = arg_hesperidina_lanzada
 	}
 
 	option = {
-		name = "Proteger la invención nacional."
+		name = arg_evento_hesperidina.a
 		add_tech_progression = { technology = patent_management progress = 0.5 }
 		add_modifier = { name = arg_bono_industria_bebidas months = 60 }
 	}
@@ -1710,10 +1863,15 @@ arg_buque_frigorifico = {
 	trigger = {
 		tag = ARG
 		is_date >= 1876.12.25
+		has_technology = atmospheric_engine # Prerequisito para la refrigeración
+		NOT = { has_variable = arg_frigorifico_lanzado }
+	}
+	immediate = {
+		set_variable = arg_frigorifico_lanzado
 	}
 
 	option = {
-		name = "Invertir en la mejora de las razas bovinas."
+		name = arg_buque_frigorifico.a
 		add_tech_progression = { technology = refrigeration progress = 0.5 }
 		s:STATE_BUENOS_AIRES = { 
 			add_modifier = { name = arg_auge_ganadero months = 60 } 
@@ -1733,10 +1891,15 @@ arg_conciliacion_1877 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1877.5.1
+		has_variable = arg_avellaneda_lanzado
+		NOT = { has_variable = arg_conciliacion_lanzada }
+	}
+	immediate = {
+		set_variable = arg_conciliacion_lanzada
 	}
 
 	option = {
-		name = "La paz es el primer requisito del progreso."
+		name = arg_conciliacion_1877.a
 		add_loyalists = { value = 0.05 }
 		add_authority = 50
 		# Reduce el radicalismo de los intelectuales (Mitristas)
@@ -1756,15 +1919,20 @@ arg_zanja_alsina = {
 	trigger = {
 		tag = ARG
 		is_date >= 1878.1.1
+		has_variable = arg_avellaneda_lanzado
+		NOT = { has_variable = arg_zanja_lanzada }
+	}
+	immediate = {
+		set_variable = arg_zanja_lanzada
 	}
 
 	option = {
-		name = "Terminar la zanja para proteger el ganado."
+		name = arg_zanja_alsina.a
 		s:STATE_BUENOS_AIRES = { add_modifier = { name = arg_proteccion_ganadera months = 48 } }
 	}
 
 	option = {
-		name = "Escuchar al General Roca: la defensa no es suficiente."
+		name = arg_zanja_alsina.b
 		add_tech_progression = { technology = mobile_artillery progress = 0.25 }
 		add_modifier = { name = arg_preparativos_ofensivos months = 24 }
 	}
@@ -1782,10 +1950,15 @@ arg_aguas_corrientes_1879 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1879.6.1
+		has_variable = arg_fiebre_lanzada # Consecuencia de la epidemia
+		NOT = { has_variable = arg_aguas_lanzado }
+	}
+	immediate = {
+		set_variable = arg_aguas_lanzado
 	}
 
 	option = {
-		name = "Agua limpia para un pueblo sano."
+		name = arg_aguas_corrientes_1879.a
 		add_modifier = { name = arg_salud_publica_mejorada months = 120 }
 		# Mejora la atracción migratoria de la capital
 		s:STATE_BUENOS_AIRES = { state_migration_pull_add = 5 }
@@ -1811,7 +1984,7 @@ arg_campaña_roca_1879 = {
 
 	# Opción A: "La victoria es la paz futura" (Histórica)
 	option = {
-		name = "Incorporar las tierras del sur al mercado nacional."
+		name = arg_campaña_roca_1879.a
 		# Mecánica de juego: Incorporación de estados
 		s:STATE_LA_PAMPA = { add_modifier = { name = arg_tierras_conquistadas months = 240 } }
 		s:STATE_RIO_NEGRO = { add_modifier = { name = arg_tierras_conquistadas months = 240 } }
@@ -1834,10 +2007,14 @@ arg_remington_telegrafo = {
 
 	trigger = {
 		has_variable = arg_campaña_lanzada
+		NOT = { has_variable = arg_remington_lanzado }
+	}
+	immediate = {
+		set_variable = arg_remington_lanzado
 	}
 
 	option = {
-		name = "La tecnología es el brazo armado de la civilización."
+		name = arg_remington_telegrafo.a
 		add_tech_progression = { technology = breech_loading_artillery progress = 0.3 }
 		add_modifier = { name = arg_ventaja_tactica months = 60 }
 	}
@@ -1861,8 +2038,10 @@ arg_revolucion_tejedor = {
 	immediate = { set_variable = arg_tejedor_lanzado }
 
 	option = {
-		name = "Someter a Buenos Aires por la fuerza de la ley."
-		add_radicalism_mult = { value = 0.1 }
+		name = arg_revolucion_tejedor.a
+		every_scope_state = {
+			add_radicals = { value = 0.1 type = lower_strata }
+		}
 		s:STATE_BUENOS_AIRES = { add_modifier = { name = arg_estado_de_sitio months = 3 } }
 	}
 }
@@ -1879,17 +2058,19 @@ arg_ley_capital_federal = {
 	trigger = {
 		tag = ARG
 		is_date >= 1880.9.20
+		has_variable = arg_tejedor_lanzado # Consecuencia de la revolución
+		NOT = { has_variable = arg_capital_lanzada }
+	}
+	immediate = {
+		set_variable = arg_capital_lanzada
 	}
 
 	option = {
-		name = "La cuestión de la Capital ha terminado."
+		name = arg_ley_capital_federal.a
 		# Bono masivo de autoridad y centralización
 		add_modifier = { name = arg_nacion_unificada months = 120 }
 		add_authority = 200
 		add_prestige = 50
-		
-		# Mecánica económica: Gran aumento de ingresos
-		country_tax_efficiency_add = 0.20
 	}
 }
 
@@ -1906,16 +2087,22 @@ arg_evento_alambrado = {
 		tag = ARG
 		is_date >= 1880.1.1
 		has_technology = enclosure
+		NOT = { has_variable = arg_alambrado_lanzado }
+	}
+	immediate = {
+		set_variable = arg_alambrado_lanzado
 	}
 
 	option = {
-		name = "Delimitar la propiedad es civilizar la tierra."
+		name = arg_evento_alambrado.a
 		# Aumenta la eficiencia de las estancias y el poder de los terratenientes
 		ig:ig_landowners = { add_approval = 5 }
 		add_modifier = { name = arg_orden_rural_alambrado months = 120 }
 		
 		# Efecto social: El gaucho se vuelve trabajador asalariado o marginal
-		add_radicalism_mult = { value = 0.05 } 
+		every_scope_state = {
+			add_radicals = { value = 0.05 type = lower_strata }
+		}
 	}
 }
 
@@ -1931,10 +2118,15 @@ arg_ramos_generales_1880 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1880.5.1
+		has_technology = railways # Los almacenes seguían al tren
+		NOT = { has_variable = arg_ramos_generales_lanzado }
+	}
+	immediate = {
+		set_variable = arg_ramos_generales_lanzado
 	}
 
 	option = {
-		name = "Brindar por el progreso de la campaña."
+		name = arg_ramos_generales_1880.a
 		# Bono al comercio interno y satisfacción popular
 		add_modifier = { name = arg_vida_de_almacen months = 120 }
 		add_loyalists = { value = 0.05 pop_type = shopkeepers }
@@ -1966,9 +2158,6 @@ arg_presidencia_roca_1880 = {
 		add_prestige = 30
 		ig:ig_landowners = { add_approval = 5 }
 		ig:ig_armed_forces = { add_approval = 5 }
-		
-		# Mecánica de estabilidad política
-		country_legitimacy_base_add = 15
 	}
 }
 
@@ -1984,10 +2173,15 @@ arg_fundacion_la_plata = {
 	trigger = {
 		tag = ARG
 		is_date >= 1882.11.19
+		has_variable = arg_roca_lanzado
+		NOT = { has_variable = arg_la_plata_lanzada }
+	}
+	immediate = {
+		set_variable = arg_la_plata_lanzada
 	}
 
 	option = {
-		name = "Un faro de modernidad en la pampa."
+		name = arg_fundacion_la_plata.a
 		s:STATE_BUENOS_AIRES = { 
 			add_modifier = { name = arg_brillo_platense months = 120 }
 			# Ganas urbanización
@@ -2009,10 +2203,15 @@ arg_perito_moreno_1883 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1883.1.22
+		has_variable = arg_roca_lanzado
+		NOT = { has_variable = arg_moreno_lanzado }
+	}
+	immediate = {
+		set_variable = arg_moreno_lanzado
 	}
 
 	option = {
-		name = "La ciencia es nuestra mejor defensa."
+		name = arg_perito_moreno_1883.a
 		add_prestige = 20
 		# Mejora la relación con los intelectuales y el prestigio científico
 		ig:ig_intelligentsia = { add_approval = 5 }
@@ -2035,10 +2234,15 @@ arg_gath_chaves_1883 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1883.7.1
+		has_variable = arg_roca_lanzado
+		NOT = { has_variable = arg_gath_lanzado }
+	}
+	immediate = {
+		set_variable = arg_gath_lanzado
 	}
 
 	option = {
-		name = "Buenos Aires se viste de gala."
+		name = arg_gath_chaves_1883.a
 		s:STATE_BUENOS_AIRES = { 
 			add_modifier = { name = arg_consumo_lujo months = 48 } 
 		}
@@ -2058,10 +2262,14 @@ arg_ley_1420_evento = {
 	trigger = {
 		tag = ARG
 		is_date >= 1884.7.8
+		has_modifier = arg_orden_conservador # Durante el gobierno de Roca
+		NOT = { has_variable = arg_ley_1420_lanzada }
 	}
+	immediate = { set_variable = arg_ley_1420_lanzada }
 
 	option = {
-		name = "Formar a los ciudadanos del futuro."
+		name = arg_ley_1420_evento.a
+		set_variable = arg_ley_1420_laica_aprobada
 		# Mejora masiva de la alfabetización
 		add_modifier = { name = arg_impulso_alfabetizador months = 240 }
 		# Conflicto religioso
@@ -2073,7 +2281,7 @@ arg_ley_1420_evento = {
 	}
 
 	option = {
-		name = "Mantener la enseñanza religiosa para evitar el conflicto."
+		name = arg_ley_1420_evento.b
 		ig:ig_devout = { add_approval = 5 }
 		add_modifier = { name = arg_paz_religiosa months = 60 }
 	}
@@ -2086,12 +2294,16 @@ arg_ruptura_vaticano = {
 	desc = "La tensión por el #v $arg_loc_registro_civil$#! y la educación ha llegado al límite. El gobierno nacional ha entregado sus pasaportes al Nuncio Apostólico, monseñor Mattera, ordenándole abandonar el país. Argentina afirma su soberanía sobre las conciencias de sus habitantes, desafiando la autoridad de Roma."
 
 	trigger = {
-		has_variable = arg_ley_1420_lanzada
+		has_variable = arg_ley_1420_laica_aprobada
 		is_date >= 1884.10.14
+		NOT = { has_variable = arg_ruptura_vaticano_lanzada }
+	}
+	immediate = {
+		set_variable = arg_ruptura_vaticano_lanzada
 	}
 
 	option = {
-		name = "No hay más autoridad que la del Estado Argentino."
+		name = arg_ruptura_vaticano.a
 		add_prestige = 20
 		add_modifier = { name = arg_soberania_laica months = 120 }
 	}
@@ -2117,7 +2329,7 @@ arg_fundacion_ushuaia = {
 
 	# Opción A: Establecer una subprefectura y colonia penal (Histórica)
 	option = {
-		name = "Asegurar la soberanía con un destacamento penal."
+		name = arg_fundacion_ushuaia.a
 		default_option = yes
 		
 		# Mejora el control estatal en el sur
@@ -2131,10 +2343,39 @@ arg_fundacion_ushuaia = {
 
 	# Opción B: Fomentar la colonización civil libre
 	option = {
-		name = "Atraer colonos y misioneros."
+		name = arg_fundacion_ushuaia.b
 		s:STATE_TIERRA_DEL_FUEGO = {
 			add_modifier = { name = arg_atraccion_austral months = 120 }
 		}
+	}
+}
+
+# Evento de finalización de la misión "Gobernar es Poblar"
+arg_fin_mision_poblar.1 = {
+	type = country_event
+	title = arg_fin_mision_poblar.1.t
+	desc = arg_fin_mision_poblar.1.d
+	flavor = arg_fin_mision_poblar.1.f
+
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_trains.bk2"
+
+	is_triggered_only = yes
+
+	option = {
+		name = arg_fin_mision_poblar.1.a
+		# Bono a la industria
+		add_modifier = {
+			name = arg_industria_nacional
+			months = 120
+		}
+		ig:ig_industrialists = { add_approval = 5 }
+	}
+
+	option = {
+		name = arg_fin_mision_poblar.1.b
+		add_prestige = 150
+		country_improve_relations_speed_mult = 0.25
 	}
 }
 
@@ -2150,10 +2391,15 @@ arg_faro_1885 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1885.5.25
+		has_variable = arg_ushuaia_lanzado
+		NOT = { has_variable = arg_faro_lanzado }
+	}
+	immediate = {
+		set_variable = arg_faro_lanzado
 	}
 
 	option = {
-		name = "Iluminar el paso de las naciones."
+		name = arg_faro_1885.a
 		add_prestige = 15
 		s:STATE_TIERRA_DEL_FUEGO = {
 			add_modifier = { name = arg_control_maritimo months = 120 }
@@ -2173,10 +2419,15 @@ arg_tranvias_1885 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1885.10.1
+		has_technology = urban_planning
+		NOT = { has_variable = arg_tranvias_lanzado }
+	}
+	immediate = {
+		set_variable = arg_tranvias_lanzado
 	}
 
 	option = {
-		name = "Modernizar la locomoción urbana."
+		name = arg_tranvias_1885.a
 		s:STATE_BUENOS_AIRES = { 
 			add_modifier = { name = arg_movilidad_urbana months = 60 }
 		}
@@ -2202,7 +2453,7 @@ arg_unicato_1886 = {
 	immediate = { set_variable = arg_unicato_lanzado }
 
 	option = {
-		name = "Yo soy el Jefe Único."
+		name = arg_unicato_1886.a
 		add_modifier = { name = arg_poder_unicato months = 48 }
 		add_authority = 100
 		ig:ig_landowners = { add_approval = 5 }
@@ -2227,7 +2478,7 @@ arg_bancos_garantidos_1887 = {
 	immediate = { set_variable = arg_bancos_lanzado }
 
 	option = {
-		name = "¡Que el crédito no se detenga!"
+		name = arg_bancos_garantidos_1887.a
 		add_modifier = { name = arg_burbuja_financiera months = 36 }
 		add_treasury = 50000
 		country_minting_mult = 0.50
@@ -2252,7 +2503,7 @@ arg_puerto_madero_1889 = {
 	immediate = { set_variable = arg_puerto_madero_lanzado }
 
 	option = {
-		name = "Buenos Aires debe tener un puerto monumental."
+		name = arg_puerto_madero_1889.a
 		s:STATE_BUENOS_AIRES = { 
 			add_modifier = { name = arg_obra_madero months = 60 }
 			add_infrastructure = 20
@@ -2281,7 +2532,9 @@ arg_revolucion_parque_1890 = {
 		name = "Juárez ha caído. ¡Llamen al Piloto de la Tormenta!"
 		add_modifier = { name = arg_caos_90 months = 12 }
 		# Efectos de la crisis
-		add_radicalism_mult = { value = 0.2 }
+		every_scope_state = {
+			add_radicals = { value = 0.2 type = lower_strata }
+		}
 		add_treasury = -40000 # El pánico bancario
 		
 		# Referencia al glosario de Pellegrini que crearemos
@@ -2308,7 +2561,7 @@ arg_banco_nacion_1891 = {
 	immediate = { set_variable = arg_banco_nacion_lanzado }
 
 	option = {
-		name = "Una institución para la reconstrucción."
+		name = arg_banco_nacion_1891.a
 		add_modifier = { name = arg_credito_nacional months = 120 }
 		add_tech_progression = { technology = central_banking progress = 0.5 }
 		add_treasury = -20000 # Costo de capitalización inicial
@@ -2328,13 +2581,20 @@ arg_nacimiento_ucr_1892 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1892.4.1
+		has_variable = arg_crisis_90_lanzada
+		NOT = { has_variable = arg_ucr_lanzada }
+	}
+	immediate = {
+		set_variable = arg_ucr_lanzada
 	}
 
 	option = {
-		name = "La lucha por la pureza del sufragio ha comenzado."
+		name = arg_nacimiento_ucr_1892.a
 		add_modifier = { name = arg_presion_radical months = 60 }
 		# Los Intelectuales se vuelven más críticos
 		ig:ig_intelligentsia = { add_approval = -5 }
-		add_radicalism_mult = { value = 0.1 }
+		every_scope_state = {
+			add_radicals = { value = 0.1 type = lower_strata }
+		}
 	}
 }

@@ -8,12 +8,6 @@ arg_mision_organizacion_nacional = {
 		tag = ARG
 	}
 
-	# Objetivo: Mantener el orden o colapsar
-	status_proxies = {
-		# Esto crea una barra que se llena con el radicalismo
-		variable = arg_progreso_caida_rosas
-	}
-
 	# Condición de fracaso (Histórica): Si el radicalismo en el Litoral es muy alto
 	# o si pasa demasiado tiempo sin reformas.
 	timeout_effect = {
@@ -48,11 +42,11 @@ arg_mision_gobernar_es_poblar = {
 	is_complete = {
 		custom_description = {
 			text = "arg_objetivo_poblacion_desc"
-			country_population >= 3000000
+			total_population >= 3000000
 		}
 		custom_description = {
 			text = "arg_objetivo_alfabetizacion_desc"
-			average_literacy >= 0.25
+			literacy_rate >= 0.25
 		}
 		custom_description = {
 			text = "arg_objetivo_ferrocarril_desc"

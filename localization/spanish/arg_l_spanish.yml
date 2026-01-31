@@ -1,4 +1,4 @@
-﻿l_spanish:
+﻿﻿l_spanish:
  argentina_events.1.t: "La Cuestión Migratoria"
  argentina_events.1.d: "Nuestros pensadores debaten si el progreso de la nación depende de atraer brazos de Europa."
  argentina_events.1.f: "Gobernar es poblar."
@@ -16,6 +16,10 @@
  arg_ley_de_aduanas.b: "Nacionalizar las rentas del puerto."
  arg_ley_de_aduanas.b.tt: "Esto debilitará el poder de Buenos Aires pero fortalecerá la unidad nacional de forma prematura."
 
+ arg_evento_mazorca.t: "La Sociedad Popular Restauradora"
+ arg_evento_mazorca.d: "Las calles de Buenos Aires ya no son seguras para los críticos del gobierno. #v $arg_loc_mazorca$#! ha intensificado sus rondas, asegurando que cada ciudadano porte el distintivo punzó y profiera las consignas federales. Aquellos sospechosos de simpatías unitarias enfrentan el azote o algo peor."
+
+
  # --- 1837 ---
  arg_guerra_peru_boliviana.t: "Guerra en el Norte"
  arg_guerra_peru_boliviana.d: "La ambición de #v $arg_loc_santa_cruz$#! ha dado sus frutos: Perú y Bolivia se han unido en una sola confederación. Esta nueva potencia amenaza la estabilidad de nuestras provincias del norte y la soberanía sobre Tarija. El gobernador #v $arg_loc_alejandro_heredia$#! solicita apoyo para movilizar las milicias y defender la Confederación Argentina."
@@ -31,6 +35,10 @@
  
  arg_bloqueo_frances.a: "¡No aceptaremos imposiciones extranjeras!"
  arg_bloqueo_frances.b: "Ceder para evitar la ruina económica."
+
+ arg_darwin_fosiles.t: "Los Gigantes del Pasado"
+ arg_darwin_fosiles.d: "Científicos y viajeros europeos, maravillados por la geografía de nuestras pampas, han reportado el hallazgo de huesos de proporciones colosales. Estos #v $arg_loc_paleontologia$#! desafían la comprensión actual del mundo natural. Algunos sugieren crear un espacio para su estudio en Buenos Aires."
+ arg_darwin_fosiles.a: "Fomentar la curiosidad científica."
 
  # --- 1839 ---
  arg_libres_del_sur.t: "La Revolución de los $arg_loc_libres_del_sur$"
@@ -54,11 +62,21 @@
  arg_fiestas_mayas_1841.f: "«¡Viva la Confederación Argentina! ¡Mueran los salvajes unitarios!» — Consigna obligatoria en las celebraciones."
  arg_fiestas_mayas_1841.a: "¡Que continúe el festejo popular!"
 
+ arg_herencia_guemes.t: "Los Herederos de Güemes"
+ arg_herencia_guemes.d: "En las provincias del Norte, el recuerdo de #v $arg_loc_guemes$#! sigue siendo el motor de las milicias locales. Los gauchos de Salta y Jujuy, que una vez frenaron a los realistas, hoy forman la vanguardia de nuestras defensas. Se dice que mientras un gaucho recuerde al 'Padre de los Pobres', la frontera norte estará segura."
+ arg_herencia_guemes.a: "Honrar la memoria del Protector del Norte."
+
+ arg_venta_tierras.t: "La Propiedad de la Tierra"
+ arg_venta_tierras.d: "Para financiar las guerras contra la Coalición del Norte y el Bloqueo Francés, el gobierno ha decidido terminar con la #v $arg_loc_ley_enfiteusis$#!. Las tierras públicas ahora serán vendidas a los actuales arrendatarios, transformando a los enfiteutas en propietarios absolutos."
+
  # --- 1842 ---
  arg_batalla_arroyo_grande.t: "Victoria en $arg_loc_batalla_arroyo_grande$"
  arg_batalla_arroyo_grande.d: "Las fuerzas de la Confederación, al mando del General Manuel Oribe, han aniquilado al ejército de Fructuoso Rivera. Con esta victoria, el camino hacia Montevideo queda abierto. Rosas consolida su dominio sobre el Río de la Plata, desafiando las pretensiones de los unitarios y sus aliados extranjeros."
  arg_batalla_arroyo_grande.f: "«¡El triunfo es completo! No queda enemigo organizado en la campaña». — Parte de guerra federal."
  arg_batalla_arroyo_grande.a: "Asegurar nuestra hegemonía regional."
+
+ arg_vida_pulperia.t: "Entre Guitarras y Facones"
+ arg_vida_pulperia.d: "En cada rincón de nuestras provincias, #v $arg_loc_pulperias$#! sirven como el único nexo entre la civilización y el desierto. Allí, el gaucho bebe, canta cielitos y reafirma su lealtad al federalismo o a su caudillo local. Controlar estos espacios es controlar el pulso del país rural."
 
  # --- 1843 ---
  arg_revista_la_moda.t: "La Elegancia y $arg_loc_la_moda$"
@@ -74,12 +92,18 @@
  arg_terremoto_salta.a: "Destinar fondos del tesoro para Salta."
  arg_terremoto_salta.b: "Confiar en la resiliencia del pueblo salteño."
 
+ arg_emision_moneda.t: "La Prensa de la $arg_loc_casa_moneda$"
+ arg_emision_moneda.d: "Las arcas están vacías tras años de bloqueos. La #v $arg_loc_casa_moneda$#! ha recibido la orden de imprimir nuevas series de billetes para cubrir los gastos militares. El valor del peso frente a la onza de oro cae estrepitosamente, encareciendo los productos importados."
+
  # --- 1845 ---
  arg_vuelta_obligado.t: "Las Cadenas de la $arg_loc_vuelta_obligado$"
  arg_vuelta_obligado.d: "Una imponente flota de vapores de guerra británicos y franceses avanza por el río Paraná, desafiando nuestra prohibición de navegar los ríos interiores. En el paso de Obligado, el general #v $arg_loc_lucio_mansilla$#! ha dispuesto baterías de artillería y cruzado tres pesadas cadenas para detenerlos. Es una lucha desigual: madera y coraje contra hierro y vapor."
  arg_vuelta_obligado.f: "«¡Vedlos, camaradas, allí los tenéis! Considerad el tamaño del insulto que vienen haciendo a la soberanía de nuestra patria». — Lucio N. Mansilla."
  arg_vuelta_obligado.a: "¡Fuego a discreción! ¡Defiendan el río!"
  arg_vuelta_obligado.b: "Es inútil resistir a las potencias mundiales."
+
+ arg_serenos_ba.t: "¡Todo Sereno!"
+ arg_serenos_ba.d: "Al caer el sol, la ciudad de Buenos Aires queda bajo el cuidado de los #v $arg_loc_serenos$#!. Con sus lanzas y faroles, recorren las calles de barro asegurando que el orden federal no sea perturbado. Sus gritos marcan las horas y el estado del tiempo, siendo un consuelo para los vecinos honestos y una advertencia para los malhechores."
 
  # --- 1846 ---
  arg_facundo_sarmiento.t: "Civilización o Barbarie"
@@ -113,11 +137,26 @@
  arg_muerte_san_martin.f: "«El sable que me ha acompañado en toda la guerra de la Independencia de la América del Sud, le será entregado al General de la República Argentina, Don Juan Manuel de Rosas». — Testamento de San Martín."
  arg_muerte_san_martin.a: "Luto nacional por el Padre de la Patria."
 
+ arg_tratado_francia.t: "La Paz con Francia"
+ arg_tratado_francia.d: "Tras el éxito con los británicos, Francia finalmente ha aceptado que no puede doblegar nuestra voluntad. El Almirante Lepredour ha firmado el tratado que devuelve la isla Martín García y reconoce nuestra soberanía fluvial. ¡La Confederación ha vencido a las dos potencias!"
+
  # --- 1851 ---
  arg_evento_pronunciamiento.t: "El $arg_loc_pronunciamiento$"
  arg_evento_pronunciamiento.d: "El general #v $arg_loc_urquiza$#! ha lanzado un desafío abierto. Al reasumir las facultades de Entre Ríos, ha roto el pacto de caballeros que sostenía a la Confederación. Con el apoyo del Brasil y los exiliados en Montevideo, se prepara para marchar sobre Buenos Aires. El sistema de Rosas se enfrenta a su prueba final."
  arg_evento_pronunciamiento.f: "«¡Muera el tirano Rosas! ¡Viva la libertad de las provincias!» — Grito de guerra del Litoral."
  arg_evento_pronunciamiento.a: "La suerte está echada."
+
+ # --- 1854-1858 ---
+ arg_primer_ferrocarril.a: "El progreso no tiene vuelta atrás."
+ arg_puerto_rosario_1855.a: "Fomentar el comercio en el Litoral."
+ arg_colonia_esperanza_evento.a: "Bienvenidos a su nueva patria."
+ arg_luz_gas_1856.a: "El progreso ilumina nuestro camino."
+ arg_registros_poblacion.a: "Invertir en el Departamento de Estadística."
+ arg_primer_colon.a: "Fomentar las artes y el refinamiento."
+ arg_educacion_1858.a: "Las letras son tan importantes como las espadas."
+
+ # --- 1860 ---
+ arg_presidencia_derqui.a: "Intentar un gobierno de unidad nacional."
 
  # --- 1861 ---
  arg_batalla_pavon_1861.t: "La Batalla de Pavón"
@@ -130,15 +169,33 @@
  arg_objetivo_ferrocarril_desc: "Establecer la primera red ferroviaria que conecte las provincias."
  
  arg_mision_gobernar_es_poblar_status: "La nación está recibiendo el flujo de la civilización. Los campos se llenan de colonos y las ciudades de escuelas."
+ arg_presidencia_mitre.a: "Unidad y Libertad."
+
+ # --- 1863 ---
+ arg_rebelion_chacho.a: "No hay paz sin orden. ¡Aplastad la rebelión!"
 
  # --- 1865 ---
  arg_g_paraguay.f: "«En 24 horas en los cuarteles, en quince días en campaña, en tres meses en Asunción». — Atribuido a Bartolomé Mitre."
+
+ # --- 1866 ---
+ arg_desastre_curupayty.a: "Debemos persistir hasta la victoria final."
+
+ # --- 1867 ---
+ arg_inicio_futbol.a: "Una curiosa distracción para los inmigrantes."
+
+ # --- 1868 ---
+ arg_presidencia_sarmiento.a: "¡Escuelas, muchas escuelas!"
+
+ # --- 1869 ---
+ arg_censo_nacional_1869.a: "Los números no mienten."
+ arg_exposicion_cordoba.a: "Hacia una nación industrializada."
 
  # --- 1870 ---
  arg_opcion_varela_nombre: "Proclamar que la victoria no da derechos sobre los vencidos."
  arg_opcion_anexion_nombre: "Exigir el pago de reparaciones y anexar territorios en disputa."
  
  arg_fin_guerra_paraguay.f: "«La República Argentina, que acaba de salir triunfante de una guerra penosa, no ha querido nunca abusar de su victoria». — Nota de la Cancillería Argentina."
+ arg_asesinato_urquiza.a: "Se apaga la última gran lanza del Federalismo."
 
  # --- 1871 ---
  arg_fiebre_amarilla_1871.f: "«El padre abandona al hijo, la esposa al esposo. El terror ha roto todos los vínculos humanos». — Relato de un sobreviviente."
@@ -146,27 +203,64 @@
  # --- 1879 ---
  arg_campaña_roca_1879.f: "«Sellaréis con vuestras espadas la ley más importante de la República: la ley que entrega el desierto a la labor del hombre blanco». — Julio A. Roca a sus tropas."
  
+ # --- 1872-1878 ---
+ arg_telegrafo_sarmiento.a: "El pensamiento viaja a la velocidad del rayo."
+ arg_atentado_sarmiento.a: "Las ideas no se matan."
+ arg_revolucion_1874.a: "La ley está por encima de los hombres."
+ arg_presidencia_avellaneda.a: "Ahorrar sobre el hambre y la sed de los argentinos."
+ arg_ley_inmigracion_1876.a: "Abrir las puertas de la Nación."
+ arg_cultura_mate.a: "El mate nunca faltará en esta tierra."
+ arg_evento_hesperidina.a: "Proteger la invención nacional."
+ arg_buque_frigorifico.a: "Invertir en la mejora de las razas bovinas."
+ arg_conciliacion_1877.a: "La paz es el primer requisito del progreso."
+ arg_zanja_alsina.a: "Terminar la zanja para proteger el ganado."
+ arg_zanja_alsina.b: "Escuchar al General Roca: la defensa no es suficiente."
+
+ # --- 1879 ---
+ arg_aguas_corrientes_1879.a: "Agua limpia para un pueblo sano."
+ arg_campaña_roca_1879.a: "Incorporar las tierras del sur al mercado nacional."
+ arg_remington_telegrafo.a: "La tecnología es el brazo armado de la civilización."
+
  # --- 1880 ---
  arg_evento_alambrado.f: "«El alambre de hierro ha sido para la propiedad rural lo que el telégrafo para el pensamiento: una revolución silenciosa que lo cambió todo»."
  arg_ramos_generales_1880.f: "«En el mostrador del almacén, todos los hombres son iguales ante la ginebra y el destino»."
+ arg_revolucion_tejedor.a: "Someter a Buenos Aires por la fuerza de la ley."
+ arg_ley_capital_federal.a: "La cuestión de la Capital ha terminado."
+ arg_evento_alambrado.a: "Delimitar la propiedad es civilizar la tierra."
+ arg_ramos_generales_1880.a: "Brindar por el progreso de la campaña."
+
+ # --- 1882-1883 ---
+ arg_fundacion_la_plata.a: "Un faro de modernidad en la pampa."
+ arg_perito_moreno_1883.a: "La ciencia es nuestra mejor defensa."
+ arg_gath_chaves_1883.a: "Buenos Aires se viste de gala."
  
  # --- 1884 ---
  arg_fundacion_ushuaia.t: "La Fundación de $arg_loc_ushuaia$"
  arg_fundacion_ushuaia.d: "Lo que comenzó como una misión anglicana se ha convertido hoy en el puesto de avanzada más austral de nuestra nación. Ante las pretensiones extranjeras en los mares del sur, el gobierno ha decidido establecer una subprefectura permanente. Algunos sugieren que la mejor forma de poblar este sitio es mediante la creación de un #v $arg_loc_presidio_ushuaia$#!, asegurando que el estado tenga ojos y oídos en el Fin del Mundo."
  arg_fundacion_ushuaia.f: "«Ushuaia no es solo un pueblo, es una centinela». — Augusto Lasserre."
+ arg_fundacion_ushuaia.a: "Asegurar la soberanía con un destacamento penal."
+ arg_fundacion_ushuaia.b: "Atraer colonos y misioneros."
  arg_ley_1420_evento.f: "«La escuela pública es el más poderoso agente de civilización y el lazo más fuerte de unión nacional». — Memoria del Ministerio de Instrucción Pública."
+ arg_ley_1420_evento.a: "Formar a los ciudadanos del futuro."
+ arg_ley_1420_evento.b: "Mantener la enseñanza religiosa para evitar el conflicto."
+ arg_ruptura_vaticano.a: "No hay más autoridad que la del Estado Argentino."
 
  # --- 1885 ---
  arg_faro_1885.f: "«Esa luz es la voz del Estado que dice: 'Aquí comienza la Argentina'». — Comentario en la prensa de la época."
+ arg_faro_1885.a: "Iluminar el paso de las naciones."
+ arg_tranvias_1885.a: "Modernizar la locomoción urbana."
 
  # --- 1886 ---
  arg_unicato_1886.d: "El presidente Miguel Juárez Celman ha concentrado en su persona la jefatura del Partido Autonomista Nacional y la Presidencia de la República. Los gobernadores responden directamente a él, y la oposición ha sido silenciada o cooptada. Sus seguidores lo llaman el 'Jefe Único', pero el descontento crece bajo la superficie de esta aparente unanimidad."
+ arg_unicato_1886.a: "Yo soy el Jefe Único."
 
  # --- 1887 ---
  arg_bancos_garantidos_1887.d: "La Ley de Bancos Garantidos ha desatado una fiebre especulativa sin precedentes. Se fundan bancos por doquier solo para emitir billetes respaldados por bonos públicos, inundando la plaza de papel moneda. La Bolsa de Comercio es un hervidero donde se hacen fortunas de la noche a la mañana, mientras la inflación comienza a carcomer los salarios reales."
+ arg_bancos_garantidos_1887.a: "¡Que el crédito no se detenga!"
 
  # --- 1889 ---
  arg_puerto_madero_1889.d: "Tras años de debates entre los proyectos de Huergo y Madero, se ha inaugurado la primera sección del puerto diseñado por Eduardo Madero. Con sus diques de ladrillo y grúas hidráulicas, promete acabar con la vergüenza del desembarco en carretas. Sin embargo, las voces críticas advierten que su diseño de esclusas es costoso y complicado para el tráfico moderno."
+ arg_puerto_madero_1889.a: "Buenos Aires debe tener un puerto monumental."
 
  # --- 1890 ---
  arg_revolucion_parque_1890.d: "La crisis económica y el autoritarismo del Unicato han estallado. La Unión Cívica, liderada por Leandro N. Alem y Bartolomé Mitre, se ha levantado en armas, tomando el Parque de Artillería. Aunque el gobierno cuenta con ventaja militar, su legitimidad política está muerta. Juárez Celman está solo y el país exige un cambio de rumbo."
@@ -175,3 +269,14 @@
  arg_homenaje_belgrano.t: "El Manto de la Patria"
  arg_homenaje_belgrano.d: "En medio de las tensiones con las potencias extranjeras, el gobernador Rosas ha ordenado celebrar con especial fervor el legado de #v $arg_loc_belgrano$#!. La bandera celeste y blanca que él creó en las barrancas del Paraná es hoy el símbolo de nuestra resistencia. Su ejemplo de austeridad y servicio es invocado para unir a los federales ante la amenaza externa."
  arg_homenaje_belgrano.a: "Su bandera nos cobija a todos."
+
+ # --- 1891-1892 ---
+ arg_banco_nacion_1891.a: "Una institución para la reconstrucción."
+ arg_nacimiento_ucr_1892.a: "La lucha por la pureza del sufragio ha comenzado."
+
+ # --- Evento de Misión ---
+ arg_fin_mision_poblar.1.t: "Una Nación en Marcha"
+ arg_fin_mision_poblar.1.d: "Hemos cumplido los objetivos de la Organización Nacional. La población crece, la educación se expande y los ferrocarriles conectan nuestras vastas tierras. Argentina ya no es una promesa, sino una realidad pujante que atrae capitales y personas de todo el mundo. El futuro es nuestro."
+ arg_fin_mision_poblar.1.f: "«América es la tierra de promisión para todos los hombres de buena voluntad que quieran habitar el suelo argentino». — Preámbulo de la Constitución Nacional."
+ arg_fin_mision_poblar.1.a: "Fomentar la industria nacional."
+ arg_fin_mision_poblar.1.b: "Consolidar nuestro prestigio internacional."

@@ -220,3 +220,9 @@ l_spanish:
 
  arg_loc_yerba_mate: "El Mate y la Identidad"
  arg_loc_yerba_mate_tooltip: "A pesar del avance de la moda europea, el mate persistió como el gran igualador social. Durante la Guerra del Paraguay y las Campañas del Desierto, fue el principal sustento de los soldados y el rito ineludible de la vida rural."
+
+ arg_loc_julio_roca: "Julio Argentino Roca"
+ arg_loc_julio_roca_tooltip: "General y estratega que transformó el ejército nacional. Su plan de ofensiva relámpago en 1879 desplazó la frontera hasta los ríos Negro y Neuquén, eliminando el problema de los malones y asegurando la Patagonia para la Argentina. Este éxito lo catapultó a la presidencia en 1880."
+
+ arg_loc_campaña_desierto: "Campaña del Desierto"
+ arg_loc_campaña_desierto_tooltip: "Ofensiva militar de 1879 que reemplazó la estrategia defensiva de fortines por una de avance continuo. Resultó en la incorporación de millones de hectáreas de tierra aptas para la ganadería y la agricultura, aunque implicó el desmantelamiento de las sociedades indígenas de la región."

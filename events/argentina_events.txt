@@ -1792,6 +1792,57 @@ arg_aguas_corrientes_1879 = {
 	}
 }
 
+# 1879 - El Avance hacia el Río Negro
+arg_campaña_roca_1879 = {
+	type = country_event
+	title = "La Conquista del Desierto"
+	desc = "El General #v $arg_loc_julio_roca$#! ha lanzado su ofensiva definitiva. Equipado con fusiles Remington y apoyado por el telégrafo, el ejército nacional se desplaza como una máquina moderna sobre la pampa. El objetivo es claro: llevar la civilización hasta los confines del sur y asegurar que el pabellón nacional ondee en las puertas de la Patagonia, antes de que otras potencias reclamen esos territorios."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1879.4.16
+		NOT = { has_variable = arg_campaña_lanzada }
+	}
+
+	immediate = { set_variable = arg_campaña_lanzada }
+
+	# Opción A: "La victoria es la paz futura" (Histórica)
+	option = {
+		name = "Incorporar las tierras del sur al mercado nacional."
+		# Mecánica de juego: Incorporación de estados
+		s:STATE_LA_PAMPA = { add_modifier = { name = arg_tierras_conquistadas months = 240 } }
+		s:STATE_RIO_NEGRO = { add_modifier = { name = arg_tierras_conquistadas months = 240 } }
+		
+		# Bono de prestigio y militares
+		add_prestige = 30
+		ig:ig_armed_forces = { add_approval = 5 }
+		ig:ig_landowners = { add_approval = 5 }
+	}
+}
+
+# 1879 - Superioridad Tecnológica
+arg_remington_telegrafo = {
+	type = country_event
+	title = "Remington y Telégrafo"
+	desc = "La campaña no solo se libra con caballos y sables. La llegada de los fusiles de repetición #v Remington#! y el tendido de líneas telegráficas que conectan los fortines con Buenos Aires han cambiado las reglas de la guerra. La coordinación en tiempo real y el poder de fuego han vuelto obsoletas las antiguas lanzas del desierto."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/telegraph_lines.dds"
+
+	trigger = {
+		has_variable = arg_campaña_lanzada
+	}
+
+	option = {
+		name = "La tecnología es el brazo armado de la civilización."
+		add_tech_progression = { technology = breech_loading_artillery progress = 0.3 }
+		add_modifier = { name = arg_ventaja_tactica months = 60 }
+	}
+}
+
 # 1880 - La Revolución de Tejedor
 arg_revolucion_tejedor = {
 	type = country_event

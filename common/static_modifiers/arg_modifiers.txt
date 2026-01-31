@@ -275,3 +275,16 @@ arg_bono_industria_bebidas = {
 	icon = "gfx/interface/icons/modifier_icons/trade_positive.dds"
 	country_manufacturing_food_industries_throughput_mult = 0.10
 }
+
+arg_tierras_conquistadas = {
+	icon = "gfx/interface/icons/modifier_icons/state_sovereignty.dds"
+	state_migration_pull_add = 10
+	state_agriculture_output_mult = 0.20 # Representa la apertura de tierras ganaderas
+	state_turmoil_mult = -0.15 # Representa el fin de los malones
+}
+
+arg_ventaja_tactica = {
+	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
+	country_army_offense_add = 15
+	country_kill_rate_mult = 0.10
+}

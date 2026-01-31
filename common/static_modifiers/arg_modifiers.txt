@@ -236,3 +236,32 @@ arg_auge_ganadero = {
 	state_agriculture_output_mult = 0.20
 	state_livestock_ranches_throughput_mult = 0.25
 }
+
+arg_estado_de_sitio = {
+	icon = "gfx/interface/icons/modifier_icons/turmoil_positive.dds"
+	state_market_access_add = -0.50
+	state_tax_capacity_add = -100
+}
+
+arg_nacion_unificada = {
+	icon = "gfx/interface/icons/modifier_icons/legitimacy_positive.dds"
+	country_legitimacy_base_add = 20
+	country_bureaucracy_add = 200
+}
+
+arg_proteccion_ganadera = {
+	icon = "gfx/interface/icons/modifier_icons/livestock_positive.dds"
+	state_livestock_ranches_throughput_mult = 0.15
+}
+
+arg_preparativos_ofensivos = {
+	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
+	country_army_offense_add = 10
+	country_war_exhaustion_mult = -0.10
+}
+
+arg_salud_publica_mejorada = {
+	icon = "gfx/interface/icons/modifier_icons/mortality_negative.dds"
+	country_health_care_eff_mult = 0.10
+	country_mortality_mult = -0.05
+}

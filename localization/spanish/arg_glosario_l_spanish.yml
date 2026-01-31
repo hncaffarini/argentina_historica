@@ -199,3 +199,15 @@ l_spanish:
 
  arg_loc_frigorifico: "El Buque Frigorífico"
  arg_loc_frigorifico_tooltip: "En 1876, el buque 'Le Frigorifique' demostró que se podía transportar carne congelada a Europa. Esto transformó la ganadería argentina de la exportación de cueros y tasajo a la carne de alta calidad."
+
+arg_loc_conciliacion_politica: "La Conciliación de los Partidos"
+arg_loc_conciliacion_politica_tooltip: "Acuerdo promovido por Avellaneda en 1877 para pacificar el país, permitiendo el regreso de Mitre a la vida política tras su rebelión. Fue un intento de 'borrón y cuenta nueva' para unir a las élites antes de la expansión al sur."
+
+arg_loc_zanjadealsina: "La Zanja de Alsina"
+arg_loc_zanjadealsina_tooltip: "Sistema defensivo de 600 km de fosas y fortines construido por el ministro Adolfo Alsina. Su objetivo era evitar que los malones indígenas se llevaran el ganado, marcando una frontera fija antes de que Roca decidiera pasar a una estrategia puramente ofensiva."
+
+arg_loc_federalizacion_ba: "Federalización de Buenos Aires"
+arg_loc_federalizacion_ba_tooltip: "Ley sancionada en 1880 que convirtió a la ciudad de Buenos Aires en un territorio federal, separándola de la provincia homónima. Esto significó que la ciudad pasó a ser la Capital Federal de todos los argentinos y sus rentas aduaneras pasaron al Tesoro Nacional."
+
+arg_loc_carlos_tejedor: "Carlos Tejedor"
+arg_loc_carlos_tejedor_tooltip: "Gobernador de Buenos Aires y líder del último gran levantamiento porteño contra el Gobierno Nacional. Su derrota militar en los combates de Barracas y Puente Alsina marcó el fin de la resistencia de Buenos Aires a integrarse plenamente."

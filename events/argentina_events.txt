@@ -1655,6 +1655,127 @@ arg_buque_frigorifico = {
 	}
 }
 
+# 1877 - La Conciliación Política
+arg_conciliacion_1877 = {
+	type = country_event
+	title = "La Unión de los Argentinos"
+	desc = "El presidente #v $arg_loc_nicolas_avellaneda$#! ha extendido una rama de olivo a sus antiguos enemigos. Mediante la #v $arg_loc_conciliacion_politica$#!, los líderes de las facciones en pugna han acordado dejar de lado las armas para trabajar en la organización nacional. Aunque los más radicales critican este pacto, la paz interna parece, por fin, una posibilidad real."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1877.5.1
+	}
+
+	option = {
+		name = "La paz es el primer requisito del progreso."
+		add_loyalists = { value = 0.05 }
+		add_authority = 50
+		# Reduce el radicalismo de los intelectuales (Mitristas)
+		ig:ig_intelligentsia = { add_approval = 5 }
+	}
+}
+
+# 1878 - La Zanja de Alsina
+arg_zanja_alsina = {
+	type = country_event
+	title = "Una Muralla en la Pampa"
+	desc = "El ministro Adolfo Alsina ha avanzado con su plan de defensa: la #v $arg_loc_zanjadealsina$#!. Miles de hombres cavan una fosa gigante para proteger las tierras ganaderas de los ataques. Sin embargo, tras la reciente muerte de Alsina, un joven general llamado #v $arg_loc_roca$#! critica este plan, asegurando que 'la zanja es una actitud defensiva' y que el país debe pasar al ataque definitivo."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/southamerica_factory_opening.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1878.1.1
+	}
+
+	option = {
+		name = "Terminar la zanja para proteger el ganado."
+		s:STATE_BUENOS_AIRES = { add_modifier = { name = arg_proteccion_ganadera months = 48 } }
+	}
+
+	option = {
+		name = "Escuchar al General Roca: la defensa no es suficiente."
+		add_tech_progression = { technology = mobile_artillery progress = 0.25 }
+		add_modifier = { name = arg_preparativos_ofensivos months = 24 }
+	}
+}
+
+# 1879 - El Palacio de las Aguas Corrientes (Proyecto)
+arg_aguas_corrientes_1879 = {
+	type = country_event
+	title = "Higiene y Civilización"
+	desc = "Tras los horrores de la fiebre amarilla, el gobierno ha aprobado los planes para la red de aguas corrientes más ambiciosa de Sudamérica. La salud de la Capital ya no dependerá de los aguateros del río. Este proyecto no solo salvará vidas, sino que demostrará que Argentina es una nación moderna y saludable."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1879.6.1
+	}
+
+	option = {
+		name = "Agua limpia para un pueblo sano."
+		add_modifier = { name = arg_salud_publica_mejorada months = 120 }
+		# Mejora la atracción migratoria de la capital
+		s:STATE_BUENOS_AIRES = { state_migration_pull_add = 5 }
+	}
+}
+
+# 1880 - La Revolución de Tejedor
+arg_revolucion_tejedor = {
+	type = country_event
+	title = "La Última Batalla por la Capital"
+	desc = "La tensión ha llegado a su punto de quiebre. El gobernador #v $arg_loc_carlos_tejedor$#! ha movilizado a las milicias provinciales, negándose a que Buenos Aires entregue su autonomía y sus rentas. El presidente Avellaneda ha tenido que trasladar el gobierno al pueblo de Belgrano mientras el ejército nacional de #v $arg_loc_roca$#! se prepara para sitiar la ciudad. Es el enfrentamiento final entre el orden nacional y el orgullo porteño."
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1880.6.20
+		NOT = { has_variable = arg_tejedor_lanzado }
+	}
+
+	immediate = { set_variable = arg_tejedor_lanzado }
+
+	option = {
+		name = "Someter a Buenos Aires por la fuerza de la ley."
+		add_radicalism_mult = { value = 0.1 }
+		s:STATE_BUENOS_AIRES = { add_modifier = { name = arg_estado_de_sitio months = 3 } }
+	}
+}
+
+# 1880 - Capital Federal
+arg_ley_capital_federal = {
+	type = country_event
+	title = "Buenos Aires: Capital de la República"
+	desc = "Se ha sancionado finalmente la #v $arg_loc_federalizacion_ba$#!. Buenos Aires ya no pertenece a los porteños, sino a toda la Nación. Con este acto, se nacionaliza la aduana y se pone fin a siete décadas de guerras civiles. Una nueva era de paz y administración centralizada comienza bajo el lema de 'Paz y Administración'."
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1880.9.20
+	}
+
+	option = {
+		name = "La cuestión de la Capital ha terminado."
+		# Bono masivo de autoridad y centralización
+		add_modifier = { name = arg_nacion_unificada months = 120 }
+		add_authority = 200
+		add_prestige = 50
+		
+		# Mecánica económica: Gran aumento de ingresos
+		country_tax_efficiency_add = 0.20
+	}
+}
+
 # 1884 - Fundación Oficial de Ushuaia
 arg_fundacion_ushuaia = {
 	type = country_event

@@ -107,7 +107,7 @@ arg_evento_mazorca = {
 	}
 
 	option = {
-		name = "El orden requiere firmeza."
+		name = arg_evento_mazorca.a
 		add_authority = 100
 		every_scope_state = {
 			add_radicals = { value = 0.05 type = lower_strata }
@@ -395,7 +395,7 @@ arg_venta_tierras = {
 	}
 
 	option = {
-		name = "Consolidar la clase terrateniente."
+		name = arg_venta_tierras.a
 		# Beneficio para los Landowners
 		ig:ig_landowners = { add_approval = 5 }
 		add_treasury = 25000
@@ -510,7 +510,7 @@ arg_vida_pulperia = {
 	}
 
 	option = {
-		name = "Asegurar la lealtad de los paisanos."
+		name = arg_vida_pulperia.a
 		add_authority = 25
 		add_loyalists = { value = 0.02 pop_type = farmers }
 	}
@@ -606,7 +606,7 @@ arg_emision_moneda = {
 	}
 
 	option = {
-		name = "Es un mal necesario para la guerra."
+		name = "arg_emision_moneda.a"
 		add_treasury = 15000
 		# Inflación representada por costo de importaciones
 		add_modifier = { name = arg_inflacion_rosista months = 48 }
@@ -683,7 +683,7 @@ arg_serenos_ba = {
 	}
 
 	option = {
-		name = "La ciudad duerme tranquila."
+		name = arg_serenos_ba.a
 		# Solo un pequeño bono de estabilidad
 		add_modifier = { name = arg_orden_urbano months = 12 }
 	}
@@ -941,14 +941,14 @@ arg_evento_pronunciamiento = {
 # 1852 - La Caída de Rosas
 arg_batalla_caseros.1 = {
 	type = country_event
-	title = "La Batalla de Caseros"
-	desc = "El #v $arg_loc_ejercito_grande$#! ha derrotado a las fuerzas federales en los campos de Caseros. Juan Manuel de Rosas ha firmado su renuncia y se encamina al exilio en un buque británico. Una nueva era comienza para la nación: la era de la Constitución."
+	title = arg_batalla_caseros.1.t
+	desc = arg_batalla_caseros.1.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/military_retreat.bk2"
 
 	option = {
-		name = "Termina una época. Comienza la Organización Nacional."
+		name = arg_batalla_caseros.1.a
 		# Cambios masivos: Rosas se va, se impulsa un nuevo orden legal
 		# Forzar leyes puede ser disruptivo, es mejor dar un gran impulso a su aprobación
 		add_enactment_progression = { law = law_census_suffrage value = 0.5 }
@@ -962,8 +962,8 @@ arg_batalla_caseros.1 = {
 # 1852 - Secesión de Buenos Aires
 arg_secesion_buenos_aires = {
 	type = country_event
-	title = "La Revolución del 11 de Septiembre"
-	desc = "La tensión entre el General Urquiza y la élite porteña ha estallado. Liderados por Valentín Alsina y Bartolomé Mitre, los bonaerenses han expulsado a las tropas federales y proclamado que Buenos Aires no se someterá a los dictados de Paraná. La nación ha quedado fracturada."
+	title = arg_secesion_buenos_aires.t
+	desc = arg_secesion_buenos_aires.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/southamerica_war_civilians.bk2"
@@ -980,7 +980,7 @@ arg_secesion_buenos_aires = {
 	}
 
 	option = {
-		name = "Buenos Aires se separa de la Confederación."
+		name = arg_secesion_buenos_aires.a
 		# Efecto de gameplay: Buenos Aires gana una autonomía enorme o se vuelve un estado rebelde
 		s:STATE_BUENOS_AIRES = {
 			add_radicals = { value = 0.5 type = lower_strata }
@@ -994,8 +994,8 @@ arg_secesion_buenos_aires = {
 # 1853 - Constitución Nacional
 arg_constitucion_1853 = {
 	type = country_event
-	title = "¡Constitución y Libertad!"
-	desc = "En la ciudad de Santa Fe, los congresistas han jurado finalmente la #v $arg_loc_constitucion_53$#!. Basada en las 'Bases' de #v $arg_loc_alberdi$#!, esta carta magna promete libertad de cultos, fomento a la inmigración y un sistema federal. Sin embargo, los representantes de Buenos Aires no han estado presentes."
+	title = arg_constitucion_1853.t
+	desc = arg_constitucion_1853.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_signed_contract.bk2"
@@ -1011,7 +1011,7 @@ arg_constitucion_1853 = {
 	}
 
 	option = {
-		name = "Gobernar es poblar. ¡Viva la República!"
+		name = arg_constitucion_1853.a
 		# Cambios legales automáticos que reflejan la constitución
 		set_law = law_freedom_of_conscience # Libertad de cultos
 		set_law = law_no_migration_controls # Puertas abiertas
@@ -1023,8 +1023,8 @@ arg_constitucion_1853 = {
 # 1854 - El Camino de Hierro
 arg_primer_ferrocarril = {
 	type = country_event
-	title = "El Ferrocarril del Oeste"
-	desc = "Se ha otorgado la concesión para construir la primera línea férrea del país. Buenos Aires busca modernizarse para demostrar su superioridad sobre el interior. La locomotora 'La Porteña' pronto silbará por nuestras tierras, cambiando para siempre el transporte de mercancías."
+	title = arg_primer_ferrocarril.t
+	desc = arg_primer_ferrocarril.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/unspecific_trains.bk2"
@@ -1051,8 +1051,8 @@ arg_primer_ferrocarril = {
 # 1855 - Rosario: El Puerto de la Confederación
 arg_puerto_rosario_1855 = {
 	type = country_event
-	title = "Rosario: La Llave del Interior"
-	desc = "Para contrarrestar el poder de Buenos Aires, el General Urquiza ha designado al #v $arg_loc_puerto_rosario$#! como puerto habilitado para el comercio exterior. Las mercaderías ya no necesitan pasar por las manos porteñas. Rosario florece, y los barcos de ultramar comienzan a remontar el Paraná en números nunca vistos."
+	title = arg_puerto_rosario_1855.t
+	desc = arg_puerto_rosario_1855.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_steam_ship.bk2"
@@ -1080,8 +1080,8 @@ arg_puerto_rosario_1855 = {
 # 1856 - Inmigración en Santa Fe
 arg_colonia_esperanza_evento = {
 	type = country_event
-	title = "La Semilla de la Esperanza"
-	desc = "Bajo el lema de Alberdi 'Gobernar es poblar', un grupo de 200 familias suizas, alemanas y francesas ha llegado a Santa Fe para fundar #v $arg_loc_colonia_esperanza$#!. Es el primer experimento de colonización agrícola organizada. Si tienen éxito, el desierto pronto se convertirá en campos de trigo."
+	title = arg_colonia_esperanza_evento.t
+	desc = arg_colonia_esperanza_evento.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
@@ -1111,8 +1111,8 @@ arg_colonia_esperanza_evento = {
 # 1856 - La Luz de Gas en Buenos Aires
 arg_luz_gas_1856 = {
 	type = country_event
-	title = "La Noche se hace Día"
-	desc = "Para las fiestas mayas de este año, el gobierno de Buenos Aires ha inaugurado el alumbrado a gas en la Plaza de la Victoria. Mientras el interior sigue iluminándose con velas de sebo, la capital brilla con una luz blanca y moderna. Los ciudadanos pasean asombrados bajo los nuevos faroles, sintiéndose más cerca de París que nunca."
+	title = arg_luz_gas_1856.t
+	desc = arg_luz_gas_1856.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -1139,8 +1139,8 @@ arg_luz_gas_1856 = {
 # 1857 - Necesidad de Datos
 arg_registros_poblacion = {
 	type = country_event
-	title = "Contar para Gobernar"
-	desc = "Para organizar un estado moderno, primero debemos saber cuántos somos y qué producimos. Se han iniciado los primeros relevamientos estadísticos en las provincias de la Confederación. Los resultados son alarmantes: somos pocos para un territorio tan vasto."
+	title = arg_registros_poblacion.t
+	desc = arg_registros_poblacion.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
@@ -1165,8 +1165,8 @@ arg_registros_poblacion = {
 # 1857 - Inauguración del Primer Teatro Colón
 arg_primer_colon = {
 	type = country_event
-	title = "Ópera en el Plata"
-	desc = "Se ha inaugurado el primer Teatro Colón en Buenos Aires. Con una capacidad para 2.500 personas y materiales importados de Europa, se convierte en el centro de la vida social de la élite porteña. La ópera y el drama europeo ahora tienen un hogar permanente, reforzando la identidad cosmopolita de la ciudad."
+	title = arg_primer_colon.t
+	desc = arg_primer_colon.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -1191,8 +1191,8 @@ arg_primer_colon = {
 # 1858 - Fomento de la Educación Primaria
 arg_educacion_1858 = {
 	type = country_event
-	title = "La Instrucción Pública"
-	desc = "En medio de la división política, surge una certeza: la República necesita ciudadanos instruidos. Se han destinado fondos para la creación de nuevas #v $arg_loc_reforma_educativa$#! en las capitales provinciales. Aunque el tesoro está exhausto por los gastos militares, la educación se ve como la única vía hacia el progreso."
+	title = arg_educacion_1858.t
+	desc = arg_educacion_1858.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
@@ -1219,8 +1219,8 @@ arg_educacion_1858 = {
 # 1859 - El choque de Cepeda
 arg_batalla_cepeda_1859 = {
 	type = country_event
-	title = "El Trueno de $arg_loc_batalla_cepeda$"
-	desc = "La paciencia de la Confederación se ha agotado. En los campos de Cepeda, el General Urquiza ha destrozado al ejército porteño de Mitre. Buenos Aires está sitiada y no tiene más opción que negociar su reincorporación. Sin embargo, los porteños son negociadores duros y exigirán revisar la Constitución."
+	title = arg_batalla_cepeda_1859.t
+	desc = arg_batalla_cepeda_1859.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_military_parade.bk2"
@@ -1236,7 +1236,7 @@ arg_batalla_cepeda_1859 = {
 	}
 
 	option = {
-		name = "Firmar el Pacto de San José de Flores."
+		name = arg_batalla_cepeda_1859.a
 		# Buenos Aires empieza a integrarse, pero con condiciones
 		s:STATE_BUENOS_AIRES = {
 			remove_modifier = arg_estado_separado
@@ -1250,8 +1250,8 @@ arg_batalla_cepeda_1859 = {
 # 1860 - Derqui al mando
 arg_presidencia_derqui = {
 	type = country_event
-	title = "Santiago Derqui y la Unión Frágil"
-	desc = "Urquiza deja la presidencia y asume el cordobés Santiago Derqui. Su misión es casi imposible: mantener unidos a los federales del interior y a los liberales de Buenos Aires. La desconfianza mutua es tan grande que el más mínimo roce podría reabrir la guerra civil."
+	title = arg_presidencia_derqui.t
+	desc = arg_presidencia_derqui.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/southamerica_election.bk2"
@@ -1277,8 +1277,9 @@ arg_presidencia_derqui = {
 # 1861 - La Batalla de Pavón
 arg_batalla_pavon_1861 = {
 	type = country_event
-	title = "El Enigma de Pavón"
-	desc = "En las orillas del arroyo Pavón, los ejércitos de la Confederación y Buenos Aires han chocado. Pero algo inaudito ha sucedido: tras un combate indeciso, el General Urquiza ha retirado a su invicta caballería entrerriana hacia el Paraná, dejando la victoria en manos de Bartolomé Mitre. Nadie entiende su motivo, pero el resultado es claro: Buenos Aires ha ganado la guerra por abandono."
+	title = arg_batalla_pavon_1861.t
+	desc = arg_batalla_pavon_1861.d
+	flavor = arg_batalla_pavon_1861.f
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
@@ -1308,9 +1309,9 @@ arg_batalla_pavon_1861 = {
 # 1862 - Asunción de Bartolomé Mitre
 arg_presidencia_mitre = {
 	type = country_event
-	title = "La República Unificada"
-	desc = "Tras la victoria en Pavón y la renuncia de las autoridades de la Confederación, #v $arg_loc_mitre$#! ha sido elegido presidente. Por primera vez en décadas, Buenos Aires y las Provincias caminan bajo una misma bandera y una misma Constitución. El desafío ahora es pacificar el interior y modernizar la nación."
-	flavor = "«Todo está por hacerse: no tenemos tesoro, no tenemos ejército, no tenemos ni siquiera un edificio donde reunir al gabinete». — Reflexión de Bartolomé Mitre al asumir."
+	title = arg_presidencia_mitre.t
+	desc = arg_presidencia_mitre.d
+	flavor = arg_presidencia_mitre.f
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/southamerica_election.bk2"
@@ -1340,8 +1341,8 @@ arg_presidencia_mitre = {
 # 1863 - La Rebelión del Chacho
 arg_rebelion_chacho = {
 	type = country_event
-	title = "La Lanza del Chacho Peñaloza"
-	desc = "En los llanos de La Rioja, el caudillo Ángel Vicente 'El Chacho' Peñaloza se ha alzado en armas. Representa el último grito de las provincias contra el centralismo de #v $arg_loc_mitre$#!. La pacificación del interior exige sangre, pero el progreso no se detendrá."
+	title = arg_rebelion_chacho.t
+	desc = arg_rebelion_chacho.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
@@ -1367,8 +1368,8 @@ arg_rebelion_chacho = {
 # 1865 - Declaración de Guerra al Paraguay
 arg_guerra_paraguay_inicio = {
 	type = country_event
-	title = "¡En veinticuatro horas en los cuarteles!"
-	desc = "El Mariscal #v $arg_loc_solano_lopez$#! ha invadido la provincia de Corrientes tras la negativa de nuestro gobierno de permitirle el paso hacia Uruguay. La indignación en Buenos Aires es total. #v $arg_loc_mitre$#! ha prometido una campaña relámpago, pero la realidad del terreno y la determinación paraguaya sugieren un conflicto mucho más largo y costoso."
+	title = arg_guerra_paraguay_inicio.t
+	desc = arg_guerra_paraguay_inicio.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_military_parade.bk2"
@@ -1383,7 +1384,7 @@ arg_guerra_paraguay_inicio = {
 
 	# Opción A: Formar la Triple Alianza (Histórica)
 	option = {
-		name = "Firmar el Tratado de la #v $arg_loc_triple_alianza$#!."
+		name = arg_guerra_paraguay_inicio.a
 		default_option = yes
 		
 		# Efectos: Guerra diplomática y costos militares
@@ -1399,7 +1400,7 @@ arg_guerra_paraguay_inicio = {
 
 	# Opción B: Intentar una mediación neutral
 	option = {
-		name = "Evitar el conflicto y buscar la paz."
+		name = arg_guerra_paraguay_inicio.b
 		add_prestige = -50
 		add_authority = -100
 		c:BRA = { add_relations = { target = c:ARG value = -30 } }
@@ -1409,8 +1410,8 @@ arg_guerra_paraguay_inicio = {
 # 1866 - El Desastre de Curupayty
 arg_desastre_curupayty = {
 	type = country_event
-	title = "El Desastre de $arg_loc_curupayty$"
-	desc = "Las noticias del frente son devastadoras. El asalto a las trincheras de Curupayty ha terminado en una masacre para nuestras tropas. La confianza en el mando de #v $arg_loc_mitre$#! se desmorona y en las provincias del interior comienzan a oírse gritos contra una guerra que consideran ajena."
+	title = arg_desastre_curupayty.t
+	desc = arg_desastre_curupayty.d
 	
 	trigger = {
 		tag = ARG
@@ -1436,8 +1437,8 @@ arg_desastre_curupayty = {
 # 1867 - El primer partido de fútbol
 arg_inicio_futbol = {
 	type = country_event
-	title = "Un Extraño Juego de Pelota"
-	desc = "En los prados de Palermo, un grupo de residentes británicos ha organizado el #v $arg_loc_primer_partido_futbol$#!. Los locales observan con curiosidad cómo veinte hombres corren tras una pelota de cuero intentando meterla en un arco. Nadie imagina que este 'pasatiempo de ingleses' terminará convirtiéndose en la pasión más grande de nuestra nación."
+	title = arg_inicio_futbol.t
+	desc = arg_inicio_futbol.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -1463,8 +1464,8 @@ arg_inicio_futbol = {
 # 1868 - Asunción de Sarmiento
 arg_presidencia_sarmiento = {
 	type = country_event
-	title = "El Maestro de América"
-	desc = "Mientras se encuentra en Estados Unidos, #v $arg_loc_sarmiento$#! ha sido elegido presidente. Su obsesión es clara: la escuela es la base de la República. Bajo su mando, se fundarán cientos de colegios y se traerán maestras norteamericanas para revolucionar la enseñanza."
+	title = arg_presidencia_sarmiento.t
+	desc = arg_presidencia_sarmiento.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/southamerica_election.bk2"
@@ -1489,8 +1490,8 @@ arg_presidencia_sarmiento = {
 # 1869 - El Primer Censo Nacional
 arg_censo_nacional_1869 = {
 	type = country_event
-	title = "Conocernos para Gobernar"
-	desc = "Bajo las órdenes de #v $arg_loc_sarmiento$#!, se ha llevado a cabo el #v $arg_loc_censo_1869$#!. Los resultados son un baño de realidad: somos una nación vasta pero casi vacía, y la mayoría de nuestros ciudadanos no saben leer ni escribir. Estos datos serán la brújula para nuestras futuras reformas de inmigración y educación."
+	title = arg_censo_nacional_1869.t
+	desc = arg_censo_nacional_1869.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/paper_reading.dds"
@@ -1517,8 +1518,8 @@ arg_censo_nacional_1869 = {
 # 1869 - Exposición Nacional de Córdoba
 arg_exposicion_cordoba = {
 	type = country_event
-	title = "El Progreso en el Corazón de la República"
-	desc = "Se ha inaugurado en Córdoba una gran exposición de artes y productos nacionales. Es un mensaje político: la modernidad no debe detenerse en el puerto de Buenos Aires. Maquinaria agrícola, tejidos y nuevas tecnologías se exhiben para demostrar que la Confederación unificada camina hacia la industria."
+	title = arg_exposicion_cordoba.t
+	desc = arg_exposicion_cordoba.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_art_gallery.dds"
@@ -1545,8 +1546,8 @@ arg_exposicion_cordoba = {
 # 1870 - La Muerte del León de Entre Ríos
 arg_asesinato_urquiza = {
 	type = country_event
-	title = "Sangre en el Palacio San José"
-	desc = "El General #v $arg_loc_urquiza$#! ha sido asesinado en su propia residencia por seguidores de Ricardo López Jordán. Los federales más radicales nunca le perdonaron su retiro en Pavón ni su acercamiento a Sarmiento. Con su muerte, termina la era de los caudillos históricos y Entre Ríos entra en un caos que debemos sofocar."
+	title = arg_asesinato_urquiza.t
+	desc = arg_asesinato_urquiza.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
@@ -1574,8 +1575,8 @@ arg_asesinato_urquiza = {
 # 1870 - Fin de la Guerra de la Triple Alianza
 arg_fin_guerra_paraguay = {
 	type = country_event
-	title = "El Final de la Gran Guerra"
-	desc = "Las noticias llegan desde el norte: el #v $arg_loc_solano_lopez$#! ha caído en el #v $arg_loc_cerro_cora$#!. La guerra más sangrienta de nuestra historia ha terminado. Paraguay yace en ruinas, y ahora nos enfrentamos al dilema de la paz. ¿Debemos exigir reparaciones y territorios, o mostrar la grandeza de una nación civilizada?"
+	title = arg_fin_guerra_paraguay.t
+	desc = arg_fin_guerra_paraguay.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_signed_contract.bk2"
@@ -1624,8 +1625,8 @@ arg_fin_guerra_paraguay = {
 # 1871 - La Epidemia de Fiebre Amarilla
 arg_fiebre_amarilla_1871 = {
 	type = country_event
-	title = "La Peste en el Puerto"
-	desc = "El verano ha traído un horror inesperado a Buenos Aires. La #v $arg_loc_fiebre_amarilla$#! se extiende por los barrios del sur, alimentada por el calor y el hacinamiento. El gobierno de #v $arg_loc_sarmiento$#! y las autoridades locales han huido de la ciudad, dejando a comisiones populares el manejo de la crisis. Las calles están desiertas, los comercios cerrados y los muertos se cuentan por cientos cada día."
+	title = arg_fiebre_amarilla_1871.t
+	desc = arg_fiebre_amarilla_1871.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_sick_in_hospital.bk2"
@@ -1640,7 +1641,7 @@ arg_fiebre_amarilla_1871 = {
 
 	# Opción A: Invertir en saneamiento de urgencia
 	option = {
-		name = "Debemos modernizar el sistema de aguas y cloacas."
+		name = arg_fiebre_amarilla_1871.a
 		add_treasury = -20000
 		s:STATE_BUENOS_AIRES = {
 			add_modifier = { name = arg_impacto_fiebre months = 12 }
@@ -1652,7 +1653,7 @@ arg_fiebre_amarilla_1871 = {
 
 	# Opción B: "Sálvese quien pueda" (Huir al norte)
 	option = {
-		name = "La élite abandona el casco histórico."
+		name = arg_fiebre_amarilla_1871.b
 		s:STATE_BUENOS_AIRES = {
 			add_modifier = { name = arg_vivienda_conventillos months = 60 }
 		}
@@ -1663,8 +1664,8 @@ arg_fiebre_amarilla_1871 = {
 # 1872 - La Red Telegráfica
 arg_telegrafo_sarmiento = {
 	type = country_event
-	title = "Hilos que Unen la República"
-	desc = "Bajo el incansable impulso de #v $arg_loc_sarmiento$#!, las líneas del telégrafo están cruzando las pampas y los Andes. Pronto, una noticia en Buenos Aires será conocida en San Juan o en Londres en cuestión de minutos. El telégrafo no es solo comercio; es la herramienta definitiva para que el gobierno central controle cada rincón del territorio."
+	title = arg_telegrafo_sarmiento.t
+	desc = arg_telegrafo_sarmiento.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -1690,8 +1691,8 @@ arg_telegrafo_sarmiento = {
 # 1873 - El Atentado fallido
 arg_atentado_sarmiento = {
 	type = country_event
-	title = "Disparos en la Noche"
-	desc = "Dos sicarios han intentado asesinar al Presidente mientras se dirigía a la casa de Dalmacio Vélez Sarsfield. El trabuco de uno de ellos estalló en su mano, y el carruaje de #v $arg_loc_sarmiento$#! siguió su marcha sin que el mandatario, debido a su avanzada sordera, notara el estruendo. La política argentina sigue siendo un terreno peligroso."
+	title = arg_atentado_sarmiento.t
+	desc = arg_atentado_sarmiento.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
@@ -1718,8 +1719,8 @@ arg_atentado_sarmiento = {
 # 1874 - La Revolución del 74
 arg_revolucion_1874 = {
 	type = country_event
-	title = "Mitre toma las Armas"
-	desc = "El general #v $arg_loc_mitre$#!, descontento con el triunfo de Nicolás Avellaneda en las urnas, ha iniciado una rebelión militar. El país se encuentra en una encrucijada: ¿Prevalecerá la legitimidad de las instituciones o el prestigio del antiguo héroe de Pavón? El ejército nacional, ahora profesionalizado, debe sofocar este último intento de sedición liberal."
+	title = arg_revolucion_1874.t
+	desc = arg_revolucion_1874.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_military_parade.bk2"
@@ -1748,8 +1749,8 @@ arg_revolucion_1874 = {
 # 1874 - Presidencia de Avellaneda
 arg_presidencia_avellaneda = {
 	type = country_event
-	title = "La Presidencia de la Austeridad"
-	desc = "Nicolás Avellaneda ha asumido el mando en un momento crítico. Con las arcas vacías y la deuda externa asfixiando la nación, el nuevo presidente ha sido tajante: 'La República puede estar dividida en partidos, pero no tiene sino un honor y un crédito'. Se avecinan tiempos de sacrificios económicos para salvar el buen nombre de la Argentina en los mercados de Londres."
+	title = arg_presidencia_avellaneda.t
+	desc = arg_presidencia_avellaneda.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
@@ -1776,8 +1777,8 @@ arg_presidencia_avellaneda = {
 # 1876 - Ley 817 de Inmigración
 arg_ley_inmigracion_1876 = {
 	type = country_event
-	title = "La Tierra de Promisión"
-	desc = "El Congreso ha sancionado la #v $arg_loc_ley_avellaneda$#!. A partir de ahora, cada inmigrante que llegue a nuestras costas será protegido y ayudado por el Estado. Se les garantiza alojamiento gratuito en el Hotel de Inmigrantes y transporte hacia las colonias del interior. ¡El sueño de Alberdi y Sarmiento se hace ley!"
+	title = arg_ley_inmigracion_1876.t
+	desc = arg_ley_inmigracion_1876.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_steam_ship.bk2"
@@ -1803,8 +1804,8 @@ arg_ley_inmigracion_1876 = {
 # 1876 - El Mate en la Frontera
 arg_cultura_mate = {
 	type = country_event
-	title = "El Rito del Mate"
-	desc = "En los fogones de la frontera y en los patios de los conventillos, el #v $arg_loc_yerba_mate$#! sigue siendo el nexo que une a los argentinos. A pesar de los intentos de las clases altas por imitar las costumbres europeas, el amargo sabor de la yerba persiste como un símbolo de resistencia cultural y fraternidad criolla."
+	title = arg_cultura_mate.t
+	desc = arg_cultura_mate.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
@@ -1829,8 +1830,8 @@ arg_cultura_mate = {
 # 1876 - La Primera Marca Registrada
 arg_evento_hesperidina = {
 	type = country_event
-	title = "Hesperidina: El Orgullo Nacional"
-	desc = "El éxito de la #v $arg_loc_hesperidina$#! ha sido tal que su creador ha solicitado la protección del Estado contra las imitaciones. El presidente ha firmado la Patente N°1 de la República. Esta bebida de naranjas no solo refresca los almacenes, sino que simboliza el nacimiento de una industria nacional con identidad propia."
+	title = arg_evento_hesperidina.t
+	desc = arg_evento_hesperidina.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -1854,8 +1855,8 @@ arg_evento_hesperidina = {
 # 1876 - Revolución de la Carne
 arg_buque_frigorifico = {
 	type = country_event
-	title = "El Triunfo del Frío"
-	desc = "El buque #v $arg_loc_frigorifico$#! ha llegado a nuestras costas demostrando que la tecnología de refrigeración permite llevar carne fresca a través del Atlántico. Esto cambia las reglas del juego: ya no exportaremos solo saladero; ahora el mundo comerá nuestra mejor carne vacuna."
+	title = arg_buque_frigorifico.t
+	desc = arg_buque_frigorifico.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/unspecific_steam_ship.bk2"
@@ -1882,8 +1883,8 @@ arg_buque_frigorifico = {
 # 1877 - La Conciliación Política
 arg_conciliacion_1877 = {
 	type = country_event
-	title = "La Unión de los Argentinos"
-	desc = "El presidente #v $arg_loc_nicolas_avellaneda$#! ha extendido una rama de olivo a sus antiguos enemigos. Mediante la #v $arg_loc_conciliacion_politica$#!, los líderes de las facciones en pugna han acordado dejar de lado las armas para trabajar en la organización nacional. Aunque los más radicales critican este pacto, la paz interna parece, por fin, una posibilidad real."
+	title = arg_conciliacion_1877.t
+	desc = arg_conciliacion_1877.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
@@ -1910,8 +1911,8 @@ arg_conciliacion_1877 = {
 # 1878 - La Zanja de Alsina
 arg_zanja_alsina = {
 	type = country_event
-	title = "Una Muralla en la Pampa"
-	desc = "El ministro Adolfo Alsina ha avanzado con su plan de defensa: la #v $arg_loc_zanjadealsina$#!. Miles de hombres cavan una fosa gigante para proteger las tierras ganaderas de los ataques. Sin embargo, tras la reciente muerte de Alsina, un joven general llamado #v $arg_loc_roca$#! critica este plan, asegurando que 'la zanja es una actitud defensiva' y que el país debe pasar al ataque definitivo."
+	title = arg_zanja_alsina.t
+	desc = arg_zanja_alsina.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/southamerica_factory_opening.bk2"
@@ -1941,8 +1942,8 @@ arg_zanja_alsina = {
 # 1879 - El Palacio de las Aguas Corrientes (Proyecto)
 arg_aguas_corrientes_1879 = {
 	type = country_event
-	title = "Higiene y Civilización"
-	desc = "Tras los horrores de la fiebre amarilla, el gobierno ha aprobado los planes para la red de aguas corrientes más ambiciosa de Sudamérica. La salud de la Capital ya no dependerá de los aguateros del río. Este proyecto no solo salvará vidas, sino que demostrará que Argentina es una nación moderna y saludable."
+	title = arg_aguas_corrientes_1879.t
+	desc = arg_aguas_corrientes_1879.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -1968,8 +1969,8 @@ arg_aguas_corrientes_1879 = {
 # 1879 - El Avance hacia el Río Negro
 arg_campaña_roca_1879 = {
 	type = country_event
-	title = "La Conquista del Desierto"
-	desc = "El General #v $arg_loc_julio_roca$#! ha lanzado su ofensiva definitiva. Equipado con fusiles Remington y apoyado por el telégrafo, el ejército nacional se desplaza como una máquina moderna sobre la pampa. El objetivo es claro: llevar la civilización hasta los confines del sur y asegurar que el pabellón nacional ondee en las puertas de la Patagonia, antes de que otras potencias reclamen esos territorios."
+	title = arg_campaña_roca_1879.t
+	desc = arg_campaña_roca_1879.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_military_parade.bk2"
@@ -1999,8 +2000,8 @@ arg_campaña_roca_1879 = {
 # 1879 - Superioridad Tecnológica
 arg_remington_telegrafo = {
 	type = country_event
-	title = "Remington y Telégrafo"
-	desc = "La campaña no solo se libra con caballos y sables. La llegada de los fusiles de repetición #v Remington#! y el tendido de líneas telegráficas que conectan los fortines con Buenos Aires han cambiado las reglas de la guerra. La coordinación en tiempo real y el poder de fuego han vuelto obsoletas las antiguas lanzas del desierto."
+	title = arg_remington_telegrafo.t
+	desc = arg_remington_telegrafo.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/telegraph_lines.dds"
@@ -2023,8 +2024,8 @@ arg_remington_telegrafo = {
 # 1880 - La Revolución de Tejedor
 arg_revolucion_tejedor = {
 	type = country_event
-	title = "La Última Batalla por la Capital"
-	desc = "La tensión ha llegado a su punto de quiebre. El gobernador #v $arg_loc_carlos_tejedor$#! ha movilizado a las milicias provinciales, negándose a que Buenos Aires entregue su autonomía y sus rentas. El presidente Avellaneda ha tenido que trasladar el gobierno al pueblo de Belgrano mientras el ejército nacional de #v $arg_loc_roca$#! se prepara para sitiar la ciudad. Es el enfrentamiento final entre el orden nacional y el orgullo porteño."
+	title = arg_revolucion_tejedor.t
+	desc = arg_revolucion_tejedor.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
@@ -2049,8 +2050,8 @@ arg_revolucion_tejedor = {
 # 1880 - Capital Federal
 arg_ley_capital_federal = {
 	type = country_event
-	title = "Buenos Aires: Capital de la República"
-	desc = "Se ha sancionado finalmente la #v $arg_loc_federalizacion_ba$#!. Buenos Aires ya no pertenece a los porteños, sino a toda la Nación. Con este acto, se nacionaliza la aduana y se pone fin a siete décadas de guerras civiles. Una nueva era de paz y administración centralizada comienza bajo el lema de 'Paz y Administración'."
+	title = arg_ley_capital_federal.t
+	desc = arg_ley_capital_federal.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -2077,8 +2078,8 @@ arg_ley_capital_federal = {
 # 1880 - El Cerco de la Pampa
 arg_evento_alambrado = {
 	type = country_event
-	title = "El Fin de la Pampa Abierta"
-	desc = "Lo que comenzó como una curiosidad en la estancia de #v $arg_loc_richard_newton$#! se ha convertido en una necesidad nacional. El #v $arg_loc_alambrado$#! está cubriendo la llanura, trazando líneas infranqueables de acero. Los estancieros celebran el control total sobre sus rodeos, pero para el gaucho y sus tradiciones de libertad, el alambre es una frontera que anuncia el fin de una era."
+	title = arg_evento_alambrado.t
+	desc = arg_evento_alambrado.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
@@ -2109,8 +2110,8 @@ arg_evento_alambrado = {
 # 1880 - El Corazón del Pueblo: Ramos Generales
 arg_ramos_generales_1880 = {
 	type = country_event
-	title = "El Almacén de Ramos Generales"
-	desc = "En cada cruce de caminos y en cada pueblo nuevo que nace junto al ferrocarril, surge un #v $arg_loc_almacen_ramos_generales$#!. Entre bolsas de arpillera con olor a yerba y estanterías llenas de conservas europeas, se forja la identidad del país. Es el lugar donde el pulpero fía al paisano y donde se discute la política de la Capital mientras se comparte un salame y un queso de colonia."
+	title = arg_ramos_generales_1880.t
+	desc = arg_ramos_generales_1880.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -2137,8 +2138,8 @@ arg_ramos_generales_1880 = {
 # 1880 - Presidencia de Julio A. Roca
 arg_presidencia_roca_1880 = {
 	type = country_event
-	title = "El Zorro en la Rosada"
-	desc = "Tras sus éxitos militares en el sur y la derrota de la rebelión porteña, #v $arg_loc_julio_roca$#! ha asumido la presidencia. Su visión es pragmática: el Estado debe ser fuerte para que el mercado sea libre. Se inicia una era de orden riguroso donde las viejas pasiones federales y unitarias son reemplazadas por la administración técnica y el progreso material."
+	title = arg_presidencia_roca_1880.t
+	desc = arg_presidencia_roca_1880.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/unspecific_military_parade.bk2"
@@ -2152,7 +2153,7 @@ arg_presidencia_roca_1880 = {
 	immediate = { set_variable = arg_roca_lanzado }
 
 	option = {
-		name = "Paz y Administración para la República."
+		name = arg_presidencia_roca_1880.a
 		# El PAN toma el control total del gobierno
 		add_modifier = { name = arg_orden_conservador months = 72 }
 		add_prestige = 30
@@ -2164,8 +2165,8 @@ arg_presidencia_roca_1880 = {
 # 1882 - Fundación de La Plata
 arg_fundacion_la_plata = {
 	type = country_event
-	title = "La Plata: La Ciudad Planificada"
-	desc = "Dardo Rocha ha fundado la nueva capital de la provincia de Buenos Aires: #v La Plata#!. Diseñada con diagonales perfectas, plazas cada seis cuadras e iluminación eléctrica (la primera en Sudamérica), esta ciudad es el símbolo máximo del racionalismo y el optimismo de la Generación del 80."
+	title = arg_fundacion_la_plata.t
+	desc = arg_fundacion_la_plata.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
@@ -2194,8 +2195,8 @@ arg_fundacion_la_plata = {
 # 1883 - La Exploración del Nahuel Huapi
 arg_perito_moreno_1883 = {
 	type = country_event
-	title = "El Centinela de los Andes"
-	desc = "El joven científico #v $arg_loc_perito_moreno$#! ha regresado de sus expediciones por los lagos del sur. Sus mapas y estudios demuestran que el #v $arg_loc_nahuel_huapi$#! y las montañas circundantes son la clave para nuestra frontera definitiva. Moreno no solo trae datos geográficos; trae la visión de una Patagonia integrada a la Nación a través de la ciencia y la soberanía."
+	title = arg_perito_moreno_1883.t
+	desc = arg_perito_moreno_1883.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/europenorthamerica_gold_prospectors.bk2"
@@ -2225,8 +2226,8 @@ arg_perito_moreno_1883 = {
 # 1883 - El nacimiento de Gath & Chaves
 arg_gath_chaves_1883 = {
 	type = country_event
-	title = "La Elegancia de la Gran Aldea"
-	desc = "Lorenzo Chaves y Alfredo Gath han fundado una pequeña tienda en Buenos Aires que promete traer lo último de la moda de Londres y París. Lo que hoy es un local modesto, pronto se convertirá en el epicentro del lujo sudamericano, demostrando que Buenos Aires ya no es un puerto de barro, sino una metrópolis cosmopolita."
+	title = arg_gath_chaves_1883.t
+	desc = arg_gath_chaves_1883.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -2253,8 +2254,8 @@ arg_gath_chaves_1883 = {
 # 1884 - La Ley 1420
 arg_ley_1420_evento = {
 	type = country_event
-	title = "Laica, Gratuita y Obligatoria"
-	desc = "El Congreso ha sancionado la #v $arg_loc_ley_1420$#! tras debates maratónicos. La Iglesia está indignada por la eliminación de la enseñanza religiosa obligatoria en horario escolar. El Nuncio Apostólico ha protestado formalmente, pero el General #v $arg_loc_julio_roca$#! es firme: la escuela pública será el crisol donde se fundan las razas para crear al ciudadano argentino."
+	title = arg_ley_1420_evento.t
+	desc = arg_ley_1420_evento.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/southamerica_christianity.bk2"
@@ -2290,8 +2291,8 @@ arg_ley_1420_evento = {
 # 1884 - Ruptura con la Santa Sede
 arg_ruptura_vaticano = {
 	type = country_event
-	title = "Expulsión del Nuncio"
-	desc = "La tensión por el #v $arg_loc_registro_civil$#! y la educación ha llegado al límite. El gobierno nacional ha entregado sus pasaportes al Nuncio Apostólico, monseñor Mattera, ordenándole abandonar el país. Argentina afirma su soberanía sobre las conciencias de sus habitantes, desafiando la autoridad de Roma."
+	title = arg_ruptura_vaticano.t
+	desc = arg_ruptura_vaticano.d
 
 	trigger = {
 		has_variable = arg_ley_1420_laica_aprobada
@@ -2312,8 +2313,8 @@ arg_ruptura_vaticano = {
 # 1884 - Fundación Oficial de Ushuaia
 arg_fundacion_ushuaia = {
 	type = country_event
-	title = "El Pabellón en el Canal Beagle"
-	desc = "El comodoro Augusto Lasserre ha llegado a las costas de la misión de #v $arg_loc_ushuaia$#! para izar oficialmente la bandera argentina. En este rincón remoto, donde la tierra parece terminar, debemos establecer una presencia permanente si queremos asegurar nuestros derechos sobre el extremo sur del continente."
+	title = arg_fundacion_ushuaia.t
+	desc = arg_fundacion_ushuaia.d
 	
 	gui_window = event_window
 	# Podrías usar un video .bk2 de un paisaje gélido o barcos en un canal
@@ -2383,8 +2384,8 @@ arg_fin_mision_poblar.1 = {
 # 1885 - El Faro del Fin del Mundo
 arg_faro_1885 = {
 	type = country_event
-	title = "La Luz en el Confín"
-	desc = "En la desolada Isla de los Estados, la luz del #v $arg_loc_faro_fin_del_mundo$#! ya brilla con regularidad. Para el gobierno de #v $arg_loc_julio_roca$#!, este faro no es solo una ayuda a la navegación; es una declaración de soberanía. Donde hay luz argentina, hay territorio nacional. Los marinos de todo el mundo ahora reconocen que estas aguas australes tienen un dueño."
+	title = arg_faro_1885.t
+	desc = arg_faro_1885.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/europenorthamerica_antarctica.bk2"
@@ -2411,8 +2412,8 @@ arg_faro_1885 = {
 # 1885 - Expansión del Tranvía
 arg_tranvias_1885 = {
 	type = country_event
-	title = "Los Rieles de la Capital"
-	desc = "El sistema de #v $arg_loc_tranvias$#! se extiende como una tela de araña por Buenos Aires. Los viejos carros a caballo están siendo superados por una red eficiente que permite a los trabajadores y a la burguesía vivir lejos del centro. La ciudad crece, se estira y late al ritmo del metal sobre el empedrado."
+	title = arg_tranvias_1885.t
+	desc = arg_tranvias_1885.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -2529,7 +2530,7 @@ arg_revolucion_parque_1890 = {
 	immediate = { set_variable = arg_crisis_90_lanzada }
 
 	option = {
-		name = "Juárez ha caído. ¡Llamen al Piloto de la Tormenta!"
+		name = arg_revolucion_parque_1890.a
 		add_modifier = { name = arg_caos_90 months = 12 }
 		# Efectos de la crisis
 		every_scope_state = {
@@ -2545,8 +2546,8 @@ arg_revolucion_parque_1890 = {
 # 1891 - El Banco de la Nación
 arg_banco_nacion_1891 = {
 	type = country_event
-	title = "El Banco de la Nación Argentina"
-	desc = "La crisis de 1890 ha destruido el sistema bancario anterior. El presidente #v $arg_loc_carlos_pellegrini$#! ha propuesto una medida audaz: la creación de un banco estatal sólido que no sea una herramienta de especulación, sino un motor de desarrollo. El Banco Nación nace para dar crédito a los que producen y para demostrar al mundo que Argentina ha vuelto a ponerse de pie."
+	title = arg_banco_nacion_1891.t
+	desc = arg_banco_nacion_1891.d
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -2572,8 +2573,8 @@ arg_banco_nacion_1891 = {
 # 1892 - La Unión Cívica Radical
 arg_nacimiento_ucr_1892 = {
 	type = country_event
-	title = "¡Adelante, Radicales!"
-	desc = "La paz de Pellegrini no ha conformado a todos. Tras la división de la Unión Cívica, #v Leandro N. Alem#! ha fundado la Unión Cívica Radical. Su proclama es la 'intransigencia': no aceptarán cargos del gobierno hasta que el sufragio sea libre y honesto. El régimen del PAN tiene ahora un enemigo que no puede ser comprado con cargos ni dinero."
+	title = arg_nacimiento_ucr_1892.t
+	desc = arg_nacimiento_ucr_1892.d
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"

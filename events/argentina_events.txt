@@ -3277,3 +3277,757 @@ arg_centenario_mayo_1910 = {
 		ig:ig_industrialists = { add_approval = 5 }
 	}
 }
+
+# 1911 - Primera Ley Electoral Moderna
+arg_ley_saenz_pena_debate = {
+	type = country_event
+	title = arg_ley_saenz_pena_debate.t
+	desc = arg_ley_saenz_pena_debate.d
+	flavor = arg_ley_saenz_pena_debate.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1911.7.1
+		NOT = { has_variable = arg_debate_electoral_lanzado }
+	}
+
+	immediate = { set_variable = arg_debate_electoral_lanzado }
+
+	option = {
+		name = arg_ley_saenz_pena_debate.a
+		
+		add_enactment_progression = { law = law_universal_suffrage value = 0.40 }
+		ig:ig_trade_unions = { add_approval = 10 }
+		ig:ig_intelligentsia = { add_approval = 8 }
+		ig:ig_landowners = { add_approval = -10 }
+		
+		add_modifier = { name = arg_reforma_electoral_progreso months = 60 }
+	}
+}
+
+# 1912 - Sanción de la Ley Sáenz Peña
+arg_ley_saenz_pena_1912 = {
+	type = country_event
+	title = arg_ley_saenz_pena_1912.t
+	desc = arg_ley_saenz_pena_1912.d
+	flavor = arg_ley_saenz_pena_1912.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1912.2.10
+		NOT = { has_variable = arg_ley_saenz_pena_lanzada }
+	}
+
+	immediate = { set_variable = arg_ley_saenz_pena_lanzada }
+
+	option = {
+		name = arg_ley_saenz_pena_1912.a
+		
+		set_law = law_universal_suffrage
+		add_prestige = 50
+		add_modifier = { name = arg_democracia_moderna months = 240 }
+		
+		ig:ig_trade_unions = { add_approval = 15 }
+		ig:ig_intelligentsia = { add_approval = 10 }
+	}
+}
+
+# 1913 - Inauguración del Subterráneo
+arg_subte_1913 = {
+	type = country_event
+	title = arg_subte_1913.t
+	desc = arg_subte_1913.d
+	flavor = arg_subte_1913.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_trains.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1913.12.1
+		NOT = { has_variable = arg_subte_lanzado }
+	}
+
+	immediate = { set_variable = arg_subte_lanzado }
+
+	option = {
+		name = arg_subte_1913.a
+		
+		add_prestige = 30
+		s:STATE_BUENOS_AIRES = {
+			add_modifier = { name = arg_transporte_moderno months = 120 }
+		}
+	}
+}
+
+# 1914 - Estalla la Gran Guerra
+arg_gran_guerra_1914 = {
+	type = country_event
+	title = arg_gran_guerra_1914.t
+	desc = arg_gran_guerra_1914.d
+	flavor = arg_gran_guerra_1914.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1914.8.1
+		NOT = { has_variable = arg_gran_guerra_lanzada }
+	}
+
+	immediate = { set_variable = arg_gran_guerra_lanzada }
+
+	option = {
+		name = arg_gran_guerra_1914.a
+		default_option = yes
+		
+		add_modifier = { name = arg_neutralidad_beneficiosa months = 60 }
+		add_prestige = 20
+	}
+
+	option = {
+		name = arg_gran_guerra_1914.b
+		
+		add_modifier = { name = arg_presion_intervencionista months = 48 }
+	}
+}
+
+# 1915 - Auge Exportador por la Guerra
+arg_auge_exportador_1915 = {
+	type = country_event
+	title = arg_auge_exportador_1915.t
+	desc = arg_auge_exportador_1915.d
+	flavor = arg_auge_exportador_1915.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1915.6.1
+		has_variable = arg_gran_guerra_lanzada
+		NOT = { has_variable = arg_auge_exportador_lanzado }
+	}
+
+	immediate = { set_variable = arg_auge_exportador_lanzado }
+
+	option = {
+		name = arg_auge_exportador_1915.a
+		
+		add_treasury = 50000
+		add_modifier = { name = arg_granero_del_mundo months = 48 }
+		ig:ig_landowners = { add_approval = 10 }
+	}
+}
+
+# 1916 - Triunfo de Yrigoyen
+arg_yrigoyen_presidente_1916 = {
+	type = country_event
+	title = arg_yrigoyen_presidente_1916.t
+	desc = arg_yrigoyen_presidente_1916.d
+	flavor = arg_yrigoyen_presidente_1916.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1916.10.12
+		has_variable = arg_ley_saenz_pena_lanzada
+		NOT = { has_variable = arg_yrigoyen_presidente_lanzado }
+	}
+
+	immediate = { set_variable = arg_yrigoyen_presidente_lanzado }
+
+	option = {
+		name = arg_yrigoyen_presidente_1916.a
+		
+		add_prestige = 40
+		add_modifier = { name = arg_era_radical months = 168 }
+		
+		ig:ig_trade_unions = { add_approval = 15 }
+		ig:ig_intelligentsia = { add_approval = 10 }
+		ig:ig_landowners = { add_approval = -15 }
+	}
+}
+
+# 1917 - Reforma Universitaria de Córdoba (anticipada)
+arg_reforma_universitaria_preludio = {
+	type = country_event
+	title = arg_reforma_universitaria_preludio.t
+	desc = arg_reforma_universitaria_preludio.d
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1917.6.1
+		has_variable = arg_yrigoyen_presidente_lanzado
+		NOT = { has_variable = arg_reforma_universitaria_preludio_lanzado }
+	}
+
+	immediate = { set_variable = arg_reforma_universitaria_preludio_lanzado }
+
+	option = {
+		name = arg_reforma_universitaria_preludio.a
+		
+		ig:ig_intelligentsia = { add_approval = 8 }
+		add_modifier = { name = arg_agitacion_estudiantil months = 24 }
+	}
+}
+
+# 1918 - Reforma Universitaria de Córdoba
+arg_reforma_universitaria_1918 = {
+	type = country_event
+	title = arg_reforma_universitaria_1918.t
+	desc = arg_reforma_universitaria_1918.d
+	flavor = arg_reforma_universitaria_1918.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1918.6.15
+		NOT = { has_variable = arg_reforma_universitaria_lanzada }
+	}
+
+	immediate = { set_variable = arg_reforma_universitaria_lanzada }
+
+	option = {
+		name = arg_reforma_universitaria_1918.a
+		
+		add_prestige = 35
+		add_modifier = { name = arg_universidad_democratica months = 240 }
+		ig:ig_intelligentsia = { add_approval = 15 }
+		
+		add_enactment_progression = { law = law_public_schools value = 0.20 }
+	}
+}
+
+# 1919 - La Semana Trágica
+arg_semana_tragica_1919 = {
+	type = country_event
+	title = arg_semana_tragica_1919.t
+	desc = arg_semana_tragica_1919.d
+	flavor = arg_semana_tragica_1919.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1919.1.7
+		has_variable = arg_yrigoyen_presidente_lanzado
+		NOT = { has_variable = arg_semana_tragica_lanzada }
+	}
+
+	immediate = { set_variable = arg_semana_tragica_lanzada }
+
+	option = {
+		name = arg_semana_tragica_1919.a
+		default_option = yes
+		
+		add_authority = 150
+		add_modifier = { name = arg_represion_obrera months = 36 }
+		ig:ig_trade_unions = { add_approval = -20 }
+		ig:ig_armed_forces = { add_approval = 5 }
+	}
+
+	option = {
+		name = arg_semana_tragica_1919.b
+		
+		add_enactment_progression = { law = law_worker_protections value = 0.25 }
+		ig:ig_trade_unions = { add_approval = 10 }
+		ig:ig_landowners = { add_approval = -10 }
+	}
+}
+
+# 1920 - Fundación de YPF
+arg_ypf_1920 = {
+	type = country_event
+	title = arg_ypf_1920.t
+	desc = arg_ypf_1920.d
+	flavor = arg_ypf_1920.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1920.6.3
+		has_variable = arg_yrigoyen_presidente_lanzado
+		NOT = { has_variable = arg_ypf_lanzada }
+	}
+
+	immediate = { set_variable = arg_ypf_lanzada }
+
+	option = {
+		name = arg_ypf_1920.a
+		
+		add_prestige = 40
+		add_modifier = { name = arg_petroleo_estatal months = 240 }
+		ig:ig_industrialists = { add_approval = -8 }
+		add_treasury = 30000
+	}
+}
+
+# 1921 - Masacre de la Patagonia Rebelde (inicio)
+arg_patagonia_rebelde_1921 = {
+	type = country_event
+	title = arg_patagonia_rebelde_1921.t
+	desc = arg_patagonia_rebelde_1921.d
+	flavor = arg_patagonia_rebelde_1921.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1921.10.1
+		NOT = { has_variable = arg_patagonia_rebelde_lanzada }
+	}
+
+	immediate = { set_variable = arg_patagonia_rebelde_lanzada }
+
+	option = {
+		name = arg_patagonia_rebelde_1921.a
+		
+		add_authority = 200
+		add_modifier = { name = arg_represion_patagonica months = 48 }
+		ig:ig_trade_unions = { add_approval = -25 }
+		ig:ig_landowners = { add_approval = 10 }
+		s:STATE_SANTA_CRUZ = {
+			add_radicals = { value = 0.20 type = lower_strata }
+		}
+	}
+}
+
+# 1922 - Primera Transmisión de Radio
+arg_radio_1922 = {
+	type = country_event
+	title = arg_radio_1922.t
+	desc = arg_radio_1922.d
+	flavor = arg_radio_1922.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1922.8.27
+		NOT = { has_variable = arg_radio_lanzada }
+	}
+
+	immediate = { set_variable = arg_radio_lanzada }
+
+	option = {
+		name = arg_radio_1922.a
+		
+		add_prestige = 25
+		add_modifier = { name = arg_era_radiofonica months = 180 }
+	}
+}
+
+# 1923 - Presidencia de Alvear
+arg_alvear_presidente_1923 = {
+	type = country_event
+	title = arg_alvear_presidente_1923.t
+	desc = arg_alvear_presidente_1923.d
+	flavor = arg_alvear_presidente_1923.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_aristocrats.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1922.10.12
+		has_variable = arg_yrigoyen_presidente_lanzado
+		NOT = { has_variable = arg_alvear_presidente_lanzado }
+	}
+
+	immediate = { set_variable = arg_alvear_presidente_lanzado }
+
+	option = {
+		name = arg_alvear_presidente_1923.a
+		
+		add_prestige = 30
+		add_modifier = { name = arg_gobierno_moderado months = 72 }
+		ig:ig_landowners = { add_approval = 5 }
+		ig:ig_intelligentsia = { add_approval = 8 }
+	}
+}
+
+# 1924 - Visita del Príncipe de Gales
+arg_principe_gales_1924 = {
+	type = country_event
+	title = arg_principe_gales_1924.t
+	desc = arg_principe_gales_1924.d
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1924.8.1
+		NOT = { has_variable = arg_principe_gales_lanzado }
+	}
+
+	immediate = { set_variable = arg_principe_gales_lanzado }
+
+	option = {
+		name = arg_principe_gales_1924.a
+		
+		add_prestige = 35
+		c:GBR = { add_relations = { target = c:ARG value = 30 } }
+	}
+}
+
+# 1925 - Auge del Tango en París
+arg_tango_paris_1925 = {
+	type = country_event
+	title = arg_tango_paris_1925.t
+	desc = arg_tango_paris_1925.d
+	flavor = arg_tango_paris_1925.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_art_gallery.dds"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1925.1.1
+		has_variable = arg_tango_lanzado
+		NOT = { has_variable = arg_tango_paris_lanzado }
+	}
+
+	immediate = { set_variable = arg_tango_paris_lanzado }
+
+	option = {
+		name = arg_tango_paris_1925.a
+		
+		add_prestige = 40
+		add_modifier = { name = arg_cultura_exportada months = 120 }
+	}
+}
+
+# 1926 - Campeonato Sudamericano de Fútbol
+arg_futbol_sudamericano_1926 = {
+	type = country_event
+	title = arg_futbol_sudamericano_1926.t
+	desc = arg_futbol_sudamericano_1926.d
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1926.10.1
+		has_variable = arg_futbol_lanzado
+		NOT = { has_variable = arg_futbol_sudamericano_lanzado }
+	}
+
+	immediate = { set_variable = arg_futbol_sudamericano_lanzado }
+
+	option = {
+		name = arg_futbol_sudamericano_1926.a
+		
+		add_prestige = 20
+		add_loyalists = { value = 0.05 }
+	}
+}
+
+# 1927 - Primer Vuelo Transatlántico
+arg_vuelo_transatlantico_1927 = {
+	type = country_event
+	title = arg_vuelo_transatlantico_1927.t
+	desc = arg_vuelo_transatlantico_1927.d
+	flavor = arg_vuelo_transatlantico_1927.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_steam_ship.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1927.1.1
+		NOT = { has_variable = arg_vuelo_transatlantico_lanzado }
+	}
+
+	immediate = { set_variable = arg_vuelo_transatlantico_lanzado }
+
+	option = {
+		name = arg_vuelo_transatlantico_1927.a
+		
+		add_prestige = 30
+		add_modifier = { name = arg_era_aviacion months = 120 }
+	}
+}
+
+# 1928 - Segundo Gobierno de Yrigoyen
+arg_yrigoyen_segundo_1928 = {
+	type = country_event
+	title = arg_yrigoyen_segundo_1928.t
+	desc = arg_yrigoyen_segundo_1928.d
+	flavor = arg_yrigoyen_segundo_1928.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1928.10.12
+		has_variable = arg_alvear_presidente_lanzado
+		NOT = { has_variable = arg_yrigoyen_segundo_lanzado }
+	}
+
+	immediate = { set_variable = arg_yrigoyen_segundo_lanzado }
+
+	option = {
+		name = arg_yrigoyen_segundo_1928.a
+		
+		add_modifier = { name = arg_yrigoyen_envejecido months = 24 }
+		ig:ig_trade_unions = { add_approval = 10 }
+		ig:ig_armed_forces = { add_approval = -10 }
+	}
+}
+
+# 1929 - Crisis de Wall Street
+arg_crisis_1929 = {
+	type = country_event
+	title = arg_crisis_1929.t
+	desc = arg_crisis_1929.d
+	flavor = arg_crisis_1929.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1929.10.24
+		NOT = { has_variable = arg_crisis_29_lanzada }
+	}
+
+	immediate = { set_variable = arg_crisis_29_lanzada }
+
+	option = {
+		name = arg_crisis_1929.a
+		
+		add_treasury = -100000
+		add_modifier = { name = arg_gran_depresion months = 84 }
+		every_scope_state = {
+			add_radicals = { value = 0.15 type = lower_strata }
+		}
+	}
+}
+
+# 1930 - Golpe de Estado de Uriburu
+arg_golpe_1930 = {
+	type = country_event
+	title = arg_golpe_1930.t
+	desc = arg_golpe_1930.d
+	flavor = arg_golpe_1930.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1930.9.6
+		has_variable = arg_yrigoyen_segundo_lanzado
+		NOT = { has_variable = arg_golpe_30_lanzado }
+	}
+
+	immediate = { set_variable = arg_golpe_30_lanzado }
+
+	option = {
+		name = arg_golpe_1930.a
+		
+		add_authority = 300
+		add_prestige = -50
+		add_modifier = { name = arg_dictadura_militar months = 18 }
+		
+		ig:ig_armed_forces = { add_approval = 15 }
+		ig:ig_trade_unions = { add_approval = -30 }
+		ig:ig_intelligentsia = { add_approval = -20 }
+	}
+}
+
+# 1931 - Elecciones Fraudulentas
+arg_fraude_patriotico_1931 = {
+	type = country_event
+	title = arg_fraude_patriotico_1931.t
+	desc = arg_fraude_patriotico_1931.d
+	flavor = arg_fraude_patriotico_1931.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1931.11.8
+		has_variable = arg_golpe_30_lanzado
+		NOT = { has_variable = arg_fraude_patriotico_lanzado }
+	}
+
+	immediate = { set_variable = arg_fraude_patriotico_lanzado }
+
+	option = {
+		name = arg_fraude_patriotico_1931.a
+		
+		add_modifier = { name = arg_decada_infame months = 60 }
+		add_authority = 150
+		ig:ig_trade_unions = { add_approval = -15 }
+		every_scope_state = {
+			add_radicals = { value = 0.10 type = lower_strata }
+		}
+	}
+}
+
+# 1932 - Pacto Roca-Runciman
+arg_pacto_roca_runciman_1932 = {
+	type = country_event
+	title = arg_pacto_roca_runciman_1932.t
+	desc = arg_pacto_roca_runciman_1932.d
+	flavor = arg_pacto_roca_runciman_1932.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1933.5.1
+		has_variable = arg_crisis_29_lanzada
+		NOT = { has_variable = arg_roca_runciman_lanzado }
+	}
+
+	immediate = { set_variable = arg_roca_runciman_lanzado }
+
+	option = {
+		name = arg_pacto_roca_runciman_1932.a
+		default_option = yes
+		
+		add_modifier = { name = arg_dependencia_britanica months = 48 }
+		add_treasury = 25000
+		ig:ig_landowners = { add_approval = 10 }
+		ig:ig_intelligentsia = { add_approval = -15 }
+	}
+
+	option = {
+		name = arg_pacto_roca_runciman_1932.b
+		
+		add_prestige = 20
+		add_treasury = -15000
+	}
+}
+
+# 1933 - Creación del Banco Central
+arg_banco_central_1933 = {
+	type = country_event
+	title = arg_banco_central_1933.t
+	desc = arg_banco_central_1933.d
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1933.3.28
+		NOT = { has_variable = arg_banco_central_lanzado }
+	}
+
+	immediate = { set_variable = arg_banco_central_lanzado }
+
+	option = {
+		name = arg_banco_central_1933.a
+		
+		add_modifier = { name = arg_politica_monetaria_moderna months = 240 }
+		add_treasury = 20000
+	}
+}
+
+# 1934 - Inauguración del Obelisco
+arg_obelisco_1934 = {
+	type = country_event
+	title = arg_obelisco_1934.t
+	desc = arg_obelisco_1934.d
+	flavor = arg_obelisco_1934.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1936.5.23
+		NOT = { has_variable = arg_obelisco_lanzado }
+	}
+
+	immediate = { set_variable = arg_obelisco_lanzado }
+
+	option = {
+		name = arg_obelisco_1934.a
+		
+		add_prestige = 25
+		s:STATE_BUENOS_AIRES = {
+			add_modifier = { name = arg_simbolo_moderno months = 120 }
+		}
+	}
+}
+
+# 1935 - Auge de la Industria Sustitutiva
+arg_sustitucion_importaciones_1935 = {
+	type = country_event
+	title = arg_sustitucion_importaciones_1935.t
+	desc = arg_sustitucion_importaciones_1935.d
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1935.1.1
+		has_variable = arg_crisis_29_lanzada
+		NOT = { has_variable = arg_sustitucion_lanzada }
+	}
+
+	immediate = { set_variable = arg_sustitucion_lanzada }
+
+	option = {
+		name = arg_sustitucion_importaciones_1935.a
+		
+		add_modifier = { name = arg_industrializacion_forzada months = 120 }
+		ig:ig_industrialists = { add_approval = 15 }
+	}
+}
+
+# 1936 - Tensiones Internacionales
+arg_preguerra_1936 = {
+	type = country_event
+	title = arg_preguerra_1936.t
+	desc = arg_preguerra_1936.d
+	flavor = arg_preguerra_1936.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1936.7.1
+		NOT = { has_variable = arg_preguerra_lanzada }
+	}
+
+	immediate = { set_variable = arg_preguerra_lanzada }
+
+	option = {
+		name = arg_preguerra_1936.a
+		
+		add_modifier = { name = arg_neutralidad_vigilante months = 60 }
+		add_prestige = 15
+	}
+}

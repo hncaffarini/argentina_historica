@@ -523,3 +523,220 @@ l_spanish:
  arg_loc_tango: "tango"
  arg_loc_centenario_mayo: "Centenario de Mayo"
  arg_loc_centenario_1910: "Centenario de 1910"
+
+
+ # --- 1911-1936 ---
+ 
+ # 1911
+ arg_ley_saenz_pena_debate.t: "El Debate de la Reforma Electoral"
+ arg_ley_saenz_pena_debate.d: "El presidente #v $arg_loc_saenz_pena$#! ha presentado al Congreso un proyecto revolucionario: el voto secreto, universal y obligatorio para todos los varones mayores de 18 años. Los conservadores temen que esto signifique el fin de su hegemonía, mientras que los radicales y socialistas ven en esta ley la puerta hacia una verdadera democracia. Las sesiones parlamentarias son tormentosas, pero la presión popular es inmensa."
+ arg_ley_saenz_pena_debate.f: "«Quiero que el sufragio sea la expresión genuina de la voluntad popular». — Roque Sáenz Peña."
+ arg_ley_saenz_pena_debate.a: "Apoyar la reforma electoral."
+ 
+ # 1912
+ arg_ley_saenz_pena_1912.t: "¡Que Vote el Pueblo!"
+ arg_ley_saenz_pena_1912.d: "El 10 de febrero de 1912 ha quedado grabado en la historia argentina. El Congreso ha sancionado la #v $arg_loc_ley_saenz_pena$#!, estableciendo el voto secreto, universal y obligatorio. Por primera vez, las elecciones no serán controladas por caudillos locales ni habrá fraude descarado. El padrón electoral se basará en el servicio militar obligatorio, garantizando que cada ciudadano pueda ejercer su derecho. Los partidos de oposición, especialmente la #v $arg_loc_ucr$#!, se preparan para competir en igualdad de condiciones."
+ arg_ley_saenz_pena_1912.f: "«He sancionado la ley que hará de la República Argentina una verdadera democracia». — Roque Sáenz Peña."
+ arg_ley_saenz_pena_1912.a: "Una nueva era democrática comienza."
+ 
+ # 1913
+ arg_subte_1913.t: "El Subterráneo de Buenos Aires"
+ arg_subte_1913.d: "Buenos Aires se convierte en la primera ciudad de América Latina y del hemisferio sur en contar con un #v $arg_loc_subterraneo$#!. La Línea A, que conecta Plaza de Mayo con Plaza Miserere, ha sido inaugurada con gran pompa. Los vagones de madera importados de Bélgica circulan bajo tierra, maravillando a los porteños que pueden cruzar la ciudad en minutos. Este logro tecnológico refuerza la imagen de Argentina como una nación moderna y progresista."
+ arg_subte_1913.f: "«Buenos Aires se coloca a la altura de las grandes capitales del mundo». — La Prensa, 1 de diciembre de 1913."
+ arg_subte_1913.a: "El futuro es subterráneo."
+ 
+ # 1914
+ arg_gran_guerra_1914.t: "La Gran Guerra Europea"
+ arg_gran_guerra_1914.d: "Europa ha estallado en llamas. El asesinato del archiduque Francisco Fernando ha desencadenado una guerra que involucra a todas las grandes potencias. Francia, Rusia y el Reino Unido se enfrentan a Alemania y Austria-Hungría. Desde Buenos Aires, el gobierno argentino observa con preocupación: nuestra economía depende del comercio con Europa, y muchos de nuestros inmigrantes tienen lazos con ambos bandos. ¿Debemos mantener la neutralidad o tomar partido?"
+ arg_gran_guerra_1914.f: "«La Argentina no tiene por qué involucrarse en las querellas europeas». — Declaración oficial del gobierno."
+ arg_gran_guerra_1914.a: "Declarar la neutralidad argentina."
+ arg_gran_guerra_1914.b: "Considerar el apoyo a los Aliados."
+ 
+ # 1915
+ arg_auge_exportador_1915.t: "El Granero del Mundo en Guerra"
+ arg_auge_exportador_1915.d: "La guerra europea ha convertido a Argentina en el proveedor esencial de alimentos para los Aliados. Los precios del trigo, la carne y el maíz se han disparado. Los barcos zarpa del puerto de Buenos Aires cargados de provisiones hacia Francia y el Reino Unido. Los estancieros acumulan fortunas mientras los frigoríficos trabajan día y noche. Sin embargo, la escasez de productos manufacturados europeos comienza a generar problemas en las ciudades."
+ arg_auge_exportador_1915.f: "«Nunca antes Argentina había sido tan próspera. Somos el granero que alimenta a los ejércitos de Europa». — Revista Caras y Caretas."
+ arg_auge_exportador_1915.a: "Aprovechar la bonanza exportadora."
+
+ 
+ # 1916
+ arg_yrigoyen_presidente_1916.t: "El Peludo Llega a la Casa Rosada"
+ arg_yrigoyen_presidente_1916.d: "Por primera vez en la historia argentina, un presidente ha sido elegido mediante el voto popular genuino. #v $arg_loc_hipolito_yrigoyen$#!, líder de la #v $arg_loc_ucr$#!, ha triunfado en las elecciones gracias a la Ley Sáenz Peña. Su figura mística y su promesa de 'reparación nacional' han movilizado a las masas. Los conservadores observan con temor cómo el poder pasa a manos de un partido que representa a las clases medias y populares. Yrigoyen promete gobernar para todos, pero su estilo personalista y su desconfianza hacia las instituciones generan inquietud."
+ arg_yrigoyen_presidente_1916.f: "«La causa radical es la causa del pueblo». — Hipólito Yrigoyen."
+ arg_yrigoyen_presidente_1916.a: "Una nueva era política comienza."
+ 
+ # 1917
+ arg_reforma_universitaria_preludio.t: "Inquietud en las Aulas"
+ arg_reforma_universitaria_preludio.d: "En las universidades argentinas, especialmente en Córdoba, los estudiantes comienzan a organizarse contra el sistema educativo arcaico. Las cátedras vitalicias, el nepotismo y la falta de participación estudiantil son el blanco de sus críticas. Inspirados por las ideas de la Revolución Rusa y el movimiento obrero, los jóvenes exigen una universidad democrática, científica y al servicio del pueblo."
+ arg_reforma_universitaria_preludio.a: "Los estudiantes tienen razones válidas."
+ 
+ # 1918
+ arg_reforma_universitaria_1918.t: "El Grito de Córdoba"
+ arg_reforma_universitaria_1918.d: "El 15 de junio de 1918, los estudiantes de la Universidad de Córdoba han lanzado el #v $arg_loc_manifiesto_liminar$#!, un documento que sacudirá toda América Latina. Exigen la autonomía universitaria, la participación estudiantil en el gobierno de las casas de estudio, la libertad de cátedra y el fin de los privilegios clericales. El movimiento se extiende rápidamente a Buenos Aires, La Plata y otras ciudades. Yrigoyen, sensible a las demandas populares, apoya la reforma."
+ arg_reforma_universitaria_1918.f: "«La juventud universitaria de Córdoba, por intermedio de su federación, saluda a los hombres libres de Sud América». — Manifiesto Liminar."
+ arg_reforma_universitaria_1918.a: "Apoyar la democratización universitaria."
+ 
+ # 1919
+ arg_semana_tragica_1919.t: "La Semana Trágica"
+ arg_semana_tragica_1919.d: "Buenos Aires ha vivido una semana de horror. Una huelga en los talleres metalúrgicos Vasena ha desencadenado una ola de violencia sin precedentes. La policía y grupos paramilitares de la #v $arg_loc_liga_patriotica$#! han reprimido brutalmente a los obreros, dejando cientos de muertos. Los barrios obreros han sido saqueados y la comunidad judía ha sido víctima de pogroms. Yrigoyen, atrapado entre su base popular y la presión de los sectores conservadores, ha optado por la represión."
+ arg_semana_tragica_1919.f: "«La sangre de los trabajadores mancha las calles de Buenos Aires». — La Vanguardia, periódico socialista."
+ arg_semana_tragica_1919.a: "Restaurar el orden con mano dura."
+ arg_semana_tragica_1919.b: "Buscar una solución negociada con los obreros."
+ 
+ # 1920
+ arg_ypf_1920.t: "Yacimientos Petrolíferos Fiscales"
+ arg_ypf_1920.d: "El General #v $arg_loc_enrique_mosconi$#! ha convencido a Yrigoyen de crear la primera empresa petrolera estatal de América Latina: #v $arg_loc_ypf$#!. Los yacimientos de Comodoro Rivadavia, descubiertos en 1907, ahora serán explotados por el Estado argentino. Esta decisión desafía a las compañías extranjeras, especialmente la Standard Oil, y marca un hito en la soberanía económica. YPF no solo extraerá petróleo, sino que también refinará y distribuirá combustible a precios accesibles."
+ arg_ypf_1920.f: "«El petróleo argentino debe ser para los argentinos». — Enrique Mosconi."
+ arg_ypf_1920.a: "Nacionalizar el petróleo."
+
+ 
+ # 1921
+ arg_patagonia_rebelde_1921.t: "La Patagonia Rebelde"
+ arg_patagonia_rebelde_1921.d: "En las estancias de Santa Cruz, los peones rurales se han alzado en huelga exigiendo mejores condiciones laborales. Los estancieros, muchos de ellos extranjeros, han pedido la intervención del ejército. El Teniente Coronel #v $arg_loc_hector_varela$#! ha sido enviado con órdenes de pacificar la región. Lo que sigue es una masacre: cientos de obreros son fusilados sin juicio. La 'Patagonia Trágica' quedará como una mancha en el gobierno radical."
+ arg_patagonia_rebelde_1921.f: "«Los fusilamientos se sucedían día tras día. La Patagonia se tiñó de rojo». — Testimonio de un sobreviviente."
+ arg_patagonia_rebelde_1921.a: "Restaurar el orden en la Patagonia."
+ 
+ # 1922
+ arg_radio_1922.t: "La Voz que Cruza el Éter"
+ arg_radio_1922.d: "El 27 de agosto de 1922, desde el Teatro Coliseo de Buenos Aires, se ha realizado la primera transmisión de radio de Argentina y de América Latina. La ópera 'Parsifal' de Wagner ha sido escuchada por cientos de personas en sus hogares. La #v $arg_loc_radio_argentina$#! marca el inicio de una nueva era en las comunicaciones. Pronto, la radio se convertirá en el medio masivo por excelencia, llevando noticias, música y propaganda política a todos los rincones del país."
+ arg_radio_1922.f: "«La radio acerca a los argentinos como nunca antes». — Revista El Hogar."
+ arg_radio_1922.a: "La era de la radiodifusión ha comenzado."
+ 
+ # 1923
+ arg_alvear_presidente_1923.t: "Marcelo T. de Alvear: El Radical Aristocrático"
+ arg_alvear_presidente_1923.d: "#v $arg_loc_marcelo_alvear$#!, un radical de origen aristocrático, ha asumido la presidencia. A diferencia de Yrigoyen, Alvear es un hombre de mundo, educado en Europa y con modales refinados. Su gobierno se caracteriza por un estilo más institucional y menos personalista. Fomenta la cultura, las artes y mantiene buenas relaciones con los sectores conservadores. Sin embargo, su distanciamiento de Yrigoyen genera una fractura dentro del radicalismo."
+ arg_alvear_presidente_1923.f: "«Alvear es un caballero en un partido de caudillos». — Comentario de la época."
+ arg_alvear_presidente_1923.a: "Un gobierno de moderación y cultura."
+ 
+ # 1924
+ arg_principe_gales_1924.t: "La Visita del Príncipe de Gales"
+ arg_principe_gales_1924.d: "El Príncipe Eduardo de Gales, heredero del trono británico, ha visitado Buenos Aires en una gira por América del Sur. La sociedad porteña ha desplegado todo su esplendor para agasajar al futuro rey. Bailes en el Jockey Club, partidos de polo en Palermo y recepciones en la Casa Rosada han marcado la visita. Esta muestra de cercanía con el Reino Unido refuerza los lazos económicos y culturales entre ambas naciones."
+ arg_principe_gales_1924.a: "Estrechar lazos con el Imperio Británico."
+ 
+ # 1925
+ arg_tango_paris_1925.t: "El Tango Conquista París"
+ arg_tango_paris_1925.d: "Lo que alguna vez fue música de arrabal y prostíbulo ahora triunfa en los salones más elegantes de París. #v $arg_loc_carlos_gardel$#! ha conquistado Europa con su voz y su estilo. El tango argentino se ha convertido en la música de moda en el Viejo Continente. Bailarines, compositores y cantantes argentinos son recibidos como estrellas. Argentina exporta no solo carne y trigo, sino también cultura."
+ arg_tango_paris_1925.f: "«Gardel canta cada día mejor». — Frase popular en Buenos Aires."
+ arg_tango_paris_1925.a: "El tango es la voz de Argentina en el mundo."
+
+ 
+ # 1926
+ arg_futbol_sudamericano_1926.t: "Campeones de América"
+ arg_futbol_sudamericano_1926.d: "La selección argentina ha conquistado el #v $arg_loc_campeonato_sudamericano$#! disputado en Chile. El fútbol, que llegó de la mano de los inmigrantes británicos, ahora es la pasión nacional. Jugadores como #v $arg_loc_manuel_seoane$#! son ídolos populares. Los domingos, los estadios se llenan de obreros, empleados y familias enteras que vibran con cada gol. El fútbol se ha convertido en un elemento de identidad nacional."
+ arg_futbol_sudamericano_1926.a: "¡Somos campeones!"
+ 
+ # 1927
+ arg_vuelo_transatlantico_1927.t: "Cruzando el Atlántico por los Cielos"
+ arg_vuelo_transatlantico_1927.d: "La aviación argentina ha dado un salto histórico. Pilotos nacionales han completado vuelos transatlánticos, conectando Buenos Aires con Europa en cuestión de días en lugar de semanas. La #v $arg_loc_aeropostal$#! comienza a operar rutas regulares. El avión, que hace apenas dos décadas era una curiosidad, ahora es una herramienta de comunicación y comercio. Argentina se posiciona como líder en aviación en América del Sur."
+ arg_vuelo_transatlantico_1927.f: "«El cielo ya no es el límite». — Titular de La Nación."
+ arg_vuelo_transatlantico_1927.a: "La era de la aviación ha llegado."
+ 
+ # 1928
+ arg_yrigoyen_segundo_1928.t: "El Regreso del Peludo"
+ arg_yrigoyen_segundo_1928.d: "Hipólito Yrigoyen ha vuelto a la presidencia con un triunfo arrollador. A sus 76 años, el líder radical es venerado por las masas como un santo laico. Sin embargo, su edad avanzada y su estilo de gobierno personalista generan preocupación. La administración pública se paraliza por su desconfianza hacia los funcionarios. Los militares, cada vez más inquietos, observan con recelo un gobierno que consideran ineficiente y corrupto."
+ arg_yrigoyen_segundo_1928.f: "«Yrigoyen es el pueblo, y el pueblo es Yrigoyen». — Consigna radical."
+ arg_yrigoyen_segundo_1928.a: "El pueblo ha hablado nuevamente."
+ 
+ # 1929
+ arg_crisis_1929.t: "El Jueves Negro"
+ arg_crisis_1929.d: "El 24 de octubre de 1929, la Bolsa de Nueva York se ha derrumbado. La #v $arg_loc_gran_depresion$#! que sigue golpea duramente a Argentina. Los precios de nuestras exportaciones se desploman, el desempleo se dispara y miles de pequeños ahorristas pierden todo. El modelo agroexportador, que nos hizo prósperos durante décadas, muestra su fragilidad. Las colas de desocupados se extienden por las calles de Buenos Aires. El gobierno de Yrigoyen, ya debilitado, no logra dar respuestas efectivas."
+ arg_crisis_1929.f: "«El mundo se derrumba y Argentina cae con él». — Editorial de Crítica."
+ arg_crisis_1929.a: "Enfrentar la peor crisis económica de nuestra historia."
+ 
+ # 1930
+ arg_golpe_1930.t: "El Golpe de Septiembre"
+ arg_golpe_1930.d: "El 6 de septiembre de 1930, el General #v $arg_loc_jose_uriburu$#! ha marchado desde Campo de Mayo hacia la Casa Rosada. Sin disparar un solo tiro, ha derrocado al presidente Yrigoyen. Es el primer golpe de Estado en Argentina desde la organización nacional. Los militares justifican su acción por la 'ineptitud' del gobierno radical y la necesidad de 'restaurar el orden'. La democracia argentina, apenas consolidada, recibe un golpe mortal. Comienza la #v $arg_loc_decada_infame$#!."
+ arg_golpe_1930.f: "«Hemos asumido el gobierno para salvar a la República». — Proclama del General Uriburu."
+ arg_golpe_1930.a: "Las Fuerzas Armadas toman el poder."
+
+ 
+ # 1931
+ arg_fraude_patriotico_1931.t: "El Fraude Patriótico"
+ arg_fraude_patriotico_1931.d: "Las elecciones de 1931 han sido una farsa. Con la #v $arg_loc_ucr$#! proscripta y el fraude electoral reinstaurado, el General #v $arg_loc_agustin_justo$#! ha sido 'elegido' presidente. Los conservadores, aliados con radicales antipersonalistas y socialistas independientes, forman la #v $arg_loc_concordancia$#!. El 'fraude patriótico', como lo llaman sus defensores, busca mantener a los radicales yrigoyenistas fuera del poder. La democracia argentina ha retrocedido a los tiempos anteriores a la Ley Sáenz Peña."
+ arg_fraude_patriotico_1931.f: "«Es necesario el fraude para salvar a la República del caos radical». — Argumento conservador."
+ arg_fraude_patriotico_1931.a: "Consolidar el gobierno de la Concordancia."
+ 
+ # 1932
+ arg_pacto_roca_runciman_1932.t: "El Pacto Roca-Runciman"
+ arg_pacto_roca_runciman_1932.d: "El vicepresidente #v $arg_loc_julio_roca_hijo$#! ha viajado a Londres para negociar con el Reino Unido. El resultado es el #v $arg_loc_pacto_roca_runciman$#!, un tratado comercial que garantiza la compra británica de carne argentina a cambio de concesiones humillantes. Argentina se compromete a no gravar las importaciones británicas, a dar trato preferencial a las empresas inglesas y a destinar las divisas obtenidas a pagar deudas con bancos londinenses. Los nacionalistas denuncian que Argentina se ha convertido en un 'dominio británico de facto'."
+ arg_pacto_roca_runciman_1932.f: "«Argentina es el dominio más importante del Imperio Británico». — Frase atribuida a Julio Roca (h)."
+ arg_pacto_roca_runciman_1932.a: "Aceptar el pacto para salvar la economía."
+ arg_pacto_roca_runciman_1932.b: "Rechazar las condiciones humillantes."
+ 
+ # 1933
+ arg_banco_central_1933.t: "Nace el Banco Central"
+ arg_banco_central_1933.d: "El gobierno ha creado el #v $arg_loc_banco_central$#! de la República Argentina, siguiendo el modelo de los bancos centrales europeos. Esta institución tendrá el monopolio de la emisión monetaria y regulará el sistema financiero. Aunque es un avance en la modernización económica, los críticos señalan que su directorio está dominado por representantes de bancos extranjeros, especialmente británicos. El Banco Central será clave en la política económica argentina durante las próximas décadas."
+ arg_banco_central_1933.a: "Modernizar el sistema financiero."
+ 
+ # 1934
+ arg_obelisco_1934.t: "El Obelisco de Buenos Aires"
+ arg_obelisco_1934.d: "Para conmemorar el cuarto centenario de la fundación de Buenos Aires, se ha erigido el #v $arg_loc_obelisco$#! en la intersección de las avenidas Corrientes y 9 de Julio. Con 67 metros de altura, este monumento de hormigón armado se ha convertido instantáneamente en el símbolo de la ciudad. Aunque algunos lo critican por su estética 'fálica' y su construcción apresurada, el Obelisco pronto será el punto de referencia más reconocible de Buenos Aires."
+ arg_obelisco_1934.f: "«El Obelisco es la expresión de una Buenos Aires moderna y cosmopolita». — Intendente Mariano de Vedia y Mitre."
+ arg_obelisco_1934.a: "Un nuevo símbolo para la capital."
+ 
+ # 1935
+ arg_sustitucion_importaciones_1935.t: "Industria Nacional por Necesidad"
+ arg_sustitucion_importaciones_1935.d: "La crisis económica mundial y las dificultades para importar productos manufacturados han forzado el desarrollo de la industria nacional. Fábricas textiles, metalúrgicas y químicas surgen en Buenos Aires, Rosario y Córdoba. Lo que antes se importaba de Europa ahora se produce en Argentina. Este proceso de #v $arg_loc_sustitucion_importaciones$#! no es planificado, sino una respuesta pragmática a la crisis. Sin embargo, sienta las bases para la industrialización futura del país."
+ arg_sustitucion_importaciones_1935.a: "Fomentar la industria nacional."
+ 
+ # 1936
+ arg_preguerra_1936.t: "Nubes de Guerra en el Horizonte"
+ arg_preguerra_1936.d: "Europa se prepara nuevamente para la guerra. En España ha estallado una guerra civil, en Alemania el régimen nazi se rearma, y en Italia Mussolini sueña con un nuevo imperio romano. Desde Argentina, observamos con preocupación estos acontecimientos. Nuestra economía sigue dependiendo del comercio con Europa, y miles de inmigrantes italianos, españoles y alemanes siguen las noticias de sus patrias con angustia. ¿Podremos mantenernos neutrales si estalla un nuevo conflicto mundial?"
+ arg_preguerra_1936.f: "«Argentina debe mantenerse al margen de las querellas europeas». — Declaración del Ministerio de Relaciones Exteriores."
+ arg_preguerra_1936.a: "Reafirmar nuestra neutralidad."
+
+ 
+ # Glosario 1911-1936
+ arg_loc_saenz_pena: "Roque Sáenz Peña"
+ arg_loc_ley_saenz_pena: "Ley Sáenz Peña"
+ arg_loc_ucr: "Unión Cívica Radical"
+ arg_loc_subterraneo: "subterráneo"
+ arg_loc_hipolito_yrigoyen: "Hipólito Yrigoyen"
+ arg_loc_manifiesto_liminar: "Manifiesto Liminar"
+ arg_loc_liga_patriotica: "Liga Patriótica Argentina"
+ arg_loc_enrique_mosconi: "Enrique Mosconi"
+ arg_loc_ypf: "YPF"
+ arg_loc_hector_varela: "Héctor Benigno Varela"
+ arg_loc_radio_argentina: "Radio Argentina"
+ arg_loc_marcelo_alvear: "Marcelo T. de Alvear"
+ arg_loc_carlos_gardel: "Carlos Gardel"
+ arg_loc_campeonato_sudamericano: "Campeonato Sudamericano"
+ arg_loc_manuel_seoane: "Manuel Seoane"
+ arg_loc_aeropostal: "Aeroposta Argentina"
+ arg_loc_gran_depresion: "Gran Depresión"
+ arg_loc_jose_uriburu: "José Félix Uriburu"
+ arg_loc_decada_infame: "Década Infame"
+ arg_loc_agustin_justo: "Agustín P. Justo"
+ arg_loc_concordancia: "Concordancia"
+ arg_loc_julio_roca_hijo: "Julio A. Roca (hijo)"
+ arg_loc_pacto_roca_runciman: "Pacto Roca-Runciman"
+ arg_loc_banco_central: "Banco Central"
+ arg_loc_obelisco: "Obelisco"
+ arg_loc_sustitucion_importaciones: "sustitución de importaciones"
+ 
+ # Modificadores 1911-1936
+ arg_reforma_electoral_progreso: "Reforma Electoral en Marcha"
+ arg_democracia_moderna: "Democracia Moderna"
+ arg_transporte_moderno: "Transporte Subterráneo"
+ arg_neutralidad_beneficiosa: "Neutralidad Beneficiosa"
+ arg_presion_intervencionista: "Presión Intervencionista"
+ arg_granero_del_mundo: "Granero del Mundo"
+ arg_era_radical: "Era Radical"
+ arg_agitacion_estudiantil: "Agitación Estudiantil"
+ arg_universidad_democratica: "Universidad Democrática"
+ arg_represion_obrera: "Represión Obrera"
+ arg_petroleo_estatal: "Petróleo Estatal"
+ arg_represion_patagonica: "Represión Patagónica"
+ arg_era_radiofonica: "Era Radiofónica"
+ arg_gobierno_moderado: "Gobierno Moderado"
+ arg_cultura_exportada: "Cultura Exportada"
+ arg_era_aviacion: "Era de la Aviación"
+ arg_yrigoyen_envejecido: "Gobierno Envejecido"
+ arg_gran_depresion: "Gran Depresión"
+ arg_dictadura_militar: "Dictadura Militar"
+ arg_decada_infame: "Década Infame"
+ arg_dependencia_britanica: "Dependencia Británica"
+ arg_politica_monetaria_moderna: "Política Monetaria Moderna"
+ arg_simbolo_moderno: "Símbolo Moderno"
+ arg_industrializacion_forzada: "Industrialización Forzada"
+ arg_neutralidad_vigilante: "Neutralidad Vigilante"

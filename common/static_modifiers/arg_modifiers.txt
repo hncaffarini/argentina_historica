@@ -590,3 +590,168 @@ arg_orgullo_centenario = {
 	country_migration_attraction_mult = 0.15 # Atractivo internacional
 	state_standard_of_living_add = 2 # Celebración mejora ánimo
 }
+
+
+# Modificadores 1911-1936
+
+arg_reforma_electoral_progreso = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_legitimacy_base_add = 10
+	country_authority_add = 50
+}
+
+arg_democracia_moderna = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_legitimacy_base_add = 20
+	country_prestige_add = 2
+	interest_group_ig_intelligentsia_pol_str_mult = 0.10
+}
+
+arg_transporte_moderno = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_goods_output_positive.dds"
+	state_infrastructure_mult = 0.15
+	state_migration_pull_mult = 0.10
+}
+
+arg_neutralidad_beneficiosa = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds"
+	country_trade_route_quantity_mult = 0.20
+	country_prestige_add = 1
+}
+
+arg_presion_intervencionista = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_authority_add = -25
+	interest_group_ig_armed_forces_approval_add = -5
+}
+
+arg_granero_del_mundo = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_goods_output_positive.dds"
+	country_trade_route_quantity_mult = 0.25
+	building_group_bg_agriculture_throughput_mult = 0.15
+}
+
+arg_era_radical = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_legitimacy_base_add = 15
+	interest_group_ig_trade_unions_pol_str_mult = 0.15
+	country_bureaucracy_mult = 0.10
+}
+
+arg_agitacion_estudiantil = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_authority_add = -30
+	interest_group_ig_intelligentsia_approval_add = 5
+}
+
+arg_universidad_democratica = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_prestige_add = 2
+	country_literacy_rate_mult = 0.10
+	interest_group_ig_intelligentsia_pol_str_mult = 0.15
+}
+
+arg_represion_obrera = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_authority_add = 100
+	interest_group_ig_trade_unions_pol_str_mult = -0.20
+	state_radicals_from_sol_change_mult = 0.15
+}
+
+arg_petroleo_estatal = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_goods_output_positive.dds"
+	country_bureaucracy_mult = 0.15
+	building_oil_rig_throughput_mult = 0.20
+	country_prestige_add = 1
+}
+
+arg_represion_patagonica = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_authority_add = 150
+	country_prestige_add = -2
+	interest_group_ig_trade_unions_approval_add = -15
+}
+
+arg_era_radiofonica = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_prestige_add = 1
+	country_authority_add = 25
+	state_assimilation_mult = 0.10
+}
+
+arg_gobierno_moderado = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_legitimacy_base_add = 10
+	interest_group_ig_landowners_approval_add = 5
+	country_bureaucracy_mult = 0.10
+}
+
+arg_cultura_exportada = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_prestige_add = 2
+	country_migration_attraction_mult = 0.08
+}
+
+arg_era_aviacion = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_goods_output_positive.dds"
+	country_prestige_add = 1
+	state_infrastructure_mult = 0.10
+}
+
+arg_yrigoyen_envejecido = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_authority_add = -50
+	country_legitimacy_base_add = -10
+}
+
+arg_gran_depresion = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	country_trade_route_quantity_mult = -0.30
+	building_group_bg_manufacturing_throughput_mult = -0.20
+	state_radicals_from_sol_change_mult = 0.25
+}
+
+arg_dictadura_militar = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_authority_add = 200
+	country_legitimacy_base_add = -25
+	interest_group_ig_armed_forces_pol_str_mult = 0.25
+}
+
+arg_decada_infame = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_legitimacy_base_add = -20
+	country_authority_add = 100
+	state_radicals_from_sol_change_mult = 0.15
+}
+
+arg_dependencia_britanica = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	country_prestige_add = -1
+	country_trade_route_quantity_mult = 0.15
+	interest_group_ig_landowners_approval_add = 8
+}
+
+arg_politica_monetaria_moderna = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds"
+	country_minting_mult = 0.15
+	country_bureaucracy_mult = 0.10
+}
+
+arg_simbolo_moderno = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_migration_pull_mult = 0.05
+	country_prestige_add = 1
+}
+
+arg_industrializacion_forzada = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_goods_output_positive.dds"
+	building_group_bg_manufacturing_throughput_mult = 0.15
+	country_bureaucracy_mult = 0.10
+}
+
+arg_neutralidad_vigilante = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_prestige_add = 1
+	country_authority_add = 25
+}

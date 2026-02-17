@@ -348,14 +348,19 @@ l_spanish:
  arg_fundacion_ushuaia.f: "«Ushuaia no es solo un pueblo, es una centinela». — Augusto Lasserre."
  arg_fundacion_ushuaia.a: "Asegurar la soberanía con un destacamento penal."
  arg_fundacion_ushuaia.b: "Atraer colonos y misioneros."
- arg_ley_1420_evento.t: "Laica, Gratuita y Obligatoria"
- arg_ley_1420_evento.d: "El Congreso ha sancionado la #v $arg_loc_ley_1420$#! tras debates maratónicos. La Iglesia está indignada por la eliminación de la enseñanza religiosa obligatoria en horario escolar. El Nuncio Apostólico ha protestado formalmente, pero el General #v $arg_loc_julio_roca$#! es firme: la escuela pública será el crisol donde se fundan las razas para crear al ciudadano argentino."
- arg_ley_1420_evento.f: "«La escuela pública es el más poderoso agente de civilización y el lazo más fuerte de unión nacional». — Memoria del Ministerio de Instrucción Pública."
- arg_ley_1420_evento.a: "Formar a los ciudadanos del futuro."
- arg_ley_1420_evento.b: "Mantener la enseñanza religiosa para evitar el conflicto."
+ arg_ley_1420_evento.t: "La Escuela del Progreso"
+ arg_ley_1420_evento.d: "El 8 de julio de 1884, el Congreso sanciona la Ley de Educación Común 1420, impulsada por el ministro Eduardo Wilde. En las aulas de todo el país, niños criollos e hijos de inmigrantes italianos, españoles y franceses se sentarán juntos por primera vez. La educación será gratuita, obligatoria y laica. \n\nEn las escuelas normales, maestras como las hermanas Cossettini ya preparan una revolución pedagógica. Los libros de lectura llevarán las palabras de Sarmiento a cada rincón de la pampa. La Iglesia protesta por la exclusión de la doctrina religiosa del horario escolar, pero el espíritu de la época es imparable: Argentina forjará ciudadanos ilustrados."
+ arg_ley_1420_evento.f: "«Leer, escribir y contar, y conocer la Constitución: eso es lo que necesita un ciudadano». — Eduardo Wilde, Ministro de Instrucción Pública."
+ arg_ley_1420_evento.a: "¡Que florezcan las escuelas en cada pueblo!"
+ arg_ley_1420_evento.b: "Avanzar con prudencia, respetando las tradiciones."
  arg_ruptura_vaticano.t: "Expulsión del Nuncio"
  arg_ruptura_vaticano.d: "La tensión por el #v $arg_loc_registro_civil$#! y la educación ha llegado al límite. El gobierno nacional ha entregado sus pasaportes al Nuncio Apostólico, monseñor Mattera, ordenándole abandonar el país. Argentina afirma su soberanía sobre las conciencias de sus habitantes, desafiando la autoridad de Roma."
  arg_ruptura_vaticano.a: "No hay más autoridad que la del Estado Argentino."
+ arg_matrimonio_civil.t: "El Matrimonio ante la Ley"
+ arg_matrimonio_civil.d: "El 2 de noviembre de 1884, el Congreso debate una ley que sacudirá los cimientos de la sociedad argentina: el matrimonio civil obligatorio. Hasta ahora, solo la Iglesia Católica podía unir a las parejas ante Dios y la ley. Pero el Estado liberal de la Generación del '80 reclama su autoridad sobre los actos civiles de los ciudadanos.\n\nEn los salones porteños, las familias tradicionales se escandalizan. ¿Cómo puede el Estado arrogarse una potestad que siempre fue de la Iglesia? Pero los liberales argumentan que en una nación de inmigrantes —italianos, españoles, franceses, judíos, protestantes— el matrimonio debe ser un acto civil, accesible a todos sin distinción de credo. La ley permitirá que católicos, protestantes y librepensadores se casen ante un juez, separando definitivamente la esfera religiosa de la civil."
+ arg_matrimonio_civil.f: "«El matrimonio es un contrato civil. La religión es un asunto de conciencia». — Debate parlamentario, 1884."
+ arg_matrimonio_civil.a: "El Estado es soberano sobre los actos civiles."
+ arg_matrimonio_civil.b: "Permitir que la ceremonia religiosa tenga validez opcional."
 
  # --- 1885 ---
  arg_faro_1885.t: "La Luz en el Confín"
@@ -367,9 +372,11 @@ l_spanish:
  arg_tranvias_1885.a: "Modernizar la locomoción urbana."
 
  # --- 1886 ---
- arg_unicato_1886.t: "El Unicato de Juárez Celman"
- arg_unicato_1886.d: "El presidente Miguel Juárez Celman ha concentrado en su persona la jefatura del Partido Autonomista Nacional y la Presidencia de la República. Los gobernadores responden directamente a él, y la oposición ha sido silenciada o cooptada. Sus seguidores lo llaman el 'Jefe Único', pero el descontento crece bajo la superficie de esta aparente unanimidad."
- arg_unicato_1886.a: "Yo soy el Jefe Único."
+ arg_presidencia_juarez_celman.t: "El Yerno del Zorro"
+ arg_presidencia_juarez_celman.d: "El 12 de octubre de 1886, Miguel Juárez Celman asume la presidencia de la República. Yerno del general Julio A. Roca, el nuevo mandatario promete continuar la obra de modernización iniciada por su predecesor. En su discurso inaugural, habla con entusiasmo de ferrocarriles, puertos, telégrafos y escuelas. Los salones porteños comentan que el país está en buenas manos, y que la prosperidad continuará. El optimismo reina en Buenos Aires, donde las obras públicas se multiplican y el crédito extranjero fluye generosamente."
+ arg_presidencia_juarez_celman.f: "«Gobernar es poblar, pero también es construir.» - Lema de la época"
+ arg_presidencia_juarez_celman.a: "Que florezcan las obras públicas."
+ arg_presidencia_juarez_celman.b: "Mejor ser prudentes con el gasto."
 
  # --- 1887 ---
  arg_bancos_garantidos_1887.t: "La Quimera del Oro"
@@ -381,10 +388,18 @@ l_spanish:
  arg_puerto_madero_1889.d: "Tras años de debates entre los proyectos de Huergo y Madero, se ha inaugurado la primera sección del puerto diseñado por Eduardo Madero. Con sus diques de ladrillo y grúas hidráulicas, promete acabar con la vergüenza del desembarco en carretas. Sin embargo, las voces críticas advierten que su diseño de esclusas es costoso y complicado para el tráfico moderno."
  arg_puerto_madero_1889.a: "Buenos Aires debe tener un puerto monumental."
 
+ arg_crisis_economica_1889.t: "El Estallido de la Burbuja"
+ arg_crisis_economica_1889.d: "La fiebre especulativa ha llegado a su fin. El Banco Constructor de La Plata ha quebrado, arrastrando consigo a decenas de instituciones financieras. La inflación devora los salarios, el desempleo crece, y las calles de Buenos Aires hierven de descontento. Los billetes que ayer valían oro hoy apenas sirven para encender el fuego. La confianza en el gobierno de Juárez Celman se desmorona junto con la economía nacional."
+ arg_crisis_economica_1889.f: "«El país está al borde del abismo financiero.» - La Prensa, julio de 1889"
+ arg_crisis_economica_1889.a: "Debemos sostener el sistema a cualquier costo."
+ arg_crisis_economica_1889.b: "Que el mercado encuentre su propio equilibrio."
+
  # --- 1890 ---
  arg_revolucion_parque_1890.t: "La Revolución del Parque"
- arg_revolucion_parque_1890.d: "La crisis económica y el autoritarismo del Unicato han estallado. La Unión Cívica, liderada por Leandro N. Alem y Bartolomé Mitre, se ha levantado en armas, tomando el Parque de Artillería. Aunque el gobierno cuenta con ventaja militar, su legitimidad política está muerta. Juárez Celman está solo y el país exige un cambio de rumbo."
- arg_revolucion_parque_1890.a: "Juárez ha caído. ¡Llamen al Piloto de la Tormenta!"
+ arg_revolucion_parque_1890.d: "En la madrugada del 26 de julio, el estruendo de los cañones despierta a Buenos Aires. La Unión Cívica, liderada por Leandro N. Alem y con el apoyo de sectores militares descontentos, ha tomado el Parque de Artillería. Durante tres días, la ciudad es un campo de batalla. Aunque las fuerzas leales al gobierno logran sofocar el levantamiento, la victoria es pírrica: Juárez Celman ha perdido toda legitimidad. El país entero exige su renuncia."
+ arg_revolucion_parque_1890.f: "«La revolución está vencida, pero el gobierno está muerto.» - Aristóbulo del Valle"
+ arg_revolucion_parque_1890.a: "Juárez debe renunciar. Que venga Pellegrini."
+ arg_revolucion_parque_1890.b: "El orden debe imponerse por la fuerza."
 
  # --- Homenajes y Cultura ---
  arg_homenaje_belgrano.t: "El Manto de la Patria"
@@ -395,6 +410,15 @@ l_spanish:
  arg_banco_nacion_1891.t: "El Banco de la Nación Argentina"
  arg_banco_nacion_1891.d: "La crisis de 1890 ha destruido el sistema bancario anterior. El presidente #v $arg_loc_carlos_pellegrini$#! ha propuesto una medida audaz: la creación de un banco estatal sólido que no sea una herramienta de especulación, sino un motor de desarrollo. El Banco Nación nace para dar crédito a los que producen y para demostrar al mundo que Argentina ha vuelto a ponerse de pie."
  arg_banco_nacion_1891.a: "Una institución para la reconstrucción."
+
+ # --- 1891 ---
+ arg_fundacion_ucr_1891.t: "Nace la Unión Cívica Radical"
+ arg_fundacion_ucr_1891.d: "En el Jardín Florida de Buenos Aires, #v Leandro N. Alem#! ha proclamado la fundación de la Unión Cívica Radical. Tras el fracaso parcial de la Revolución del Parque, los sectores más intransigentes de la oposición se niegan a pactar con el régimen. Su bandera es clara: sufragio libre, honesto y universal. No aceptarán cargos ni negociarán hasta que la voluntad popular sea respetada. El viejo orden oligárquico tiene ahora un enemigo que no puede ser comprado."
+ arg_fundacion_ucr_1891.f: "«¡Adelante los que quedan! Que se vayan los que se cansan.» — Leandro N. Alem"
+ arg_fundacion_ucr_1891.a: "Un nuevo actor político ha nacido."
+ arg_fundacion_ucr_1891.b: "Ignorar a estos agitadores."
+
+ # --- 1892 ---
  arg_nacimiento_ucr_1892.t: "¡Adelante, Radicales!"
  arg_nacimiento_ucr_1892.d: "La paz de Pellegrini no ha conformado a todos. Tras la división de la Unión Cívica, #v Leandro N. Alem#! ha fundado la Unión Cívica Radical. Su proclama es la 'intransigencia': no aceptarán cargos del gobierno hasta que el sufragio sea libre y honesto. El régimen del PAN tiene ahora un enemigo que no puede ser comprado con cargos ni dinero."
  arg_nacimiento_ucr_1892.a: "La lucha por la pureza del sufragio ha comenzado."
@@ -419,6 +443,13 @@ l_spanish:
  arg_primer_automovil_1894.d: "Una extraña máquina sin caballos ha aparecido en las calles de Buenos Aires. El #v $arg_loc_primer_automovil$#! importado por un comerciante local causa sensación entre los paseantes de la Avenida de Mayo. Los niños corren tras él gritando, mientras los cocheros observan con preocupación este invento que podría cambiar para siempre el transporte urbano."
  arg_primer_automovil_1894.a: "Una curiosidad que pronto será común."
 
+ # --- 1895 ---
+ arg_censo_nacional_1895.t: "El Segundo Censo Nacional"
+ arg_censo_nacional_1895.d: "Los resultados del censo son asombrosos: Argentina cuenta ahora con #v 4.044.911 habitantes#!, más del doble que en 1869. En provincias como Santa Fe, el #v 42% de la población es extranjera#!. Italianos, españoles, franceses y alemanes han transformado el rostro de la nación. Las colonias agrícolas prosperan, las ciudades crecen vertiginosamente. Somos testigos de una transformación sin precedentes en la historia sudamericana."
+ arg_censo_nacional_1895.f: "«Gobernar es poblar, y poblar es civilizar». — Los números confirman el éxito de la política migratoria."
+ arg_censo_nacional_1895.a: "¡Argentina es una nación moderna!"
+ arg_censo_nacional_1895.b: "Tantos extranjeros amenazan nuestra identidad."
+
  # --- 1905 ---
  arg_fundacion_boca_1905.t: "Nace el Club Atlético Boca Juniors"
  arg_fundacion_boca_1905.d: "En el barrio de La Boca, un grupo de jóvenes inmigrantes italianos ha fundado un club de fútbol. Inspirados por los colores de la bandera sueca de un barco en el puerto, han elegido el azul y amarillo como sus colores. Lo que comenzó como un pasatiempo de domingo pronto se convertirá en una pasión que unirá a todo el barrio."
@@ -437,6 +468,12 @@ l_spanish:
  arg_huelga_inquilinos_1907.b: "Regular los alquileres y mejorar las condiciones."
 
  # --- 1898 ---
+ arg_roca_segundo_gobierno_1898.t: "El Retorno del Zorro"
+ arg_roca_segundo_gobierno_1898.d: "Julio Argentino Roca vuelve a la Casa Rosada después de 12 años. El 'Zorro' que conquistó el desierto y modernizó la nación regresa con la promesa de estabilidad y progreso. Su experiencia y astucia política son innegables, pero también lo es su compromiso con el régimen oligárquico. Los radicales denuncian que su elección fue producto del fraude, mientras los conservadores celebran el retorno de la mano firme."
+ arg_roca_segundo_gobierno_1898.f: "«Paz y administración». — Lema del segundo gobierno de Roca."
+ arg_roca_segundo_gobierno_1898.a: "Roca traerá orden y progreso."
+ arg_roca_segundo_gobierno_1898.b: "Este retorno perpetúa la oligarquía."
+
  arg_servicio_militar_1898.t: "El Servicio Militar Obligatorio"
  arg_servicio_militar_1898.d: "El Congreso ha sancionado la ley que establece el #v $arg_loc_servicio_militar_obligatorio$#! para todos los varones argentinos. El general Pablo Riccheri, inspirado en el modelo prusiano, busca crear un ejército moderno y profesional. Pero también persigue un objetivo social: que el cuartel sea la 'escuela de la patria' donde se forjen ciudadanos disciplinados."
  arg_servicio_militar_1898.f: "«El cuartel será la escuela complementaria de la escuela primaria». — General Pablo Riccheri."
@@ -444,6 +481,12 @@ l_spanish:
  arg_servicio_militar_1898.b: "Mantener el sistema de voluntarios."
 
  # --- 1899 ---
+ arg_conflicto_chile_1899.t: "Crisis en los Andes"
+ arg_conflicto_chile_1899.d: "La tensión con Chile ha alcanzado su punto máximo. Ambas naciones reclaman vastos territorios en la Patagonia y la Puna de Atacama. Los ejércitos se movilizan, los diarios hablan de guerra inminente, y los diplomáticos europeos observan con preocupación. En Buenos Aires y Santiago se escuchan voces belicistas, pero también hay quienes proponen someter la disputa al arbitraje británico. Una guerra entre hermanos sería una tragedia, pero ceder territorio es impensable para muchos."
+ arg_conflicto_chile_1899.f: "«Los Andes no deben ser frontera, sino unión entre hermanos». — Voz pacifista de la época."
+ arg_conflicto_chile_1899.a: "Preparar al ejército para defender nuestros derechos."
+ arg_conflicto_chile_1899.b: "Buscar el arbitraje británico para resolver la disputa."
+
  arg_conflictos_laborales_1899.t: "Los Primeros Conflictos Obreros"
  arg_conflictos_laborales_1899.d: "La industrialización ha traído nuevos problemas. En los talleres y fábricas de Buenos Aires, los trabajadores se organizan para exigir mejores salarios y condiciones laborales. Los #v $arg_loc_anarquistas$#! y #v $arg_loc_socialistas$#! compiten por liderar estas luchas, mientras los patrones reclaman mano dura del gobierno."
  arg_conflictos_laborales_1899.a: "Reprimir duramente las huelgas."
@@ -740,3 +783,10 @@ l_spanish:
  arg_simbolo_moderno: "Símbolo Moderno"
  arg_industrializacion_forzada: "Industrialización Forzada"
  arg_neutralidad_vigilante: "Neutralidad Vigilante"
+
+ # Modificadores 1891-1900
+ arg_oposicion_radical: "Oposición Radical"
+ arg_nacion_moderna: "Nación Moderna"
+ arg_mano_firme_roca: "Mano Firme de Roca"
+ arg_tension_andina: "Tensión Andina"
+ arg_paz_andina: "Paz Andina"

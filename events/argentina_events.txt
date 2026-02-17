@@ -2254,6 +2254,7 @@ arg_ley_1420_evento = {
 	type = country_event
 	title = arg_ley_1420_evento.t
 	desc = arg_ley_1420_evento.d
+	flavor = arg_ley_1420_evento.f
 	
 	gui_window = event_window
 	texture = "gfx/event_pictures/southamerica_christianity.bk2"
@@ -2266,23 +2267,35 @@ arg_ley_1420_evento = {
 	}
 	immediate = { set_variable = arg_ley_1420_lanzada }
 
+	# Opción A: Implementar la ley con entusiasmo (Histórica)
 	option = {
 		name = arg_ley_1420_evento.a
+		default_option = yes
 		set_variable = arg_ley_1420_laica_aprobada
-		# Mejora masiva de la alfabetización
+		
+		# Mejora masiva de la alfabetización y progreso social
 		add_modifier = { name = arg_impulso_alfabetizador months = 240 }
-		# Conflicto religioso
-		ig:ig_devout = { add_approval = -10 }
+		add_prestige = 25
+		
+		# Efectos en grupos de interés
 		ig:ig_intelligentsia = { add_approval = 10 }
+		ig:ig_petty_bourgeoisie = { add_approval = 5 }
+		ig:ig_devout = { add_approval = -5 }
 		
 		# Progresión hacia leyes de educación pública
 		set_law = law_public_schools
 	}
 
+	# Opción B: Enfoque gradual y conciliador
 	option = {
 		name = arg_ley_1420_evento.b
+		
+		# Implementación más suave
+		add_modifier = { name = arg_educacion_gradual months = 180 }
+		add_authority = 50
+		
 		ig:ig_devout = { add_approval = 5 }
-		add_modifier = { name = arg_paz_religiosa months = 60 }
+		ig:ig_intelligentsia = { add_approval = 3 }
 	}
 }
 
@@ -2305,6 +2318,56 @@ arg_ruptura_vaticano = {
 		name = arg_ruptura_vaticano.a
 		add_prestige = 20
 		add_modifier = { name = arg_soberania_laica months = 120 }
+	}
+}
+
+# 1884 - Ley de Matrimonio Civil
+arg_matrimonio_civil = {
+	type = country_event
+	title = arg_matrimonio_civil.t
+	desc = arg_matrimonio_civil.d
+	flavor = arg_matrimonio_civil.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_christianity.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1884.11.2
+		has_modifier = arg_orden_conservador # Durante el gobierno de Roca
+		NOT = { has_variable = arg_matrimonio_civil_lanzado }
+	}
+	immediate = { set_variable = arg_matrimonio_civil_lanzado }
+
+	# Opción A: Aprobar la ley con firmeza (Histórica)
+	option = {
+		name = arg_matrimonio_civil.a
+		default_option = yes
+		
+		# Consolidación del Estado laico
+		add_prestige = 20
+		add_authority = 75
+		add_modifier = { name = arg_estado_laico months = 180 }
+		
+		# Efectos en grupos de interés
+		ig:ig_intelligentsia = { add_approval = 8 }
+		ig:ig_petty_bourgeoisie = { add_approval = 3 }
+		ig:ig_devout = { add_approval = -8 }
+		
+		# Progresión hacia separación Iglesia-Estado
+		add_enactment_progression = { law = law_total_separation value = 0.15 }
+	}
+
+	# Opción B: Permitir excepciones religiosas
+	option = {
+		name = arg_matrimonio_civil.b
+		
+		# Implementación más moderada
+		add_prestige = 10
+		add_modifier = { name = arg_matrimonio_mixto months = 120 }
+		
+		ig:ig_devout = { add_approval = 2 }
+		ig:ig_intelligentsia = { add_approval = -3 }
 	}
 }
 
@@ -2435,11 +2498,12 @@ arg_tranvias_1885 = {
 	}
 }
 
-# 1886 - El Unicato de Juárez Celman
-arg_unicato_1886 = {
+# 1886 - Presidencia de Juárez Celman
+arg_presidencia_juarez_celman = {
 	type = country_event
-	title = "El Unicato de Juárez Celman"
-	desc = "arg_unicato_1886.d" # Referencia a localización
+	title = arg_presidencia_juarez_celman.t
+	desc = arg_presidencia_juarez_celman.d
+	flavor = arg_presidencia_juarez_celman.f
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/southamerica_election.bk2"
@@ -2447,16 +2511,37 @@ arg_unicato_1886 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1886.10.12
-		NOT = { has_variable = arg_unicato_lanzado }
+		NOT = { has_variable = arg_juarez_celman_lanzado }
+		has_variable = arg_roca_lanzado # Ocurre después de la presidencia de Roca
 	}
 
-	immediate = { set_variable = arg_unicato_lanzado }
+	immediate = { set_variable = arg_juarez_celman_lanzado }
 
+	# Opción A: Apoyar el programa de obras públicas (Histórica)
 	option = {
-		name = arg_unicato_1886.a
-		add_modifier = { name = arg_poder_unicato months = 48 }
-		add_authority = 100
+		name = arg_presidencia_juarez_celman.a
+		default_option = yes
+		
+		# Impulso a la modernización e infraestructura
+		add_modifier = { name = arg_obras_publicas_juarez months = 48 }
+		add_prestige = 20
+		
+		# Apoyo de las élites y continuidad del proyecto de Roca
 		ig:ig_landowners = { add_approval = 5 }
+		ig:ig_industrialists = { add_approval = 3 }
+		
+		# Pequeño costo por el gasto público
+		add_treasury = -10000
+	}
+
+	# Opción B: Enfoque más conservador en el gasto
+	option = {
+		name = arg_presidencia_juarez_celman.b
+		
+		# Menor impulso pero más estabilidad fiscal
+		add_modifier = { name = arg_prudencia_fiscal months = 48 }
+		add_authority = 50
+		ig:ig_petty_bourgeoisie = { add_approval = 3 }
 	}
 }
 
@@ -2510,11 +2595,69 @@ arg_puerto_madero_1889 = {
 	}
 }
 
-# 1890 - Crisis y Revolución
+# 1889 - Crisis Económica (Baring Crisis)
+arg_crisis_economica_1889 = {
+	type = country_event
+	title = arg_crisis_economica_1889.t
+	desc = arg_crisis_economica_1889.d
+	flavor = arg_crisis_economica_1889.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_rich_and_poor.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1889.7.1
+		NOT = { has_variable = arg_crisis_1889_lanzado }
+		has_variable = arg_juarez_celman_lanzado # Ocurre durante su presidencia
+	}
+
+	immediate = { set_variable = arg_crisis_1889_lanzado }
+
+	# Opción A: Intentar sostener el sistema financiero (Histórica)
+	option = {
+		name = arg_crisis_economica_1889.a
+		default_option = yes
+		
+		# La crisis golpea la economía
+		add_modifier = { name = arg_crisis_baring months = 24 }
+		add_treasury = -30000
+		
+		# Descontento social generalizado
+		every_scope_state = {
+			add_radicals = { value = 0.15 type = lower_strata }
+		}
+		
+		# Los grupos de interés pierden confianza
+		ig:ig_industrialists = { add_approval = -5 }
+		ig:ig_petty_bourgeoisie = { add_approval = -8 }
+		ig:ig_trade_unions = { add_approval = -10 }
+	}
+
+	# Opción B: Dejar que el mercado se ajuste
+	option = {
+		name = arg_crisis_economica_1889.b
+		
+		# Crisis más profunda pero más corta
+		add_modifier = { name = arg_ajuste_economico months = 18 }
+		add_treasury = -20000
+		
+		# Mayor radicalismo inmediato
+		every_scope_state = {
+			add_radicals = { value = 0.25 type = lower_strata }
+		}
+		
+		# Pero recuperación más rápida
+		add_modifier = { name = arg_recuperacion_rapida months = 12 }
+	}
+}
+
+# 1890 - Revolución del Parque
 arg_revolucion_parque_1890 = {
 	type = country_event
-	title = "La Revolución del Parque"
-	desc = "arg_revolucion_parque_1890.d"
+	title = arg_revolucion_parque_1890.t
+	desc = arg_revolucion_parque_1890.d
+	flavor = arg_revolucion_parque_1890.f
 	
 	gui_window = event_window
 	video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
@@ -2522,24 +2665,51 @@ arg_revolucion_parque_1890 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1890.7.26
-		NOT = { has_variable = arg_crisis_90_lanzada }
+		NOT = { has_variable = arg_revolucion_parque_lanzado }
+		has_variable = arg_crisis_1889_lanzado # Ocurre después de la crisis
 	}
 
-	immediate = { set_variable = arg_crisis_90_lanzada }
+	immediate = { set_variable = arg_revolucion_parque_lanzado }
 
+	# Opción A: Negociar la renuncia de Juárez Celman (Histórica)
 	option = {
 		name = arg_revolucion_parque_1890.a
-		add_modifier = { name = arg_caos_90 months = 12 }
-		# Efectos de la crisis
-		every_scope_state = {
-			add_radicals = { value = 0.2 type = lower_strata }
-		}
-		add_treasury = -40000 # El pánico bancario
+		default_option = yes
 		
-		# Referencia al glosario de Pellegrini que crearemos
-		set_variable = arg_pellegrini_lanzado
+		# "La revolución está vencida, pero el gobierno está muerto"
+		add_modifier = { name = arg_despertar_civico months = 36 }
+		add_authority = -100
+		
+		# Cambio político significativo
+		ig:ig_intelligentsia = { add_approval = 10 }
+		ig:ig_petty_bourgeoisie = { add_approval = 8 }
+		ig:ig_armed_forces = { add_approval = -5 }
+		
+		# Estabilización gradual
+		every_scope_state = {
+			add_radicals = { value = -0.10 type = lower_strata }
+		}
+	}
+
+	# Opción B: Reprimir el levantamiento
+	option = {
+		name = arg_revolucion_parque_1890.b
+		
+		# Victoria militar pero derrota política
+		add_modifier = { name = arg_represion_parque months = 24 }
+		add_authority = 50
+		
+		# Mayor descontento a largo plazo
+		every_scope_state = {
+			add_radicals = { value = 0.20 type = lower_strata }
+		}
+		
+		ig:ig_armed_forces = { add_approval = 5 }
+		ig:ig_intelligentsia = { add_approval = -15 }
+		ig:ig_petty_bourgeoisie = { add_approval = -10 }
 	}
 }
+
 
 # 1891 - El Banco de la Nación
 arg_banco_nacion_1891 = {
@@ -2553,7 +2723,7 @@ arg_banco_nacion_1891 = {
 	trigger = {
 		tag = ARG
 		is_date >= 1891.10.26
-		has_variable = arg_crisis_90_lanzada
+		has_variable = arg_revolucion_parque_lanzado
 		NOT = { has_variable = arg_banco_nacion_lanzado }
 	}
 
@@ -2565,6 +2735,61 @@ arg_banco_nacion_1891 = {
 		add_tech_progression = { technology = central_banking progress = 0.5 }
 		add_treasury = -20000 # Costo de capitalización inicial
 		ig:ig_industrialists = { add_approval = 5 }
+	}
+}
+
+# 1891 - Fundación de la Unión Cívica Radical
+arg_fundacion_ucr_1891 = {
+	type = country_event
+	title = arg_fundacion_ucr_1891.t
+	desc = arg_fundacion_ucr_1891.d
+	flavor = arg_fundacion_ucr_1891.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1891.6.26
+		has_variable = arg_revolucion_parque_lanzado
+		NOT = { has_variable = arg_fundacion_ucr_1891_lanzado }
+	}
+
+	immediate = {
+		set_variable = arg_fundacion_ucr_1891_lanzado
+	}
+
+	# Opción A: Reconocer el nuevo partido como oposición legítima
+	option = {
+		name = arg_fundacion_ucr_1891.a
+		default_option = yes
+		
+		# Nace una nueva fuerza política que desafiará al régimen
+		add_modifier = { name = arg_oposicion_radical months = 120 }
+		
+		# Los intelectuales y la pequeña burguesía apoyan el cambio
+		ig:ig_intelligentsia = { add_approval = 5 }
+		ig:ig_petty_bourgeoisie = { add_approval = 3 }
+		
+		# Pero aumenta la presión por reformas
+		every_scope_state = {
+			add_radicals = { value = 0.05 type = lower_strata }
+		}
+	}
+
+	# Opción B: Ignorar este movimiento político
+	option = {
+		name = arg_fundacion_ucr_1891.b
+		
+		# Mantener el status quo, pero la oposición se fortalece
+		add_authority = 50
+		
+		# Mayor radicalización a largo plazo
+		every_scope_state = {
+			add_radicals = { value = 0.10 type = lower_strata }
+		}
+		
+		ig:ig_intelligentsia = { add_approval = -5 }
 	}
 }
 
@@ -2703,6 +2928,57 @@ arg_fundacion_boca_1905 = {
 	}
 }
 
+# 1895 - Segundo Censo Nacional
+arg_censo_nacional_1895 = {
+	type = country_event
+	title = arg_censo_nacional_1895.t
+	desc = arg_censo_nacional_1895.d
+	flavor = arg_censo_nacional_1895.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1895.5.10
+		NOT = { has_variable = arg_censo_1895_lanzado }
+	}
+
+	immediate = {
+		set_variable = arg_censo_1895_lanzado
+	}
+
+	# Opción A: Celebrar el crecimiento demográfico
+	option = {
+		name = arg_censo_nacional_1895.a
+		default_option = yes
+		
+		# Los datos revelan el éxito de la inmigración
+		add_prestige = 30
+		add_modifier = { name = arg_nacion_moderna months = 60 }
+		
+		# Mejor administración del territorio
+		ig:ig_intelligentsia = { add_approval = 3 }
+		
+		# Impulso a la planificación estatal
+		add_tech_progression = { technology = bureaucracy progress = 0.2 }
+	}
+
+	# Opción B: Preocuparse por la alta proporción de extranjeros
+	option = {
+		name = arg_censo_nacional_1895.b
+		
+		# Temor a la pérdida de identidad nacional
+		add_authority = 50
+		
+		# Impulso a políticas de integración
+		add_enactment_progression = { law = law_national_supremacy value = 0.1 }
+		
+		ig:ig_landowners = { add_approval = 3 }
+		ig:ig_petty_bourgeoisie = { add_approval = -2 }
+	}
+}
+
 # 1896 - La Primera Película Argentina
 arg_primera_pelicula_1896 = {
 	type = country_event
@@ -2783,6 +3059,62 @@ arg_huelga_inquilinos_1907 = {
 	}
 }
 
+# 1898 - Segundo Gobierno de Roca
+arg_roca_segundo_gobierno_1898 = {
+	type = country_event
+	title = arg_roca_segundo_gobierno_1898.t
+	desc = arg_roca_segundo_gobierno_1898.d
+	flavor = arg_roca_segundo_gobierno_1898.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1898.10.12
+		NOT = { has_variable = arg_roca_1898_lanzado }
+	}
+
+	immediate = {
+		set_variable = arg_roca_1898_lanzado
+	}
+
+	# Opción A: Apoyar el retorno del Zorro
+	option = {
+		name = arg_roca_segundo_gobierno_1898.a
+		default_option = yes
+		
+		# Roca trae estabilidad y experiencia
+		add_modifier = { name = arg_mano_firme_roca months = 72 }
+		add_authority = 100
+		
+		# Los militares y terratenientes lo apoyan
+		ig:ig_armed_forces = { add_approval = 8 }
+		ig:ig_landowners = { add_approval = 5 }
+		
+		# Pero los radicales se oponen
+		ig:ig_intelligentsia = { add_approval = -3 }
+		
+		every_scope_state = {
+			add_radicals = { value = -0.05 type = lower_strata }
+		}
+	}
+
+	# Opción B: Cuestionar el retorno al poder
+	option = {
+		name = arg_roca_segundo_gobierno_1898.b
+		
+		# Debilita la autoridad del gobierno
+		add_authority = -50
+		
+		# Pero fortalece las voces democráticas
+		add_enactment_progression = { law = law_census_suffrage value = 0.1 }
+		
+		ig:ig_intelligentsia = { add_approval = 5 }
+		ig:ig_armed_forces = { add_approval = -5 }
+	}
+}
+
 # 1898 - El Servicio Militar Obligatorio
 arg_servicio_militar_1898 = {
 	type = country_event
@@ -2826,6 +3158,71 @@ arg_servicio_militar_1898 = {
 		ig:ig_landowners = { add_approval = 3 }
 		# Pero debilita la capacidad militar
 		ig:ig_armed_forces = { add_approval = -5 }
+	}
+}
+
+# 1899 - Conflicto Limítrofe con Chile
+arg_conflicto_chile_1899 = {
+	type = country_event
+	title = arg_conflicto_chile_1899.t
+	desc = arg_conflicto_chile_1899.d
+	flavor = arg_conflicto_chile_1899.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1899.3.1
+		exists = c:CHL
+		NOT = { has_variable = arg_conflicto_chile_1899_lanzado }
+	}
+
+	immediate = {
+		set_variable = arg_conflicto_chile_1899_lanzado
+	}
+
+	# Opción A: Prepararse para la guerra
+	option = {
+		name = arg_conflicto_chile_1899.a
+		
+		# Movilización militar y tensión
+		add_modifier = { name = arg_tension_andina months = 36 }
+		
+		# Fortalece el ejército pero cuesta dinero
+		ig:ig_armed_forces = { add_approval = 10 }
+		add_treasury = -50000
+		
+		# Tensión con Chile
+		c:CHL = {
+			add_relations = { target = c:ARG value = -30 }
+		}
+		
+		every_scope_state = {
+			add_radicals = { value = 0.10 type = lower_strata }
+		}
+	}
+
+	# Opción B: Buscar arbitraje internacional (Histórica)
+	option = {
+		name = arg_conflicto_chile_1899.b
+		default_option = yes
+		
+		# Solución diplomática y pacífica
+		add_prestige = 40
+		add_modifier = { name = arg_paz_andina months = 48 }
+		
+		# Mejora las relaciones con potencias europeas
+		ig:ig_intelligentsia = { add_approval = 5 }
+		
+		# Relaciones con Chile se mantienen estables
+		c:CHL = {
+			add_relations = { target = c:ARG value = 10 }
+		}
+		
+		every_scope_state = {
+			add_radicals = { value = -0.05 type = lower_strata }
+		}
 	}
 }
 

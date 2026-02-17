@@ -437,3 +437,156 @@ arg_industria_nacional = {
 	icon = "gfx/interface/icons/modifier_icons/production_positive.dds"
 	building_group_bg_manufacturing_throughput_mult = 0.10
 }
+
+arg_estado_de_sitio_nacional = {
+	icon = "gfx/interface/icons/modifier_icons/turmoil_positive.dds"
+	state_radicals_from_standard_of_living_mult = -0.30 # Represión efectiva pero temporal
+	country_authority_add = 100
+	state_market_access_add = -0.20 # Disruption económica
+}
+
+arg_vanguardia_cultural = {
+	icon = "gfx/interface/icons/modifier_icons/innovation_positive.dds"
+	country_prestige_add = 10
+	technology_spread_mult = 0.10
+	state_urban_center_throughput_mult = 0.05
+}
+
+arg_pasion_futbolera = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	state_standard_of_living_add = 1
+	state_radicals_from_standard_of_living_mult = -0.15 # El deporte calma tensiones
+	country_migration_attraction_mult = 0.05
+}
+
+arg_integracion_barrial = {
+	icon = "gfx/interface/icons/modifier_icons/migration_positive.dds"
+	state_migration_pull_add = 5
+	state_radicals_from_standard_of_living_mult = -0.10 # Mejor integración social
+}
+
+arg_regulacion_alquileres = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	state_standard_of_living_add = 2
+	state_migration_pull_add = 5
+	state_radicals_from_standard_of_living_mult = -0.20
+}
+
+arg_ciudadano_soldado = {
+	icon = "gfx/interface/icons/modifier_icons/army_power_positive.dds"
+	army_morale_mult = 0.15
+	state_conscription_rate_add = 0.05
+	country_migration_attraction_mult = 0.10 # Integración de inmigrantes
+	state_radicals_from_standard_of_living_mult = -0.05 # Disciplina social
+}
+
+arg_paz_laboral = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	state_radicals_from_standard_of_living_mult = -0.25
+	building_group_bg_manufacturing_throughput_mult = 0.05
+}
+
+arg_faro_progreso = {
+	icon = "gfx/interface/icons/modifier_icons/migration_positive.dds"
+	country_migration_attraction_mult = 0.25
+	country_prestige_add = 20
+	state_urban_center_throughput_mult = 0.10
+}
+
+arg_paris_sudamericano = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	state_standard_of_living_add = 3
+	state_urban_center_throughput_mult = 0.20
+	country_prestige_add = 25
+}
+
+arg_control_inmigracion = {
+	icon = "gfx/interface/icons/modifier_icons/authority_positive.dds"
+	country_authority_add = 75
+	state_radicals_from_standard_of_living_mult = -0.20 # Menos agitadores
+	country_migration_attraction_mult = -0.10 # Pero menos inmigración
+}
+
+arg_agitacion_social = {
+	icon = "gfx/interface/icons/modifier_icons/civil_unrest.dds"
+	state_radicals_from_standard_of_living_mult = 0.25
+	building_group_bg_manufacturing_throughput_mult = -0.10 # Huelgas frecuentes
+}
+
+arg_dialogo_social = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	state_radicals_from_standard_of_living_mult = -0.15
+	building_group_bg_manufacturing_throughput_mult = 0.10
+	country_authority_add = 50
+}
+
+arg_paz_andina = {
+	icon = "gfx/interface/icons/modifier_icons/diplomatic_positive.dds"
+	country_prestige_add = 15
+	military_goods_cost_mult = -0.15 # Menos gastos militares en la frontera
+	country_improve_relations_speed_mult = 0.20
+}
+
+arg_identidad_tanguera = {
+	icon = "gfx/interface/icons/modifier_icons/standard_of_living_positive.dds"
+	country_prestige_add = 20
+	state_standard_of_living_add = 1
+	country_migration_attraction_mult = 0.10 # Atractivo cultural
+	state_radicals_from_standard_of_living_mult = -0.10 # Identidad nacional
+}
+
+arg_martir_democratico = {
+	icon = "gfx/interface/icons/modifier_icons/legitimacy_negative.dds"
+	state_radicals_from_standard_of_living_mult = 0.20
+	country_authority_add = -50 # La represión genera más oposición
+}
+
+arg_presion_democratica = {
+	icon = "gfx/interface/icons/modifier_icons/legitimacy_negative.dds"
+	law_enactment_time_mult = 0.15 # Presión para reformas
+	state_radicals_from_standard_of_living_mult = 0.10
+}
+
+arg_obras_centenario = {
+	icon = "gfx/interface/icons/modifier_icons/construction_positive.dds"
+	state_construction_efficiency_add = 0.25
+	state_infrastructure_add = 20
+	country_prestige_add = 30
+}
+
+arg_austeridad_crisis = {
+	icon = "gfx/interface/icons/modifier_icons/money_negative.dds"
+	government_goods_cost_mult = -0.20 # Recortes
+	state_radicals_from_standard_of_living_mult = 0.25 # Descontento
+	country_loan_interest_rate_mult = 0.15 # Desconfianza financiera
+}
+
+arg_estimulo_keynesiano = {
+	icon = "gfx/interface/icons/modifier_icons/construction_positive.dds"
+	state_construction_efficiency_add = 0.20
+	building_group_bg_manufacturing_throughput_mult = 0.10
+	state_radicals_from_standard_of_living_mult = -0.10 # Mantiene empleo
+}
+
+arg_ley_defensa_social = {
+	icon = "gfx/interface/icons/modifier_icons/authority_positive.dds"
+	country_authority_add = 150
+	state_radicals_from_standard_of_living_mult = -0.30 # Represión efectiva
+	country_migration_attraction_mult = -0.20 # Menos atractivo para "agitadores"
+	building_group_bg_manufacturing_throughput_mult = -0.05 # Pero afecta la industria
+}
+
+arg_violencia_politica = {
+	icon = "gfx/interface/icons/modifier_icons/civil_unrest.dds"
+	state_radicals_from_standard_of_living_mult = 0.30
+	country_prestige_add = -15 # Mala imagen internacional
+	state_market_access_add = -0.10 # Inseguridad afecta comercio
+}
+
+arg_orgullo_centenario = {
+	icon = "gfx/interface/icons/modifier_icons/prestige_positive.dds"
+	country_prestige_add = 50
+	state_radicals_from_standard_of_living_mult = -0.25 # Unidad nacional
+	country_migration_attraction_mult = 0.15 # Atractivo internacional
+	state_standard_of_living_add = 2 # Celebración mejora ánimo
+}

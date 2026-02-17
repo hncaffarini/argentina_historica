@@ -1,5 +1,4 @@
-﻿l_spanish:
-﻿﻿l_spanish:
+l_spanish:
  argentina_events.1.t: "La Cuestión Migratoria"
  argentina_events.1.d: "Nuestros pensadores debaten si el progreso de la nación depende de atraer brazos de Europa."
  argentina_events.1.f: "Gobernar es poblar."
@@ -406,3 +405,121 @@
  arg_fin_mision_poblar.1.f: "«América es la tierra de promisión para todos los hombres de buena voluntad que quieran habitar el suelo argentino». — Preámbulo de la Constitución Nacional."
  arg_fin_mision_poblar.1.a: "Fomentar la industria nacional."
  arg_fin_mision_poblar.1.b: "Consolidar nuestro prestigio internacional."
+ # --- Nuevos Eventos 1893-1910 ---
+
+ # --- 1893 ---
+ arg_revolucion_radical_1893.t: "La Revolución Radical de 1893"
+ arg_revolucion_radical_1893.d: "La Unión Cívica Radical ha tomado las armas en Santa Fe, Buenos Aires y Tucumán. #v Leandro N. Alem#! y sus seguidores denuncian el fraude electoral y exigen el sufragio libre. Las milicias provinciales se han sumado a la rebelión, pero el ejército nacional permanece leal al gobierno. Es la primera gran prueba de fuego para la democracia argentina."
+ arg_revolucion_radical_1893.f: "«¡Sufragio libre o revolución!» — Consigna radical."
+ arg_revolucion_radical_1893.a: "Aplastar la sedición con mano de hierro."
+ arg_revolucion_radical_1893.b: "Buscar una salida negociada y reformas."
+
+ # --- 1894 ---
+ arg_primer_automovil_1894.t: "El Primer Automóvil en Buenos Aires"
+ arg_primer_automovil_1894.d: "Una extraña máquina sin caballos ha aparecido en las calles de Buenos Aires. El #v $arg_loc_primer_automovil$#! importado por un comerciante local causa sensación entre los paseantes de la Avenida de Mayo. Los niños corren tras él gritando, mientras los cocheros observan con preocupación este invento que podría cambiar para siempre el transporte urbano."
+ arg_primer_automovil_1894.a: "Una curiosidad que pronto será común."
+
+ # --- 1905 ---
+ arg_fundacion_boca_1905.t: "Nace el Club Atlético Boca Juniors"
+ arg_fundacion_boca_1905.d: "En el barrio de La Boca, un grupo de jóvenes inmigrantes italianos ha fundado un club de fútbol. Inspirados por los colores de la bandera sueca de un barco en el puerto, han elegido el azul y amarillo como sus colores. Lo que comenzó como un pasatiempo de domingo pronto se convertirá en una pasión que unirá a todo el barrio."
+ arg_fundacion_boca_1905.a: "El fútbol une a los hijos de inmigrantes."
+
+ # --- 1896 ---
+ arg_primera_pelicula_1896.t: "La Bandera Argentina: Primera Película Nacional"
+ arg_primera_pelicula_1896.d: "El francés Eugène Py ha filmado las primeras imágenes en movimiento en territorio argentino. Su cortometraje #v 'La Bandera Argentina'#! muestra el pabellón nacional flameando en la Plaza de Mayo. Es el nacimiento del cine nacional, una nueva forma de arte que promete revolucionar el entretenimiento popular."
+ arg_primera_pelicula_1896.a: "El arte del futuro ha llegado a Argentina."
+
+ # --- 1907 ---
+ arg_huelga_inquilinos_1907.t: "La Huelga de Inquilinos"
+ arg_huelga_inquilinos_1907.d: "Los conventillos del sur de Buenos Aires están en ebullición. Miles de familias inmigrantes se niegan a pagar los alquileres abusivos, denunciando el hacinamiento y las condiciones insalubres. La #v $arg_loc_huelga_inquilinos$#! ha paralizado barrios enteros. Las mujeres lideran la protesta, colgando escobas en las ventanas como símbolo de resistencia."
+ arg_huelga_inquilinos_1907.f: "«¡No más conventillos! ¡Vivienda digna para el pueblo trabajador!» — Consigna de los huelguistas."
+ arg_huelga_inquilinos_1907.a: "Desalojar por la fuerza a los morosos."
+ arg_huelga_inquilinos_1907.b: "Regular los alquileres y mejorar las condiciones."
+
+ # --- 1898 ---
+ arg_servicio_militar_1898.t: "El Servicio Militar Obligatorio"
+ arg_servicio_militar_1898.d: "El Congreso ha sancionado la ley que establece el #v $arg_loc_servicio_militar_obligatorio$#! para todos los varones argentinos. El general Pablo Riccheri, inspirado en el modelo prusiano, busca crear un ejército moderno y profesional. Pero también persigue un objetivo social: que el cuartel sea la 'escuela de la patria' donde se forjen ciudadanos disciplinados."
+ arg_servicio_militar_1898.f: "«El cuartel será la escuela complementaria de la escuela primaria». — General Pablo Riccheri."
+ arg_servicio_militar_1898.a: "Todos los argentinos deben servir a la patria."
+ arg_servicio_militar_1898.b: "Mantener el sistema de voluntarios."
+
+ # --- 1899 ---
+ arg_conflictos_laborales_1899.t: "Los Primeros Conflictos Obreros"
+ arg_conflictos_laborales_1899.d: "La industrialización ha traído nuevos problemas. En los talleres y fábricas de Buenos Aires, los trabajadores se organizan para exigir mejores salarios y condiciones laborales. Los #v $arg_loc_anarquistas$#! y #v $arg_loc_socialistas$#! compiten por liderar estas luchas, mientras los patrones reclaman mano dura del gobierno."
+ arg_conflictos_laborales_1899.a: "Reprimir duramente las huelgas."
+ arg_conflictos_laborales_1899.b: "Mediar entre patrones y obreros."
+
+ # --- 1900 ---
+ arg_modernizacion_1900.t: "Buenos Aires en el Nuevo Siglo"
+ arg_modernizacion_1900.d: "El siglo XX encuentra a Buenos Aires transformada. La luz eléctrica ilumina las avenidas, los tranvías eléctricos surcan la ciudad y los primeros rascacielos se alzan hacia el cielo. Los porteños se sienten orgullosos de vivir en la #v 'París de Sudamérica'#!, una metrópolis que rivaliza con las grandes capitales europeas."
+ arg_modernizacion_1900.f: "«Buenos Aires es hoy una de las ciudades más hermosas del mundo». — Comentario de un viajero europeo."
+ arg_modernizacion_1900.a: "Consolidar nuestro lugar entre las grandes metrópolis."
+
+ # --- 1901 ---
+ arg_ley_residencia_1901.t: "La Ley de Residencia"
+ arg_ley_residencia_1901.d: "Tras los atentados anarquistas y las huelgas, el Congreso ha sancionado la #v $arg_loc_ley_residencia$#!. Esta norma permite al Poder Ejecutivo expulsar del país a cualquier extranjero que 'comprometa la seguridad nacional o perturbe el orden público'. Los anarquistas la llaman 'ley maldita', pero el gobierno asegura que es necesaria para proteger la paz social."
+ arg_ley_residencia_1901.f: "«El derecho de hospitalidad no incluye el derecho a la sedición». — Justificación oficial."
+ arg_ley_residencia_1901.a: "Expulsar a los agitadores extranjeros."
+ arg_ley_residencia_1901.b: "Respetar los derechos constitucionales."
+
+ # --- 1902 ---
+ arg_primera_huelga_general_1902.t: "La Primera Huelga General"
+ arg_primera_huelga_general_1902.d: "Por primera vez en la historia argentina, todas las organizaciones obreras han coordinado una #v $arg_loc_huelga_general$#!. Buenos Aires está paralizada: no circulan tranvías, los puertos están cerrados y las fábricas silenciosas. La FORA (Federación Obrera Regional Argentina) demuestra su poder de movilización, desafiando abiertamente al gobierno conservador."
+ arg_primera_huelga_general_1902.a: "Declarar el estado de sitio."
+ arg_primera_huelga_general_1902.b: "Negociar con los dirigentes sindicales."
+
+ # --- 1903 ---
+ arg_tratado_chile_1903.t: "Los Pactos de Mayo con Chile"
+ arg_tratado_chile_1903.d: "Tras décadas de tensiones fronterizas, Argentina y Chile han firmado los #v $arg_loc_pactos_de_mayo$#!. El acuerdo establece la limitación naval mutua y el arbitraje del Rey Eduardo VII para resolver las disputas territoriales restantes. Ambas naciones se comprometen a no agredir y a resolver sus diferencias por medios pacíficos."
+ arg_tratado_chile_1903.f: "«Que estos pueblos hermanos jamás se vean envueltos en luchas fratricidas». — Declaración conjunta."
+ arg_tratado_chile_1903.a: "Sellar la paz definitiva con Chile."
+
+ # --- 1904 ---
+ arg_auge_tango_1904.t: "El Tango Conquista los Salones"
+ arg_auge_tango_1904.d: "Lo que nació en los arrabales y prostíbulos del Río de la Plata ha comenzado a conquistar los salones elegantes. El #v $arg_loc_tango$#!, esa música melancólica y sensual, ya no es solo cosa de compadritos y milongueras. La alta sociedad porteña empieza a bailarlo, y se dice que pronto llegará a París."
+ arg_auge_tango_1904.f: "«El tango es un pensamiento triste que se baila». — Enrique Santos Discépolo."
+ arg_auge_tango_1904.a: "Nuestra música conquista el mundo."
+
+ # --- 1905 ---
+ arg_revolucion_radical_1905.t: "La Revolución Radical de 1905"
+ arg_revolucion_radical_1905.d: "Una vez más, los radicales han tomado las armas. Esta vez la rebelión se extiende por Córdoba, Mendoza y Buenos Aires. #v Hipólito Yrigoyen#! lidera la conspiración desde las sombras, manteniendo su 'intransigencia' ante el régimen conservador. Aunque la revolución fracasa, el prestigio moral de los radicales crece entre las clases medias."
+ arg_revolucion_radical_1905.a: "Sofocar una vez más la sedición radical."
+ arg_revolucion_radical_1905.b: "Iniciar reformas para calmar los ánimos."
+
+ # --- 1906 ---
+ arg_preparativos_centenario_1906.t: "Preparativos para el Centenario"
+ arg_preparativos_centenario_1906.d: "Se acerca 1910 y con él la celebración del #v $arg_loc_centenario_mayo$#!. El gobierno ha decidido que Argentina debe mostrar al mundo su progreso y civilización. Se planifican grandes obras: la Avenida de Mayo será ensanchada, se construirán monumentos y se invitará a delegaciones de todo el mundo. Será la gran fiesta de la Argentina moderna."
+ arg_preparativos_centenario_1906.a: "Invertir en obras monumentales."
+ arg_preparativos_centenario_1906.b: "Una celebración austera y patriótica."
+
+ # --- 1907 ---
+ arg_crisis_1907.t: "La Crisis Financiera Mundial"
+ arg_crisis_1907.d: "La crisis que comenzó en Wall Street ha llegado a Buenos Aires. Los bancos restringen el crédito, las inversiones británicas se reducen y el desempleo aumenta. La Argentina, tan dependiente del capital extranjero, siente el golpe de la recesión mundial. El gobierno debe decidir cómo enfrentar esta tormenta económica."
+ arg_crisis_1907.a: "Política de austeridad y equilibrio fiscal."
+ arg_crisis_1907.b: "Invertir en obras públicas para mantener el empleo."
+
+ # --- 1909 ---
+ arg_atentado_falcon_1909.t: "El Atentado contra Falcón"
+ arg_atentado_falcon_1909.d: "Una bomba anarquista ha segado la vida del jefe de policía #v Ramón L. Falcón#! y su secretario. El atentado, perpetrado por #v Simón Radowitzky#!, ha conmocionado a la sociedad porteña. El gobierno conservador ve en este acto la justificación perfecta para endurecer la legislación contra los 'elementos subversivos'."
+ arg_atentado_falcon_1909.f: "«La anarquía ha mostrado su rostro más siniestro». — Editorial de La Nación."
+ arg_atentado_falcon_1909.a: "Sancionar la Ley de Defensa Social."
+ arg_atentado_falcon_1909.b: "Buscar reformas sociales para calmar las tensiones."
+
+ # --- 1910 ---
+ arg_centenario_mayo_1910.t: "El Centenario de la Revolución de Mayo"
+ arg_centenario_mayo_1910.d: "¡Ha llegado el gran día! Argentina celebra el #v $arg_loc_centenario_1910$#! con pompa y esplendor. Delegaciones de todo el mundo han llegado a Buenos Aires para rendir homenaje a la joven nación que se ha convertido en el granero del mundo. Los desfiles, las exposiciones y los festejos muestran al planeta que Argentina ha cumplido su destino de grandeza."
+ arg_centenario_mayo_1910.f: "«En cien años hemos pasado del desierto a la civilización, de la barbarie al progreso». — Discurso oficial del Centenario."
+ arg_centenario_mayo_1910.a: "¡Gloria y honor a la Patria Argentina!"
+
+ # --- Términos y Personajes Nuevos ---
+ arg_loc_primer_automovil: "primer automóvil"
+ arg_loc_huelga_inquilinos: "Huelga de Inquilinos"
+ arg_loc_servicio_militar_obligatorio: "Servicio Militar Obligatorio"
+ arg_loc_anarquistas: "anarquistas"
+ arg_loc_socialistas: "socialistas"
+ arg_loc_ley_residencia: "Ley de Residencia"
+ arg_loc_huelga_general: "huelga general"
+ arg_loc_pactos_de_mayo: "Pactos de Mayo"
+ arg_loc_tango: "tango"
+ arg_loc_centenario_mayo: "Centenario de Mayo"
+ arg_loc_centenario_1910: "Centenario de 1910"

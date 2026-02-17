@@ -973,7 +973,7 @@ arg_secesion_buenos_aires = {
 		is_date >= 1852.9.11
 		NOT = { has_variable = arg_secesion_ba_lanzada }
 		# Ocurre después de la caída de Rosas
-		has_completed_journal_entry = arg_mision_organizacion_nacional
+		NOT = { has_variable = arg_mision_caseros_activa }
 	}
 	immediate = {
 		set_variable = arg_secesion_ba_lanzada
@@ -1456,8 +1456,6 @@ arg_inicio_futbol = {
 	option = {
 		name = arg_inicio_futbol.a
 		add_modifier = { name = arg_pasion_deportiva months = 120 }
-		# Mejora la atracción migratoria británica
-		country_migration_attraction_mult = 0.05
 	}
 }
 
@@ -1473,7 +1471,7 @@ arg_presidencia_sarmiento = {
 	trigger = {
 		tag = ARG
 		is_date >= 1868.10.12
-		has_completed_journal_entry = arg_mision_gobernar_es_poblar # Ocurre en la era de la organización
+		has_variable = arg_mitre_lanzado # Ocurre en la era de la organización nacional
 		NOT = { has_variable = arg_sarmiento_lanzado }
 	}
 	immediate = {
@@ -2597,5 +2595,685 @@ arg_nacimiento_ucr_1892 = {
 		every_scope_state = {
 			add_radicals = { value = 0.1 type = lower_strata }
 		}
+	}
+}
+
+# 1893 - La Revolución Radical de 1893
+arg_revolucion_radical_1893 = {
+	type = country_event
+	title = arg_revolucion_radical_1893.t
+	desc = arg_revolucion_radical_1893.d
+	flavor = arg_revolucion_radical_1893.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1893.7.30
+		has_variable = arg_ucr_lanzada
+		NOT = { has_variable = arg_rev_radical_93_lanzada }
+	}
+
+	immediate = { set_variable = arg_rev_radical_93_lanzada }
+
+	# Opción A: Reprimir duramente (Histórica)
+	option = {
+		name = arg_revolucion_radical_1893.a
+		default_option = yes
+		
+		add_authority = 100
+		ig:ig_armed_forces = { add_approval = 3 }
+		
+		# Radicalización en las provincias rebeldes
+		s:STATE_SANTA_FE = { add_radicals = { value = 0.25 type = lower_strata } }
+		s:STATE_BUENOS_AIRES = { add_radicals = { value = 0.15 type = lower_strata } }
+		s:STATE_TUCUMAN = { add_radicals = { value = 0.20 type = lower_strata } }
+		
+		add_modifier = { name = arg_estado_de_sitio_nacional months = 6 }
+	}
+
+	# Opción B: Buscar conciliación política
+	option = {
+		name = arg_revolucion_radical_1893.b
+		
+		add_authority = -50
+		ig:ig_intelligentsia = { add_approval = 3 }
+		add_enactment_progression = { law = law_census_suffrage value = 0.1 }
+	}
+}
+
+# 1894 - El Primer Automóvil en Argentina
+arg_primer_automovil_1894 = {
+	type = country_event
+	title = arg_primer_automovil_1894.t
+	desc = arg_primer_automovil_1894.d
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1894.2.14
+		has_technology = combustion_engine
+		NOT = { has_variable = arg_automovil_lanzado }
+	}
+
+	immediate = { set_variable = arg_automovil_lanzado }
+
+	option = {
+		name = arg_primer_automovil_1894.a
+		add_prestige = 10
+		add_tech_progression = { technology = automobiles progress = 0.15 }
+		ig:ig_capitalists = { add_approval = 2 }
+		
+		# Curiosidad y fascinación popular
+		add_loyalists = { value = 0.01 pop_type = clerks }
+	}
+}
+
+# 1905 - Fundación de Boca Juniors
+arg_fundacion_boca_1905 = {
+	type = country_event
+	title = arg_fundacion_boca_1905.t
+	desc = arg_fundacion_boca_1905.d
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/southamerica_factory_opening.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1905.4.3
+		has_variable = arg_futbol_lanzado # Requiere que el fútbol ya esté establecido
+		NOT = { has_variable = arg_boca_lanzado }
+	}
+
+	immediate = { set_variable = arg_boca_lanzado }
+
+	option = {
+		name = arg_fundacion_boca_1905.a
+		# El fútbol se vuelve pasión popular en los barrios obreros
+		add_modifier = { name = arg_pasion_futbolera months = 240 }
+		add_loyalists = { value = 0.03 pop_type = laborers }
+		
+		# Mejora la integración de inmigrantes
+		s:STATE_BUENOS_AIRES = { 
+			add_modifier = { name = arg_integracion_barrial months = 120 }
+		}
+	}
+}
+
+# 1896 - La Primera Película Argentina
+arg_primera_pelicula_1896 = {
+	type = country_event
+	title = arg_primera_pelicula_1896.t
+	desc = arg_primera_pelicula_1896.d
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_art_gallery.dds"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1896.11.18
+		has_technology = camera
+		NOT = { has_variable = arg_cine_lanzado }
+	}
+
+	immediate = { set_variable = arg_cine_lanzado }
+
+	option = {
+		name = arg_primera_pelicula_1896.a
+		add_prestige = 15
+		ig:ig_intelligentsia = { add_approval = 3 }
+		
+		# Impulso cultural temprano
+		add_modifier = { name = arg_vanguardia_cultural months = 60 }
+	}
+}
+
+# 1907 - La Huelga de Inquilinos
+arg_huelga_inquilinos_1907 = {
+	type = country_event
+	title = arg_huelga_inquilinos_1907.t
+	desc = arg_huelga_inquilinos_1907.d
+	flavor = arg_huelga_inquilinos_1907.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1907.9.1
+		# Requiere problemas de vivienda urbana (inmigración masiva)
+		OR = {
+			has_modifier = arg_vivienda_conventillos
+			has_modifier = arg_gran_inmigración
+			total_population >= 4000000
+		}
+		NOT = { has_variable = arg_huelga_inquilinos_lanzada }
+	}
+
+	immediate = { set_variable = arg_huelga_inquilinos_lanzada }
+
+	# Opción A: Reprimir la huelga
+	option = {
+		name = arg_huelga_inquilinos_1907.a
+		
+		add_authority = 50
+		s:STATE_BUENOS_AIRES = {
+			add_radicals = { value = 0.20 type = lower_strata }
+		}
+		ig:ig_trade_unions = { add_approval = -5 }
+	}
+
+	# Opción B: Mediar y regular alquileres
+	option = {
+		name = arg_huelga_inquilinos_1907.b
+		default_option = yes
+		
+		add_enactment_progression = { law = law_worker_protections value = 0.1 }
+		ig:ig_trade_unions = { add_approval = 5 }
+		ig:ig_landowners = { add_approval = -3 }
+		
+		# Mejora las condiciones habitacionales
+		s:STATE_BUENOS_AIRES = {
+			remove_modifier = arg_vivienda_conventillos
+			add_modifier = { name = arg_regulacion_alquileres months = 120 }
+		}
+	}
+}
+
+# 1898 - El Servicio Militar Obligatorio
+arg_servicio_militar_1898 = {
+	type = country_event
+	title = arg_servicio_militar_1898.t
+	desc = arg_servicio_militar_1898.d
+	flavor = arg_servicio_militar_1898.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1898.12.1
+		NOT = { has_variable = arg_servicio_militar_lanzado }
+	}
+
+	immediate = { set_variable = arg_servicio_militar_lanzado }
+
+	# Opción A: Implementar el servicio obligatorio (Histórica)
+	option = {
+		name = arg_servicio_militar_1898.a
+		default_option = yes
+		
+		# Fortalece las fuerzas armadas y la cohesión nacional
+		add_modifier = { name = arg_ciudadano_soldado months = 240 }
+		ig:ig_armed_forces = { add_approval = 10 }
+		
+		# Resistencia inicial de las familias
+		every_scope_state = {
+			add_radicals = { value = 0.05 type = lower_strata }
+		}
+		
+		# Mejora la integración de inmigrantes
+		add_loyalists = { value = 0.05 }
+	}
+
+	# Opción B: Mantener el sistema de enganche voluntario
+	option = {
+		name = arg_servicio_militar_1898.b
+		
+		ig:ig_landowners = { add_approval = 3 }
+		# Pero debilita la capacidad militar
+		ig:ig_armed_forces = { add_approval = -5 }
+	}
+}
+
+# 1899 - La Semana Trágica Temprana (Conflictos Laborales)
+arg_conflictos_laborales_1899 = {
+	type = country_event
+	title = arg_conflictos_laborales_1899.t
+	desc = arg_conflictos_laborales_1899.d
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1899.5.1
+		has_technology = steel_frame_buildings # Industrialización avanzada
+		NOT = { has_variable = arg_conflictos_99_lanzados }
+	}
+
+	immediate = { set_variable = arg_conflictos_99_lanzados }
+
+	# Opción A: Mano dura contra los huelguistas
+	option = {
+		name = arg_conflictos_laborales_1899.a
+		
+		add_authority = 75
+		ig:ig_industrialists = { add_approval = 5 }
+		ig:ig_trade_unions = { add_approval = -8 }
+		
+		# Radicalización obrera
+		every_scope_state = {
+			add_radicals = { value = 0.15 type = lower_strata }
+		}
+	}
+
+	# Opción B: Buscar mediación y reformas laborales
+	option = {
+		name = arg_conflictos_laborales_1899.b
+		default_option = yes
+		
+		add_enactment_progression = { law = law_worker_protections value = 0.15 }
+		ig:ig_trade_unions = { add_approval = 5 }
+		ig:ig_industrialists = { add_approval = -3 }
+		
+		add_modifier = { name = arg_paz_laboral months = 36 }
+	}
+}
+
+# 1900 - El Nuevo Siglo: Modernización de Buenos Aires
+arg_modernizacion_1900 = {
+	type = country_event
+	title = arg_modernizacion_1900.t
+	desc = arg_modernizacion_1900.d
+	flavor = arg_modernizacion_1900.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1900.1.1
+		has_technology = electric_lighting
+		NOT = { has_variable = arg_siglo_xx_lanzado }
+	}
+
+	immediate = { set_variable = arg_siglo_xx_lanzado }
+
+	option = {
+		name = arg_modernizacion_1900.a
+		
+		add_prestige = 50
+		s:STATE_BUENOS_AIRES = {
+			add_modifier = { name = arg_paris_sudamericano months = 120 }
+			add_infrastructure = 25
+		}
+		
+		# Atrae más inmigración europea
+		add_modifier = { name = arg_faro_progreso months = 120 }
+		ig:ig_capitalists = { add_approval = 5 }
+	}
+}
+
+# 1901 - La Ley de Residencia
+arg_ley_residencia_1901 = {
+	type = country_event
+	title = arg_ley_residencia_1901.t
+	desc = arg_ley_residencia_1901.d
+	flavor = arg_ley_residencia_1901.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1901.11.22
+		has_variable = arg_conflictos_99_lanzados # Consecuencia de conflictos laborales
+		NOT = { has_variable = arg_ley_residencia_lanzada }
+	}
+
+	immediate = { set_variable = arg_ley_residencia_lanzada }
+
+	# Opción A: Aprobar la ley (Histórica)
+	option = {
+		name = arg_ley_residencia_1901.a
+		default_option = yes
+		
+		add_authority = 100
+		ig:ig_landowners = { add_approval = 5 }
+		ig:ig_armed_forces = { add_approval = 3 }
+		
+		# Represión de anarquistas y socialistas
+		ig:ig_trade_unions = { add_approval = -10 }
+		add_modifier = { name = arg_control_inmigracion months = 120 }
+	}
+
+	# Opción B: Rechazar la ley por inconstitucional
+	option = {
+		name = arg_ley_residencia_1901.b
+		
+		add_prestige = 20 # Respeto internacional por los derechos
+		ig:ig_intelligentsia = { add_approval = 5 }
+		ig:ig_trade_unions = { add_approval = 5 }
+		
+		# Pero continúan los conflictos
+		add_modifier = { name = arg_agitacion_social months = 60 }
+	}
+}
+
+# 1902 - La Primera Huelga General
+arg_primera_huelga_general_1902 = {
+	type = country_event
+	title = arg_primera_huelga_general_1902.t
+	desc = arg_primera_huelga_general_1902.d
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1902.11.24
+		has_variable = arg_ley_residencia_lanzada
+		NOT = { has_variable = arg_huelga_general_02_lanzada }
+	}
+
+	immediate = { set_variable = arg_huelga_general_02_lanzada }
+
+	# Opción A: Estado de sitio y represión
+	option = {
+		name = arg_primera_huelga_general_1902.a
+		
+		add_authority = 150
+		add_modifier = { name = arg_estado_de_sitio_nacional months = 3 }
+		
+		# Paralización económica temporal
+		add_treasury = -15000
+		every_scope_state = {
+			add_radicals = { value = 0.20 type = lower_strata }
+		}
+	}
+
+	# Opción B: Negociar con los sindicatos
+	option = {
+		name = arg_primera_huelga_general_1902.b
+		default_option = yes
+		
+		add_enactment_progression = { law = law_worker_protections value = 0.20 }
+		ig:ig_trade_unions = { add_approval = 8 }
+		ig:ig_industrialists = { add_approval = -5 }
+		
+		add_modifier = { name = arg_dialogo_social months = 60 }
+	}
+}
+
+# 1903 - El Tratado de Límites con Chile
+arg_tratado_chile_1903 = {
+	type = country_event
+	title = arg_tratado_chile_1903.t
+	desc = arg_tratado_chile_1903.d
+	flavor = arg_tratado_chile_1903.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1903.5.28
+		exists = c:CHL
+		NOT = { has_variable = arg_tratado_chile_lanzado }
+	}
+
+	immediate = { set_variable = arg_tratado_chile_lanzado }
+
+	option = {
+		name = arg_tratado_chile_1903.a
+		
+		add_prestige = 30
+		c:CHL = {
+			add_relations = { target = c:ARG value = 50 }
+		}
+		
+		# Fin de las tensiones fronterizas
+		add_modifier = { name = arg_paz_andina months = 240 }
+		
+		# Permite enfocar recursos en desarrollo interno
+		add_treasury = 10000 # Ahorro en gastos militares
+	}
+}
+
+# 1904 - El Tango en los Salones
+arg_auge_tango_1904 = {
+	type = country_event
+	title = arg_auge_tango_1904.t
+	desc = arg_auge_tango_1904.d
+	flavor = arg_auge_tango_1904.f
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_art_gallery.dds"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1904.1.1
+		has_variable = arg_siglo_xx_lanzado # Modernización de Buenos Aires
+		NOT = { has_variable = arg_tango_lanzado }
+	}
+
+	immediate = { set_variable = arg_tango_lanzado }
+
+	option = {
+		name = arg_auge_tango_1904.a
+		
+		add_prestige = 25
+		# El tango se vuelve símbolo de identidad nacional
+		add_modifier = { name = arg_identidad_tanguera months = 240 }
+		
+		# Integración social entre clases
+		add_loyalists = { value = 0.03 }
+	}
+}
+
+# 1905 - La Revolución Radical de 1905
+arg_revolucion_radical_1905 = {
+	type = country_event
+	title = arg_revolucion_radical_1905.t
+	desc = arg_revolucion_radical_1905.d
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1905.2.4
+		has_variable = arg_ucr_lanzada
+		NOT = { has_variable = arg_rev_radical_05_lanzada }
+	}
+
+	immediate = { set_variable = arg_rev_radical_05_lanzada }
+
+	# Opción A: Reprimir nuevamente
+	option = {
+		name = arg_revolucion_radical_1905.a
+		
+		add_authority = 100
+		ig:ig_armed_forces = { add_approval = 3 }
+		
+		# Mayor radicalización
+		every_scope_state = {
+			add_radicals = { value = 0.15 type = lower_strata }
+		}
+		
+		# Yrigoyen gana prestigio como mártir
+		add_modifier = { name = arg_martir_democratico months = 60 }
+	}
+
+	# Opción B: Iniciar reformas electorales
+	option = {
+		name = arg_revolucion_radical_1905.b
+		default_option = yes
+		
+		add_enactment_progression = { law = law_census_suffrage value = 0.25 }
+		ig:ig_intelligentsia = { add_approval = 5 }
+		
+		# Presión hacia la democratización
+		add_modifier = { name = arg_presion_democratica months = 120 }
+	}
+}
+
+# 1906 - El Centenario se Acerca: Obras Públicas
+arg_preparativos_centenario_1906 = {
+	type = country_event
+	title = arg_preparativos_centenario_1906.t
+	desc = arg_preparativos_centenario_1906.d
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1906.1.1
+		NOT = { has_variable = arg_centenario_prep_lanzado }
+	}
+
+	immediate = { set_variable = arg_centenario_prep_lanzado }
+
+	# Opción A: Gran inversión en obras públicas
+	option = {
+		name = arg_preparativos_centenario_1906.a
+		default_option = yes
+		
+		add_treasury = -30000
+		s:STATE_BUENOS_AIRES = {
+			add_modifier = { name = arg_obras_centenario months = 48 }
+			add_infrastructure = 30
+		}
+		
+		add_prestige = 40
+		ig:ig_industrialists = { add_approval = 5 }
+	}
+
+	# Opción B: Celebración austera
+	option = {
+		name = arg_preparativos_centenario_1906.b
+		
+		add_treasury = 5000 # Ahorro
+		ig:ig_devout = { add_approval = 3 } # Aprecian la modestia
+		add_prestige = -10 # Pero pierde impacto internacional
+	}
+}
+
+# 1907 - Crisis Económica Mundial
+arg_crisis_1907 = {
+	type = country_event
+	title = arg_crisis_1907.t
+	desc = arg_crisis_1907.d
+	
+	gui_window = event_window
+	texture = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1907.10.1
+		NOT = { has_variable = arg_crisis_07_lanzada }
+	}
+
+	immediate = { set_variable = arg_crisis_07_lanzada }
+
+	# Opción A: Política monetaria restrictiva
+	option = {
+		name = arg_crisis_1907.a
+		
+		add_modifier = { name = arg_austeridad_crisis months = 24 }
+		add_treasury = -20000
+		
+		# Desempleo y malestar social
+		every_scope_state = {
+			add_radicals = { value = 0.10 type = lower_strata }
+		}
+	}
+
+	# Opción B: Estímulo con obras públicas
+	option = {
+		name = arg_crisis_1907.b
+		default_option = yes
+		
+		add_treasury = -35000
+		add_modifier = { name = arg_estimulo_keynesiano months = 36 }
+		
+		# Mantiene el empleo pero aumenta la deuda
+		ig:ig_trade_unions = { add_approval = 5 }
+	}
+}
+
+# 1909 - El Atentado Anarquista contra Falcón
+arg_atentado_falcon_1909 = {
+	type = country_event
+	title = arg_atentado_falcon_1909.t
+	desc = arg_atentado_falcon_1909.d
+	flavor = arg_atentado_falcon_1909.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1909.11.14
+		has_variable = arg_ley_residencia_lanzada
+		NOT = { has_variable = arg_atentado_falcon_lanzado }
+	}
+
+	immediate = { set_variable = arg_atentado_falcon_lanzado }
+
+	# Opción A: Ley de Defensa Social (Histórica)
+	option = {
+		name = arg_atentado_falcon_1909.a
+		default_option = yes
+		
+		add_authority = 200
+		add_modifier = { name = arg_ley_defensa_social months = 120 }
+		
+		# Represión masiva del anarquismo
+		ig:ig_trade_unions = { add_approval = -15 }
+		ig:ig_landowners = { add_approval = 8 }
+		ig:ig_armed_forces = { add_approval = 5 }
+	}
+
+	# Opción B: Reformas sociales para calmar tensiones
+	option = {
+		name = arg_atentado_falcon_1909.b
+		
+		add_enactment_progression = { law = law_worker_protections value = 0.30 }
+		ig:ig_trade_unions = { add_approval = 8 }
+		ig:ig_landowners = { add_approval = -8 }
+		
+		# Pero la violencia continúa
+		add_modifier = { name = arg_violencia_politica months = 60 }
+	}
+}
+
+# 1910 - El Centenario de Mayo
+arg_centenario_mayo_1910 = {
+	type = country_event
+	title = arg_centenario_mayo_1910.t
+	desc = arg_centenario_mayo_1910.d
+	flavor = arg_centenario_mayo_1910.f
+	
+	gui_window = event_window
+	video = "gfx/event_pictures/unspecific_military_parade.bk2"
+
+	trigger = {
+		tag = ARG
+		is_date >= 1910.5.25
+		NOT = { has_variable = arg_centenario_lanzado }
+	}
+
+	immediate = { set_variable = arg_centenario_lanzado }
+
+	option = {
+		name = arg_centenario_mayo_1910.a
+		
+		add_prestige = 100
+		add_loyalists = { value = 0.10 }
+		
+		# Gran celebración nacional
+		add_modifier = { name = arg_orgullo_centenario months = 120 }
+		
+		# Todas las facciones se unen en la celebración
+		ig:ig_landowners = { add_approval = 5 }
+		ig:ig_intelligentsia = { add_approval = 5 }
+		ig:ig_armed_forces = { add_approval = 5 }
+		ig:ig_industrialists = { add_approval = 5 }
 	}
 }
